@@ -1,9 +1,8 @@
 <?php
-include "conn.php";
-if(isset($_POST['sumbmit'])){
 
-}
+asdas
 ?>
+
 
 
 <!DOCTYPE html>
@@ -13,8 +12,16 @@ if(isset($_POST['sumbmit'])){
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Sal!</h1>
+  <div class="container">
+  <form action="">
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+  </form>
+  </div>
 </body>
 </html>
