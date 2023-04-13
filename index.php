@@ -1,8 +1,9 @@
 <?php
+include "conn.php";
+if(isset($_POST['sumbmit'])){
 
-asdas
+}
 ?>
-
 
 
 <!DOCTYPE html>
