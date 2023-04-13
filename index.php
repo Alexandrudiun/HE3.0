@@ -15,13 +15,5 @@ asdas
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-  <form action="">
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email" required>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password">
-  </form>
-  </div>
 </body>
 </html>
