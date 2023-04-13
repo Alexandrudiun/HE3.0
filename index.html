@@ -7,17 +7,25 @@
   <title>Login | I&D CREW</title>
   <link rel="stylesheet" href="style.css">
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <form action="">
-    <div class="d-flex flex-column">
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email" required>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password">
-  </div>
+  <div class="container">
+    <div class="title">Login</div>
+      <form action="#">
+          <div class="input-box">
+          <span class="details">Email:</span>
+          <input type="text" id="email" name="email" placeholer="Enter your email" required>
+          </div>
+          <div class="input-box">
+          <span class="details">Password:</span>
+          <input type="password" id="password" name="password" placeholer="Enter your password" required>
+          </div>
+    <div class="button">
+      <input type="submit" value="Login">
+    </div>
   </form>
+  </div>
 </body>
 </html>
