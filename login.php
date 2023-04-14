@@ -1,3 +1,10 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | I&D CREW</title>
+  <link rel="stylesheet" href="style.css"> <!-- add this line -->
+</head>
 <?php 
 include "conn.php";
 //test conecsiune DB
@@ -25,13 +32,13 @@ include "conn.php";
             exit; // Exit script after successful login
         }
         else {
-            echo "Parola incorecta";
+            echo "<p class='error'>Parola incorecta</p>";
             exit; // Exit script after unsuccessful login
         }
     }
 
     if(!$email_found) {
-        echo "Email neinregistrat";
+        echo "Email neînregistrat";
     }
  }
 

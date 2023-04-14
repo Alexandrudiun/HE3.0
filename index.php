@@ -16,11 +16,11 @@
       <form action="index.php" method="post">
           <div class="input-box">
           <span class="details">Email:</span>
-          <input type="text" id="email" name="email" placeholer="Enter your email" required>
+          <input type="text" id="email" name="email" placeholder="Enter your email" required>
           </div>
           <div class="input-box">
           <span class="details">Password:</span>
-          <input type="password" id="password" name="password" placeholer="Enter your password" required>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
           </div>
     <div class="button">
       <input type="submit" name="submit" value="Login">
