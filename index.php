@@ -11,22 +11,36 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="title">Login</div>
-      <form action="index.php" method="post">
+  <section>
+    <div class="form-box">
+      <div class="form-value">
+        <form action="index.php" method="Post">
+          <h1>Login</h1>
           <div class="input-box">
-          <span class="details">Email:</span>
-          <input type="text" id="email" name="email" placeholder="Enter your email" required>
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="text" id="email" name="email" required>
+          <label for="">Email</label>
           </div>
           <div class="input-box">
-          <span class="details">Password:</span>
-          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input type="password" id="password" name="password" required>
+          <label for="">Password:</label>
           </div>
-    <div class="button">
-      <input type="submit" name="submit" value="Login">
+          <div class="forget">
+            <label for=""><input type="checkbox">Tine-mă minte <a href="#">Am uitat parola</a></label>
+          </div>
+          <div class="button">
+          <input type="submit" name="submit" value="Login">
+          </div>
+          <div class="register">
+            <p>Nu ai un cont? <a href="#">Inregistrează-te! </a></p>
+          </div>
+        </form>
+      </div>
     </div>
-  </form>
-  </div>
+  </section>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
 <?php
