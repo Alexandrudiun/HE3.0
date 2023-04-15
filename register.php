@@ -30,7 +30,7 @@
         die('Query Failed'. mysqli_error());
       }
       
-      echo "<script>document.getElementById('message').innerHTML = 'Ați fost inregistrat click aici pentru login';</script>";
+      echo "<script>document.getElementById('message').innerHTML = '<p class="message-succesful">Ați fost inregistrat click aici pentru login</p>';</script>";
     }
   ?>
 </body>
