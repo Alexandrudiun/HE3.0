@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +15,8 @@
   <section>
     <div class="form-box">
       <div class="form-value">
-        <form action="index.php" method="Post">
+        <form action="index1.php" method="Post">
+        <a href="index.php"><div id="message"></div></a>
           <h1>Register</h1>
           <div class="input-box">
           <ion-icon name="mail-outline"></ion-icon>
@@ -51,4 +53,4 @@
 </body>
 </html>
 <?php
-include "login.php";
+include "register.php";

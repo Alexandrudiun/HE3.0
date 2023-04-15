@@ -5,11 +5,14 @@
   <title>Login | I&D CREW</title>
   <link rel="stylesheet" href="style.css"> <!-- add this line -->
 </head>
+
 <?php 
+session_start(); // Start the session
 include "conn.php";
-//test conecsiune DB
+// test conexiune DB
 // if($conn){echo "OK";}
 //   else{die("not ok");}
+
 
  if(isset($_POST['submit'])){
     $email = $_POST['email'];
@@ -28,17 +31,20 @@ include "conn.php";
         }
         $email_found = true;
         if($row[2] === $password) {
-            echo "OK";
+            $_SESSION['email'] = $email;
+            $_SESSION['password'] = $password;
+            echo "<script>document.getElementById('message').innerHTML = 'Te-ai logat cu succes';</script>";
+            header("Location: profilbk.php");
             exit; // Exit script after successful login
         }
         else {
-            echo "<p class='error'>Parola incorecta</p>";
+            echo "<script>document.getElementById('message').innerHTML = 'Parola incorecta';</script>";
             exit; // Exit script after unsuccessful login
         }
     }
 
     if(!$email_found) {
-        echo "Email neînregistrat";
+        echo "<script>document.getElementById('message').innerHTML = 'Email neînregistrat';</script>";
     }
  }
 
