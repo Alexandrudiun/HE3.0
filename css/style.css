@@ -20,11 +20,6 @@ section{
   width: 400px;
   height: 450px;
   background: transparent;
-  /* -----Desktop----- */
-  /* border: 2px solid #fff; */
-  /* border-radius: 20px; */
-  /* backdrop-filter: blur(15px); */
-  /* ------------- */
   display: flex;
   justify-content: center;
   align-items: center;
