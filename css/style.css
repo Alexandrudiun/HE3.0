@@ -106,6 +106,7 @@ input:valid ~ label{
 }
 
 #message{
+  text-decoration: none;
   margin-top: 10px;
   color: #155724;
   text-align: center;
