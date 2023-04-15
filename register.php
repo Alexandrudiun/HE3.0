@@ -13,7 +13,7 @@
         die('Query Failed'. mysqli_error());
       }
       if(mysqli_num_rows($select_user_query) > 0) {
-        echo "<script>document.getElementById('message').innerHTML = 'Emailul este deja inregistrat click aici pentru login';</script>";
+        echo "<script>document.getElementById('message').innerHTML = '<p class=\"registration-message\">Ați fost inregistrat click aici pentru login</p>';</script>";
         exit;
       }
 

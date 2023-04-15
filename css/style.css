@@ -105,9 +105,14 @@ input:valid ~ label{
   font-weight: 500;
 }
 
-.message-succesful{
-  text-align: center;
-  
+.registration-message {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid transparent;
+  border-radius: .25rem;
 }
 
 input.btn-login{
