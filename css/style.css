@@ -95,6 +95,10 @@ input:valid ~ label{
   text-decoration: underline;
 }
 
+.error-message {
+  display: none;
+}
+
 input[type="submit"]{
   width: 100%;
   height: 40px;

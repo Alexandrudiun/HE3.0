@@ -1,17 +1,27 @@
 const form = document.querySelector('form');
-  const passwordInput = document.querySelector('#password');
-  const confirmPasswordInput = document.querySelector('#confirmPassword');
-  const errorLabel = document.createElement('label');
-  errorLabel.textContent = 'Parolele nu se potrivesc';
-  errorLabel.style.color = 'red';
-  errorLabel.style.display = 'none';
-  confirmPasswordInput.parentNode.appendChild(errorLabel);
+const password = document.querySelector('#password');
+const confirmPassword = document.querySelector('#confirm-password');
+const errorMessage = document.querySelector('.error-message');
 
-  function validateForm(event) {
-    if (passwordInput.value !== confirmPasswordInput.value) {
-      errorLabel.style.display = 'block';
-      event.preventDefault();
-    }
+form.addEventListener('submit', (event) => {
+  if (password.value !== confirmPassword.value) {
+    errorMessage.style.display = 'block';
+    errorMessage.style.color = 'red';
+    errorMessage.style.fontWeight = '500';
+    form.style.textAlign = 'center';
+    event.preventDefault();
   }
+});
 
-  form.addEventListener('submit', validateForm);
+password.addEventListener('input', () => {
+  errorMessage.style.display = 'none';
+});
+
+confirmPassword.addEventListener('input', () => {
+  errorMessage.style.display = 'none';
+});
+
+form.addEventListener('reset', () => {
+  errorMessage.style.display = 'none';
+  form.style.textAlign = '';
+});

@@ -28,12 +28,13 @@
           </div>
           <div class="input-box">
           <ion-icon name="lock-closed-outline"></ion-icon>
-          <input type="password" id="confirmPassword" name="confirmPassword" required>
+          <input type="password" id="confirm-password" name="confirmPassword" required>
           <label for="">Confirm Password:</label>
           </div>
           <div class="forget">
             <label for=""><input type="checkbox">Tine-mă minte <a href="#">Am uitat parola</a></label>
           </div>
+          <p class="error-message">Parolele nu se potrivesc</p>
           <div class="button">
           <input type="submit" name="submit" value="Register">
           </div>
