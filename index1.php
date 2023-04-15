@@ -17,7 +17,6 @@
     <div class="form-box">
       <div class="form-value">
         <form action="index1.php" method="Post">
-        <a href="index.php"><div id="message"></div></a>
           <h1>Register</h1>
           <div class="input-box">
           <ion-icon name="mail-outline"></ion-icon>
@@ -41,6 +40,7 @@
           <div class="button">
           <input type="submit" name="submit" value="Register" class="btn-login">
           </div>
+          <a href="index.php"><div id="message"></div></a>
           <div class="register">
             <p>Ai deja un cont? <a href="index.php">Intră în cont! </a></p>
           </div>
