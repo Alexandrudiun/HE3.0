@@ -9,6 +9,7 @@
   <!-- Bootstrap -->
   <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="/manifest.json">
 </head>
 <body>
   <section>
