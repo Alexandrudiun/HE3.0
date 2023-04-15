@@ -76,6 +76,7 @@ input:valid ~ label{
 .forget{
   margin: -15px 0 15px;
   font-size: .9em;
+  font-weight: 600;
   color: #fff;
   display: flex;
   justify-content: center;
