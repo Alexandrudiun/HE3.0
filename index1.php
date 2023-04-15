@@ -37,10 +37,14 @@
           <div class="button">
           <input type="submit" name="submit" value="Register">
           </div>
+          <div class="register">
+            <p>Ai deja un cont? <a href="index.php">Intră în cont! </a></p>
+          </div>
         </form>
       </div>
     </div>
   </section>
+  <script src="index.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

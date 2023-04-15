@@ -33,7 +33,7 @@
           <input type="submit" name="submit" value="Login">
           </div>
           <div class="register">
-            <p>Nu ai un cont? <a href="register.php">Inregistrează-te! </a></p>
+            <p>Nu ai un cont? <a href="index1.php">Inregistrează-te! </a></p>
           </div>
         </form>
       </div>
