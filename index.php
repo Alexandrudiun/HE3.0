@@ -15,7 +15,6 @@
     <div class="form-box">
       <div class="form-value">
         <form action="index.php" method="Post">
-        <div id="message"></div>
           <h1>Login</h1>
           <div class="input-box">
           <ion-icon name="mail-outline"></ion-icon>
@@ -30,6 +29,7 @@
           <div class="forget">
             <label for=""><input type="checkbox">Tine-mă minte <a href="#">Am uitat parola</a></label>
           </div>
+          <div class="message" id="message" ></div>
           <div class="button">
           <input type="submit" name="submit" value="Login">
           </div>
