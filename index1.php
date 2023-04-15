@@ -39,7 +39,7 @@
           </div>
           <p class="error-message">Parolele nu se potrivesc</p>
           <div class="button">
-          <input type="submit" name="submit" value="Register">
+          <input type="submit" name="submit" value="Register" class="btn-login">
           </div>
           <div class="register">
             <p>Ai deja un cont? <a href="index.php">Intră în cont! </a></p>
