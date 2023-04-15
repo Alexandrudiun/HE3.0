@@ -18,7 +18,7 @@
           <h1>Login</h1>
           <div class="input-box">
           <ion-icon name="mail-outline"></ion-icon>
-          <input type="text" id="email" name="email" required>
+          <input type="email" id="email" name="email" required>
           <label for="">Email:</label>
           </div>
           <div class="input-box">
