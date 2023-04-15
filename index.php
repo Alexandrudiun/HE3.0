@@ -32,8 +32,8 @@
           </div>
           <div class="message" id="message" ></div>
           <div class="button">
-          <p>Login</p>
-          <input type="submit" name="submit">
+        
+          <input type="submit" name="submit">login
           </div>
           <div class="register">
             <p>Nu ai un cont? <a href="index1.php">Inregistrează-te! </a></p>
