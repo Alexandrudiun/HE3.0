@@ -31,9 +31,8 @@
             <label for=""><input type="checkbox">Tine-mă minte <a href="#">Am uitat parola</a></label>
           </div>
           <div class="message" id="message" ></div>
-          <div class="button">
-        
-          <input type="submit" name="submit">login
+          <div class="">
+          <input type="submit" name="submit" value="Login">
           </div>
           <div class="register">
             <p>Nu ai un cont? <a href="index1.php">Inregistrează-te! </a></p>
