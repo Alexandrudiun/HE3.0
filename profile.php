@@ -13,7 +13,7 @@
     <section>
         <div class="navigation">
             <ul>
-                <li class="list">
+                <li class="list active">
                     <a href="#">
                         <span class="icon">
                         <ion-icon name="home-outline"></ion-icon>
@@ -45,9 +45,11 @@
                         <span class="text">Setări</span>
                     </a>
                 </li>
+                <div class="indicator"></div>
             </ul>
         </div>
     </section>
+    <script src="profile.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
