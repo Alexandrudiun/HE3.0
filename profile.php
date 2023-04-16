@@ -9,8 +9,27 @@
     <link rel="manifest" href="/manifest.json">
 </head>
 <body>
+<div class="search-container">
+    <form action="#">
+        <span class="search-icon"><ion-icon name="search"></ion-icon></span>
+        <input type="text" name="" id="search-item" placeholder="Caută un serviciu..." onkeyup="search()">
+    </form>
+</div>
+
+<div class="service-container" id="service-container">
+    <p class="service">green apple</p>
+    <p class="service">red apple</p>
+    <p class="service">black cat</p>
+    <p class="service">white cat</p>
+    <p class="service">eating healthy</p>
+    <p class="service">eating healthy</p>
+    <p class="service">red tshirt</p>
+    <p class="service">green tshirt</p>
+</div>
     <div id="message"></div>
-    <section>
+
+    <!-- Navbar Down -->
+    <section class="nav-bar">
         <div class="navigation">
             <ul>
                 <li class="list active">
@@ -57,7 +76,8 @@
             </ul>
         </div>
     </section>
-    <script src="profile.js"></script>
+    <script src="nav.js"></script>
+    <script src="search.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
