@@ -4,8 +4,8 @@
   "description": "gigel",
   "icons": [
     {
-      "src": "logo-192.jpg",
-      "sizes": "192x192",
+      "src": "logo512.jpg",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
