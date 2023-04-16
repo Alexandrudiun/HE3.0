@@ -40,6 +40,14 @@
                 <li class="list">
                     <a href="#">
                         <span class="icon">
+                        <ion-icon name="hammer-outline"></ion-icon>
+                        </span>
+                        <span class="text">Munca mea</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
                         <ion-icon name="settings-outline"></ion-icon>
                         </span>
                         <span class="text">Setări</span>
