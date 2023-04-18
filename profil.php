@@ -12,13 +12,17 @@
 <body>
   <header>
       <div class="banner-container">
-      <img src="logos/user.png" alt="user-image" class="user">
-      <a href="#" class="edit">EDITEAZĂ</a>
-    </div>
-    <div class="message">
-      <h3 class="salut"></h3>
-    </div>
+        <div class="flex-banner">
+          <img src="logos/user.png" alt="user-image" class="user">
+          <a href="#" class="edit">EDITEAZĂ</a>
+        </div>
+        <h3 class="salut">Salut, User!</h3>
+      </div>
+    
   </header>
+  <div class="btn-post">
+
+  </div>
 
   <main>
 
