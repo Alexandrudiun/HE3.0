@@ -13,7 +13,10 @@
   <header>
       <div class="banner-container">
       <img src="logos/user.png" alt="user-image" class="user">
-      <a href="#">Editeaza</a>
+      <a href="#" class="edit">EDITEAZĂ</a>
+    </div>
+    <div class="message">
+      <h3 class="salut"></h3>
     </div>
   </header>
 
