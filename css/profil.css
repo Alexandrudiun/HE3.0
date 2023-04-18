@@ -17,6 +17,7 @@ img{
   border-radius: 50%;
 }
 .banner-container {
-  background: url("/logos/banner.jpg");background-repeat: no-repeat;
+  background: url("/logos/banner.png");background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
 }
