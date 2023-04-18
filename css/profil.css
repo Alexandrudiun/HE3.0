@@ -19,4 +19,5 @@ img{
 .banner-container {
   background: url("/logos/banner.png") cover no-repeat;
   width: 100%;
+  height: 70px;
 }
