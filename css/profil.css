@@ -14,9 +14,8 @@ body{
 }
 
 .banner-container {
-  position: relative;
   padding: 20px;
-  background: url("/logos/banner.jpg") cover no-repeat right;
+  background: url("/logos/banner.jpg") cover no-repeat;
   width: 100%;
   height: 100px;
   display: flex;
