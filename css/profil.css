@@ -13,19 +13,15 @@ body{
   width: 100%;
 }
 
-header{
-  background-image: url("/logos/banner.jpg") cover no-repeat;
-  width: 100%;
-  height: 100px;
-}
-
 .banner-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  background-image: url("/logos/banner.jpg") /* add a space here */ cover no-repeat;
+  width: 100%;
+  height: 100px;
 }
-
 img.user{
   border-radius: 50%;
   width: 60px;
