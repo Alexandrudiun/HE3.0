@@ -94,6 +94,7 @@ h3.title{
   justify-content: space-between;
   border-bottom: 1px solid rgb(61, 61, 61);
   margin-top: 5px;
+  cursor: pointer;
 }
 
 .active-section-left{
@@ -104,5 +105,10 @@ h3.title{
 .active-section-left a{
   text-decoration: none;
   color: #222
+}
+
+.active-link{
+  text-decoration: none;
+  color: black;
 }
 

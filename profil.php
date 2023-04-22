@@ -31,11 +31,13 @@
         </div>
       </div>
       <div class="active-section">
+        <a href="" class="active-link">
         <h3>Anunţuri dezactivate</h3>
         <div class="active-section-left">
           <a href="#">5</a>
           <ion-icon name="arrow-forward-outline"></ion-icon>
         </div>
+        </a>
       </div>
     </section>
   </main>
