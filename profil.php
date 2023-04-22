@@ -12,13 +12,9 @@
 <body>
   <header>
       <div class="banner-container">
-        <div class="flex-banner">
           <img src="img/user.png" alt="user-image" class="user">
           <a href="#" class="edit">EDITEAZĂ</a>
-        </div>
-        <h3 class="salut">Salut, User!</h3>
       </div>
-    
   </header>
   <div class="btn-post">
 
