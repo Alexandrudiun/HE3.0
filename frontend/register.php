@@ -42,7 +42,7 @@
           </div>
           <a href="index.php"><div id="message"></div></a>
           <div class="register">
-            <p>Ai deja un cont? <a href="index.php">Intră în cont! </a></p>
+            <p>Ai deja un cont? <a href="/index.php">Intră în cont! </a></p>
           </div>
         </form>
       </div>
@@ -54,4 +54,4 @@
 </body>
 </html>
 <?php
-include "backend/registerbk.php";
+include "/backend/registerbk.php";

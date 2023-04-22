@@ -12,7 +12,7 @@
 <body>
   <header>
       <div class="banner-container">
-          <img src="img/user.png" alt="user-image" class="user">
+          <img src="/img/user.png" alt="user-image" class="user">
           <a href="#" class="edit">EDITEAZĂ</a>
       </div>
   </header>
@@ -53,4 +53,4 @@
 </body>
 </html>
 <?php
-include "backend/profilbk.php";
+include "/backend/profilbk.php";
