@@ -137,7 +137,7 @@ body{
   height: 70px;
   background: #fff;
   border-radius: 50%;
-  border: 6px solid transparent;
+  border: 6px solid black;
   transition: 0.5s;
 }
 
