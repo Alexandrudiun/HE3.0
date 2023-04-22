@@ -88,6 +88,38 @@ h3{
   padding: 10px;
 }
 
+.accout-settings{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:5px ;
+}
+
+.flex-edit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  background: #45cafc;
+  padding: 5px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.edit{
+  text-decoration: none;
+  color:#fff;
+}
+
+.logout{
+  text-decoration: none;
+  color:#fff;
+}
+
+.icon{
+  cursor: pointer;
+  margin-left: 2px;
+}
 /* Navbar css */
 
 .nav-bar{

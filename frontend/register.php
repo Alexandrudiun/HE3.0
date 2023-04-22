@@ -26,12 +26,12 @@
           <div class="input-box">
           <ion-icon name="lock-closed-outline"></ion-icon>
           <input type="password" id="password" name="password" required>
-          <label for="">Password:</label>
+          <label for="">Password</label>
           </div>
           <div class="input-box">
           <ion-icon name="lock-closed-outline"></ion-icon>
           <input type="password" id="confirm-password" name="confirmPassword" required>
-          <label for="">Confirm Password:</label>
+          <label for="">Confirm Password</label>
           </div>
           <div class="forget">
             <label for=""><input type="checkbox">Tine-mă minte <a href="#">Am uitat parola</a></label>
