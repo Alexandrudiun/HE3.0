@@ -13,7 +13,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
       die('Query Failed'. mysqli_error());
     }
     $email_found = false; // Flag variable to check if email was found
-    while($row = mysqli_fetch_row($select_user_query)) {}
+    while($row = mysqli_fetch_row($select_user_query)) {
     if($row[1] == $email && $row[2] == $password) {
       $email_found = true;
       $image = $row[3];
@@ -22,7 +22,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
       echo "<script>document.getElementById('image').innerHTML = '{$image}';</script>";
       echo "<script>document.getElementById('name').innerHTML = '{$name} gigi';</script>";
       echo "<script>document.getElementById('skills').innerHTML = '{$skills}gigi';</script>";
-    
+    }
     }
 }
 
