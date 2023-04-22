@@ -16,6 +16,10 @@
           <a href="#" class="edit">EDITEAZĂ</a>
       </div>
   </header>
+
+  <div id="message"></div>
+
+
   <div class="btn-container">
   <a href="post.php" class="btn-post">Publică un anunţ</a>
   </div>
@@ -48,3 +52,5 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
+<?php
+include "profilbk.php";
