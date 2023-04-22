@@ -4,36 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROFIL</title>
+    <title>Profilul meu</title>
     <link rel="icon" href="/logos/logo192.jpg">
-    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="manifest" href="/manifest.json">
 </head>
 <body>
-<div class="search-container">
-    <form action="#">
-        <span class="search-icon"><ion-icon name="search"></ion-icon></span>
-        <input type="text" name="" id="search-item" placeholder="Caută un serviciu..." onkeyup="search()">
-    </form>
-</div>
+    <main>
+        <div class="center">
+    <div class="profile-card">
+        <div class="image">
+            <img src="/img/user.png" alt="user image" class="profile-img">
+        </div>
+        <div class="text-data">
+            <!-- Aici vine php cu echo si script pentru email -->
+            <span class="name">andreiionescu750@gmail.com<div id="message"></div></span>
+            <span class="jobs">Plimba Catei | Sofer | Curatenie <div id="message"></div></span>
+        </div>
+    </div>
+        </div>
 
-<div class="service-container" id="service-container">
-    <p class="service">green apple</p>
-    <p class="service">red apple</p>
-    <p class="service">black cat</p>
-    <p class="service">white cat</p>
-    <p class="service">eating healthy</p>
-    <p class="service">eating healthy</p>
-    <p class="service">red tshirt</p>
-    <p class="service">green tshirt</p>
-</div>
-    <div id="message"></div>
-
-    <!-- Navbar Down -->
+    <div class="btn-container">
+        <a href="post.php" class="btn-post">Publică un anunţ</a>
+    </div>
+    
+    </main>
+    <footer>
+        <!-- Navbar Down -->
     <section class="nav-bar">
         <div class="navigation">
             <ul>
-                <li class="list active">
+                <li class="list">
                     <a href="#">
                         <span class="icon">
                         <ion-icon name="home-outline"></ion-icon>
@@ -41,7 +42,7 @@
                         <span class="text">Acasă</span>
                     </a>
                 </li>
-                <li class="list">
+                <li class="list active">
                     <a href="#">
                         <span class="icon">
                         <ion-icon name="person-circle-outline"></ion-icon>
@@ -52,34 +53,75 @@
                 <li class="list">
                     <a href="#">
                         <span class="icon">
-                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                            <ion-icon name="add-circle-outline"></ion-icon>
                         </span>
-                        <span class="text">Chat</span>
+                        <span class="text">Adaugă anunţ</span>
                     </a>
                 </li>
                 <li class="list">
                     <a href="#">
                         <span class="icon">
-                        <ion-icon name="hammer-outline"></ion-icon>
+                            <ion-icon name="albums-outline"></ion-icon>
                         </span>
-                        <span class="text">Munca mea</span>
+                        <span class="text">Istoric</span>
                     </a>
                 </li>
                 <li class="list">
                     <a href="#">
                         <span class="icon">
-                        <ion-icon name="settings-outline"></ion-icon>
+                        <ion-icon name="build-outline"></ion-icon>
                         </span>
-                        <span class="text">Setări</span>
+                        <span class="text">My work</span>
                     </a>
                 </li>
                 <div class="indicator"></div>
             </ul>
         </div>
     </section>
-    <script src="/js/nav.js"></script>
-    <script src="/js/search.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    </footer>
+
+
+
+    <!-- Old design -->
+  <!-- <header>
+      <div class="banner-container">
+          <img src="/img/user.png" alt="user-image" class="user">
+          <a href="#" class="edit">EDITEAZĂ</a>
+      </div>
+  </header>
+
+  <div id="message"></div>
+
+
+  <div class="btn-container">
+  <a href="post.php" class="btn-post">Publică un anunţ</a>
+  </div>
+  <main>
+    <section class="section-1">
+      <h3 class="title">Anunţurile tale</h3>
+      <a href="" class="active-link">
+      <div class="active-section">
+        <h3>Anunţuri active</h3>
+        <div class="active-section-left">
+          <a href="#">2</a>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+        </a>
+      </div>
+      <div class="active-section">
+        <a href="" class="active-link">
+        <h3>Anunţuri dezactivate</h3>
+        <div class="active-section-left">
+          <a href="#">5</a>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+        </a>
+      </div>
+    </section>
+  </main> -->
+  <script src="/js/nav.js"></script>
+  <!-- Ion icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
