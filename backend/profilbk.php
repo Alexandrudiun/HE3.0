@@ -19,8 +19,8 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
       $image = $row[3];
       $name = $row[4];
       $skills = $row[5];
-      
-      echo "<script>document.getElementById('name').innerHTML = '{$name} ';</script>";
+     
+      echo "<script>document.getElementById('name').innerHTML = '{$name}';</script>";
       echo "<script>document.getElementById('skills').innerHTML = '{$skills}';</script>";
     
     }
