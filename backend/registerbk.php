@@ -1,5 +1,5 @@
 <?php 
-    include "/backend/conn.php";
+    include "../backend/conn.php"
     
     if(isset($_POST['submit'])){
       $email = $_POST['email'];

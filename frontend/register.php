@@ -54,4 +54,4 @@
 </body>
 </html>
 <?php
-include "/backend/registerbk.php";
+include "../backend/registerbk.php";
