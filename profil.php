@@ -16,12 +16,31 @@
           <a href="#" class="edit">EDITEAZĂ</a>
       </div>
   </header>
-  <div class="btn-post">
-
+  <div class="btn-container">
+  <a href="post.php" class="btn-post">Publică un anunţ</a>
   </div>
-
+  <!-- Anunturi -->
   <main>
-
+    <section class="section-1">
+      <h3 class="title">Anunţurile tale</h3>
+      <div class="active-section">
+        <h3>Anunţuri active</h3>
+        <div class="active-section-left">
+          <a href="#">2</a>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+      </div>
+      <div class="active-section">
+        <h3>Anunţuri dezactivate</h3>
+        <div class="active-section-left">
+          <a href="#">5</a>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+      </div>
+    </section>
   </main>
+  <!-- Ion icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
