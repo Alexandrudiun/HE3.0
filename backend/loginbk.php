@@ -1,6 +1,6 @@
 <?php 
 session_start(); // Start the session
-include "../backend/conn.php";
+include "conn.php";
 // test conexiune DB
 // if($conn){echo "OK";}
 //   else{die("not ok");}
