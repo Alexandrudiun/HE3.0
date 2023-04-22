@@ -13,10 +13,10 @@
   <header>
       <div class="banner-container">
         <div class="flex-banner">
-          <img src="logos/user.png" alt="user-image" class="user">
+          <img src="img/user.png" alt="user-image" class="user">
           <a href="#" class="edit">EDITEAZĂ</a>
         </div>
-        <h3 class="salut">Salut, User.!</h3>
+        <h3 class="salut">Salut, User!</h3>
       </div>
     
   </header>
