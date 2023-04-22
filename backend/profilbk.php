@@ -1,4 +1,6 @@
 <?php
+ 
+echo"<h1>DA</h1>";
 
 session_start(); // Start the session
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {

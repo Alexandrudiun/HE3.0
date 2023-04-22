@@ -1,6 +1,6 @@
 <?php 
     include "conn.php";
-
+    echo"<h1>DA</h1>";
     if(isset($_POST['submit'])){
       $email = $_POST['email'];
       $password = $_POST['password'];
