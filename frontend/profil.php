@@ -1,3 +1,5 @@
+<?php
+include "../backend/profilbk.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +15,7 @@
     <main>
         <div class="center">
     <div class="profile-card">
-        <div class="image" id="image"></div>
+        <div class="image" id="image"><?php echo "<img src='data:image/jpeg;base64," . base64_encode($image) . "' />";?></div>
         <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
             <span class="name"><div id="name"></div></span>
@@ -123,5 +125,3 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
-<?php
-include "../backend/profilbk.php";
