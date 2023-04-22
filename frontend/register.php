@@ -7,17 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register | I&D CREW</title>
   <link rel="icon" href="/logos/logo192.jpg">
-  <link rel="stylesheet" href="style.css">
   <!-- Bootstrap -->
   <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="manifest" href="/manifest.json">
 </head>
 <body>
   <section>
     <div class="form-box">
       <div class="form-value">
-        <form action="index1.php" method="Post">
+        <form action="/frontend/register.php" method="Post">
           <h1>Register</h1>
           <div class="input-box">
           <ion-icon name="mail-outline"></ion-icon>
