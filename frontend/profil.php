@@ -13,9 +13,7 @@
     <main>
         <div class="center">
     <div class="profile-card">
-        <div class="image" id="image">
-            <img src="/img/user.png" alt="user image" class="profile-img">
-        </div>
+        <div class="image" id="image"></div>
         <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
             <span class="name"><div id="name"></div></span>
