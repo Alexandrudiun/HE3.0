@@ -36,7 +36,7 @@
           <input type="submit" name="submit" value="Login" class="btn-login">
           </div>
           <div class="register">
-            <p>Nu ai un cont? <a href="index1.php">Inregistrează-te! </a></p>
+            <p>Nu ai un cont? <a href="/frontend/register.php">Inregistrează-te! </a></p>
           </div>
         </form>
       </div>
@@ -47,4 +47,4 @@
 </body>
 </html>
 <?php
-include "login.php";
+include "backend/loginbk.php";

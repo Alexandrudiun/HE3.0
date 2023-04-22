@@ -1,11 +1,3 @@
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login | I&D CREW</title>
-  <link rel="stylesheet" href="style.css"> <!-- add this line -->
-</head>
-
 <?php 
 session_start(); // Start the session
 include "conn.php";
@@ -34,7 +26,7 @@ include "conn.php";
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
             echo "<script>document.getElementById('message').innerHTML = 'Te-ai logat cu succes';</script>";
-            header("Location: profil.php");
+            header("Location: /frontend/profil.php");
             exit; // Exit script after successful login
         }
         else {
