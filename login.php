@@ -34,7 +34,7 @@ include "conn.php";
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
             echo "<script>document.getElementById('message').innerHTML = 'Te-ai logat cu succes';</script>";
-            header("Location: profilbk.php");
+            header("Location: profil.php");
             exit; // Exit script after successful login
         }
         else {
