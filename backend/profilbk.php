@@ -22,5 +22,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
         }
     }
     echo "<script>document.getElementById('name').innerHTML = '{$db_name}';</script>";
+    echo "<script>document.getElementById('name').innerHTML = 'da';</script>";
 }
 ?>
