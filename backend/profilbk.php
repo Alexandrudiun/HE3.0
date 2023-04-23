@@ -24,7 +24,8 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     
     }
     }
-    if(!$email_found) {
-      header("Location: ../index.php");
+    if(!$email_found) { echo "Email not found"; 
+      header("Location: ../index.php");}
+    else { echo "Email found";}
     }
-}?>
+?>
