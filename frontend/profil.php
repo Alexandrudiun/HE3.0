@@ -18,7 +18,8 @@ include "../backend/profilbk.php";?>
         <div class="center">
             <div class="profile-card">
                 <div class="image">
-                    <img src="/img/user.png" class="profile-img">
+                    <?php if($image==NULL)
+                        echo "<img src='/img/user.png' class='profile-img'>"?>
                     <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="<?=$name?>" class="profile-img">
 
             </div>
