@@ -9,23 +9,39 @@ include "../backend/profilbk.php";?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profilul meu</title>
     <link rel="icon" href="/logos/logo192.jpg">
-    <link rel="stylesheet" href="/css/profil.css">
+    <link rel="stylesheet" href="/css/index.css">
     <link rel="manifest" href="/manifest.json">
 </head>
 <body>
     <main>
         <div class="center">
-    <div class="profile-card">
-        <div class="image" id="image">
-        <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="<?=$name?>" class="profile-img">
-
-      </div> 
-        <div class="text-data">
+            <div class="profile-card">
+                <div class="image">
+                    <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="<?=$name?>" class="profile-img">
+            </div>
+            <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
-            <span class="name"><?php echo $name?></span>
-            <span class="jobs"><?php echo $skills?></span>
+                <span class="name"><?php echo $name?></span>
+                <span class="jobs"><?php echo $skills?></span>
+                <div class="accout-settings">
+                    <div class="flex-edit">
+                        <a href="form.html" class="edit">Edit Profile</a>
+                        <ion-icon name="create-outline" class="icon"></ion-icon>
+                    </div>
+                    <div class="flex-edit">
+                        <a href="" class="logout">Logout</a>
+                        <ion-icon name="log-out-outline" class="icon"></ion-icon>
+                    </div>
+                </div>
+                <div class="credits">
+                    <h3>Credits: 100 lei</h3>
+                    <div class="flex-edit">
+                    <a href="#" class="credits">Add </a>
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
         </div>
 
     <div class="btn-container">
@@ -84,6 +100,45 @@ include "../backend/profilbk.php";?>
     </section>
     </footer>
 
+
+
+    <!-- Old design -->
+  <!-- <header>
+      <div class="banner-container">
+          <img src="/img/user.png" alt="user-image" class="user">
+          <a href="#" class="edit">EDITEAZĂ</a>
+      </div>
+  </header>
+
+  <div id="message"></div>
+
+
+  <div class="btn-container">
+  <a href="post.php" class="btn-post">Publică un anunţ</a>
+  </div>
+  <main>
+    <section class="section-1">
+      <h3 class="title">Anunţurile tale</h3>
+      <a href="" class="active-link">
+      <div class="active-section">
+        <h3>Anunţuri active</h3>
+        <div class="active-section-left">
+          <a href="#">2</a>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+        </a>
+      </div>
+      <div class="active-section">
+        <a href="" class="active-link">
+        <h3>Anunţuri dezactivate</h3>
+        <div class="active-section-left">
+          <a href="#">5</a>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+        </a>
+      </div>
+    </section>
+  </main> -->
   <script src="/js/nav.js"></script>
   <!-- Ion icons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
