@@ -1,7 +1,5 @@
 <?php  
 include "conn.php";
-if($conn){echo "OK";}
-  else{die("not ok");}
 
 session_start(); // Start the session
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
@@ -22,9 +20,10 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
       $image = $row[3];
       $name = $row[4];
       $skills = $row[5];
+      echo "<script>document.getElementById('image').innerHTML = '<img src=\'data:image/jpeg;base64," . base64_encode($image) . "\' alt=\'user image\' class=\'profile-img\'>';</script>";
       echo "<img src='data:image/jpeg;base64," . base64_encode($image) . "' />";
       echo "<script>document.getElementById('name').innerHTML = '{$name}';</script>";
       echo "<script>document.getElementById('skills').innerHTML = '{$skills}';</script>";
     }
     }
-}
+}?>
