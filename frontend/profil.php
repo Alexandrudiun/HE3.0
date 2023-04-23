@@ -83,45 +83,6 @@ include "../backend/profilbk.php";?><!DOCTYPE html>
     </section>
     </footer>
 
-
-
-    <!-- Old design -->
-  <!-- <header>
-      <div class="banner-container">
-          <img src="/img/user.png" alt="user-image" class="user">
-          <a href="#" class="edit">EDITEAZĂ</a>
-      </div>
-  </header>
-
-  <div id="message"></div>
-
-
-  <div class="btn-container">
-  <a href="post.php" class="btn-post">Publică un anunţ</a>
-  </div>
-  <main>
-    <section class="section-1">
-      <h3 class="title">Anunţurile tale</h3>
-      <a href="" class="active-link">
-      <div class="active-section">
-        <h3>Anunţuri active</h3>
-        <div class="active-section-left">
-          <a href="#">2</a>
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-        </div>
-        </a>
-      </div>
-      <div class="active-section">
-        <a href="" class="active-link">
-        <h3>Anunţuri dezactivate</h3>
-        <div class="active-section-left">
-          <a href="#">5</a>
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-        </div>
-        </a>
-      </div>
-    </section>
-  </main> -->
   <script src="/js/nav.js"></script>
   <!-- Ion icons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
