@@ -33,7 +33,7 @@ include "../backend/profilbk.php";?>
                         <ion-icon name="create-outline" class="icon"></ion-icon>
                     </div>
                     <div class="flex-edit">
-                        <a href="/backend/loginbk.php" class="logout">Logout</a>
+                        <a href="/backend/logoutbk.php" class="logout">Logout</a>
                         <ion-icon name="log-out-outline" class="icon"></ion-icon>
                     </div>
                 </div>
