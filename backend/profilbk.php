@@ -1,5 +1,8 @@
-<?php  echo"ok";
+<?php  
 include "conn.php";
+if($conn){echo "OK";}
+  else{die("not ok");}
+
 session_start(); // Start the session
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     $email = $_SESSION['email'];
