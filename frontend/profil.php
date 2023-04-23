@@ -15,10 +15,7 @@ include "../backend/profilbk.php";?><!DOCTYPE html>
     <main>
         <div class="center">
     <div class="profile-card">
-        <div class="image" id="image">
-             <img src="" alt="user image" class="profile-img">
-
-      </div> 
+        <div class="image" id="image"></div> 
         <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
             <span class="name"><?php echo $name?></span>
