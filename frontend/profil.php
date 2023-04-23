@@ -131,8 +131,8 @@
 <?php
 echo "ok1";
 session_start(); // Start the session
-echo "ok1";
-if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
+
+if(isset($_SESSION['email']) && isset($_SESSION['password'])) {echo "ok1";
     $email = $_SESSION['email'];
     $password = $_SESSION['password'];
     
