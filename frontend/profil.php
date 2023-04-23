@@ -49,8 +49,8 @@ include "../backend/profilbk.php";?>
     </div>
     
     </main>
-    <footer>
-        <!-- Navbar Down -->
+    <!-- Navbar Down -->
+    <footer>  
     <section class="nav-bar">
         <div class="navigation">
             <ul>
