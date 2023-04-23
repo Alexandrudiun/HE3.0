@@ -1,6 +1,7 @@
 <?php
 
-include "../backend/profilbk.php";?><!DOCTYPE html>
+//include "../backend/profilbk.php";?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
