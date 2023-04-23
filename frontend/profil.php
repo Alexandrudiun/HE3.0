@@ -16,7 +16,7 @@ include "../backend/profilbk.php";?><!DOCTYPE html>
         <div class="center">
     <div class="profile-card">
         <div class="image" id="image">
-             <img src="<php? echo {$image};?>" alt="user image" class="profile-img">
+             <img src="<php? echo {$imagine};?>" alt="user image" class="profile-img">
 
       </div> 
         <div class="text-data">
