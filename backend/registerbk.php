@@ -5,7 +5,7 @@
       $email = $_POST['email'];
       $password = $_POST['password'];
       //$confirm_password = $_POST['confirm-password'];
-
+      $default_image_path = "/img/user.png";
       // Check if email is already registered
       $query = "SELECT * FROM users WHERE email = '{$email}'";
       $select_user_query = mysqli_query($conn, $query);
@@ -24,7 +24,8 @@
       // }
 
       // Add new user to database
-      $query = "INSERT INTO users (email, password) VALUES ('{$email}', '{$password}')";
+      
+      $query = "INSERT INTO users (email, password, image) VALUES ('{$email}', '{$password}', '{$default_image_path}')";
       $add_user_query = mysqli_query($conn, $query);
       if(!$add_user_query) {
         die('Query Failed'. mysqli_error());
