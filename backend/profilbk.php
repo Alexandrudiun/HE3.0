@@ -21,11 +21,9 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
       $name = $row[4];
       $skills = $row[5];
      
+      
+    }
+    }
     
-    }
-    }
-    if(!$email_found) { echo "Email not found"; 
-      header("Location: ../index.php");}
-    else { echo "Email found";}
     }
 ?>
