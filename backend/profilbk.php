@@ -16,9 +16,10 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     while($row = mysqli_fetch_row($select_user_query)) {
         if($row[1] == $email && $row[2] == $password) {
             $email_found = true;
+            $image = $row[3];
             $name = $row[4];
             $skills = $row[5];
-            //echo "<img src='data:image/jpeg;base64," . base64_encode($image) . "' />";
+            echo "<img src='data:image/jpeg;base64," . base64_encode($image) . "' />";
             echo "<script>document.getElementById('name').innerHTML = '{$name}';</script>";
             echo "<script>document.getElementById('skills').innerHTML = '{$skills}';</script>";
         }
