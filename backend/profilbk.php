@@ -23,5 +23,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
 
 
 
-      $imagine = "data:image/jpeg;base64," . base64_encode($image);
-      echo "<img src='$imagine' alt='user image' class='profile-img'>";}}
+      //$imagine = "data:image/jpeg;base64," . base64_encode($image);
+    }
+    }
