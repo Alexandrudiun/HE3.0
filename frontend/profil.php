@@ -15,7 +15,7 @@ include "../backend/profilbk.php";?><!DOCTYPE html>
     <main>
         <div class="center">
     <div class="profile-card">
-        <div class="image" id="image">
+        <div class="image" style="width: 150px; height: 150px;">
        <?php echo "<img src='data:image/jpeg;base64," . base64_encode($image) . "' />";?>
 
       </div> 
