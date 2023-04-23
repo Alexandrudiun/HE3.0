@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profilul meu</title>
     <link rel="icon" href="/logos/logo192.jpg">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/css/index.css">
     <link rel="manifest" href="/manifest.json">
 </head>
 <body>
