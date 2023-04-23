@@ -44,7 +44,7 @@ body{
   top:50%;
   left:5px;
   transform: translateY(-50%);
-  color: #fff;
+  color: #222;
   font-size: 1em;
   pointer-events: none;
   transition: .5s;
@@ -63,7 +63,7 @@ input:valid ~ label{
   outline: none;
   font-size: 1em;
   padding: 0 35px 0 5px;
-  color: #fff;
+  color: #222;
 }
 
 .input-box ion-icon{
