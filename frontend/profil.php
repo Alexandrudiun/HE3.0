@@ -127,5 +127,5 @@
 </body>
 </html>
 <?php
-echo "da";
-include "../backend/profilbk.php";
+
+include "../backend/profilbk.php";echo "da";
