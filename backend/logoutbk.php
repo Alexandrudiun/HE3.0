@@ -1,5 +1,5 @@
 <?php
-function logoutanddeletecookies() {
+
   session_start();
   session_destroy();
   setcookie("email", "", time() - 3600);
@@ -12,6 +12,6 @@ function logoutanddeletecookies() {
     header("Location: ../index.php");
     exit;
   }
-}
-logoutanddeletecookies();
+
+
 ?>
