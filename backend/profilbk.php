@@ -1,5 +1,4 @@
 <?php
-echo "da";
 session_start(); // Start the session
 include "conn.php"; echo"lol";
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
@@ -22,6 +21,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
             $db_image = $row['image'];
         }
     }
-    echo "<h1>{$db_email}</h1>";
+    echo "<script>document.getElementById('name').innerHTML = '{$db_name}';</script>";
 }
 ?>

@@ -19,7 +19,7 @@
       </div> 
         <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
-            <span class="name"><div id="name">1</div></span>
+            <span class="name"><div id="name"></div></span>
             <span class="jobs"><div id="skills">1</div></span>
         </div>
     </div>
@@ -128,4 +128,4 @@
 </html>
 <?php
 
-include "../backend/profilbk.php";echo "da";
+include "../backend/profilbk.php";
