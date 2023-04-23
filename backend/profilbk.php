@@ -23,9 +23,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
      
       //echo "<script>document.getElementById('image').innerHTML = '<img src=\'data:image/jpeg;base64," . base64_encode($image) . "\' alt=\'user image\' class=\'profile-img\'>';</script>";
       echo "<img src='data:image/jpeg;base64," . base64_encode($image) . "' />";
-      echo "<script>document.getElementById('name').innerHTML = '1{$name}';</script>";
-      echo "<script>document.getElementById('skills').innerHTML = '{$skills}';</script>";
-      
     }
     }
 }?>

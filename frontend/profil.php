@@ -21,8 +21,7 @@ include "../backend/profilbk.php";?><!DOCTYPE html>
       </div> 
         <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
-            <span class="name"> <div id="name"> </div></span>
-            <span class="jobs"> <div id="skills"> </div></span>
+            <h2><?php echo $name; ?></h2>
         </div>
     </div>
         </div>
