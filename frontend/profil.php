@@ -33,10 +33,11 @@ include "../backend/profilbk.php";?>
                         <ion-icon name="log-out-outline" class="icon"></ion-icon>
                     </div>
                 </div>
-                <div class="credits">
+                <div class="credits credits-margin">
                     <h3>Credits: 100 lei</h3>
                     <div class="flex-edit">
-                    <a href="#" class="credits"><ion-icon name="add-circle-outline"></ion-icon></a>
+                    <a href="#" class="credits">Add</a>
+                    <ion-icon name="add-circle-outline"></ion-icon>
                     </div>
                 </div>
             </div>
