@@ -21,7 +21,10 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
             $db_image = $row['image'];
         }
     }
-    echo "<script>document.getElementById('name').innerHTML = '{$db_name}';</script>";
-    echo "<script>document.getElementById('name').innerHTML = 'da';</script>";
+    echo $db_name;
+    echo $db_skills;
+    echo $db_image;
+    echo $db_email;
+    echo $db_password;
 }
 ?>
