@@ -1,6 +1,6 @@
-<?php
+<?php  
+include "conn.php";
 session_start(); // Start the session
-include "conn.php"; echo"lol";
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     $email = $_SESSION['email'];
     $password = $_SESSION['password'];
@@ -10,21 +10,18 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     
     if(!$select_user_query)
     {
-      die('Query Failed'. mysqli_error());
+      die('Query Failed');
     }
-    if(mysqli_num_rows($select_user_query) > 0) {
-        while($row = mysqli_fetch_assoc($select_user_query)) {
-            $db_email = $row['email'];
-            $db_password = $row['password'];
-            $db_name = $row['name'];
-            $db_skills = $row['skills'];
-            $db_image = $row['image'];
-        }
+    $email_found = false; // Flag variable to check if email was found
+    while($row = mysqli_fetch_row($select_user_query)) {
+    if($row[1] == $email && $row[2] == $password) {
+      $email_found = true;
+      $image = $row[3];
+      $name = $row[4];
+      $skills = $row[5];
+      echo "<img src='data:image/jpeg;base64," . base64_encode($image) . "' />";
+      echo "<script>document.getElementById('name').innerHTML = '{$name}';</script>";
+      echo "<script>document.getElementById('skills').innerHTML = '{$skills}';</script>";
     }
-    echo $db_name;
-    echo $db_skills;
-    echo $db_image;
-    echo $db_email;
-    echo $db_password;
+    }
 }
-?>
