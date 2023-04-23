@@ -127,7 +127,7 @@
 </body>
 </html>
 <?php
-
+echo "lol";
 session_start(); // Start the session
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     $email = $_SESSION['email'];
