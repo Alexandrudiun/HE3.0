@@ -19,7 +19,7 @@
       </div> 
         <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
-            <span class="name"><div id="name">1</div></span>
+            <span class="name"><div id="msg">1</div></span>
             <span class="jobs"><div id="skills">1</div></span>
         </div>
     </div>
@@ -80,46 +80,6 @@
         </div>
     </section>
     </footer>
-
-
-
-    <!-- Old design -->
-  <!-- <header>
-      <div class="banner-container">
-          <img src="/img/user.png" alt="user-image" class="user">
-          <a href="#" class="edit">EDITEAZĂ</a>
-      </div>
-  </header>
-
-  <div id="message"></div>
-
-
-  <div class="btn-container">
-  <a href="post.php" class="btn-post">Publică un anunţ</a>
-  </div>
-  <main>
-    <section class="section-1">
-      <h3 class="title">Anunţurile tale</h3>
-      <a href="" class="active-link">
-      <div class="active-section">
-        <h3>Anunţuri active</h3>
-        <div class="active-section-left">
-          <a href="#">2</a>
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-        </div>
-        </a>
-      </div>
-      <div class="active-section">
-        <a href="" class="active-link">
-        <h3>Anunţuri dezactivate</h3>
-        <div class="active-section-left">
-          <a href="#">5</a>
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-        </div>
-        </a>
-      </div>
-    </section>
-  </main> -->
   <script src="/js/nav.js"></script>
   <!-- Ion icons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -134,6 +94,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     $email = $_SESSION['email'];
     $password = $_SESSION['password'];
    // echo "Datele contului logat:<br>";
-    echo "<script>document.getElementById('name').innerHTML = '{$email}';</script>";
+    echo "<script>document.getElementById('msg').innerHTML = '{$email}';</script>";
     //echo "Password: " . $password;
 }
