@@ -1,5 +1,5 @@
 <?php
-
+echo "da";
 session_start(); // Start the session
 include "conn.php"; echo"lol";
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
