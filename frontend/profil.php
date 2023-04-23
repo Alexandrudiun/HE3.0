@@ -25,7 +25,7 @@ include "../backend/profilbk.php";?>
                 <span class="jobs"><?php echo $skills?></span>
                 <div class="accout-settings">
                     <div class="flex-edit">
-                        <a href="form.html" class="edit">Edit Profile</a>
+                        <a href="profiledit.php" class="edit">Edit Profile</a>
                         <ion-icon name="create-outline" class="icon"></ion-icon>
                     </div>
                     <div class="flex-edit">
