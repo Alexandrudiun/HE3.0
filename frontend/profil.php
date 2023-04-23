@@ -1,6 +1,6 @@
 <?php
 
-//include "../backend/profilbk.php";?>
+include "../backend/profilbk.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

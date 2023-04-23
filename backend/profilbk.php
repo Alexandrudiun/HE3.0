@@ -25,4 +25,4 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
 
       //$imagine = "data:image/jpeg;base64," . base64_encode($image);
     }
-    }
+    } ?>
