@@ -12,11 +12,10 @@
 </head>
 <body>
     <main>
-      
+    
     </main>
   
-    <!-- Navbar Down -->
-    <footer>
+    <footer>  
     <section class="nav-bar">
         <div class="navigation">
             <ul>
