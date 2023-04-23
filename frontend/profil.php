@@ -19,7 +19,7 @@
       </div> 
         <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
-            <span class="name"><div id="msg"></div></span>
+            <span class="name"><div id="usr"></div></span>
             <span class="jobs"><div id="skills">1</div></span>
         </div>
     </div>
@@ -126,15 +126,19 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
+
+
 <?php
-echo "lol";
+echo "ok1";
 session_start(); // Start the session
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     $email = $_SESSION['email'];
     $password = $_SESSION['password'];
+    echo "ok2";
    // echo "Datele contului logat:<br>";
-    echo "<script>document.getElementById('msg').innerHTML = '{$email}';</script>";
+    echo "<script>document.getElementById('usr').innerHTML = '{$email}';</script>";
     //echo "Password: " . $password;
+    echo "ok3";
 }
 
 
