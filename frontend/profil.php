@@ -16,13 +16,13 @@ include "../backend/profilbk.php";?><!DOCTYPE html>
         <div class="center">
     <div class="profile-card">
         <div class="image" id="image">
-             <img src="/img/user.png" alt="user image" class="profile-img">
+        echo "<img src='data:image/jpeg;base64," . base64_encode($image) . "' />";
 
       </div> 
         <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
-            <span class="name"> <?php echo $name?></span>
-            <span class="jobs"> <?php echo $skills?></span>
+            <span class="name"><?php echo $name?></span>
+            <span class="jobs"><?php echo $skills?></span>
         </div>
     </div>
         </div>
