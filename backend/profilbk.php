@@ -1,4 +1,4 @@
-<?php  
+<?php  echo"ok";
 include "conn.php";
 session_start(); // Start the session
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
