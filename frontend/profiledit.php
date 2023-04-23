@@ -11,42 +11,32 @@
     <link rel="manifest" href="/manifest.json">
 </head>
 <body>
-<main>
-        <div class="center">
-            <div class="profile-card">
-                <div class="image">
-                    <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="<?=$name?>" class="profile-img">
-            </div>
-            <div class="text-data">
-            <!-- Aici vine php cu echo si script pentru email -->
-                <span class="name"><?php echo $name?></span>
-                <span class="jobs"><?php echo $skills?></span>
-                <div class="accout-settings">
-                    <div class="flex-edit">
-                        <a href="profiledit.php" class="edit">Edit Profile</a>
-                        <ion-icon name="create-outline" class="icon"></ion-icon>
-                    </div>
-                    <div class="flex-edit">
-                        <a href="" class="logout">Logout</a>
-                        <ion-icon name="log-out-outline" class="icon"></ion-icon>
-                    </div>
-                </div>
-                <div class="credits credits-margin">
-                    <h3>Credits: 100 lei</h3>
-                    <div class="flex-edit">
-                    <a href="#" class="credits">Add</a>
-                    <ion-icon name="add-circle-outline"></ion-icon>
-                    </div>
-                </div>
-            </div>
+  <div class="center">
+    <div class="profile-card">
+      <form action="#">
+        <div class="input-box">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="text" id="name" name="name">
+          <label for="">Name</label>
         </div>
+        <div class="input-box">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="email" id="email" name="email">
+          <label for="">Email</label>
         </div>
-
-    <div class="btn-container">
-        <a href="post.php" class="btn-post">Publică un anunţ</a>
+        <div class="input-box">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="text" id="skills" name="skills">
+          <label for="">Skills</label>
+        </div>
+        <div class="input-box">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="file" id="imageFile" capture="user" accept="image/*"name="image">
+          <label for="">Change Profile Picture</label>
+        </div>
+      </form>
     </div>
-    
-    </main>
+  </div>
 
 <footer>  
     <section class="nav-bar">
