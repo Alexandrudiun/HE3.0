@@ -10,6 +10,7 @@ include "../backend/profilbk.php";?>
     <title>Profilul meu</title>
     <link rel="icon" href="/logos/logo192.jpg">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="manifest" href="/manifest.json">
 </head>
 <body>
