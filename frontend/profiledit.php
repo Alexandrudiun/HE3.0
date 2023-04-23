@@ -14,8 +14,7 @@
     <main>
 
     </main>
-  
-    <footer>  
+    
     <section class="nav-bar">
         <div class="navigation">
             <ul>
@@ -63,7 +62,6 @@
             </ul>
         </div>
     </section>
-    </footer>
 
 </body>
 </html>
