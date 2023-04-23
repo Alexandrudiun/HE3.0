@@ -14,7 +14,7 @@
     <div class="profile-card">
       <form action="#">
         <div class="input-box">
-          <ion-icon name="mail-outline"></ion-icon>
+        <ion-icon name="person-outline"></ion-icon>
           <input type="text" id="name" name="name">
           <label for="">Name</label>
         </div>
