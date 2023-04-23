@@ -19,7 +19,7 @@
       </div> 
         <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
-            <span class="name"><div id="msg">1</div></span>
+            <span class="name"><div id="name">1</div></span>
             <span class="jobs"><div id="skills">1</div></span>
         </div>
     </div>
@@ -94,6 +94,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     $email = $_SESSION['email'];
     $password = $_SESSION['password'];
    // echo "Datele contului logat:<br>";
-    echo "<script>document.getElementById('msg').innerHTML = '{$email}';</script>";
+    echo "<script>document.getElementById('name').innerHTML = '{$email}';</script>";
     //echo "Password: " . $password;
 }
