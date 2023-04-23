@@ -14,11 +14,9 @@
         <div class="center">
     <div class="profile-card">
         <div class="image" id="image">
-            <!-- <img src="/img/user.png" alt="user image" class="profile-img">
-         -->
-        <?php while($row = $result->fetch_assoc()){ ?> 
-            <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['photo']); ?>" /> 
-        <?php } ?> </div>
+             <img src="/img/user.png" alt="user image" class="profile-img">
+        
+      </div> 
         <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
             <span class="name"><div id="name">1</div></span>
