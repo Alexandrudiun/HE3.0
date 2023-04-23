@@ -131,14 +131,15 @@
 <?php
 echo "ok1";
 session_start(); // Start the session
+echo "ok1";
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     $email = $_SESSION['email'];
     $password = $_SESSION['password'];
-    echo "ok2";
+    
    // echo "Datele contului logat:<br>";
     echo "<script>document.getElementById('usr').innerHTML = '{$email}';</script>";
     //echo "Password: " . $password;
-    echo "ok3";
+    
 }
 
 
