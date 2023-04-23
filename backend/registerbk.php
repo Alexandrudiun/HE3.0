@@ -25,7 +25,7 @@
 
       // Add new user to database
       
-      $query = "INSERT INTO users (email, password, image) VALUES ('{$email}', '{$password}', '{$default_image_path}')";
+      $query = "INSERT INTO users (email, password, photo) VALUES ('{$email}', '{$password}', '{$default_image_path}')";
       $add_user_query = mysqli_query($conn, $query);
       if(!$add_user_query) {
         die('Query Failed'. mysqli_error());
