@@ -1,6 +1,7 @@
 <?php
-include "conn.php";
+
 session_start(); // Start the session
+include "conn.php"; echo"lol";
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     $email = $_SESSION['email'];
     $password = $_SESSION['password'];
