@@ -35,6 +35,9 @@
           <input type="file" id="imageFile" capture="user" accept="image/*"name="image">
           <label for="">Change Profile Picture</label>
         </div>
+        <div class="button">
+          <input type="submit" name="submit" value="Save" class="btn-login">
+          </div>
       </form>
     </div>
   </div>
