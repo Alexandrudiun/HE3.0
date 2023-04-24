@@ -13,7 +13,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
       $update_user_query = mysqli_query($conn, $query);
       if(!$update_user_query) {
         die("Query Failed" . mysqli_error($conn));
-      }
-      header("Location: ../frontend/profil.php");
+      } echo $image;
+      //header("Location: ../frontend/profil.php");
     }
 }?>
