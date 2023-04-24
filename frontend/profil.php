@@ -39,9 +39,8 @@ include "../backend/profilbk.php";?>
                     </div>
                 </div>
                 <div class="credits credits-box">
-                    <h3>Credits: 100 lei</h3>
                     <div class="flex-button">
-                    <a href="#" class="credits">Add</a>
+                    <a href="#" class="credits">Credits: 100 lei</a>
                     <ion-icon name="add-circle-outline"></ion-icon>
                     </div>
                 </div>
