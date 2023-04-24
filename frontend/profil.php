@@ -17,12 +17,14 @@ include "../backend/profilbk.php";?>
     <main>
         <div class="center">
             <div class="profile-card">
-                <div class="image">
-                    <?php if($image==NULL)
-                        echo "<img src='/img/user.png' class='profile-img'>"?>
-                    <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="profile picture of<?=$name?>" class="profile-img">
-                    </img>
-            </div>
+            <div class="image">
+    <?php if($image==NULL): ?>
+        <img src='/img/user.png' class='profile-img'>
+    <?php else: ?>
+        <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="profile picture of <?=$name?>" class="profile-img">
+    <?php endif; ?>
+</div>
+
             <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
                 <span class="name"><?php echo $name?></span>
