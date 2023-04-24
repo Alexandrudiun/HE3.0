@@ -13,9 +13,9 @@
 </head>
 
 <body>
-  <div class="center">
+<div class="center">
     <div class="profile-card">
-      <form action="#" method="post">
+      <form action="#" method="post" enctype="multipart/form-data">
         <h1>Edit Profile</h1>
         <div class="input-box">
           <ion-icon name="person-outline"></ion-icon>
@@ -29,7 +29,7 @@
         </div>
         <div class="input-box">
           <ion-icon name="camera-outline"></ion-icon>
-          <input type="file" accept="image/*" capture class="upload-image" id="image">
+          <input type="file" accept="image/*" name="image" class="upload-image" id="image">
           <label for="">Change Profile Picture</label>
         </div>
         <div class="button">
@@ -37,8 +37,7 @@
           </div>
       </form>
     </div>
-  </div>
-
+  </div>  
 <footer>  
     <section class="nav-bar">
         <div class="navigation">
