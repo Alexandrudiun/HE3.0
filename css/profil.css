@@ -94,15 +94,18 @@ h3{
   margin-top:5px ;
 }
 
-.flex-edit{
+.flex-button{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:10px;
   background: #45cafc;
   padding: 5px;
   border-radius: 10px;
   color: #fff;
+}
+
+.flex-edit{
+  gap:10px;
 }
 
 .edit,

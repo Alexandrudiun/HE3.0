@@ -30,17 +30,19 @@ include "../backend/profilbk.php";?>
                 <span class="jobs"><?php echo $skills?></span>
                 <div class="accout-settings">
                     <div class="flex-edit">
+                    <div class="flex-button">
                         <a href="profiledit.php" class="edit">Edit Profile</a>
                         <ion-icon name="create-outline" class="icon"></ion-icon>
                     </div>
-                    <div class="flex-edit">
+                    <div class="flex-button">
                         <a href="/backend/logoutbk.php" class="logout">Logout</a>
                         <ion-icon name="log-out-outline" class="icon"></ion-icon>
+                    </div>
                     </div>
                 </div>
                 <div class="credits credits-box">
                     <h3>Credits: 100 lei</h3>
-                    <div class="flex-edit">
+                    <div class="flex-button">
                     <a href="#" class="credits">Add</a>
                     <ion-icon name="add-circle-outline"></ion-icon>
                     </div>
