@@ -32,7 +32,7 @@
         </div>
         <div class="input-box">
           <ion-icon name="mail-outline"></ion-icon>
-          <input type="file" id="imageFile" capture="user" accept="image/*"name="image">
+          <input type="file" accept="image/*" capture>
           <label for="">Change Profile Picture</label>
         </div>
         <div class="button">

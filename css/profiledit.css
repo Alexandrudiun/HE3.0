@@ -87,3 +87,7 @@ input.btn-login{
   font-size: 1em;
   font-weight: 600;
 }
+
+#imageFile{
+  top:5px
+}
