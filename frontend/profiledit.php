@@ -15,7 +15,7 @@
   <div class="center">
     <div class="profile-card">
       <form action="#">
-        <h1>Login</h1>
+        <h1>Edit Profile</h1>
         <div class="input-box">
           <ion-icon name="person-outline"></ion-icon>
           <input type="text" id="name" name="name">
