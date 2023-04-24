@@ -1,7 +1,5 @@
-<!-- https://www.php.net/session_destroy -->
 <?php 
 // Initialize the session.
-// If you are using session_name("something"), don't forget it now!
 session_start();
 
 // Unset all of the session variables.
@@ -19,5 +17,18 @@ if (ini_get("session.use_cookies")) {
 
 // Finally, destroy the session.
 session_destroy();
+
+// Prevent caching of this page
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+header("Expires: Sat, 01 Jan 2000 00:00:00 GMT");
+
+// Prevent the user from going back to the previous page
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: 0");
+
+// Redirect the user to the index page
 header("Location: ../index.php");
+exit;
 ?>
