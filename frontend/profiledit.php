@@ -15,8 +15,9 @@
   <div class="center">
     <div class="profile-card">
       <form action="#">
+        <h1>Login</h1>
         <div class="input-box">
-          <ion-icon name="mail-outline"></ion-icon>
+          <ion-icon name="person-outline"></ion-icon>
           <input type="text" id="name" name="name">
           <label for="">Name</label>
         </div>
@@ -26,12 +27,12 @@
           <label for="">Email</label>
         </div>
         <div class="input-box">
-          <ion-icon name="mail-outline"></ion-icon>
+          <ion-icon name="build-outline"></ion-icon>
           <input type="text" id="skills" name="skills">
           <label for="">Skills</label>
         </div>
         <div class="input-box">
-          <ion-icon name="mail-outline"></ion-icon>
+          <ion-icon name="camera-outline"></ion-icon>
           <input type="file" accept="image/*" capture class="upload-image" id="image">
           <label for="">Change Profile Picture</label>
         </div>
