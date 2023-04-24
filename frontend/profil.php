@@ -27,9 +27,7 @@ include "../backend/profilbk.php";?>
             <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
                 <span class="name"><?php echo $name?></span>
-            <div class="column-layout">
                 <span class="jobs"><?php echo $skills?></span>
-            </div>
                 <div class="accout-settings">
                     <div class="flex-button">
                         <a href="profiledit.php" class="edit">Edit Profile</a>

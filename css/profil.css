@@ -63,11 +63,6 @@ h3{
   font-weight: 400;
 }
 
-.column-layout {
-  column-count: 2; /* Set the number of columns */
-  column-gap: 20px; /* Set the gap between columns */
-}
-
 .jobs{
   font-size: 14px;
   font-weight: 400;
