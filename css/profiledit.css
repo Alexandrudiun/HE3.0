@@ -62,13 +62,9 @@ input:valid ~ label{
   top:-10px;
 }
 
-input[type="file"]::-webkit-file-upload-button {
-  background-color: #ccc;
-  color: white;
+input[type="file"] {
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+  outline: none;
 }
 
 .input-box input{
