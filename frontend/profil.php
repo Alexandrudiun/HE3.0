@@ -21,7 +21,7 @@ include "../backend/profilbk.php";?>
                     <?php if($image==NULL)
                         echo "<img src='/img/user.png' class='profile-img'>"?>
                     <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="<?=$name?>" class="profile-img">
-
+                    </img>
             </div>
             <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
