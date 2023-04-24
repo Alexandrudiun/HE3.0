@@ -28,7 +28,7 @@
         </div>
         <div class="input-box">
           <ion-icon name="build-outline"></ion-icon>
-          <input type="text" id="skills" name="skills">
+          <input type="text" id="skills" name="skills" rows="4">
           <label for="">Skills</label>
         </div>
         <div class="input-box">
