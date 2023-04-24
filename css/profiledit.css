@@ -78,6 +78,7 @@ input:valid ~ label{
 
 #image{
   max-width: 80%;
+  word-wrap: break-word;
   margin-top: 8px;
   color: #222;
   border: none;
