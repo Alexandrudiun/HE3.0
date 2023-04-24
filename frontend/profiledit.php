@@ -37,7 +37,7 @@
           </div>
       </form>
     </div>
-  </div>  
+  </div> 
 <footer>  
     <section class="nav-bar">
         <div class="navigation">

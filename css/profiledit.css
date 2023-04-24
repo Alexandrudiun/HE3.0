@@ -62,12 +62,9 @@ input:valid ~ label{
   top:-10px;
 }
 
-input[type="file"] {
-  border: none;
-  outline: none;
-}
-
-.input-box input{
+#name,
+#skills
+{
   border: 1px #222 solid;
   border-radius: 10px;
   width: 100%;
@@ -79,7 +76,14 @@ input[type="file"] {
   color: #222;
 }
 
-
+#image{
+  max-width: 80%;
+  word-wrap: break-word;
+  margin-top: 8px;
+  color: #222;
+  border: none;
+  cursor: pointer;
+}
 
 .input-box ion-icon{
   position: absolute;
