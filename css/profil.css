@@ -67,6 +67,7 @@ h3{
   font-size: 14px;
   font-weight: 400;
   color: #3c3c3c;
+  word-wrap: break-word;
 }
 
 .btn-container{
