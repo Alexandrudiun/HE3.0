@@ -28,8 +28,9 @@
           <label for="">Skills</label>
         </div>
         <div class="input-box">
-          <input type="file" accept="image/*" name="image" class="upload-image" id="image">
-          <label for="">Change Profile Picture</label>
+        <ion-icon name="camera-outline"></ion-icon>
+        <input type="file" accept="image/*" capture class="upload-image" id="image" onchange="updateFileName()">
+        <label for="image" id="file-label">Choose file</label>
         </div>
         <div class="button">
           <input type="submit" name="submit" value="Save" class="btn-login">
