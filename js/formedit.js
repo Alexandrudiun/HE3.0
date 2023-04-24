@@ -1,6 +1,13 @@
-function updateFileName() {
-  const input = document.getElementById('image');
-  const label = document.getElementById('file-label');
-  const fileName = input.files[0].name;
-  label.innerHTML = fileName;
+function previewFile() {
+  const preview = document.getElementById('preview');
+  const file = document.querySelector('input[type=file]').files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener("load", function () {
+    preview.innerHTML = `<img src="${reader.result}" alt="preview image">`;
+  }, false);
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
 }

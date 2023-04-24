@@ -32,6 +32,9 @@
         <input type="file" accept="image/*" capture class="upload-image" id="image" onchange="updateFileName()">
         <label for="image" id="file-label">Choose file</label>
         </div>
+        <div class="preview-box">
+        <p id="preview"></p>
+        </div>
         <div class="button">
           <input type="submit" name="submit" value="Save" class="btn-login">
           </div>
