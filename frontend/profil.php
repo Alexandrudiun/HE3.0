@@ -24,7 +24,12 @@ include "../backend/profilbk.php";?>
         <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="profile picture of <?=$name?>" class="profile-img">
     <?php endif; ?>
 </div>
-
+            <div class="image">
+                    <?php if($image==NULL)
+                        echo "<img src='/img/user.png' class='profile-img'>"?>
+                    <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="profile picture of<?=$name?>" class="profile-img">
+                    </img>
+            </div>
             <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
                 <span class="name"><?php echo $name?></span>
@@ -39,7 +44,7 @@ include "../backend/profilbk.php";?>
                         <ion-icon name="log-out-outline" class="icon"></ion-icon>
                     </div>
                 </div>
-                <div class="credits credits-margin">
+                <div class="credits credits-box">
                     <h3>Credits: 100 lei</h3>
                     <div class="flex-edit">
                     <a href="#" class="credits">Add</a>
