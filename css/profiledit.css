@@ -78,10 +78,9 @@ input:valid ~ label{
 
 #image{
   margin-top: 8px;
-  background-color: #ccc;
   color: #222;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
