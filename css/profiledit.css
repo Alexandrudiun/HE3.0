@@ -82,7 +82,6 @@ input:valid ~ label{
   margin-top: 8px;
   color: #222;
   border: none;
-  border-radius: 10px;
   cursor: pointer;
 }
 
