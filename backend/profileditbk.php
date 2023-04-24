@@ -14,6 +14,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
       if(!$update_user_query) {
         die("Query Failed" . mysqli_error($conn));
       }
-      header("Location: Home1.php");
+      header("Location: ../frontend/profil.php");
     }
 }?>

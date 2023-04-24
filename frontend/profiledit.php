@@ -11,20 +11,16 @@
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="manifest" href="/manifest.json">
 </head>
+
 <body>
   <div class="center">
     <div class="profile-card">
-      <form action="#">
+      <form action="#" method="post">
         <h1>Edit Profile</h1>
         <div class="input-box">
           <ion-icon name="person-outline"></ion-icon>
           <input type="text" id="name" name="name">
           <label for="">Name</label>
-        </div>
-        <div class="input-box">
-          <ion-icon name="mail-outline"></ion-icon>
-          <input type="email" id="email" name="email">
-          <label for="">Email</label>
         </div>
         <div class="input-box">
           <ion-icon name="build-outline"></ion-icon>
