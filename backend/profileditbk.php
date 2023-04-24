@@ -9,7 +9,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
       $name = $_POST['name'];
       $skills = $_POST['skills'];
       $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
-      $query = "UPDATE users SET name = '{$name}', skills = '{$skills}', image = '{$image}' WHERE email = '{$email}'";
+      $query = "UPDATE users SET name = '{$name}', skills = '{$skills}', photos = '{$image}' WHERE email = '{$email}'";
       $update_user_query = mysqli_query($conn, $query);
       if(!$update_user_query) {
         die("Query Failed" . mysqli_error($conn));
