@@ -39,7 +39,7 @@ include "../backend/profilbk.php";?>
                     </div>
                 </div>
                 <div class="credits credits-box">
-                    <a href="#" class="credits">Credits: 100 lei</a>
+                    <a href="#" class="credits">Credits: <?php echo $credit; ?> RON</a>
                     <ion-icon name="add-circle-outline"></ion-icon>
                 </div>
             </div>
