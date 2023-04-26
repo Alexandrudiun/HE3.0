@@ -17,6 +17,12 @@ include "../backend/profilbk.php";?>
     <main>
         <div class="center">
             <div class="profile-card">
+            <div class="toggle-container">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
             <div class="image">
             <?php if($image==NULL): ?>
             <img src='/img/user.png' class='profile-img'>
@@ -48,16 +54,7 @@ include "../backend/profilbk.php";?>
 
     <div class="btn-container">
         <a href="post.php" class="btn-post">Publică un anunţ</a>
-    </div>
-
-            <div class="toggle-container">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-
-    
+    </div>    
     </main>
     <!-- Navbar Down -->
     <footer>  
