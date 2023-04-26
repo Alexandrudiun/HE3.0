@@ -1,63 +1,46 @@
-const toggleButton = document.querySelector('#toggle-button');
-const originalStyles = {};
+// Select the toggle button
+const toggleBtn = document.querySelector("#toggleBtn");
 
-function invertColor(hex) {
-  return '#' + hex.slice(1).split('').map(c => (15 - parseInt(c, 16)).toString(16)).join('');
-}
+// Add a click event listener to the toggle button
+toggleBtn.addEventListener("click", function () {
+  // Select all elements with a style property that contains a value with #ff9800
+  const elements = document.querySelectorAll("[style*=#ff9800]");
+  
+  // Loop through each element and update its styles
+  elements.forEach((el) => {
+    const styles = window.getComputedStyle(el);
+    if (styles.backgroundColor === "rgb(255, 152, 0)") {
+      el.style.backgroundColor = "#e91e63";
+    }
+    if (styles.boxShadow === "rgb(255, 152, 0) 0px 0px 10px") {
+      el.style.boxShadow = "#e91e63 0px 0px 10px";
+    }
+    if (styles.border === "rgb(255, 152, 0) solid 1px") {
+      el.style.border = "#e91e63 solid 1px";
+    }
+  });
+  
+  // Toggle the class of the toggle button to change its appearance
+  toggleBtn.classList.toggle("active");
+});
 
-function invertStyles() {
-  const elements = document.querySelectorAll('*');
-  for (let i = 0; i < elements.length; i++) {
-    const styles = getComputedStyle(elements[i]);
-    if (styles.backgroundColor && styles.backgroundColor !== 'rgba(0, 0, 0, 0)') {
-      originalStyles[elements[i]] = originalStyles[elements[i]] || {};
-      originalStyles[elements[i]].backgroundColor = styles.backgroundColor;
-      elements[i].style.backgroundColor = invertColor(styles.backgroundColor);
-    }
-    if (styles.boxShadow) {
-      originalStyles[elements[i]] = originalStyles[elements[i]] || {};
-      originalStyles[elements[i]].boxShadow = styles.boxShadow;
-      const boxShadowParts = styles.boxShadow.split(' ');
-      const invertedColor = invertColor(boxShadowParts[boxShadowParts.length - 1]);
-      boxShadowParts[boxShadowParts.length - 1] = invertedColor;
-      elements[i].style.boxShadow = boxShadowParts.join(' ');
-    }
-    if (styles.border && styles.border !== 'none') {
-      originalStyles[elements[i]] = originalStyles[elements[i]] || {};
-      originalStyles[elements[i]].border = styles.border;
-      const borderParts = styles.border.split(' ');
-      const invertedColor = invertColor(borderParts[borderParts.length - 1]);
-      borderParts[borderParts.length - 1] = invertedColor;
-      elements[i].style.border = borderParts.join(' ');
-    }
-  }
-}
-
-function revertStyles() {
-  const elements = document.querySelectorAll('*');
-  for (let i = 0; i < elements.length; i++) {
-    const styles = originalStyles[elements[i]];
-    if (styles) {
-      if (styles.backgroundColor) {
-        elements[i].style.backgroundColor = styles.backgroundColor;
+// Add a click event listener to the page to revert to the original colors when the toggle button is pressed again
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("active")) {
+    const elements = document.querySelectorAll("[style*=#e91e63]");
+    elements.forEach((el) => {
+      const styles = window.getComputedStyle(el);
+      if (styles.backgroundColor === "rgb(233, 30, 99)") {
+        el.style.backgroundColor = "#ff9800";
       }
-      if (styles.boxShadow) {
-        elements[i].style.boxShadow = styles.boxShadow;
+      if (styles.boxShadow === "rgb(233, 30, 99) 0px 0px 10px") {
+        el.style.boxShadow = "#ff9800 0px 0px 10px";
       }
-      if (styles.border) {
-        elements[i].style.border = styles.border;
+      if (styles.border === "rgb(233, 30, 99) solid 1px") {
+        el.style.border = "#ff9800 solid 1px";
       }
-    }
-  }
-  originalStyles = {};
-}
-
-toggleButton.addEventListener('click', () => {
-  if (toggleButton.classList.contains('active')) {
-    toggleButton.classList.remove('active');
-    revertStyles();
-  } else {
-    toggleButton.classList.add('active');
-    invertStyles();
+    });
+    
+    toggleBtn.classList.remove("active");
   }
 });
