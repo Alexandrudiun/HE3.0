@@ -26,6 +26,7 @@ h3{
   justify-content: center;
 }
 .profile-card{
+  position: relative;
   margin: 10px;
   max-width: 450px;
   display: flex;
