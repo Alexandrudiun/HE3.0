@@ -1,10 +1,15 @@
-  const toggleInput = document.getElementById('toggle-input');
-  const toggleContainer = document.querySelector('.toggle-container');
+const toggleButton = document.getElementById('toggle-button');
 
-  toggleInput.addEventListener('change', () => {
-    if (toggleInput.checked) {
-      toggleContainer.style.backgroundColor = '#e91e63';
-    } else {
-      toggleContainer.style.backgroundColor = toggleContainer.getAttribute('data-color');
+toggleButton.addEventListener('click', function() {
+  const elements = document.querySelectorAll('*');
+  
+  for(let i = 0; i < elements.length; i++) {
+    const element = elements[i];
+    const styles = getComputedStyle(element);
+    const color = styles.getPropertyValue('color');
+
+    if(color === 'rgb(255, 152, 0)') {
+      element.style.color = '#e91e63';
     }
-  });
+  }
+});

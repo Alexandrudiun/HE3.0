@@ -17,9 +17,9 @@ include "../backend/profilbk.php";?>
     <main>
         <div class="center">
             <div class="profile-card">
-            <div class="toggle-container" data-color="#ff9800">
+            <div class="toggle-container">
                 <label class="switch">
-                    <input type="checkbox" id="toggle-input">
+                    <input type="checkbox" id="toggle-button">
                     <span class="slider round"></span>
                 </label>
             </div>
