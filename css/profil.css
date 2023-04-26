@@ -127,7 +127,6 @@ h3{
 }
  /* Toggle button */
 
- /* Toggle button */
 .toggle-container {
   position: absolute;
   top: 10px;
@@ -152,7 +151,7 @@ h3{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #ff9800;
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 34px;
@@ -172,11 +171,11 @@ h3{
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #e91e63;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #e91e63;
 }
 
 input:checked + .slider:before {
