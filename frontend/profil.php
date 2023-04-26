@@ -49,6 +49,14 @@ include "../backend/profilbk.php";?>
     <div class="btn-container">
         <a href="post.php" class="btn-post">Publică un anunţ</a>
     </div>
+
+            <div class="toggle-container">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
     
     </main>
     <!-- Navbar Down -->
