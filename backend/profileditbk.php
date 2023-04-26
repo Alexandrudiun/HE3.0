@@ -11,9 +11,9 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
         $image_name = addslashes($_FILES['image']['name']);
         $image_size = getimagesize($_FILES['image']['tmp_name']);
 
-        if($image_size == false) {
-            die("Invalid image.");
-        }
+        // if($image_size == false) {
+        //     die("Invalid image.");
+        // }
 
         $query = "UPDATE users SET name = '$name', skills = '$skills', photo = '$image' WHERE email = '$email'";
         $update_user_query = mysqli_query($conn, $query);
