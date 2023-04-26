@@ -17,9 +17,9 @@ include "../backend/profilbk.php";?>
     <main>
         <div class="center">
             <div class="profile-card">
-            <div class="toggle-container">
+            <div class="toggle-container" data-color="#ff9800">
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="toggle-input">
                     <span class="slider round"></span>
                 </label>
             </div>
@@ -106,7 +106,8 @@ include "../backend/profilbk.php";?>
         </div>
     </section>
     </footer>
-  <script src="/js/nav.js"></script>
+    <script src="/js/toggleinput.js"></script>
+    <script src="/js/nav.js"></script>
   <!-- Ion icons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
