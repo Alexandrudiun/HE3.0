@@ -2,7 +2,7 @@ const toggleButton = document.querySelector('#toggle-button');
 
 
 toggleButton.addEventListener('click', () =>{
-  document.documentElement.style.setProperty('--worker-color' , '--prestator-color');
+  document.documentElement.style.setProperty('--worker-color' , '#e91e63');
 });
 
 
