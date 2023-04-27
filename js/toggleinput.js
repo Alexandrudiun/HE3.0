@@ -9,13 +9,13 @@ toggleBtn.addEventListener("click", function () {
   // Loop through each element and update its styles
   elements.forEach((el) => {
     const styles = window.getComputedStyle(el);
-    if (styles.backgroundColor === "rgb(255, 152, 0)") {
-      el.style.backgroundColor = "#e91e63";
+    if (styles.background === "#ff9800") {
+      el.style.background = "#e91e63";
     }
-    if (styles.boxShadow === "rgb(255, 152, 0) 0px 0px 10px") {
+    if (styles.boxShadow === "#ff9800 0px 0px 10px") {
       el.style.boxShadow = "#e91e63 0px 0px 10px";
     }
-    if (styles.border === "rgb(255, 152, 0) solid 1px") {
+    if (styles.border === "#ff9800 solid 1px") {
       el.style.border = "#e91e63 solid 1px";
     }
   });
@@ -30,13 +30,13 @@ document.addEventListener("click", function (event) {
     const elements = document.querySelectorAll("[style*='#e91e63']");
     elements.forEach((el) => {
       const styles = window.getComputedStyle(el);
-      if (styles.backgroundColor === "rgb(233, 30, 99)") {
-        el.style.backgroundColor = "#ff9800";
+      if (styles.background === "#e91e63") {
+        el.style.background = "#ff9800";
       }
-      if (styles.boxShadow === "rgb(233, 30, 99) 0px 0px 10px") {
+      if (styles.boxShadow === "#e91e63 0px 0px 10px") {
         el.style.boxShadow = "#ff9800 0px 0px 10px";
       }
-      if (styles.border === "rgb(233, 30, 99) solid 1px") {
+      if (styles.border === "#e91e63 solid 1px") {
         el.style.border = "#ff9800 solid 1px";
       }
     });
