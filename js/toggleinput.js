@@ -4,7 +4,7 @@ const toggleBtn = document.querySelector("#toggle-button");
 // Add a click event listener to the toggle button
 toggleBtn.addEventListener("click", function () {
   // Select all elements with a style property that contains a value with #ff9800
-  const elements = document.querySelectorAll("[style*=#ff9800]");
+  const elements = document.querySelectorAll("[style*='#ff9800']");
   
   // Loop through each element and update its styles
   elements.forEach((el) => {
@@ -27,7 +27,7 @@ toggleBtn.addEventListener("click", function () {
 // Add a click event listener to the page to revert to the original colors when the toggle button is pressed again
 document.addEventListener("click", function (event) {
   if (event.target.classList.contains("active")) {
-    const elements = document.querySelectorAll("[style*=#e91e63]");
+    const elements = document.querySelectorAll("[style*='#e91e63']");
     elements.forEach((el) => {
       const styles = window.getComputedStyle(el);
       if (styles.backgroundColor === "rgb(233, 30, 99)") {
