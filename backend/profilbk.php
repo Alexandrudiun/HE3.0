@@ -2,10 +2,14 @@
 include "conn.php";
 
 session_start(); // Start the session
+
+
+
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     $email = $_SESSION['email'];
     $password = $_SESSION['password'];
 
+    
     $query="SELECT * FROM users WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn, $query);
     
@@ -25,6 +29,10 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
       
     }
     }
-    
+    if(($row[8] == 2 && $row[9] == 2))
+             { 
+               header("Location: ../frontend/profiletype.php");
+             }
+             
     }
 ?>
