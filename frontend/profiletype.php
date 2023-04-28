@@ -27,7 +27,7 @@
             </div>
             <div>
               <label>
-                <input type="checkbox" id="worker" name="worker">
+                <input type="checkbox" id="worker" name="buyer">
                 <span>Cumpărator</span>
               </label>
             </div>
@@ -45,3 +45,5 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
+<?php
+include "../backend/profiletypebk.php";

@@ -25,6 +25,10 @@ include "conn.php";
         if($row[2] === $password) {
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
+            if(!($row[8] == 1 || $row[9] == 1))
+             {
+                header("Location: /frontend/profiletype.php");
+             }
             echo "<script>document.getElementById('message').innerHTML = 'Te-ai logat cu succes';</script>";
             header("Location: /frontend/profil.php");
             exit; // Exit script after successful login
