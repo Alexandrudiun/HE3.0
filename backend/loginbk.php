@@ -26,12 +26,12 @@ include "conn.php";
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
             if(!($row[8] == 2 && $row[9] == 2))
-             { echo"daaaaa";
-               // header("Location: ../frontend/profiletype.php");
+             { 
+               header("Location: ../frontend/profiletype.php");
              }
-            // echo "<script>document.getElementById('message').innerHTML = 'Te-ai logat cu succes';</script>";
-            // header("Location: /frontend/profil.php");
-            // exit; // Exit script after successful login
+            echo "<script>document.getElementById('message').innerHTML = 'Te-ai logat cu succes';</script>";
+            header("Location: /frontend/profil.php");
+            exit;//  Exit script after successful login
         }
         else {
             echo "<script>document.getElementById('message').innerHTML = 'Parola incorecta';</script>";
