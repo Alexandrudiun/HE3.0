@@ -17,8 +17,13 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
    
     while($row = mysqli_fetch_row($select_user_query)) {
     if($row[1] == $email && $row[2] == $password) {
-               $row[8]=$_POST['worker']; // $row[7] is the column name in the database
-               $row[9]=$_POST['buyer']; // $row[8] is the column name in the database
+
+               if(isset($_POST['worker'])){
+                $row[8] = 1;
+               }
+                if(isset($_POST['employer'])){
+                  $row[9] = 1;
+                }
       
          }
         }
