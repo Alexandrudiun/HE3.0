@@ -17,6 +17,8 @@ include "conn.php";
       die('Query Failed'. mysqli_error());
     }
     $email_found = false; // Flag variable to check if email was found
+    $profile_type_set = false; // Flag variable to check if profile type is set
+    
     while($row = mysqli_fetch_row($select_user_query)){
         if($row[1] !== $email) {
             continue; // Skip to next row if email doesn't match
@@ -27,7 +29,7 @@ include "conn.php";
             $_SESSION['password'] = $password;
             if(!($row[8] == 2 && $row[9] == 2))
              { 
-               header("Location: ../frontend/profiletype.php");
+               $profile_type_set = true;
              }
              else{
             echo "<script>document.getElementById('message').innerHTML = 'Te-ai logat cu succes';</script>";
@@ -39,6 +41,15 @@ include "conn.php";
             echo "<script>document.getElementById('message').innerHTML = 'Parola incorecta';</script>";
             exit; // Exit script after unsuccessful login
         }
+    }
+    
+    if(!$email_found) {
+        echo "<script>document.getElementById('message').innerHTML = 'Email neînregistrat';</script>";
+    }
+    
+    if(!$profile_type_set) {
+        header("Location: ../frontend/profiletype.php");
+        exit;
     }
 
     if(!$email_found) {
