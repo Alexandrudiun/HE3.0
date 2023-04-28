@@ -22,7 +22,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     if($row[1] == $email && $row[2] == $password) {
       if(($row[8] == 2 && $row[9] == 2))
       { 
-        header("Location: ../frontend/profiletype.php");
+        header("Location: /frontend/profiletype.php");
       }
       $email_found = true;
       $image = $row[3]; //image is stored in blob format
