@@ -27,7 +27,7 @@ include "conn.php";
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
          
-            if($row[7]===3 && $row[8]===2)
+            if($row[7]==2 && $row[8]==2)
             {
                 echo "da";
                 header("Location: /frontend/profiletype.php");
