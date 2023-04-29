@@ -24,7 +24,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
 
            $row[8] = $option1;
            $row[9] = $option2;      
-           header("Location: /frontend/profil.php");
+          // header("Location: /frontend/profil.php");
          }
         }
        
