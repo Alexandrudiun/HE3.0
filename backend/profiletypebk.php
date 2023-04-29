@@ -22,7 +22,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     while($row = mysqli_fetch_row($select_user_query)) {
     if($row[1] == $email && $row[2] == $password) {
 
-           $row[8] = $option1;
+           $row[8] = 3;
            $row[9] = $option2;      
           // header("Location: /frontend/profil.php");
          }
