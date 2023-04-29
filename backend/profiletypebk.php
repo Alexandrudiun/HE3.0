@@ -9,7 +9,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
 
 
     $worker = isset($_POST['worker']) ? 1 : 0;
-    $buyer = isset($_POST['employer']) ? 1 : 0;
+    $buyer = isset($_POST['buyer']) ? 1 : 0;
 
      
    
