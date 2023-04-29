@@ -22,7 +22,7 @@ include "conn.php";
             continue; // Skip to next row if email doesn't match
         }
         $email_found = true;
-        print_r($row);}
+        }print_r($row);
         if($row[2] === $password) {
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
