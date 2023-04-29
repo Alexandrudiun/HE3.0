@@ -31,7 +31,7 @@ include "conn.php";
             }
             else {
             echo "<script>document.getElementById('message').innerHTML = 'Te-ai logat cu succes';</script>";
-            header("Location: /frontend/profil.php");
+           // header("Location: /frontend/profil.php");
             exit;//  Exit script after successful login
             }
         }
