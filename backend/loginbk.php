@@ -29,7 +29,6 @@ include "conn.php";
          
             if($row[7]==2 && $row[8]==2)
             {
-                echo "da";
                 header("Location: /frontend/profiletype.php");
             }
             else {
