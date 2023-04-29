@@ -29,7 +29,7 @@ include "conn.php";
 
 for($i=1;$i<=9;$i++){
     echo "      ";
-    echo $row[i];
+    echo $l[i];
 }
 
 
