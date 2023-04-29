@@ -9,7 +9,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
 
 
     $worker = isset($_POST['worker']) ? 1 : 0;
-    $employer = isset($_POST['employer']) ? 1 : 0;
+    $buyer = isset($_POST['employer']) ? 1 : 0;
 
     $query="SELECT * FROM users WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn, $query);
@@ -19,15 +19,12 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
       die('Query Failed');
     }
    
-    while($row = mysqli_fetch_row($select_user_query)) {
-    if($row[1] == $email && $row[2] == $password) {
-            
-           $row[8] = $option1;
-           $row[9] = $option2;      
-          header("Location: /frontend/profil.php");
-         }
-        }
-       
-      }
+    $query = "UPDATE users SET worker = '$worker', buyer = '$buyer' WHERE email = '$email'";
+    $update_user_query = mysqli_query($conn, $query);
+
+
+
+
+ 
     }
 ?>
