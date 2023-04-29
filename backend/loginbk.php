@@ -26,6 +26,7 @@ include "conn.php";
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
            echo $row[8];
+           echo "    ";
            echo $row[9];
             if($row[8]===2 && $row[9]===2)
             {
