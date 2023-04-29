@@ -16,7 +16,7 @@
 <section>
     <div class="form-box">
       <div class="form-value">
-        <form action="#" method="Post">
+        <form action="profiletype.php" method="Post">
           <h1>Selectează tipul de profil</h1>
           <div class="input-box">
             <div>
