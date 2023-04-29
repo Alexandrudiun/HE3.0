@@ -21,18 +21,10 @@ include "conn.php";
         if($row[1] !== $email) {
             continue; // Skip to next row if email doesn't match
         }
-        $email_found = true;
+        $email_found = true;}
         if($row[2] === $password) {
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
-
-
-for($i=1;$i<=9;$i++){
-    echo "      ";
-    echo $l[i];
-}
-
-
             if($row[8]===2 && $row[9]===2)
             {
                 header("Location: /frontend/profiletype.php");
@@ -47,7 +39,7 @@ for($i=1;$i<=9;$i++){
             echo "<script>document.getElementById('message').innerHTML = 'Parola incorecta';</script>";
             exit; // Exit script after unsuccessful login
         }
-    }
+}
 
     if(!$email_found) {
         echo "<script>document.getElementById('message').innerHTML = 'Email neînregistrat';</script>";
