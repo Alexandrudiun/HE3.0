@@ -21,7 +21,8 @@ include "conn.php";
         if($row[1] !== $email) {
             continue; // Skip to next row if email doesn't match
         }
-        $email_found = true;}
+        $email_found = true;
+        print_r($row);}
         if($row[2] === $password) {
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
