@@ -39,7 +39,7 @@ include "conn.php";
             echo "<script>document.getElementById('message').innerHTML = 'Parola incorecta';</script>";
             exit; // Exit script after unsuccessful login
         }
-}
+    
 
     if(!$email_found) {
         echo "<script>document.getElementById('message').innerHTML = 'Email neînregistrat';</script>";
