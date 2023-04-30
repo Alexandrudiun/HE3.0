@@ -20,7 +20,6 @@ include "../backend/profilbk.php";?>
             <div class="toggle-container">
                 <label class="switch">
                 
-                
                 <?php
 session_start();
 $profiletype_temp = isset($_SESSION['profiletype_temp']) ? $_SESSION['profiletype_temp'] : 0;
@@ -31,23 +30,13 @@ if ($profiletype_temp) {
     echo "buyer";
 }
 
-echo '<form method="post">
-        <label class="switch">
-            <input type="submit" id="toggle-button" name="toggle_profile_type" ';
-if ($profiletype_temp) {
-    echo 'checked';
-}
-echo '>
-            <span class="slider round"></span>
-        </label>
-      </form>';
+echo "<form method='post'><button type='submit' name='toggle_profile_type'>Switch profile type</button></form>";
 
 if (isset($_POST['toggle_profile_type'])) {
     $profiletype_temp = $profiletype_temp ? 0 : 1;
     $_SESSION['profiletype_temp'] = $profiletype_temp;
 }
 ?>
-
                
 
 
@@ -79,13 +68,10 @@ if (isset($_POST['toggle_profile_type'])) {
                 
                 if($worker == 1 && $buyer == 1) 
                 {
-                    echo "Switch profile type to $profiletype_temp";
-                    if($profiletype_temp) $worker = 1;
-                    else $buyer = 1;
-                    
+                    echo "Switch profile type to $profiletype_temp";                  
 
                   }
-                
+                else
                   if($worker == 1 && $buyer == 0)
                  {
                     echo "worker";
