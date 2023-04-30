@@ -1,21 +1,13 @@
 <?php
-                $worker = 1 ; $buyer = 1;
 if ($worker == 1 && $buyer == 1) {
+    // Check if the button was clicked
+    if (isset($_POST['toggle_profile_type'])) {
+        // Toggle the profile type value
+        $profiletype_temp = ($profiletype_temp == 1) ? 0 : 1;
+    }
+    
     // Display the toggle button with the current profile type value
-    echo "<button id='toggle-button' onclick='toggleProfileType()'>Switch profile type to $profiletype_temp</button>";
-
-    // Define the JavaScript function to toggle the profile type value
-    echo "<script>
-        function toggleProfileType() {
-            var button = document.getElementById('toggle-button');
-            var profileType = button.textContent.split(' ')[4]; // Extract the current profile type value from the button text
-            if (profileType === '0') {
-                button.textContent = 'Switch profile type to 1';
-            } else {
-                button.textContent = 'Switch profile type to 0';
-            }
-        }
-        </script>";
+    echo "<form method='post'><button type='submit' name='toggle_profile_type'>Switch profile type to $profiletype_temp</button></form>";
 } else if ($worker == 1 && $buyer == 0) {
     echo "worker";
 } else {
