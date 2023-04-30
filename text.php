@@ -7,7 +7,8 @@ if ($worker == 1 && $buyer == 1) {
         // Toggle the profile type value
         $profiletype_temp = !$profiletype_temp;
     }
-    
+    if($profiletype_temp) echo "worker";
+    else echo "buyer";
     // Display the toggle button with the current profile type value
     echo "<form method='post'><button type='submit' name='toggle_profile_type'>Switch profile type to $profiletype_temp</button></form>";
 } else if ($worker == 1 && $buyer == 0) {
