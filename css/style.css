@@ -43,11 +43,6 @@ h1{
   border-bottom: 2px solid #fff;
 }
 
-
-.input-box:hover {
-  border-bottom: 2px solid #9668f5; /* change the border color on hover */
-}
-
 .input-box::before {
   content: "";
   position: absolute;
@@ -55,8 +50,12 @@ h1{
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #9668f5; /* set the initial background color */
+  background-color: #f00; /* set the initial background color */
   transition: width 0.3s ease-out; /* add a transition effect */
+}
+
+.input-box:hover {
+  border-bottom-color: #f00; /* change the border color on hover */
 }
 
 .input-box:hover::before {
