@@ -82,13 +82,14 @@ include "../backend/profilbk.php";?>
                         else echo "post a job";
 
                     }
-
+else{
     if($worker == 1 && $buyer == 0) {
             echo "Get a job";
     }
     else{
         echo "Post a job";
-     }?>
+     }
+    }?>
      
     </a>
     </div>    
