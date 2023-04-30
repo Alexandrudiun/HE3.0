@@ -63,8 +63,10 @@ if (isset($_POST['toggle_profile_type'])) {
                 
                 if($worker == 1 && $buyer == 1) 
                 {
-                    echo "Switch profile type to $profiletype_temp";                  
-
+                                      
+?> <p>Switch profile type to</p> <?php 
+                    if(!$profiletype_temp)   echo "worker";
+                    else echo "buyer";
                   }
                 else
                   if($worker == 1 && $buyer == 0)
