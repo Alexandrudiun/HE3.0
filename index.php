@@ -28,7 +28,7 @@
           <label for="">Password</label>
           </div>
           <div class="forget">
-            <label for=""><input type="checkbox">Tine-mă minte <a href="#">Am uitat parola</a></label>
+             <a href="#">Am uitat parola</a></label>
           </div>
           <div class="message" id="message" ></div>
           <div class="button">
