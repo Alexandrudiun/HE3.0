@@ -37,7 +37,7 @@ if (isset($_POST['toggle_profile_type'])) {
                 {
                                       
 ?> <form method='post'>
-    <button type='submit' class="flex-button" name='toggle_profile_type'><p>Switch profile type to</p> <?php 
+    <button type='submit' class="btn-post" name='toggle_profile_type'><p>Switch profile type to</p> <?php 
                     if(!$profiletype_temp)   echo "worker";
                     else echo "buyer";
                   }
