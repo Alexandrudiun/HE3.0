@@ -33,7 +33,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     
 
       if($worker == 1 && $buyer == 1) {
-        echo "<script>document.getElementById('profiletype').innerHTML = 'Swich profile'</script>";
+        echo "da";
       }
       
       if($worker == 1 && $buyer == 0) {
