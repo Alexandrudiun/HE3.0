@@ -25,7 +25,7 @@ session_start();
 $profiletype_temp = isset($_SESSION['profiletype_temp']) ? $_SESSION['profiletype_temp'] : 0;
 
 
-echo "<form method='post'><button type='submit' name='toggle_profile_type'>Switch profile type</button></form>";
+
 
 if (isset($_POST['toggle_profile_type'])) {
     $profiletype_temp = $profiletype_temp ? 0 : 1;
@@ -64,7 +64,8 @@ if (isset($_POST['toggle_profile_type'])) {
                 if($worker == 1 && $buyer == 1) 
                 {
                                       
-?> <p>Switch profile type to</p> <?php 
+?> <form method='post'>
+    <button type='submit' name='toggle_profile_type'><p>Switch profile type to</p> <?php 
                     if(!$profiletype_temp)   echo "worker";
                     else echo "buyer";
                   }
@@ -78,7 +79,10 @@ if (isset($_POST['toggle_profile_type'])) {
                          echo "buyer"; 
                     }
                          
-                    ?>
+                    ?></button>
+</form>
+
+
                    
 
                 
