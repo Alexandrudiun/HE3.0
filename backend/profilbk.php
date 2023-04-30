@@ -26,11 +26,25 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
       $name = $row[4];
       $skills = $row[5];
       $credit = $row[6];
-     
+      $worker = $row[7];
+      $buyer = $row[8];
       
     }
     }
-   
+
+      if($worker == 1 && $buyer == 1) {
+        echo "<script>document.getElementById('profiletype').innerHTML = 'Swich profile'</script>";
+      }
+      
+      if($worker == 1 && $buyer == 0) {
+        echo "<script>document.getElementById('profiletype').innerHTML = 'Worker'</script>";
+        echo "<script>document.getElementById('workertype').innerHTML = 'Get a job'</script>";
+      }
+      else{
+        echo "<script>document.getElementById('profiletype').innerHTML = 'Buyer'</script>";
+        echo "<script>document.getElementById('workertype').innerHTML = 'Post a job'</script>";
+      }
+      
              
     }
 ?>

@@ -44,6 +44,9 @@ include "../backend/profilbk.php";?>
                         <ion-icon name="log-out-outline" class="icon"></ion-icon>
                     </div>
                 </div>
+
+                <div id="profiletype"></div>
+                
                 <div class="credits credits-box">
                     <a href="#" class="credits">Credits: <?php echo $credit; ?> RON</a>
                     <ion-icon name="add-circle-outline"></ion-icon>
@@ -53,7 +56,7 @@ include "../backend/profilbk.php";?>
         </div>
 
     <div class="btn-container">
-        <a href="post.php" class="btn-post">Publică un anunţ</a>
+        <a href="post.php" class="btn-post"><div id="workertype"></a>
     </div>    
     </main>
     <!-- Navbar Down -->
