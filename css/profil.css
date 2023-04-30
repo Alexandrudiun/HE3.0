@@ -3,7 +3,7 @@
 /* Global */
 
 :root{
-  --worker-color:#ff9800;
+  --worker-color: #362A60;
   --prestator-color: #e91e63;
 }
 *{
@@ -14,7 +14,7 @@
 }
 
 body{
-  background: linear-gradient(#45cafc, #303f9f);
+  background: #040307;
   min-height: 100vh;
   width: 100%;
   padding: 3px;
@@ -37,7 +37,7 @@ h3{
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background: #fff;
+  background: #9668f5;
   border-radius: 10px;
   padding: 25px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
@@ -106,7 +106,7 @@ h3{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #45cafc;
+  background: #5740A0;
   padding: 5px;
   border-radius: 10px;
   color: #fff;
