@@ -43,8 +43,14 @@ h1{
   border-bottom: 2px solid #fff;
 }
 
-.input-box:hover{
-  border-bottom: 2px solid #362A60;
+.input-box:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
 }
 
 .input-box label{
