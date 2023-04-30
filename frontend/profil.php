@@ -49,7 +49,7 @@ include "../backend/profilbk.php";?>
                 
                 if($worker == 1 && $buyer == 1) 
                 {
-                    echo "Switch to profile type: $profiletype_temp";
+                    echo "Switch profile type to $profiletype_temp";
 
                   }
                   if($worker == 1 && $buyer == 0)
@@ -75,6 +75,14 @@ include "../backend/profilbk.php";?>
         <div class="btn-container">
         <a href="post.php" class="btn-post">
     <?php     
+
+                    if($worker == 1 && $buyer == 1) 
+                    {
+                        if(!$profiletype_temp)   echo "get a job";
+                        else echo "post a job";
+
+                    }
+
     if($worker == 1 && $buyer == 0) {
             echo "Get a job";
     }

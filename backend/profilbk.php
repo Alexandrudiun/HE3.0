@@ -8,7 +8,7 @@ session_start(); // Start the session
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     $email = $_SESSION['email'];
     $password = $_SESSION['password'];
-
+    $profiletype_temp=0; // o for buyer, 1 for worker;
     
     $query="SELECT * FROM users WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn, $query);
