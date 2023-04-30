@@ -9,7 +9,7 @@
 }
 
 body{
-  background: linear-gradient(#45cafc, #303f9f);
+  background: #040307;
   min-height: 100vh;
   width: 100%;
   border-radius: 50%;
@@ -73,6 +73,9 @@ textarea{
 }
 
 .input-box input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 30px;
   background: #f3f3f3;
@@ -106,7 +109,7 @@ input.btn-login{
   height: 40px;
   border-radius: 40px;
   background: #362A60;
-  color: black;
+  color: #f3f3f3;
   border: none;
   outline: none;
   cursor: pointer;
