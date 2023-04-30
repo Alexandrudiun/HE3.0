@@ -87,12 +87,7 @@ textarea{
   color: #222;
 }
 
-
-input[type="file"]{
-  display: none;
-}
-
-.change-profile{
+#image{
   max-width: 80%;
   word-wrap: break-word;
   margin-top: 8px;
