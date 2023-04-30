@@ -54,8 +54,10 @@ include "../backend/profilbk.php";?>
             </div>
         </div>
         </div>
+
         <div id="workertype"></div>
-    <div class="btn-container">
+    
+        <div class="btn-container">
         <a href="post.php" class="btn-post">...............</a>
     </div>    
     </main>

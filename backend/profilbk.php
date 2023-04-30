@@ -30,7 +30,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
       $buyer = $row[8];
       
     }
-    }
+    
 
       if($worker == 1 && $buyer == 1) {
         echo "<script>document.getElementById('profiletype').innerHTML = 'Swich profile'</script>";
@@ -45,6 +45,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
         echo "<script>document.getElementById('workertype').innerHTML = 'Post a job'</script>";
       }
       
-             
+    }
     }
 ?>
