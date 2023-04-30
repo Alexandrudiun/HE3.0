@@ -46,6 +46,7 @@ include "../backend/profilbk.php";?>
                 </div>
                 
                 <?php
+                $worker = 1 ; $buyer = 1;
 if ($worker == 1 && $buyer == 1) {
     // Display the toggle button with the current profile type value
     echo "<button id='toggle-button' onclick='toggleProfileType()'>Switch profile type to $profiletype_temp</button>";
