@@ -1,6 +1,18 @@
 <?php
 
 include "../backend/profilbk.php";?>
+<?php
+session_start();
+$profiletype_temp = isset($_SESSION['profiletype_temp']) ? $_SESSION['profiletype_temp'] : 0;
+
+
+
+
+if (isset($_POST['toggle_profile_type'])) {
+    $profiletype_temp = $profiletype_temp ? 0 : 1;
+    $_SESSION['profiletype_temp'] = $profiletype_temp;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,18 +53,7 @@ include "../backend/profilbk.php";?>
                          
                     ?></button>
 </form>
-                <?php
-session_start();
-$profiletype_temp = isset($_SESSION['profiletype_temp']) ? $_SESSION['profiletype_temp'] : 0;
-
-
-
-
-if (isset($_POST['toggle_profile_type'])) {
-    $profiletype_temp = $profiletype_temp ? 0 : 1;
-    $_SESSION['profiletype_temp'] = $profiletype_temp;
-}
-?>
+                
                
 
 
