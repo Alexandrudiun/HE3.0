@@ -34,7 +34,7 @@
           <label for="">Confirm Password</label>
           </div>
           <div class="forget">
-            <label for=""><input type="checkbox">Tine-mă minte <a href="#">Am uitat parola</a></label>
+             <a href="#">Am uitat parola</a></label>
           </div>
           <p class="error-message">Parolele nu se potrivesc</p>
           <div class="button">
