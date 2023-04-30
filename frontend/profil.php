@@ -52,6 +52,7 @@ include "../backend/profilbk.php";?>
                     echo "Switch profile type to $profiletype_temp";
 
                   }
+                    else
                   if($worker == 1 && $buyer == 0)
                  {
                     echo "worker";
