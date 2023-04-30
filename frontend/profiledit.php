@@ -30,7 +30,7 @@
         <div class="input-box">
           <ion-icon name="camera-outline"></ion-icon>
           <input type="file" accept="image/*" name="image" class="upload-image" id="image">
-          <label for="">Change Profile Picture</label>
+          <label for="" class="change-profile">Change Profile Picture</label>
         </div>
         <div class="button">
           <input type="submit" name="submit" value="Save" class="btn-login">
