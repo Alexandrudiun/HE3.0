@@ -79,8 +79,8 @@ include "../backend/profilbk.php";?>
 
                     if($worker == 1 && $buyer == 1) 
                     {
-                        if(!$profiletype_temp)   echo "get a job";
-                        else echo "post a job";
+                        if(!$profiletype_temp)   echo "post a job";
+                        else echo "get a job";
 
                     }
 else{
