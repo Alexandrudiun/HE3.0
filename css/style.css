@@ -43,23 +43,10 @@ h1{
   border-bottom: 2px solid #fff;
 }
 
-.input-box::before {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #f00; /* set the initial background color */
-  transition: width 0.3s ease-out; /* add a transition effect */
-}
-
-.input-box:hover {
-  border-bottom-color: #f00; /* change the border color on hover */
-}
-
-.input-box:hover::before {
-  width: 100%; /* expand the width on hover */
+.input-box input:focus {
+  outline: none;
+  border-bottom-color: #9668f5;
+  transition: border-bottom-color 0.3s ease-in-out;
 }
 
 .input-box label{
