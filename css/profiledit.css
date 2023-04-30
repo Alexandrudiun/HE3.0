@@ -87,6 +87,10 @@ textarea{
   color: #222;
 }
 
+input[type="file"]{
+  background: none;
+}
+
 #image{
   max-width: 80%;
   word-wrap: break-word;
