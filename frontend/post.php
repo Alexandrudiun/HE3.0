@@ -45,7 +45,7 @@
                 <input type="tel" id="phone" name="phone" pattern="^(\+40|0)[0-9]{9}$" required>
                     </div>
                 <div class="button">
-                  <input type="submit" name="submit" value="Save" class="btn-login">
+                  <input type="submit" name="submit" value="Post" class="btn-login">
                   </div>
               </form>
             </div>
