@@ -19,8 +19,10 @@ include "../backend/profilbk.php";?>
             <div class="profile-card">
             <div class="toggle-container">
                 <label class="switch">
-                    <input type="checkbox" id="toggle-button">
+                    <form method="post">
+                    <input type="checkbox" id="toggle-button" name="toggle_profile_type">
                     <span class="slider round"></span>
+                    <!-- <input type="submit" name="toggle_profile_type" value="Switch profile type"> -->
                 </label>
             </div>
             <div class="image">
@@ -44,7 +46,23 @@ include "../backend/profilbk.php";?>
                         <ion-icon name="log-out-outline" class="icon"></ion-icon>
                     </div>
                 </div>
-                
+                <?php
+session_start();
+$profiletype_temp = isset($_SESSION['profiletype_temp']) ? $_SESSION['profiletype_temp'] : 0;
+
+if ($profiletype_temp) {
+    echo "worker";
+} else {
+    echo "buyer";
+}
+
+echo "<form method='post'><button type='submit' name='toggle_profile_type'>Switch profile type</button></form>";
+
+if (isset($_POST['toggle_profile_type'])) {
+    $profiletype_temp = $profiletype_temp ? 0 : 1;
+    $_SESSION['profiletype_temp'] = $profiletype_temp;
+}
+?>
                 <?php
                 
                 if($worker == 1 && $buyer == 1) 
@@ -63,23 +81,7 @@ include "../backend/profilbk.php";?>
                     }
                          
                     ?>
-                    <?php
-session_start();
-$profiletype_temp = isset($_SESSION['profiletype_temp']) ? $_SESSION['profiletype_temp'] : 0;
-
-if ($profiletype_temp) {
-    echo "worker";
-} else {
-    echo "buyer";
-}
-
-echo "<form method='post'><button type='submit' name='toggle_profile_type'>Switch profile type</button></form>";
-
-if (isset($_POST['toggle_profile_type'])) {
-    $profiletype_temp = $profiletype_temp ? 0 : 1;
-    $_SESSION['profiletype_temp'] = $profiletype_temp;
-}
-?>
+                   
 
                 
                 <div class="credits credits-box">
