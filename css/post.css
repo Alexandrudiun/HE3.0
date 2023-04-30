@@ -2,10 +2,6 @@
 
 /* Global */
 
-:root{
-  --worker-color:#ff9800;
-  --prestator-color: #e91e63;
-}
 *{
   margin: 0;
   padding: 0;
@@ -14,11 +10,10 @@
 }
 
 body{
-  background: linear-gradient(#45cafc, #303f9f);
-  min-height: 100vh;
+  background: #040307;
+  height: calc(100vh + 70px);
   width: 100%;
   padding: 3px;
-  overflow: hidden;
 }
 
 .center{
@@ -34,7 +29,7 @@ body{
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background: #fff;
+  background: #9668f5;
   border-radius: 10px;
   padding: 25px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
@@ -42,16 +37,28 @@ body{
 
 h1{
   font-size: 1.7em;
-  color:#222;
+  color:#fff;
   text-align: center;
 }
 
 h3{
+  position: relative;
   text-align: center;
   font-size: 17px;
   font-weight: 400;
 }
-.input-box{
+h3::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background: #040307;
+}
+.file-box{
   position: relative;
   margin: 30px 0;
   width: 100%;
@@ -75,7 +82,8 @@ input[type="file"]{
   justify-content: center;
   gap: 5px;
   position: relative;
-  background-color: #e91e63;
+  background-color: #362A60;
+  color: #fff;
   font-size: 18px;
   width: 80%;
   padding: 5px 10px;
@@ -107,6 +115,7 @@ figure{
 img{
   width: 100%;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 figCaption{
@@ -115,4 +124,43 @@ figCaption{
   font-weight: 300px;
   margin-top: 5px;
   word-wrap: break-word;
+}
+
+.input-box{
+  position: relative;
+  margin: 30px 0;
+  max-width: 450px;
+  min-width: 100px;
+}
+
+textarea{
+  border-radius: 10px;
+  resize: vertical;
+  width: 100%;
+  padding: 0 35px 0 10px;
+}
+
+.input-box input{
+  width: 100%;
+  height: 30px;
+  background: #f3f3f3;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1em;
+  padding: 0 35px 0 10px;
+  color: #222;
+}
+
+input.btn-login{
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background: #362A60;
+  color: #f3f3f3;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
 }
