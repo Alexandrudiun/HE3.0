@@ -24,7 +24,7 @@ include "../backend/profilbk.php";?>
 session_start();
 $profiletype_temp = isset($_SESSION['profiletype_temp']) ? $_SESSION['profiletype_temp'] : 0;
 
-if ($profiletype_temp) {
+if (!$profiletype_temp) {
     echo "worker";
 } else {
     echo "buyer";
