@@ -1,6 +1,7 @@
 <?php
 $worker =1;
 $buyer =1;
+$profiletype_temp = 0;
 if ($worker == 1 && $buyer == 1) {
     // Check if the button was clicked
     if (isset($_POST['toggle_profile_type'])) {
