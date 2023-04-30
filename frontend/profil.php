@@ -19,6 +19,8 @@ include "../backend/profilbk.php";?>
             <div class="profile-card">
             <div class="toggle-container">
                 <label class="switch">
+                
+                
                 <?php
 session_start();
 $profiletype_temp = isset($_SESSION['profiletype_temp']) ? $_SESSION['profiletype_temp'] : 0;
@@ -46,7 +48,10 @@ if (isset($_POST['toggle_profile_type'])) {
 }
 ?>
 
-                </label>
+               
+
+
+</label>
             </div>
             <div class="image">
             <?php if($image==NULL): ?>
@@ -75,9 +80,12 @@ if (isset($_POST['toggle_profile_type'])) {
                 if($worker == 1 && $buyer == 1) 
                 {
                     echo "Switch profile type to $profiletype_temp";
+                    if($profiletype_temp) $worker = 1;
+                    else $buyer = 1;
+                    
 
                   }
-                    else
+                
                   if($worker == 1 && $buyer == 0)
                  {
                     echo "worker";
