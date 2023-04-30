@@ -44,8 +44,24 @@ include "../backend/profilbk.php";?>
                         <ion-icon name="log-out-outline" class="icon"></ion-icon>
                     </div>
                 </div>
+                
+                <?php
+                
+                if($worker == 1 && $buyer == 1) 
+                {
+                    echo "Switch to profile type: $profiletype_temp";
 
-                <div id="profiletype"></div>
+                  }
+                  if($worker == 1 && $buyer == 0)
+                 {
+                    echo "worker";
+                 }
+                    else
+                    {
+                         echo "buyer"; 
+                    }
+                         
+                    ?>
                 
                 <div class="credits credits-box">
                     <a href="#" class="credits">Credits: <?php echo $credit; ?> RON</a>
@@ -55,10 +71,18 @@ include "../backend/profilbk.php";?>
         </div>
         </div>
 
-        <div id="workertype"></div>
     
         <div class="btn-container">
-        <a href="post.php" class="btn-post">...............</a>
+        <a href="post.php" class="btn-post">
+    <?php     
+    if($worker == 1 && $buyer == 0) {
+            echo "Get a job";
+    }
+    else{
+        echo "Post a job";
+     }?>
+     
+    </a>
     </div>    
     </main>
     <!-- Navbar Down -->

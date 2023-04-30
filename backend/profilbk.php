@@ -32,18 +32,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     }
     
 
-      if($worker == 1 && $buyer == 1) {
-        echo "da";
-      }
-      
-      if($worker == 1 && $buyer == 0) {
-        echo "<script>document.getElementById('profiletype').innerHTML = 'Worker'</script>";
-        echo "<script>document.getElementById('workertype').innerHTML = 'Get a job'</script>";
-      }
-      else{
-        echo "<script>document.getElementById('profiletype').innerHTML = 'Buyer'</script>";
-        echo "<script>document.getElementById('workertype').innerHTML = 'Post a job'</script>";
-      }
+     
       
     }
     }
