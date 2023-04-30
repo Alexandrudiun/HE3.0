@@ -56,7 +56,7 @@ include "../backend/profilbk.php";?>
         </div>
 
     <div class="btn-container">
-        <a href="post.php" class="btn-post"><div id="workertype"></a>
+        <a href="post.php" class="btn-post"><div id="workertype"></div></a>
     </div>    
     </main>
     <!-- Navbar Down -->
