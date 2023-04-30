@@ -51,7 +51,7 @@
                     </a>
                 </li>
                 <li class="list active">
-                    <a href="#">
+                    <a href="/frontend/profil.php">
                         <span class="icon">
                         <ion-icon name="person-circle-outline"></ion-icon>
                         </span>
@@ -59,11 +59,11 @@
                     </a>
                 </li>
                 <li class="list">
-                    <a href="#">
+                    <a href="/frontend/post.php">
                         <span class="icon">
                             <ion-icon name="add-circle-outline"></ion-icon>
                         </span>
-                        <span class="text">Adaugă anunţ</span>
+                        <span class="text">Postează</span>
                     </a>
                 </li>
                 <li class="list">
