@@ -24,6 +24,7 @@
 
 <?php
 if(isset($_POST['submit'])){
+    for ($i = 0; $i < count($_FILES['files']['name']); $i++){
     $file = $_FILES['file'];
     $fileName = $_FILES['file']['name'];
     $fileTmpName = $_FILES['file']['tmp_name']; 
@@ -52,6 +53,7 @@ if(isset($_POST['submit'])){
     } else {
         echo "You cannot upload files of this type!";
     }
+}
 }
 
 
