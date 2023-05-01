@@ -1,5 +1,3 @@
-
-<?php echo"da";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +17,7 @@
             <div class="profile-card">
               <form action="post.php" method="post" enctype="multipart/form-data">
                 <h1>Publică un anunţ nou</h1>
-                <h3>Detalii anunţ</h3><?php echo"da";?>
+                <h3>Detalii anunţ</h3>
                 <section>
                 <div class="file-box file-input">
                     <input type="file" id="fileInput" accept="image/png, image/png, image/jpeg" name="file[]" multiple="multiple" onchange="preview()">
@@ -28,7 +26,7 @@
                     </label>
                     <p id="num-of-files">Nicio imagine adăugată</p>
                     <div id="images"></div>
-                </div><?php echo"da";?>
+                </div>
                 </section>
                 <!-- <div class="input-box">
                   <label for="">Titlul anunţului</label>
@@ -119,7 +117,7 @@
 session_start(); // Start the session
 
  
-
+echo $_SESSION['email'];
 
 if(isset($_POST['submit'])){
 
