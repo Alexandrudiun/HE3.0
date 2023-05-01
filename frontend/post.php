@@ -117,12 +117,12 @@
 include "../backend/conn.php";
 session_start(); // Start the session
 
- 
-echo $_SESSION['email'];
+if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
+echo $_SESSION['email'];}
 
 if(isset($_POST['submit'])){
 
-    if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
+   
     
     
 
@@ -161,5 +161,5 @@ if(isset($_POST['submit'])){
         header("Location: post.php?uploadsuccess");
     }
     
+?>
 
-}
