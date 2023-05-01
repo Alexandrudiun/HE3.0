@@ -1,4 +1,8 @@
-<?php 
+<form action="text.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="file[]" multiple>
+    <input type="submit" name="submit" value="Upload">
+</form>
+<?php
 if(isset($_POST['submit'])){
     $files = $_FILES['file'];
     $allowed = array('jpg', 'jpeg', 'png', 'pdf');
@@ -37,8 +41,3 @@ if(isset($_POST['submit'])){
 }
 
 
-?>
-<form action="text.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="file[]" multiple>
-    <input type="submit" name="submit" value="Upload">
-</form>
