@@ -115,11 +115,7 @@
 
 <?php
 include "../backend/conn.php";
-session_start(); // Start the session
 
-if(isset($_SESSION['email'])){
-    echo "da";
-}
 
 if(isset($_POST['submit'])){
 
