@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){
     $fileSize = $_FILES['file']['size'][$i]; 
     $fileError = $_FILES['file']['error'][$i]; 
     $fileType = $_FILES['file']['type'][$i]; 
-        echo $fileName;
+     print_r($file);
 }
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
