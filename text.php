@@ -24,15 +24,14 @@
 
 <?php
 if(isset($_POST['submit'])){
-    $file = $_FILES['file'];
+
     for ($i = 0; $i < count($_FILES['file']['name']); $i++){
    
         $fileName = $_FILES['files']['name'][$i];
-        $fileTmpName = $_FILES['files']['tmp_name'][$i]; 
-        $fileSize = $_FILES['files']['size'][$i]; 
-        $fileError = $_FILES['files']['error'][$i]; 
-        $fileType = $_FILES['files']['type'][$i]; 
-    
+      $fileTmpName = $_FILES['files']['tmp_name'][$i]; 
+      $fileSize = $_FILES['files']['size'][$i]; 
+      $fileError = $_FILES['files']['error'][$i]; 
+      $fileType = $_FILES['files']['type'][$i]; 
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
     
@@ -41,10 +40,10 @@ if(isset($_POST['submit'])){
     if(in_array($fileActualExt, $allowed)){
         if($fileError === 0){
             if($fileSize < 1000000){
-            
-                $fileNameNew = time() . '_' . uniqid('', true).".".$fileActualExt;
+              
+               // $fileNameNew = time() . '_' . uniqid('', true).".".$fileActualExt;
 
-                // $fileNameNew = uniqid('', true).".".$fileActualExt;
+                $fileNameNew = uniqid('', true).".".$fileActualExt;
                 $fileDestination = 'img/upload/'.$fileNameNew;
                 move_uploaded_file($fileTmpName, $fileDestination);
                 header("Location: text.php?uploadsuccess");
