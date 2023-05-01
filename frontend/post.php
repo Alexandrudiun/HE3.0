@@ -121,6 +121,7 @@ include "../backend/conn.php";
 
 if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
+    echo $email;
     $name = $_POST['name'];
     $title = $_POST['titlu'];
     $price = $_POST['pret'];
