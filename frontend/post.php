@@ -2,7 +2,7 @@
 <?php 
 
 include "../backend/postbk.php";
-echo "da";
+
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@ echo "da";
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="manifest" href="/manifest.json"> -->
 </head>
-<body style="color: white;">
+<body style="color: black;">
 
     <main>
         <div class="center">
