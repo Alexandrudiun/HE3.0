@@ -1,5 +1,6 @@
 
-
+<?php echo $email;
+    echo $password;?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -127,8 +128,7 @@ if(isset($_POST['submit'])){
         $email = $_SESSION['email'];
         $password = $_SESSION['password'];
     }
-    echo $email;
-    echo $password;
+    
 
     $files = $_FILES['file'];
     $allowed = array('jpg', 'jpeg', 'png', 'pdf');
