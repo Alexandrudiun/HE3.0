@@ -1,35 +1,43 @@
 <form action="text.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="file">
+    <input type="file" name="file[]" multiple>
     <input type="submit" name="submit" value="Upload">
 </form>
 <?php
 if(isset($_POST['submit'])){
-    $file = $_FILES['file'];
-    $fileName = $_FILES['file']['name'];
-    $fileTmpName = $_FILES['file']['tmp_name']; 
-    $fileSize = $_FILES['file']['size']; 
-    $fileError = $_FILES['file']['error']; 
-    $fileType = $_FILES['file']['type']; 
-    
-    $fileExt = explode('.', $fileName);
-    $fileActualExt = strtolower(end($fileExt));
-    
+    $files = $_FILES['file'];
     $allowed = array('jpg', 'jpeg', 'png', 'pdf');
-    
-    if(in_array($fileActualExt, $allowed)){
-        if($fileError === 0){
-            if($fileSize < 1000000){
-                $fileNameNew = uniqid('', true).".".$fileActualExt;
-                $fileDestination = 'img/upload'.$fileNameNew;
-                move_uploaded_file($fileTmpName, $fileDestination);
-                header("Location: text.php?uploadsuccess");
+    $uploadCount = 0;
+
+    foreach($files['name'] as $key => $fileName){
+        $fileTmpName = $files['tmp_name'][$key]; 
+        $fileSize = $files['size'][$key]; 
+        $fileError = $files['error'][$key]; 
+        $fileType = $files['type'][$key]; 
+
+        $fileExt = explode('.', $fileName);
+        $fileActualExt = strtolower(end($fileExt));
+
+        if(in_array($fileActualExt, $allowed)){
+            if($fileError === 0){
+                if($fileSize < 1000000){
+                    $fileNameNew = uniqid('', true).".".$fileActualExt;
+                    $fileDestination = 'img/upload/'.$fileNameNew;
+                    move_uploaded_file($fileTmpName, $fileDestination);
+                    $uploadCount++;
+                } else {
+                    echo "File $fileName is too big!<br>";
+                }
             } else {
-                echo "Your file is too big!";
+                echo "There was an error uploading file $fileName!<br>";
             }
         } else {
-            echo "There was an error uploading your file!";
+            echo "You cannot upload files of type $fileActualExt!<br>";
         }
-    } else {
-        echo "You cannot upload files of this type!";
+    }
+
+    if($uploadCount > 0){
+        header("Location: text.php?uploadsuccess");
     }
 }
+
+
