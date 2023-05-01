@@ -1,7 +1,4 @@
-<form action="text.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="file[]" multiple>
-    <input type="submit" name="submit" value="Upload">
-</form>
+
 <?php 
 if(isset($_POST['submit'])){
     $files = $_FILES['file'];
@@ -59,6 +56,13 @@ if(isset($_POST['submit'])){
         <div class="center">
             <div class="profile-card">
               <form action="post.php" method="post" enctype="multipart/form-data">
+
+              <form action="text.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="file[]" multiple>
+    <input type="submit" name="submit" value="Upload">
+</form>
+
+
                 <h1>Publică un anunţ nou</h1>
                 <h3>Detalii anunţ</h3>
                 <section>
