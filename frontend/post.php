@@ -124,7 +124,7 @@ if(isset($_POST['submit'])){
     $price = $_POST['pret'];
     $description = $_POST['descriere'];
     $skills = $_POST['skills'];
-    $query = "INSERT INTO posts (email, name, title, price, description, skills) VALUES ('{$email}', '{$name}', '{$title}', '{$price}', '{$description}', '{$images}', '{$skills}')";
+    $query = "INSERT INTO posts (email, name, title, price, description, skills) VALUES ('{$email}', '{$name}', '{$title}', '{$price}', '{$description}', '{$skills}')";
     $add_post_query = mysqli_query($conn, $query);
     if(!$add_post_query) {
        die('Query Failed'. mysqli_error($conn));
