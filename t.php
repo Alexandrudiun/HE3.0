@@ -1,5 +1,5 @@
 <?php
 
     session_start(); // Start the session
-echo $_session['email'];
+echo $_SESSION['email'];
     
