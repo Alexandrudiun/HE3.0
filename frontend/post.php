@@ -8,12 +8,13 @@ include "../backend/postbk.php";?><!DOCTYPE html>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post</title>
-    <link rel="icon" href="/img/logo192.jpg">
+    <!-- <link rel="icon" href="/img/logo192.jpg">
     <link rel="stylesheet" href="/css/post.css">
     <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/manifest.json"> -->
 </head>
-<body>
+<body style="color: white;">
+
     <main>
         <div class="center">
             <div class="profile-card">
