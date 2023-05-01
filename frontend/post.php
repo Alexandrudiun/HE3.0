@@ -1,4 +1,4 @@
-<form action="text.php" method="post" enctype="multipart/form-data">
+<form action="post.php" method="post" enctype="multipart/form-data">
     <input type="file" name="file[]" multiple>
     <input type="submit" name="submit" value="Upload">
 </form>
@@ -36,7 +36,7 @@ if(isset($_POST['submit'])){
     }
 
     if($uploadCount > 0){
-        header("Location: text.php?uploadsuccess");
+        header("Location: post.php?uploadsuccess");
     }
 }
 
