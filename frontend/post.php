@@ -117,7 +117,7 @@
 
 
 
-include "../backend/postbk.php";
+include "../postbk.php";
 
 
 // if(isset($_POST['submit'])){
