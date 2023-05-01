@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+
+<?php 
+
+include "../backend/postbk.php";?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -108,6 +111,3 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
-<?php 
-
-include "../backend/postbk.php";
