@@ -4,6 +4,11 @@ if(isset($_POST['submit'])){
 
     session_start(); // Start the session
 
-    echo $_SESSION['email'];
-    echo $_SESSION['password'];
-        
+    if(isset($_SESSION['email'])){
+        echo $_SESSION['email'];
+        echo $_SESSION['password'];
+    }
+    else{
+        echo "You are not logged in!";
+    }
+    
