@@ -18,9 +18,10 @@
 
 ?>
 <form action="text.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="file">
+    <input type="file" name="file" multiple="multiple">
     <input type="submit" name="submit" value="Upload">
 </form>
+
 <?php
 if(isset($_POST['submit'])){
     $file = $_FILES['file'];
