@@ -5,7 +5,7 @@ if(isset($_POST['submit'])){
     foreach($FILES['doc']['name'] as $key=>$val){
         $rand=rand('11111111','99999999');
         $file=$rand.''.$val;
-        move_uploaded_file($_FILES['doc']['tmp_name'][$key],'media/'.$file);
+        move_uploaded_file($_FILES['doc']['tmp_name'][$key],'img/upload/'.$file);
         //insert into table(image) values('$file');
     }
 }
