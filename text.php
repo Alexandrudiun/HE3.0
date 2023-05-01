@@ -24,7 +24,7 @@
 
 <?php
 if(isset($_POST['submit'])){
-    for ($i = 0; $i < count($_FILES['files']['name']); $i++){
+    for ($i = 0; $i < count($_FILES['file']['name']); $i++){
     $file = $_FILES['file'];
     $fileName = $_FILES['file']['name'];
     $fileTmpName = $_FILES['file']['tmp_name']; 
