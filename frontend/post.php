@@ -30,7 +30,7 @@
                     <div id="images"></div>
                 </div>
                 </section>
-                <div class="input-box">
+                <!-- <div class="input-box">
                   <label for="">Titlul anunţului</label>
                   <input type="text" id="titlu" name="titlu" required>
                 </div>
@@ -49,7 +49,7 @@
                     </div>
                 <div class="button">
                   <input type="submit" name="submit" value="Post" class="btn-login">
-                  </div>
+                  </div> -->
               </form>
             </div>
           </div> 
@@ -118,6 +118,8 @@
 <?php
 session_start(); // Start the session
 
+ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
+
 
 
 if(isset($_POST['submit'])){
@@ -160,4 +162,4 @@ if(isset($_POST['submit'])){
     }
     }
 
- 
+ }
