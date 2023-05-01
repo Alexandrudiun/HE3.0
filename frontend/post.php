@@ -114,8 +114,10 @@
 
 
 <?php
+
+include "../t.php";
 include "../backend/conn.php";
-session_start();
+
 
 if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
