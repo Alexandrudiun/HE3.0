@@ -1,7 +1,10 @@
 
 <?php 
 
-include "../backend/postbk.php";?><!DOCTYPE html>
+include "../backend/postbk.php";
+echo "da";
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
