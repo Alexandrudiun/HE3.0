@@ -23,13 +23,15 @@
 </form>
 <?php
 if(isset($_POST['submit'])){
-    $file = $_FILES['file'];
-    $fileName = $_FILES['file']['name'];
-    $fileTmpName = $_FILES['file']['tmp_name']; 
-    $fileSize = $_FILES['file']['size']; 
-    $fileError = $_FILES['file']['error']; 
-    $fileType = $_FILES['file']['type']; 
-    
+    for ($i = 0; $i < count($_FILES['files']['name']); $i++) {
+    $file = $_FILES['file'][$i];
+    $fileName = $_FILES['file']['name'][$i];
+    $fileTmpName = $_FILES['file']['tmp_name'][$i]; 
+    $fileSize = $_FILES['file']['size'][$i]; 
+    $fileError = $_FILES['file']['error'][$i]; 
+    $fileType = $_FILES['file']['type'][$i]; 
+        echo $fileName;
+}
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
     
