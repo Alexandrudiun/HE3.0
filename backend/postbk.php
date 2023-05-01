@@ -48,7 +48,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     if(!$add_user_query) {
        die('Query Failed'. mysqli_error($conn));
     }
-    header("Location: text.php?uploadsuccess");
+   // header("Location: text.php?uploadsuccess");
   }
 }
 
