@@ -11,7 +11,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     $price = $_POST['pret'];
     $description = $_POST['descriere'];
     $skills = $_POST['skills'];
-    $images = ''; // initialize the images variable
+   // $images = ''; // initialize the images variable
     
     // Check if the user uploaded images
     $files = $_FILES['file'];
