@@ -12,6 +12,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     $description = $_POST['descriere'];
     $skills = $_POST['skills'];
     $images = ''; // initialize the images variable
+    print_r($_FILES['files']['name']);
     for ($i = 0; $i < count($_FILES['files']['name']); $i++) {
       $fileName = $_FILES['files']['name'][$i];
       $fileTmpName = $_FILES['files']['tmp_name'][$i]; 
