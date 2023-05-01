@@ -117,8 +117,9 @@
 include "../backend/conn.php";
 session_start(); // Start the session
 
-if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
-echo $_SESSION['email'];}
+if(isset($_SESSION['email'])){
+    echo "da";
+}
 
 if(isset($_POST['submit'])){
 
