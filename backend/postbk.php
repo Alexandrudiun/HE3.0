@@ -3,6 +3,9 @@
 
 include "conn.php";
 
+session_start();
+
+echo $_SESSION['email'];
 
 
 if(isset($_POST['submit'])){
