@@ -40,7 +40,9 @@ if(isset($_POST['submit'])){
     if(in_array($fileActualExt, $allowed)){
         if($fileError === 0){
             if($fileSize < 1000000){
-                $fileNameNew = uniqid('', true).".".$fileActualExt;
+                $fileNameNew = time() . '_' . uniqid('', true).".".$fileActualExt;
+
+                // $fileNameNew = uniqid('', true).".".$fileActualExt;
                 $fileDestination = 'img/upload/'.$fileNameNew;
                 move_uploaded_file($fileTmpName, $fileDestination);
                 header("Location: text.php?uploadsuccess");
