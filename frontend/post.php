@@ -57,7 +57,7 @@ if(isset($_POST['submit'])){
             <div class="profile-card">
               <!-- <form action="post.php" method="post" enctype="multipart/form-data"> -->
 
-              <form action="text.php" method="post" enctype="multipart/form-data">
+              <form action="post.php" method="post" enctype="multipart/form-data">
     <input type="file" name="file[]" multiple>
     <input type="submit" name="submit" value="Upload">
 </form>
