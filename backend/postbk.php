@@ -10,19 +10,45 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     $title = $_POST['titlu'];
     $price = $_POST['pret'];
     $description = $_POST['descriere'];
-    $imagine1 = $_FILES['imagine1']['name'];
-    $imagine2 = $_FILES['imagine2']['name'];
-    $imagine3 = $_FILES['imagine3']['name'];
     $skills = $_POST['skills'];
+    $images = ''; // initialize the images variable
+    for ($i = 0; $i < count($_FILES['files']['name']); $i++) {
+      $fileName = $_FILES['files']['name'][$i];
+      $fileTmpName = $_FILES['files']['tmp_name'][$i]; 
+      $fileSize = $_FILES['files']['size'][$i]; 
+      $fileError = $_FILES['files']['error'][$i]; 
+      $fileType = $_FILES['files']['type'][$i]; 
+      
+      $fileExt = explode('.', $fileName);
+      $fileActualExt = strtolower(end($fileExt));
+      
+      $allowed = array('jpg', 'jpeg', 'png', 'pdf');
+      
+      if(in_array($fileActualExt, $allowed)){
+          if($fileError === 0){
+              if($fileSize < 1000000){
+                  $fileNameNew = uniqid('', true).".".$fileActualExt;
+                  $fileDestination = 'img/upload/'.$fileNameNew;
+                  move_uploaded_file($fileTmpName, $fileDestination);
+                  $images .= $fileNameNew . ','; // append the filename to the images variable
+              } else {
+                  echo "Your file is too big!";
+              }
+          } else {
+              echo "There was an error uploading your file!";
+          }
+      } else {
+          echo "You cannot upload files of this type!";
+      }
 
-    // Upload images to server
-    // Insert data into database
-    $query = "INSERT INTO posts (email, name, title, price, description, imagine1, imagine2, imagine3, skills) VALUES ('{$email}', '{$name}', '{$title}', '{$price}', '{$description}', '{$imagine1}', '{$imagine2}', '{$imagine3}', '{$skills}')";
+    }
+    $images = rtrim($images, ','); // remove the trailing comma
+    $query = "INSERT INTO posts (email, name, title, price, description, images, skills) VALUES ('{$email}', '{$name}', '{$title}', '{$price}', '{$description}', '{$images}', '{$skills}')";
     $add_user_query = mysqli_query($conn, $query);
     if(!$add_user_query) {
-      die('Query Failed'. mysqli_error($conn));
+       die('Query Failed'. mysqli_error($conn));
     }
-    
+    header("Location: text.php?uploadsuccess");
   }
 }
 
