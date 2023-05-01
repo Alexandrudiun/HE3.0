@@ -164,7 +164,7 @@ if(isset($_POST['submit'])){
     $photoNames = rtrim($photoNames, ', ');
     if($uploadCount > 0){
         // Store the concatenated string in the database
-        $query = "UPDATE post SET images = '$photoNames' WHERE email = '$email' AND name = '$name' AND title = '$title' AND price = '$price' AND description = '$description' AND skills = '$skills'";
+        $query = "UPDATE posts SET images = '$photoNames' WHERE email = '$email' AND name = '$name' AND title = '$title' AND price = '$price' AND description = '$description' AND skills = '$skills'";
         $result = mysqli_query($conn, $query);
         
         if($result){
