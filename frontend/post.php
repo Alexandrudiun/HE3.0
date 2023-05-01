@@ -14,29 +14,22 @@
 </head>
 <body>
 
-    <main>
+<main>
         <div class="center">
             <div class="profile-card">
- 
-
               <form action="post.php" method="post" enctype="multipart/form-data">
-                <input type="file" name="file[]" multiple>
-                    <input type="submit" name="submit" value="Upload">
-                        </form>
-
-
                 <h1>Publică un anunţ nou</h1>
                 <h3>Detalii anunţ</h3>
                 <section>
                 <div class="file-box file-input">
-                    <input type="file" id="fileInput" name="file[]" multiple onchange="preview()">
+                    <input type="file" id="fileInput" accept="image/png, image/png, image/jpeg" name="file[]" multiple="multiple" onchange="preview()">
                     <label for="fileInput" class="inputFile">
                         <ion-icon name="albums-outline"></ion-icon> Adaugă imagini
                     </label>
                     <p id="num-of-files">Nicio imagine adăugată</p>
                     <div id="images"></div>
                 </div>
-                </section> 
+                </section>
                 <div class="input-box">
                   <label for="">Titlul anunţului</label>
                   <input type="text" id="titlu" name="titlu" required>
@@ -53,7 +46,7 @@
                 <div class="input-box">
                     <label for="">Telefon</label>
                 <input type="tel" id="phone" name="phone" pattern="^(\+40|0)[0-9]{9}$" required>
-                    </div> 
+                    </div>
                 <div class="button">
                   <input type="submit" name="submit" value="Post" class="btn-login">
                   </div>
