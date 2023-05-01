@@ -1,18 +1,18 @@
 
 <form method="post" enctype="multipart/form-data">
-    <input type="file" name="file[]" multiple>
+    <input type="file" name="file" multiple>
     <input type="submit" name="submit" value="Upload">
 </form>
 
 <?php
 if(isset($_POST['submit'])){
-    for ($i = 0; $i < count($_FILES['file']['name']); $i++) {
-    $file = $_FILES['file'][$i];
-    $fileName = $_FILES['file']['name'][$i];
-    $fileTmpName = $_FILES['file']['tmp_name'][$i];
-    $fileSize = $_FILES['file']['size'][$i]; 
-    $fileError = $_FILES['file']['error'][$i]; 
-    $fileType = $_FILES['file']['type'][$i]; 
+  
+    $file = $_FILES['file'];
+    $fileName = $_FILES['file']['name'];
+    $fileTmpName = $_FILES['file']['tmp_name'];
+    $fileSize = $_FILES['file']['size']; 
+    $fileError = $_FILES['file']['error']; 
+    $fileType = $_FILES['file']['type']; 
     
 
     $fileExt = explode('.', $fileName);
@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
             if($fileSize < 1000000){
                 $fileNameNew = uniqid('', true).".".$fileActualExt;
                 $fileDestination = 'img/upload/'.$fileNameNew;
-                move_uploaded_file($_FILES['file']['tmp_name'][$i]; , $fileDestination);
+                move_uploaded_file($fileTmpName; , $fileDestination);
                 header("Location: text.php?uploadsuccess");
             } else {
                 echo "Your file is too big!";
@@ -36,6 +36,6 @@ if(isset($_POST['submit'])){
     } else {
         echo "You cannot upload files of this type!";
     }
-}
+
 
 }
