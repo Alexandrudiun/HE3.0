@@ -115,10 +115,11 @@
 
 <?php
 
-include "../t.php";
-include "../backend/conn.php";
 
-if(isset($pass)&& isset($email))
+include "../backend/conn.php";
+include "../t.php";
+
+if(isset($password) && isset($email))
 if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
     echo $email;
