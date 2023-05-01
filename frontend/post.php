@@ -1,5 +1,5 @@
 
-<?php error_reporting(E_ALL);?>
+<?php echo"da";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
