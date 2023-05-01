@@ -18,7 +18,7 @@
 
 ?>
 <form action="text.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="file" multiple>
+    <input type="file" name="file[]" multiple>
     <input type="submit" name="submit" value="Upload">
 </form>
 <?php
@@ -30,8 +30,8 @@ if(isset($_POST['submit'])){
     $fileSize = $_FILES['file']['size'][$i]; 
     $fileError = $_FILES['file']['error'][$i]; 
     $fileType = $_FILES['file']['type'][$i]; 
-     print_r($file);
-}
+    
+
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
     
@@ -55,4 +55,4 @@ if(isset($_POST['submit'])){
     }
 }
 
-
+}
