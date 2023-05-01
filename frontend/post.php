@@ -1,6 +1,5 @@
 
-<?php echo $email;
-    echo $password;?>
+<?php error_reporting(E_ALL);?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -125,9 +124,7 @@ session_start(); // Start the session
 if(isset($_POST['submit'])){
 
     if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
-        $email = $_SESSION['email'];
-        $password = $_SESSION['password'];
-    }
+    
     
 
     $files = $_FILES['file'];
@@ -166,4 +163,4 @@ if(isset($_POST['submit'])){
     }
     
 
-
+}
