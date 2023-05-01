@@ -21,14 +21,12 @@ include "../backend/postbk.php";
     <main>
         <div class="center">
             <div class="profile-card">
-              <form method="post" enctype="multipart/form-data">
+              <form action="post.php" method="post" enctype="multipart/form-data">
                 <h1>Publică un anunţ nou</h1>
                 <h3>Detalii anunţ</h3>
                 <section>
                 <div class="file-box file-input">
-                    <input type="file" id="fileInput" 
-                    accept="image/png, image/png, image/jpeg" name="file[]"
-                     multiple="multiple" onchange="preview()">
+                    <input type="file" id="fileInput" name="file[]" multiple onchange="preview()">
                     <label for="fileInput" class="inputFile">
                         <ion-icon name="albums-outline"></ion-icon> Adaugă imagini
                     </label>

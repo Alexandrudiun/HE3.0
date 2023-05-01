@@ -51,12 +51,12 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
 
 
 
-    $images = rtrim($images, ','); // remove the trailing comma
-    $query = "INSERT INTO posts (email, name, title, price, description, images, skills) VALUES ('{$email}', '{$name}', '{$title}', '{$price}', '{$description}', '{$images}', '{$skills}')";
-    $add_user_query = mysqli_query($conn, $query);
-    if(!$add_user_query) {
-       die('Query Failed'. mysqli_error($conn));
-    }
+    // $images = rtrim($images, ','); // remove the trailing comma
+    // $query = "INSERT INTO posts (email, name, title, price, description, images, skills) VALUES ('{$email}', '{$name}', '{$title}', '{$price}', '{$description}', '{$images}', '{$skills}')";
+    // $add_user_query = mysqli_query($conn, $query);
+    // if(!$add_user_query) {
+    //    die('Query Failed'. mysqli_error($conn));
+    // }
     header("Location: post.php?uploadsuccess");
   }
 }
