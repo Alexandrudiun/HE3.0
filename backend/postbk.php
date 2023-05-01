@@ -12,37 +12,45 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     $description = $_POST['descriere'];
     $skills = $_POST['skills'];
     $images = ''; // initialize the images variable
-    echo "da";
-    for ($i = 0; $i < count($_FILES['files']['name']); $i++) {
-      $fileName = $_FILES['files']['name'][$i];
-      $fileTmpName = $_FILES['files']['tmp_name'][$i]; 
-      $fileSize = $_FILES['files']['size'][$i]; 
-      $fileError = $_FILES['files']['error'][$i]; 
-      $fileType = $_FILES['files']['type'][$i]; 
-  
-      $fileExt = explode('.', $fileName);
-      $fileActualExt = strtolower(end($fileExt));
-      
-      $allowed = array('jpg', 'jpeg', 'png', 'pdf');
-      
-      if(in_array($fileActualExt, $allowed)){
-          if($fileError === 0){
-              if($fileSize < 1000000){
-                  $fileNameNew = uniqid('', true).".".$fileActualExt;
-                  $fileDestination = 'img/upload'.$fileNameNew;
-                  move_uploaded_file($fileTmpName, $fileDestination);
-                  $images .= $fileNameNew . ','; // append the filename to the images variable
-              } else {
-                  echo "Your file is too big!";
-              }
-          } else {
-              echo "There was an error uploading your file!";
-          }
-      } else {
-          echo "You cannot upload files of this type!";
-      }
+    
+    // Check if the user uploaded images
+    $files = $_FILES['file'];
+    $allowed = array('jpg', 'jpeg', 'png', 'pdf');
+    $uploadCount = 0;
 
+    foreach($files['name'] as $key => $fileName){
+        $fileTmpName = $files['tmp_name'][$key]; 
+        $fileSize = $files['size'][$key]; 
+        $fileError = $files['error'][$key]; 
+        $fileType = $files['type'][$key]; 
+
+        $fileExt = explode('.', $fileName);
+        $fileActualExt = strtolower(end($fileExt));
+
+        if(in_array($fileActualExt, $allowed)){
+            if($fileError === 0){
+                if($fileSize < 1000000){
+                    $fileNameNew = uniqid('', true).".".$fileActualExt;
+                    $fileDestination = 'img/upload/'.$fileNameNew;
+                    move_uploaded_file($fileTmpName, $fileDestination);
+                    $uploadCount++;
+                } else {
+                    echo "File $fileName is too big!<br>";
+                }
+            } else {
+                echo "There was an error uploading file $fileName!<br>";
+            }
+        } else {
+            echo "You cannot upload files of type $fileActualExt!<br>";
+        }
     }
+
+    if($uploadCount > 0){
+        header("Location: text.php?uploadsuccess");
+    }
+
+
+
     $images = rtrim($images, ','); // remove the trailing comma
     $query = "INSERT INTO posts (email, name, title, price, description, images, skills) VALUES ('{$email}', '{$name}', '{$title}', '{$price}', '{$description}', '{$images}', '{$skills}')";
     $add_user_query = mysqli_query($conn, $query);
