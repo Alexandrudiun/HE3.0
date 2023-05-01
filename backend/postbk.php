@@ -1,7 +1,7 @@
 <?php
 
 
-include "/backend/conn.php";
+include "conn.php";
 
 session_start();
 
