@@ -118,7 +118,7 @@
 include "../t.php";
 include "../backend/conn.php";
 
-
+if(isset($pass)&& isset($email))
 if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
     echo $email;

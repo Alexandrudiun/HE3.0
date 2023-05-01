@@ -1,5 +1,5 @@
 <?php
 
     session_start(); // Start the session
-echo $_SESSION['email'];
-    
+$email = $_SESSION['email'];
+$password = $_SESSION['password'];    
