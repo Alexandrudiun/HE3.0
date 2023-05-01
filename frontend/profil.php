@@ -2,8 +2,6 @@
 
 include "../backend/profilbk.php";?>
 <?php
-session_name("user");
-session_start();
 $profiletype_temp = isset($_SESSION['profiletype_temp']) ? $_SESSION['profiletype_temp'] : 0;
 
 
