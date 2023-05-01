@@ -120,6 +120,10 @@ include "../backend/conn.php";
 include "../t.php";
 
 if(isset($password) && isset($email))
+{echo "ok";}
+else {
+ echo "not ok";
+}
 if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
     echo $email;
