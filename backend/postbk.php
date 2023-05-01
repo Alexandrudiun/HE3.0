@@ -5,8 +5,9 @@ include "conn.php";
 
 session_start();
 
-echo $_SESSION['email'];
 
+if(isset($_SESSION['email']) && isset ($_SESSION['password'])) 
+{
 
 if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
@@ -64,6 +65,7 @@ if(isset($_POST['submit'])){
         } else {
             echo "Error: " . mysqli_error($conn);
         }
+}
 }
 }
 ?>
