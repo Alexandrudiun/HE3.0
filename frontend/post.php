@@ -123,8 +123,7 @@ session_start(); // Start the session
 
 if(isset($_POST['submit'])){
 
-    if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
-
+   
 
     $files = $_FILES['file'];
     $allowed = array('jpg', 'jpeg', 'png', 'pdf');
@@ -160,6 +159,6 @@ if(isset($_POST['submit'])){
     if($uploadCount > 0){
         header("Location: post.php?uploadsuccess");
     }
-    }
+    
 
 
