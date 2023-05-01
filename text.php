@@ -40,6 +40,7 @@ if(isset($_POST['submit'])){
     if(in_array($fileActualExt, $allowed)){
         if($fileError === 0){
             if($fileSize < 1000000){
+                sleep(1);
                 $fileNameNew = time() . '_' . uniqid('', true).".".$fileActualExt;
 
                 // $fileNameNew = uniqid('', true).".".$fileActualExt;
@@ -54,7 +55,7 @@ if(isset($_POST['submit'])){
         }
     } else {
         echo "You cannot upload files of this type!";
-    }
+    
 }
 }
 
