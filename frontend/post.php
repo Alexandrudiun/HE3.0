@@ -28,7 +28,7 @@
                     <div id="images"></div>
                 </div>
                 </section>
-                <!-- <div class="input-box">
+                <div class="input-box">
                   <label for="">Titlul anunţului</label>
                   <input type="text" id="titlu" name="titlu" required>
                 </div>
@@ -44,7 +44,7 @@
                 <div class="input-box">
                     <label for="">Telefon</label>
                 <input type="tel" id="phone" name="phone" pattern="^(\+40|0)[0-9]{9}$" required>
-                    </div> -->
+                    </div>
                 <div class="button">
                   <input type="submit" name="submit" value="Post" class="btn-login">
                   </div>
