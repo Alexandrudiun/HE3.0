@@ -55,7 +55,7 @@ if(isset($_POST['submit'])){
     <main>
         <div class="center">
             <div class="profile-card">
-              <form action="post.php" method="post" enctype="multipart/form-data">
+              <!-- <form action="post.php" method="post" enctype="multipart/form-data"> -->
 
               <form action="text.php" method="post" enctype="multipart/form-data">
     <input type="file" name="file[]" multiple>
@@ -63,7 +63,7 @@ if(isset($_POST['submit'])){
 </form>
 
 
-                <h1>Publică un anunţ nou</h1>
+                <!-- <h1>Publică un anunţ nou</h1>
                 <h3>Detalii anunţ</h3>
                 <section>
                 <div class="file-box file-input">
@@ -74,7 +74,7 @@ if(isset($_POST['submit'])){
                     <p id="num-of-files">Nicio imagine adăugată</p>
                     <div id="images"></div>
                 </div>
-                </section>
+                </section> -->
                 <!-- <div class="input-box">
                   <label for="">Titlul anunţului</label>
                   <input type="text" id="titlu" name="titlu" required>
@@ -92,10 +92,10 @@ if(isset($_POST['submit'])){
                     <label for="">Telefon</label>
                 <input type="tel" id="phone" name="phone" pattern="^(\+40|0)[0-9]{9}$" required>
                     </div> -->
-                <div class="button">
+                <!-- <div class="button">
                   <input type="submit" name="submit" value="Post" class="btn-login">
                   </div>
-              </form>
+              </form> -->
             </div>
           </div> 
     </main>
