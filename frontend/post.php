@@ -118,15 +118,12 @@
 <?php
 session_start(); // Start the session
 
- if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
-
 
 
 if(isset($_POST['submit'])){
 
+      
 
-
-    
     $files = $_FILES['file'];
     $allowed = array('jpg', 'jpeg', 'png', 'pdf');
     $uploadCount = 0;
@@ -163,4 +160,4 @@ if(isset($_POST['submit'])){
     }
     }
 
- }
+ 
