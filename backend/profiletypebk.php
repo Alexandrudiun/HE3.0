@@ -15,7 +15,8 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
 
     $query = "UPDATE users SET worker = '$worker', buyer = '$buyer' WHERE email = '$email'";
     $update_user_query = mysqli_query($conn, $query);
-    
-    }
+    header("Location: ../frontend/profil.php");
+     }
   }
+
 ?>

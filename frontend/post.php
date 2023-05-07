@@ -1,5 +1,3 @@
-
-<?php error_reporting(E_ALL);?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +28,7 @@
                     <div id="images"></div>
                 </div>
                 </section>
-                <!-- <div class="input-box">
+                <div class="input-box">
                   <label for="">Titlul anunţului</label>
                   <input type="text" id="titlu" name="titlu" required>
                 </div>
@@ -46,7 +44,7 @@
                 <div class="input-box">
                     <label for="">Telefon</label>
                 <input type="tel" id="phone" name="phone" pattern="^(\+40|0)[0-9]{9}$" required>
-                    </div> -->
+                    </div>
                 <div class="button">
                   <input type="submit" name="submit" value="Post" class="btn-login">
                   </div>
@@ -116,51 +114,6 @@
 
 
 <?php
-session_start(); // Start the session
 
- 
+include "../backend/postbk.php";?>
 
-
-if(isset($_POST['submit'])){
-
-    if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
-    
-    
-
-    $files = $_FILES['file'];
-    $allowed = array('jpg', 'jpeg', 'png', 'pdf');
-    $uploadCount = 0;
-
-    foreach($files['name'] as $key => $fileName){
-        $fileTmpName = $files['tmp_name'][$key]; 
-        $fileSize = $files['size'][$key]; 
-        $fileError = $files['error'][$key]; 
-        $fileType = $files['type'][$key]; 
-
-        $fileExt = explode('.', $fileName);
-        $fileActualExt = strtolower(end($fileExt));
-
-        if(in_array($fileActualExt, $allowed)){
-            if($fileError === 0){
-                if($fileSize < 1000000){
-                    $fileNameNew = uniqid('', true).".".$fileActualExt;
-                    $fileDestination = '../img/upload/'.$fileNameNew;
-                    move_uploaded_file($fileTmpName, $fileDestination);
-                    $uploadCount++;
-                } else {
-                    echo "File $fileName is too big!<br>";
-                }
-            } else {
-                echo "There was an error uploading file $fileName!<br>";
-            }
-        } else {
-            echo "You cannot upload files of type $fileActualExt!<br>";
-        }
-    }
-}
-    if($uploadCount > 0){
-        header("Location: post.php?uploadsuccess");
-    }
-    
-
-}
