@@ -88,25 +88,18 @@ textarea{
   color: #222;
 }
 
-input[type="file"] {
-  opacity: 0;
-  position: absolute;
-  z-index: -1;
+input[type="file"]{
+  background: none;
 }
 
-.custom-file-upload {
-  display: inline-block;
-  padding: 6px 12px;
+#image{
+  max-width: 80%;
+  word-wrap: break-word;
+  margin-top: 8px;
+  color: #222;
+  border: none;
   cursor: pointer;
-  background-color: #44B3C2;
-  color: #fff;
-  border-radius: 4px;
 }
-
-.custom-file-upload:hover {
-  background-color: #2F94A2;
-}
-
 
 .input-box ion-icon{
   position: absolute;
