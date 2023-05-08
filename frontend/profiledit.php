@@ -29,7 +29,7 @@
         </div>
         <div class="input-box">
           <ion-icon name="camera-outline"></ion-icon>
-          <input type="file" accept="image/*" name="image" class="upload-image" id="image">
+          <input type="file" accept="image/*" name="image" id="image">
           <label class="change-profile">Change Profile Picture</label>
         </div>
         <div class="button">

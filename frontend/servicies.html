@@ -48,6 +48,54 @@
 			font-size: 14px;
 			margin: 10px 0;
 		}
+		.input-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+ion-icon {
+  font-size: 50px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+input[type="file"] {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.change-profile {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #4CAF50;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.change-profile:hover {
+  background-color: #3e8e41;
+}
+
 	</style>
 </head>
 <body>
@@ -84,6 +132,11 @@
 			<span>Constanta</span>
 			<span>Time: 1 hour</span>
 		</div>
+	</div>
+	<div class="input-box">
+		<ion-icon name="camera-outline"></ion-icon>
+		<input type="file" accept="image/*" name="image">
+		<label class="change-profile">Change Profile Picture</label>
 	</div>
 </body>
 </html>
