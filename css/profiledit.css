@@ -92,6 +92,11 @@ input[type="file"]{
   background: none;
 }
 
+.camera-icon
+{
+ color: #ccc;
+}
+
 #image{
   max-width: 90%;
   word-wrap: break-word;

@@ -28,7 +28,7 @@
           <label for="">Skills</label>
         </div>
         <div class="input-box">
-          <ion-icon name="camera-outline"></ion-icon>
+          <ion-icon name="camera-outline" class="camera-icon"></ion-icon>
           <input type="file" accept="image/*" name="image" id="image">
           <label class="change-profile">Change Profile Picture</label>
         </div>
