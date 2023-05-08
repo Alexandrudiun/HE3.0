@@ -52,7 +52,7 @@ h1{
   top:50%;
   left:5px;
   transform: translateY(-50%);
-  color: #222;
+  color: #ccc;
   font-size: 1em;
   pointer-events: none;
   transition: .5s;
