@@ -146,6 +146,7 @@ textarea{
   resize: vertical;
   width: 100%;
   padding: 0 35px 0 10px;
+  font-size: 1em;
 }
 
 .input-box input{

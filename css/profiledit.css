@@ -66,6 +66,7 @@ textarea:valid ~ label{
 
 textarea{
   color: #222;
+  font-size: 1em;
   border-radius: 10px;
   resize: vertical;
   width: 100%;
