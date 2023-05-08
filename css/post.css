@@ -135,6 +135,10 @@ figCaption{
   min-width: 100px;
 }
 
+.input-box label {
+  color: #ccc;
+}
+
 textarea{
   border-radius: 10px;
   resize: vertical;
