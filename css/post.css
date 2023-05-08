@@ -121,6 +121,7 @@ img{
 }
 
 figCaption{
+  color: #ccc;
   text-align: center;
   font-size: 12px;
   font-weight: 300px;
