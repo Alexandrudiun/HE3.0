@@ -57,7 +57,7 @@ h3::after {
   transform: translateX(-50%);
   width: 50%;
   height: 2px;
-  background: #040307;
+  background: #1C1C1E;
 }
 .file-box{
   position: relative;
