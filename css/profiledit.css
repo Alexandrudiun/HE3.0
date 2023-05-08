@@ -108,12 +108,6 @@ input[type="file"] {
 }
 
 
-#image{
-  max-width: 80%;
-  word-wrap: break-word;
-  cursor: pointer;
-}
-
 .input-box ion-icon{
   position: absolute;
   right: 8px;
