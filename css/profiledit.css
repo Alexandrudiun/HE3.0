@@ -92,11 +92,6 @@ input[type="file"]{
   background: none;
 }
 
-.camera-icon
-{
- color: #ccc;
-}
-
 #image{
   max-width: 90%;
   word-wrap: break-word;
@@ -110,7 +105,7 @@ input[type="file"]{
 .input-box ion-icon{
   position: absolute;
   right: 8px;
-  color:#222;
+  color:#ccc;
   font-size: 1.2em;
   top:10px
 }
