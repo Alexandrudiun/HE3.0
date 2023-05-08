@@ -2,10 +2,6 @@
 
 /* Global */
 
-:root{
-  --worker-color: #362A60;
-  --prestator-color: #e91e63;
-}
 *{
   margin: 0;
   padding: 0;
@@ -37,7 +33,7 @@ h3{
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background: #9668f5;
+  background: #2C3E50;
   border-radius: 10px;
   padding: 25px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
@@ -53,7 +49,7 @@ h3{
   width: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid var(--worker-color);
+  border: 3px solid #F1C40F;
 }
 
 .text-data{
@@ -71,7 +67,7 @@ h3{
 .jobs{
   font-size: 14px;
   font-weight: 400;
-  color: #3c3c3c;
+  color: #fff;
   word-wrap: anywhere;
   padding: 0 20px 0 20px;
 }
@@ -88,7 +84,7 @@ h3{
   border: solid 1px transparent;
   width: 250px;
   text-align: center;
-  background: var(--worker-color);
+  background: #2C3E50;
   border-radius: 10px;
   color: #fff ;
   padding: 10px;
@@ -106,7 +102,7 @@ h3{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #5740A0;
+  background: #44B3C2;
   padding: 5px;
   border-radius: 10px;
   color: #fff;
@@ -123,7 +119,7 @@ h3{
   display: flex;
   align-items: center;
   justify-content: center ;
-  background: var(--worker-color);
+  background: #ccc;
   border: 1px solid transparent;
   border-radius: 10px;
   padding: 5px;
