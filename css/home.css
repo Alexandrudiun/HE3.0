@@ -15,3 +15,83 @@ body{
   width: 100%;
   padding: 3px;
 }
+
+.flex-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  border-radius: 5px;
+  /* border: 1px solid #333; */
+  padding: 5px;
+  margin: 10px 10px 30px 10px;
+}
+
+.search-bar input[type="text"] {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  padding: 5px;
+  font-size: 1em;
+}
+
+ion-icon{
+  color: #f3f3f3;
+}
+
+.search-bar button[type="submit"] {
+  border: none;
+  font-size: 1.2em;
+  background: none;
+  outline: none;
+  color: #333;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.cards{
+  display: flex;
+  flex-direction: row;
+	justify-content: center;
+  padding: 0 5px 0 5px;
+  margin-bottom:0px;
+}
+
+.card{
+  background-color: #2C3E50;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  flex-basis: calc(50% - 20px);
+	margin: 10px;
+}
+.card img{
+  display: block;
+	margin: 0 auto;
+	max-width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius:10px;
+}
+
+.info-area{
+  padding: 5px;
+}
+
+.card h3{
+  font-size: 1em;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card h2{
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #fff;
+}
+
+.card span{
+  display: block;
+  font-size: 10px;
+  color: #ccc;
+}
