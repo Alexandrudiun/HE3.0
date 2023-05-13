@@ -65,10 +65,10 @@ if(isset($_POST['submit'])){
                     echo "File $fileName is too big!<br>";
                 }
             } else {
-                echo "There was an error uploading file $fileName!<br>";
+                echo "<script>document.getElementById('mesaj').innerHTML = 'There was an error uploading file $fileName!<br>';</script>";
             }
         } else {
-            echo "You cannot upload files of type $fileActualExt!<br>";
+            echo "<script>document.getElementById('mesaj').innerHTML = 'You cannot upload files of type $fileActualExt!<br>';</script>";
         }
     }
     $photoNames = rtrim($photoNames, ', ');
