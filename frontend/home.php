@@ -42,7 +42,7 @@ if (mysqli_num_rows($result) > 0) {
         // echo '<div class="cards">';
         
         echo '<div class="card">';
-        echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="max-width: 100px; max-height: 100px;">';
+        echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="max-width: 250px; max-height: 250px;">';
         echo '<div class="info-area">';
         echo '<h3 class="service-title">' . $row['title'] . '</h3>';
         echo '<h2 class="service-price">' . $row['price'] . '</h2>';
