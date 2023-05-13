@@ -37,9 +37,9 @@ if (mysqli_num_rows($result) > 0) {
         $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside the while loop
         
       
-        if($row['id']%2==0)
-        echo "</div>";
-        echo '<div class="cards">';
+        // if($row['id']%2==0)
+        // echo "</div>";
+        // echo '<div class="cards">';
         
         echo '<div class="card">';
         echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="max-width: 350px; max-height: 250px;">';
