@@ -11,8 +11,24 @@ session_start();
 // else
 //  echo "You are not logged in!";
 if(isset($_POST['submit'])){
-    $email = $_SESSION['email'];
-    echo $email;
+    $email = $_POST['email'];
+    $query="SELECT * FROM users WHERE email = '{$email}'";
+    $select_user_query = mysqli_query($conn, $query);
+    
+    
+    $email_found = false; // Flag variable to check if email was found
+    while($row = mysqli_fetch_row($select_user_query)){
+        if($row[1] !== $email) {
+            continue; // Skip to next row if email doesn't match
+        }
+        $email_found = true;
+    }
+
+    if(!$email_found) {
+        echo "<script>document.getElementById('mesaj').innerHTML = 'Email neînregistrat';</script>";
+    }
+    else{
+
     $name = $_POST['name'];
     $title = $_POST['titlu'];
     $price = $_POST['pret'];
@@ -62,11 +78,12 @@ if(isset($_POST['submit'])){
         $result = mysqli_query($conn, $query);
         
         if($result){
+            echo "<script>document.getElementById('mesaj').innerHTML = 'Anunțul a fost postat';</script>";
             header("Location: post.php?uploadsuccess");
         } else {
             echo "Error: " . mysqli_error($conn);
         }
 }
 }
-
+}
 ?>

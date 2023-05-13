@@ -48,6 +48,7 @@
                 <div class="button">
                   <input type="submit" name="submit" value="Post" class="btn-login">
                   </div>
+                  <div id="mesaj"></div>
               </form>
             </div>
           </div> 
