@@ -19,7 +19,7 @@
   </div>
   <section>
   <div class="flex-2-column">
-
+  <div class="cards">
 <?php
 
 include "backend/conn.php";
@@ -37,7 +37,10 @@ if (mysqli_num_rows($result) > 0) {
         $location="https://idcrew.shop/img/upload/" . $photo_names[1]; // Moved inside the while loop
         
       
+        if($row['id']%2==0)
+        echo "</div>";
         echo '<div class="cards">';
+        
         echo '<div class="card">';
         echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="max-width: 250px; max-height: 100px;">';
         echo '<div class="info-area">';
@@ -47,10 +50,7 @@ if (mysqli_num_rows($result) > 0) {
         echo '<span>' . $row['date'] . 'aici era data</span>';
         echo '</div>';
         echo '</div>';
-        if($row['id']%2==0)
-        echo "</div>";
-        echo '<div class="cards">';
-        
+       
         
 
         
