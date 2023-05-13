@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <title>Home</title>
+</head>
+<body>
+  <div class="search-bar">
+    <form action="#">
+      <div class="flex-search">
+      <input type="text" placeholder="Search...">
+      <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+      </div>
+    </form>
+  </div>
+  <section>
+
+
+<?php
+
+include "backend/conn.php";
+
+
+$sql = "SELECT * FROM `posts` ORDER BY `id` ASC;";
+$result = mysqli_query($conn, $sql);
+
+// Store the products in an array
+$post = array();
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $post[] = $row;
+        $photo_names = explode(', ', $row['images']);
+        $location="https://idcrew.shop/img/upload/" . $photo_names[1]; // Moved inside the while loop
+        
+        echo '<div class="flex-2-column">';
+        echo '<div class="cards">';
+        echo '<div class="card">';
+        echo '<img src="' . $location . '" alt="' . $row['name'] . '">';
+        echo '<div class="info-area">';
+        echo '<h3 class="service-title">' . $row['name'] . '</h3>';
+        echo '<h2 class="service-price">' . $row['price'] . '</h2>';
+        echo '<span>' . $row['location'] . '</span>';
+        echo '<span>' . $row['date'] . '</span>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // echo '<div class="post">';
+        // echo '<h2>' . $row['name'] . '</h2>';
+        // echo '<p>' . $row['description'] . '</p>';
+        // echo '<img src="' . $location . '" alt="' . $row['name'] . '">';
+        // //echo $location;
+        // echo '<p>Price: ' . $row['price'] . '</p>';
+        // echo '<p>Skills required: ' . $row['skills'] . '</p>';
+        // echo '</div>';
+    }
+}
+
+
+?>
+</section>
+<!-- Navbar Down --> 
+<footer>  
+    <section class="nav-bar">
+        <div class="navigation">
+            <ul>
+                <li class="list active">
+                    <a href="/frontend/home.html">
+                        <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Explorează</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="/frontend/profil.php">
+                        <span class="icon">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="text">Profil</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="/frontend/post.php">
+                        <span class="icon">
+                            <ion-icon name="add-circle-outline"></ion-icon>
+                        </span>
+                        <span class="text">Postează</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="albums-outline"></ion-icon>
+                        </span>
+                        <span class="text">Istoric</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                        <ion-icon name="build-outline"></ion-icon>
+                        </span>
+                        <span class="text">My work</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+        </div>
+    </section>
+    </footer>
+    <script src="/js/nav.js"></script>
+    <script src="/js/sliderimg.js"></script>
+  <!-- Ion icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
