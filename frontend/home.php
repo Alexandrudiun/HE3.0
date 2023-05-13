@@ -71,7 +71,7 @@ if (mysqli_num_rows($result) > 0) {
         <div class="navigation">
             <ul>
                 <li class="list active">
-                    <a href="/frontend/home.html">
+                    <a href="/frontend/home.php">
                         <span class="icon">
                         <ion-icon name="home-outline"></ion-icon>
                         </span>
