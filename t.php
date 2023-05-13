@@ -17,8 +17,8 @@ if (mysqli_num_rows($result) > 0) {
         echo '<div class="post">';
         echo '<h2>' . $row['name'] . '</h2>';
         echo '<p>' . $row['description'] . '</p>';
-        //echo '<img src="' . $location . '" alt="' . $row['name'] . '">';
-        echo $location;
+        echo '<img src="' . $location . '" alt="' . $row['name'] . '">';
+        //echo $location;
         echo '<p>Price: ' . $row['price'] . '</p>';
         echo '<p>Skills required: ' . $row['skills'] . '</p>';
         echo '</div>';
