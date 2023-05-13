@@ -3,14 +3,6 @@
 
 include "backend/conn.php";
 
-if($conn){
-    echo "Connection succesful";   
-    }
-    else{
-        echo "Connection failed";
-    }
-    
-    
 
 $sql = "SELECT * FROM `posts` ORDER BY `id` ASC;";
 $result = mysqli_query($conn, $sql);
