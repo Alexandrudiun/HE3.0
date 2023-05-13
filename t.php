@@ -1,7 +1,7 @@
 
 <div id="product-container"><?php
 
-include "conn.php";
+include "backend/conn.php";
 
 if($conn){
     echo "Connection succesful";   
