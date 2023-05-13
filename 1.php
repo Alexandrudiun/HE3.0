@@ -34,10 +34,7 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $post[] = $row;
         $photo_names = explode(', ', $row['images']);
-        if($photo_names[0] == '')
-        {
-            $photo_names[0] = $row['images'];
-        }
+   
         $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside the while loop
         
       
