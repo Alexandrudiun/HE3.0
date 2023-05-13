@@ -4,7 +4,7 @@
 include "conn.php";
 
 
-$sql = "SELECT * FROM posts";
+$sql = "SELECT * FROM `posts` ORDER BY `id` ASC;";
 $result = mysqli_query($conn, $sql);
 
 // Store the products in an array
