@@ -27,6 +27,7 @@
                     <p id="num-of-files">Nicio imagine adăugată</p>
                     <div id="images"></div>
                 </div>
+                <div id="mesaj" style="color:red;"></div>
                 </section>
                 <div class="input-box">
                   <label for="">Titlul anunţului</label>
@@ -48,7 +49,7 @@
                 <div class="button">
                   <input type="submit" name="submit" value="Post" class="btn-login">
                   </div>
-                  <div id="mesaj"></div>
+                  
               </form>
             </div>
           </div> 
