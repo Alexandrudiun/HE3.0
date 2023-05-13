@@ -123,7 +123,7 @@ else{
         <div class="navigation">
             <ul>
                 <li class="list">
-                    <a href="/frontend/home.html">
+                    <a href="/frontend/home.php">
                         <span class="icon">
                         <ion-icon name="home-outline"></ion-icon>
                         </span>

@@ -22,7 +22,7 @@
   <div class="cards">
 <?php
 
-include "backend/conn.php";
+include "..backend/conn.php";
 
 
 $sql = "SELECT * FROM `posts` ORDER BY `id` ASC;";
