@@ -27,7 +27,7 @@
                     <p id="num-of-files">Nicio imagine adăugată</p>
                     <div id="images"></div>
                 </div>
-                <div id="mesaj" style="color:red;"></div>
+                <div id="mesaj" style="color:red; text-align:center;"></div>
                 </section>
                 <div class="input-box">
                   <label for="">Titlul anunţului</label>
