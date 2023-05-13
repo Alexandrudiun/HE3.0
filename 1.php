@@ -49,7 +49,7 @@ if (mysqli_num_rows($result) > 0) {
         echo '</div>';
         if($row['id']%2==0)
         echo "</div>";
-        echo '<div class="card">';
+        echo '<div class="cards">';
         
         
 
