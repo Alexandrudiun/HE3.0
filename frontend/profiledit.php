@@ -43,7 +43,7 @@
         <div class="navigation">
             <ul>
                 <li class="list">
-                    <a href="#">
+                    <a href="/frontend/home.html">
                         <span class="icon">
                         <ion-icon name="home-outline"></ion-icon>
                         </span>
