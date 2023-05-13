@@ -18,7 +18,7 @@
     </form>
   </div>
   <section>
-
+  <div class="flex-2-column">
 
 <?php
 
@@ -36,7 +36,7 @@ if (mysqli_num_rows($result) > 0) {
         $photo_names = explode(', ', $row['images']);
         $location="https://idcrew.shop/img/upload/" . $photo_names[1]; // Moved inside the while loop
         
-        echo '<div class="flex-2-column">';
+      
         echo '<div class="cards">';
         echo '<div class="card">';
         echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="max-width: 250px; max-height: 100px;">';
@@ -48,7 +48,7 @@ if (mysqli_num_rows($result) > 0) {
         echo '</div>';
         echo '</div>';
         echo '</div>';
-        echo '</div>';
+        
 
         
         // echo '<div class="post">';
@@ -64,6 +64,7 @@ if (mysqli_num_rows($result) > 0) {
 
 
 ?>
+</div>
 </section>
 <!-- Navbar Down --> 
 <footer>  
