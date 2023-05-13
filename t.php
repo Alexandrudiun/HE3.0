@@ -12,7 +12,7 @@ $post = array();
 if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $post[] = $row;
-        $photo_names = explode(',', $row['images']);
+        $photo_names = explode(', ', $row['images']);
         $location="https://idcrew.shop/img/upload/" . $photo_names[1]; // Moved inside the while loop
         echo '<div class="post">';
         echo '<h2>' . $row['name'] . '</h2>';
