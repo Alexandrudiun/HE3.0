@@ -1,4 +1,12 @@
-
+<?php
+   session_start(); // Start the session
+   $email = $_SESSION['email'];
+   $password = $_SESSION['password'];  
+   if(isset($_SESSION['email']) && isset ($_SESSION['password'])) 
+    echo "You are logged in!";
+   else
+    echo "You are not logged in!";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -115,11 +123,8 @@
 
 <?php
 
-    session_start(); // Start the session
-$email = $_SESSION['email'];
-$password = $_SESSION['password'];    
- if($email)echo $email;
- else echo $password;
+   
+
  
  if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
