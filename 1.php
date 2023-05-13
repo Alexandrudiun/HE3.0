@@ -61,9 +61,8 @@ if (mysqli_num_rows($result) > 0) {
         // echo '</div>';
     }
 }
-
-
 ?>
+
 </div>
 </section>
 <!-- Navbar Down --> 
