@@ -12,18 +12,17 @@ $post = array();
 if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $post[] = $row;
+        $location="img/upload/" . $row['images']; // Moved inside the while loop
+        echo '<div class="post">';
+        echo '<h2>' . $row['name'] . '</h2>';
+        echo '<p>' . $row['description'] . '</p>';
+        echo '<img src="' . $location . '" alt="' . $row['name'] . '">';
+        echo '<p>Price: ' . $row['price'] . '</p>';
+        echo '<p>Skills required: ' . $row['skills'] . '</p>';
+        echo '</div>';
     }
 }
-$location="img/upload/" . $post['images'];
-foreach ($post as $post) {
-    echo '<div class="post">';
-    echo '<h2>' . $post['name'] . '</h2>';
-    echo '<p>' . $post['description'] . '</p>';
-    echo '<img src="' . $location . '" alt="' . $post['name'] . '">';
-    echo '<p>Price: ' . $post['price'] . '</p>';
-    echo '<p>Skills required: ' . $post['skills'] . '</p>';
-    echo '</div>';
-}
+
 ?>
 <h1>Products</h1>
 </div>
