@@ -25,6 +25,7 @@ foreach ($post as $post) {
     echo '</div>';
 }
 ?>
+<h1>Products</h1>
 </div>
 <style>
     #product-container {
