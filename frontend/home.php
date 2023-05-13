@@ -21,7 +21,7 @@
     <div class="flex-2-column">
       <?php
 
-      include "backend/conn.php";
+      include "..backend/conn.php";
       
       
       $sql = "SELECT * FROM `posts` ORDER BY `id` ASC;";
@@ -48,6 +48,7 @@
               //echo '<p>Skills required: ' . $row['skills'] . '</p>';
               echo '<span>Constanta</span>
               <span>12 apr, 09:48</span>'
+              echo '</div>';
               echo '</div>';
               echo '</div>';
           }
