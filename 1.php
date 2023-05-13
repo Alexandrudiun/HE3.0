@@ -47,7 +47,10 @@ if (mysqli_num_rows($result) > 0) {
         echo '<span>' . $row['date'] . 'aici era data</span>';
         echo '</div>';
         echo '</div>';
-        echo '</div>';
+        if($row['id']%2==0)
+        echo "</div>";
+        echo '<div class="card">';
+        
         
 
         
