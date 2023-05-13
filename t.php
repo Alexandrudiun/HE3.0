@@ -118,8 +118,8 @@
     session_start(); // Start the session
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];    
- echo $email;
- echo $password;
+ if($email)echo $email;
+ else echo $password;
  
  if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
