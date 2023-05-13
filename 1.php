@@ -43,8 +43,8 @@ if (mysqli_num_rows($result) > 0) {
         echo '<div class="info-area">';
         echo '<h3 class="service-title">' . $row['name'] . '</h3>';
         echo '<h2 class="service-price">' . $row['price'] . '</h2>';
-        echo '<span>' . $row['location'] . '</span>';
-        echo '<span>' . $row['date'] . '</span>';
+        echo '<span>' . $row['location'] . 'aici trb ceva (locatie era) </span>';
+        echo '<span>' . $row['date'] . 'aici era data</span>';
         echo '</div>';
         echo '</div>';
         echo '</div>';
