@@ -37,11 +37,6 @@ if (mysqli_num_rows($result) > 0) {
         $photo_names = explode(', ', $row['images']);
         $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside the while loop
         
-      
-        // if($row['id']%2==0)
-        // echo "</div>";
-        // echo '<div class="cards">';
-        
         echo '<div class="card">';
         echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;">';
         echo '<div class="info-area">';
@@ -55,20 +50,12 @@ if (mysqli_num_rows($result) > 0) {
     }
     echo '</div>';
 }
-// echo '<div class="post">';
-        // echo '<h2>' . $row['name'] . '</h2>';
-        // echo '<p>' . $row['description'] . '</p>';
-        // echo '<img src="' . $location . '" alt="' . $row['name'] . '">';
-        // //echo $location;
-        // echo '<p>Price: ' . $row['price'] . '</p>';
-        // echo '<p>Skills required: ' . $row['skills'] . '</p>';
-        // echo '</div>';
 
 ?>
 </div>
 </section>
 <!-- Navbar Down --> 
-<footer>  
+<footer class="fixed-footer">  
     <section class="nav-bar">
         <div class="navigation">
             <ul>
