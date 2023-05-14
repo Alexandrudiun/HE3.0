@@ -62,12 +62,13 @@ h3{
 .name{
   font-size: 17px;
   font-weight: 400;
+  color: #fff;
 }
 
 .jobs{
   font-size: 14px;
   font-weight: 400;
-  color: #fff;
+  color: #f3f3f3;
   word-wrap: anywhere;
   padding: 0 20px 0 20px;
 }
