@@ -82,22 +82,22 @@ input[type="checkbox"]{
 }
 
 .input-box div:nth-child(1) label input[type="checkbox"]:checked ~ span{
-  background: #e91e63;
+  background: #44B3C2;
   color: #fff;
-  box-shadow: 0 2px 20px #e91e63;
+  box-shadow: 0 2px 20px #44B3C2;
 }
 
 .input-box div:nth-child(2) label input[type="checkbox"]:checked ~ span{
-  background: #ff9800;
+  background: #F1C40F;
   color: #fff;
-  box-shadow: 0 2px 20px #ff9800;
+  box-shadow: 0 2px 20px #F1C40F;
 }
 
 input.btn-login{
   width: 100%;
   height: 40px;
   border-radius: 40px;
-  background: #362A60;
+  background: #44B3C2;
   color: #f3f3f3;
   border: none;
   outline: none;
@@ -112,4 +112,5 @@ input.btn-login{
   font-size: 12px;
   font-style: italic;
   font-weight: 300;
+  color: #f3f3f3;
 }
