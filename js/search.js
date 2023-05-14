@@ -9,7 +9,7 @@ const search = () => {
       if (textvalue.toUpperCase().indexOf(searchbox) > -1) {
           product[i].style.display = "";
       } else {
-          product[i].style.display = "none";
+          product[i].style.display = "";
       }
   }
 }
