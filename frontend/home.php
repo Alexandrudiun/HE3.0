@@ -43,7 +43,7 @@ if (mysqli_num_rows($result) > 0) {
         // echo '<div class="cards">';
         
         echo '<div class="card">';
-        echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="max-width: 150px; max-height: 200px;">';
+        echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;">';
         echo '<div class="info-area">';
         echo '<h3 class="service-title">' . $row['title'] . '</h3>';
         echo '<h2 class="service-price">' . $row['price'] . '</h2>';
@@ -51,7 +51,11 @@ if (mysqli_num_rows($result) > 0) {
         echo '<span>' . $row['date'] . 'aici era data</span>';
         echo '</div>';
         echo '</div>';        
-        // echo '<div class="post">';
+        
+    }
+    echo '</div>';
+}
+// echo '<div class="post">';
         // echo '<h2>' . $row['name'] . '</h2>';
         // echo '<p>' . $row['description'] . '</p>';
         // echo '<img src="' . $location . '" alt="' . $row['name'] . '">';
@@ -59,10 +63,6 @@ if (mysqli_num_rows($result) > 0) {
         // echo '<p>Price: ' . $row['price'] . '</p>';
         // echo '<p>Skills required: ' . $row['skills'] . '</p>';
         // echo '</div>';
-    }
-    echo '</div>';
-}
-
 
 ?>
 </div>
