@@ -75,6 +75,11 @@ ion-icon{
   flex-basis: calc(50% - 20px);
 	margin: 10px;
 }
+
+.card.hidden {
+  display: none;
+}
+
 .card img{
   display: block;
 	margin: 0 auto;
