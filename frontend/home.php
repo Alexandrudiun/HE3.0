@@ -12,7 +12,7 @@
   <div class="search-bar">
     <form action="#">
       <div class="flex-search">
-      <input type="text" placeholder="Search...">
+      <input type="search" placeholder="Search...">
       <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
       </div>
     </form>
