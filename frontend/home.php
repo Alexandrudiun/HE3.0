@@ -55,7 +55,7 @@ if (mysqli_num_rows($result) > 0) {
 </div>
 </section>
 <!-- Navbar Down --> 
-<footer class="fixed-footer">  
+<footer>  
     <section class="nav-bar">
         <div class="navigation">
             <ul>
