@@ -1,3 +1,17 @@
+<?php
+include "../backend/conn.php";
+
+if (isset($_GET['submit'])) {
+  $search_term = $_GET['text'];
+
+  $sql = "SELECT * FROM 'posts' WHERE title LIKE '%$search_term%'";
+  $result = mysqli_query($conn, $sql);
+
+  while ($row = mysqli_fetch_assoc($result)) {
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +24,10 @@
 </head>
 <body>
   <div class="search-bar">
-    <form action="#">
+    <form action="/frontend/home.php" method="get">
       <div class="flex-search">
-      <input type="text" placeholder="Search...">
-      <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+      <input type="text" name="text" placeholder="Search...">
+      <button type="submit" name="submit"><ion-icon name="search-outline"></ion-icon></button>
       </div>
     </form>
   </div>
@@ -104,6 +118,7 @@ if (mysqli_num_rows($result) > 0) {
         </div>
     </section>
     </footer>
+    <script src="/js/search.js"></script>
     <script src="/js/nav.js"></script>
     <script src="/js/sliderimg.js"></script>
   <!-- Ion icons -->
