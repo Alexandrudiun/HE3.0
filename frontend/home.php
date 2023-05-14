@@ -31,6 +31,7 @@ $result = mysqli_query($conn, $sql);
 // Store the products in an array
 $post = array();
 if (mysqli_num_rows($result) > 0) {
+    echo '<div class="flex-container">';
     while ($row = mysqli_fetch_assoc($result)) {
         $post[] = $row;
         $photo_names = explode(', ', $row['images']);
@@ -59,6 +60,7 @@ if (mysqli_num_rows($result) > 0) {
         // echo '<p>Skills required: ' . $row['skills'] . '</p>';
         // echo '</div>';
     }
+    echo '</div>';
 }
 
 
