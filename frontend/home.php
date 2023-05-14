@@ -1,17 +1,3 @@
-<?php
-include "../backend/conn.php";
-
-if (isset($_GET['submit'])) {
-  $search_term = $_GET['text'];
-
-  $sql = "SELECT * FROM 'posts' WHERE title LIKE '%$search_term%'";
-  $result = mysqli_query($conn, $sql);
-
-  while ($row = mysqli_fetch_assoc($result)) {
-  }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,9 +10,9 @@ if (isset($_GET['submit'])) {
 </head>
 <body>
   <div class="search-bar">
-    <form action="/frontend/home.php" method="get">
+    <form action="#">
       <div class="flex-search">
-      <input type="text" name="text" placeholder="Search...">
+      <input type="text" name="text" id="search-item" placeholder="Search..." onkeyup="search()">
       <button type="submit" name="submit"><ion-icon name="search-outline"></ion-icon></button>
       </div>
     </form>
@@ -45,7 +31,7 @@ $result = mysqli_query($conn, $sql);
 // Store the products in an array
 $post = array();
 if (mysqli_num_rows($result) > 0) {
-    echo '<div class="flex-container">';
+    echo '<div class="flex-container id="service-list">';
     while ($row = mysqli_fetch_assoc($result)) {
         $post[] = $row;
         $photo_names = explode(', ', $row['images']);
