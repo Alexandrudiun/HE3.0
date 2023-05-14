@@ -14,3 +14,30 @@ body{
   height: calc(120vh + 70px);
   width: 100%;
 }
+
+.container{
+  padding: 3px;
+}
+
+.slider-wrapper{
+  position: relative;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.slider{
+  display: flex;
+  aspect-ratio: 16/9 ;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius:10px ;
+}
+
+.slider img{
+  flex: 1 0 100%; 
+  /* grow shrink initial-size:100% */
+  scroll-snap-align: start;
+  object-fit: cover;
+}
