@@ -46,6 +46,14 @@
                     <label for="">Telefon</label>
                 <input type="tel" id="phone" name="phone" pattern="^(\+40|0)[0-9]{9}$" required>
                     </div>
+                <div class="input-box">
+                <label for="">Localitate</label>
+                <input type="text" id="localitate" name="localitate" required>
+                </div>
+                <div class="input-box">
+                <label for="">Judeţ</label>
+                <input type="text" id="judet" name="judet" required>
+                </div>
                 <div class="button">
                   <input type="submit" name="submit" value="Post" class="btn-login">
                   </div>
