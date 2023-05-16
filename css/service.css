@@ -128,7 +128,7 @@ body{
 }
 
 .img-profile {
-  position: relative; /* Required for positioning the ::after element */
+  position: relative; 
   width: 100px;
   height: 100px;
   object-fit: contain;
@@ -141,10 +141,10 @@ body{
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 50%; /* Adjust the position as needed */
-  width: 2px; /* Adjust the width of the vertical line */
-  background-color: #F1C40F; /* Adjust the color as needed */
-  transform: translateX(-50%); /* Centers the line vertically */
+  left: 50%;
+  width: 2px; 
+  background-color: #F1C40F; 
+  transform: translateX(-50%); 
 }
 
 
