@@ -6,10 +6,10 @@ include "conn.php";
 session_start();
 
 
-// if(isset($_SESSION['email']) && isset ($_SESSION['password'])) 
-//  echo "You are logged in!";
-// else
-//  echo "You are not logged in!";
+if(isset($_SESSION['email']) && isset ($_SESSION['password'])) 
+ echo "You are logged in!";
+else
+ echo "You are not logged in!";
 if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $query="SELECT * FROM users WHERE email = '{$email}'";
