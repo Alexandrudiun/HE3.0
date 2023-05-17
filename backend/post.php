@@ -121,5 +121,5 @@
 
 <?php
 
-include "../backend/postbk.php";?>
+include "postbk.php";?>
 
