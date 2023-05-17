@@ -5,9 +5,9 @@ include "conn.php";
 
 session_start();
 
-echo $_SESSION['email'];
+
 if(isset($_SESSION['email']) && isset ($_SESSION['password'])) 
-{ echo "da";
+{ 
 if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
     $query="SELECT * FROM users WHERE email = '{$email}'";
