@@ -20,7 +20,7 @@
                 <h3>Detalii anunţ</h3>
                 <section>
                 <div class="file-box file-input">
-                    <input type="file" id="fileInput" accept="image/png, image/png, image/jpeg" name="file[]" multiple="multiple" onchange="preview()">
+                    <input type="file" id="fileInput" accept="image/png, image/png, image/jpeg" name="file[]" multiple="multiple" onchange="preview()" required>
                     <label for="fileInput" class="inputFile">
                         <ion-icon name="albums-outline"></ion-icon> Adaugă imagini
                     </label>
@@ -38,7 +38,7 @@
                   <textarea type="text" id="descriere" name="descriere" rows="5" required></textarea>
                 </div>
                     <h3>Date de contact</h3>
-                <div class="input-box">
+                    <div class="input-box">
                     <label for="">Telefon</label>
                 <input type="tel" id="phone" name="phone" pattern="^(\+40|0)[0-9]{9}$" required>
                     </div>
