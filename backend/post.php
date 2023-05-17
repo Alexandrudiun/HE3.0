@@ -9,7 +9,7 @@ echo $_SESSION['email'];
 if(isset($_SESSION['email']) && isset ($_SESSION['password'])) 
 { echo "da";
 if(isset($_POST['submit'])){
-    $email = $_POST['email'];
+    $email = $_SESSION['email'];
     $query="SELECT * FROM users WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn, $query);
     
