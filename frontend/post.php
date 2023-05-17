@@ -39,10 +39,6 @@
                 </div>
                     <h3>Date de contact</h3>
                 <div class="input-box">
-                    <label for="">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="input-box">
                     <label for="">Telefon</label>
                 <input type="tel" id="phone" name="phone" pattern="^(\+40|0)[0-9]{9}$" required>
                     </div>
