@@ -14,18 +14,7 @@ if(isset($_POST['submit'])){
     $select_user_query = mysqli_query($conn, $query);
     
     
-    $email_found = false; // Flag variable to check if email was found
-    while($row = mysqli_fetch_row($select_user_query)){
-        if($row[1] !== $email) {
-            continue; // Skip to next row if email doesn't match
-        }
-        $email_found = true;
-    }
-
-    if(!$email_found) {
-        echo "<script>document.getElementById('mesaj').innerHTML = 'Email neînregistrat';</script>";
-    }
-    else{
+    
 
     $name = $_POST['name'];
     $title = $_POST['titlu'];
@@ -84,8 +73,7 @@ if(isset($_POST['submit'])){
 }
 }
 }
-}
-else echo "nu";
+
 ?>
 
 
