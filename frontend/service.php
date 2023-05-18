@@ -76,7 +76,32 @@ if (mysqli_num_rows($result) > 0) {
   echo '<h3>Descrierea serviciului</h3>';
   echo '<p>'.$row['description'].'</p>';
   echo '</div>';
-   }
+   ?>
+  <?php
+  $email = $row['email'];
+  
+   $query="SELECT * FROM users WHERE email = '{$email}'";
+      $select_user_query = mysqli_query($conn, $query);
+      
+      if(!$select_user_query)
+      {
+        die('Query Failed');
+      }
+      $email_found = false; // Flag variable to check if email was found
+      while($row = mysqli_fetch_row($select_user_query)) {
+      if($row[1] == $email) {
+        
+        $email_found = true;
+        $image = $row[3]; //image is stored in blob format
+        $name = $row[4];
+        $skills = $row[5];
+        $credit = $row[6];
+        $worker = $row[7];
+        $buyer = $row[8];
+        
+      }?>
+<?php
+}
 
 }
 } else {
@@ -96,29 +121,7 @@ if (mysqli_num_rows($result) > 0) {
             <?php endif; ?>
         </div>
   <div class="profile-name">
-  <?php
-$email = 'lol';
-echo $email;
-//  $query="SELECT * FROM users WHERE email = '{$email}'";
-//     $select_user_query = mysqli_query($conn, $query);
-    
-//     if(!$select_user_query)
-//     {
-//       die('Query Failed');
-//     }
-//     $email_found = false; // Flag variable to check if email was found
-//     while($row = mysqli_fetch_row($select_user_query)) {
-//     if($row[1] == $email) {
-      
-//       $email_found = true;
-//       $image = $row[3]; //image is stored in blob format
-//       $name = $row[4];
-//       $skills = $row[5];
-//       $credit = $row[6];
-//       $worker = $row[7];
-//       $buyer = $row[8];
-      
-//     }?>
+ 
 
   <!-- <h3><?php ?></h3>
  <span><?php?></span> -->
