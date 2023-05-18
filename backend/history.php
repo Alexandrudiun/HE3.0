@@ -107,8 +107,6 @@ echo '</div>';
 
 }
 }?>
-
-</a>
           <div class="delete-btn">
             <ion-icon name="close-outline"></ion-icon>
             <span>Delete Post</span>
