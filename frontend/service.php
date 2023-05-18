@@ -97,8 +97,7 @@ if (mysqli_num_rows($result) > 0) {
        $skills = $r[5];
        
      }}
-     echo $email .'  ';
-     echo $image;
+    
      ?>
 
   
@@ -115,8 +114,8 @@ if (mysqli_num_rows($result) > 0) {
         </div>
   <div class="profile-name">
 
-  <h3 id ="message1"></h3>
- <span id ="message"></span> 
+  <h3><?php echo $name;?></h3>
+ <span><?php echo $skills;?></span> 
 
 
   </div>
@@ -126,7 +125,7 @@ if (mysqli_num_rows($result) > 0) {
 
   <footer>
     <div class="buy">
-      <a href="+040721333445"  class="call">Call / SMS</a>
+      <a href="<?php echo ?>"  class="call">Call / SMS</a>
       <span class="buy-btn"> Buy now!</Sspan>
     </div>
   </footer>
