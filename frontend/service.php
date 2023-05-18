@@ -95,8 +95,9 @@ if (mysqli_num_rows($result) > 0) {
        $image = $r[3]; //image is stored in blob format
        $name = $r[4];
        $skills = $r[5];
-      echo $r[5];
+      
       print_r($r);
+      echo $r[5];
      }}
      
      ?>
