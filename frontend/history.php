@@ -48,8 +48,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 $photo_names = explode(', ', $row['images']);
 $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside the while loop
 
-           echo '<a href="/frontend/serviceedit.php?id="'. $row['id'] '>';
+          
           echo '<div class="card">';
+          echo '<a href="/frontend/serviceedit.php?id="'. $row['id'] '>';
           echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;">';
         //   echo '<div class="info-area">';
         //   echo '<div class="title-price">';
@@ -61,7 +62,7 @@ $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside t
         //  // echo '<span>'.$row['city'].'</span>';
         //   echo '</div>';
         //   echo '</div>';
-        //   echo '</div>';
+        echo '</div>';
         }
 
       }
