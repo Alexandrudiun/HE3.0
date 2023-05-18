@@ -85,7 +85,8 @@ if (mysqli_num_rows($result) > 0) {
   
   </main>
 <?php
- $query="SELECT * FROM users WHERE email = '{$row['email']}'";
+$email = $row['email'];
+ $query="SELECT * FROM users WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn, $query);
     
     if(!$select_user_query)
