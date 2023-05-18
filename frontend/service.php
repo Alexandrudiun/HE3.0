@@ -30,7 +30,9 @@ if (isset($_GET['id'])) {
     <link rel="manifest" href="/manifest.json">
 </head>
 <body>
-<?php
+
+  <section class="container">
+  <?php
 
 include "../backend/conn.php";
 
@@ -45,37 +47,26 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $photo_names = explode(', ', $row['images']);
         $location="https://idcrew.shop/img/upload/" . $photo_names[0]; 
-        echo '<div class="card">';
-        echo '<a style="text-decoration:none;" href="/frontend/service.php?id=' . $row['id'] . '">';
-        echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;">';
-        echo '<div class="info-area">';
-        echo '<h3 class="service-title">' . $row['title'] . '</h3>';
-        echo '<h2 class="service-price">' . $row['price'] . '</h2>';
-        echo '<span>' . $row['location'] . 'aici trb ceva (locatie era) </span>';
-        echo '<span>' . $row['date'] . 'aici era data</span>';
-        echo '</div>';
-        echo '</a>';
-        echo '</div>';        
+        echo '<div class="slide-wrapper">';
+        echo '<div class="slider">';
+        for($i=0;$i<3;$i++){
+        echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;" id="slide-'.$i.'">';
+        }
         
+        echo '</div>';
+
+       echo '<div class="slider-nav">';
+       echo '<a href="#slide-1"></a>';
+       echo '<a href="#slide-2"></a>';
+       echo '<a href="#slide-3"></a>';
+       echo '</div>';
+    echo'</div>';
     }
-    echo '</div>';
+
 }
 
 ?>
-  <section class="container">
-    <div class="
-    slide-wrapper">
-      <div class="slider">
-        <img id="slide-1" src="/img/caine1.jpg" >
-        <img id="slide-2" src="/img/caine2.jpg" >
-        <img id="slide-3" src="/img/caine3.jpg" >
-      </div>
-      <div class="slider-nav">
-        <a href="#slide-1"></a>
-        <a href="#slide-2"></a>
-        <a href="#slide-3"></a>
-      </div>
-    </div>
+    
   </section>
 
 
