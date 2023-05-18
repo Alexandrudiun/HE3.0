@@ -97,7 +97,8 @@ if (mysqli_num_rows($result) > 0) {
        $skills = $r[5];
        
      }}
-     echo $email .'da';
+     echo $email .'  ';
+     echo $name;
      ?>
 
   
