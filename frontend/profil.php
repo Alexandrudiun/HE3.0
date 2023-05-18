@@ -146,8 +146,8 @@ else{
                         <span class="text">Postează</span>
                     </a>
                 </li>
-                <li class="/frontend/history.php">
-                    <a href="#">
+                <li class="list">
+                    <a href="/frontend/history.php">
                         <span class="icon">
                             <ion-icon name="albums-outline"></ion-icon>
                         </span>
