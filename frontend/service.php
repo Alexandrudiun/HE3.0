@@ -1,18 +1,13 @@
 <?php
-// Check if the 'id' parameter exists in the URL
-if (isset($_GET['id'])) {
-  // Retrieve the value of the 'id' parameter
-  $id = $_GET['id'];
+include "../backend/conn.php";
 
-  // You can use the $id variable for further processing
-  // For example, you can echo the value or use it in a database query
+if (isset($_GET['id'])) {
+
+  $id = $_GET['id'];
   echo "ID: " . $id;
 
-  // Other processing with the $id variable...
-} else {
-  // Handle the case when the 'id' parameter is not present in the URL
-  echo "ID not found in the URL.";
-}
+
+
 ?>
 
 
@@ -33,9 +28,6 @@ if (isset($_GET['id'])) {
 
   <section class="container">
   <?php
-
-include "../backend/conn.php";
-
 
 $sql = "SELECT * FROM `posts` WHERE id = '{$id}';";
 $result = mysqli_query($conn, $sql);
@@ -61,41 +53,43 @@ if (mysqli_num_rows($result) > 0) {
        echo '<a href="#slide-3"></a>';
        echo '</div>';
     echo'</div>';
-    }
-
-}
-
-?>
-    
+  ?>
   </section>
 
-
-
-  
   <main>
-    <div class="top-details">
-      <div class="date">
-        <span>12 mai, 9:48</span>
-      </div>
-      <div class="title">
-        <h3>Plimb câini zona Tomis Nord </h3>
-      </div>
-      <div class="price">
-        <h2>100 lei / h</h2>
-      </div>
-    </div>
-    <div class="description">
-      <h3>Descrierea serviciului</h3>
-      <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi amet soluta nemo. Labore nostrum nobis aliquam tenetur recusandae blanditiis veritatis porro commodi debitis? Dolorem illo nulla non consequatur doloremque, iusto praesentium dolorum veniam harum ad quam id sunt accusamus eveniet inventore a quasi? Tenetur, asperiores nam vel distinctio laudantium quam neque est, sit eius minima voluptatum recusandae tempora voluptates doloremque!</p>
-    </div>
+  <?php
+  echo '<div class="top-details">';
+  echo '<div class="date">';
+  echo '<span>12 mai, 9:48</span>';
+  echo '</div>';
+  echo '<div class="title">';
+  echo '<h3>Plimb câini zona Tomis Nord </h3>';
+  echo '</div>';
+  echo '<div class="price">';
+  echo '<h2>100 lei / h</h2>';
+  echo '</div>';
+  echo '</div>';
+  echo '<div class="description">';
+  echo '<h3>Descrierea serviciului</h3>';
+  echo '<p></p>';
+  echo '</div>';
+  echo '<div class="profile-details">';
+  echo '<img src="/img/user.png" class="img-profile">';
+  echo '<div class="profile-name">';
+  echo '<h3>Ionescu Andrei</h3>';
+ echo '<span>WEB Dev |Front web dev</span>';
+  echo '</div>';
+  echo '</div>';
+ 
+  }
 
-    <div class="profile-details">
-      <img src="/img/user.png" class="img-profile">
-      <div class="profile-name">
-        <h3>Ionescu Andrei</h3>
-        <span>Web dev | Front-End Developer</span>
-      </div>
-    </div>
+}
+} else {
+ 
+  echo "ID not found in the URL.";
+}
+?>
+  
   </main>
 
   <footer>
