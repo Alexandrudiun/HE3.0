@@ -46,7 +46,7 @@ if (mysqli_num_rows($result) > 0) {
         }
         echo '<div class="popup-image">';
         echo '<img src="' . $location . '"';
-        echo '<span class="close-btn">&times;</span>';
+        echo '<ion-icon name="close-circle-outline"></ion-icon>';
         echo '</div>';
         echo '</div>';
 
