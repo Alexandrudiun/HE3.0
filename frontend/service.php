@@ -60,29 +60,21 @@ if (mysqli_num_rows($result) > 0) {
   <?php
   echo '<div class="top-details">';
   echo '<div class="date">';
-  echo '<span>12 mai, 9:48</span>';
+  echo '<span>'.$row['date'].'</span>';
   echo '</div>';
   echo '<div class="title">';
-  echo '<h3>Plimb câini zona Tomis Nord </h3>';
+  echo '<h3>'.$row['title'].'</h3>';
   echo '</div>';
   echo '<div class="price">';
-  echo '<h2>100 lei / h</h2>';
+  echo '<h2>'.$row['price'].'</h2>';
   echo '</div>';
   echo '</div>';
   echo '<div class="description">';
   echo '<h3>Descrierea serviciului</h3>';
-  echo '<p></p>';
+  echo '<p>'.$row['description'].'</p>';
   echo '</div>';
-  echo '<div class="profile-details">';
-  echo '<img src="/img/user.png" class="img-profile">';
-  echo '<div class="profile-name">';
-  echo '<h3>Ionescu Andrei</h3>';
- echo '<span>WEB Dev |Front web dev</span>';
-  echo '</div>';
-  echo '</div>';
- 
-  }
-
+   }
+ include "../backend/profilbk.php";
 }
 } else {
  
@@ -91,6 +83,22 @@ if (mysqli_num_rows($result) > 0) {
 ?>
   
   </main>
+
+  <div class="profile-details">
+  <img src="/img/user.png" class="img-profile">
+  <div class="profile-name">
+  <h3>Ionescu Andrei</h3>
+ <span>WEB Dev |Front web dev</span>
+  </div>
+  </div>
+
+  <div class="image">
+            <?php if($image==NULL): ?>
+            <img src='/img/user.png' class='profile-img'>
+            <?php else: ?>
+            <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="profile picture of <?=$name?>" class="profile-img">
+            <?php endif; ?>
+        </div>
 
   <footer>
     <div class="buy">
