@@ -76,6 +76,39 @@ body{
   opacity: 1;
 }
 
+.popup-image{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #1C1C1E;
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.popup-image span{
+  position: inherit;
+  top:0;
+  right: 10px;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.popup-image img{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  width: 300px;
+  object-fit: cover;
+}
+
 .top-details{
   background-color: #2C3E50;
   padding: 10px;
@@ -233,3 +266,4 @@ footer {
   border-radius: 50%;
   border: 3px solid #F1C40F;
 }
+
