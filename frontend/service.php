@@ -102,9 +102,9 @@ if (mysqli_num_rows($result) > 0) {
     {
       die('Query Failed');
     }
-    while($row = mysqli_fetch_row($select_user_query)) {
-      $name = $row[4];
-      $skills = $row[5];
+    while($row1 = mysqli_fetch_row($select_user_query)) {
+      $name = $row1[4];
+      $skills = $row1[5];
       echo $name;
     }
     ?>
