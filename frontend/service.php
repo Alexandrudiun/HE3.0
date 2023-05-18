@@ -27,7 +27,7 @@ if (isset($_GET['id'])) {
 <body>
 
   <section class="container">
-  <?php 
+  <?php
 
 $sql = "SELECT * FROM `posts` WHERE id = '{$id}';";
 $result = mysqli_query($conn, $sql);
@@ -37,7 +37,7 @@ $post = array();
 if (mysqli_num_rows($result) > 0) {
     echo '<div class="flex-container id="service-list">';
     while ($row = mysqli_fetch_assoc($result)) {
-        $numphone=$row['phone'];
+        $numphones = $row['phone'];
         $photo_names = explode(', ', $row['images']);
         $location="https://idcrew.shop/img/upload/" . $photo_names[0]; 
         echo '<div class="slide-wrapper">';
@@ -75,20 +75,18 @@ if (mysqli_num_rows($result) > 0) {
   echo '<p>'.$row['description'].'</p>';
   echo '</div>';
    }
- 
+ include "../backend/profilbk.php";
 }
 } else {
  
   echo "ID not found in the URL.";
 }
-include "../backend/profilbk.php";
 ?>
   
   </main>
 
   <div class="profile-details">
   <div class="image">
-      <?php echo $name;?>
             <?php if($image==NULL): ?>
             <img src='/img/user.png' class='profile-img'>
             <?php else: ?>
@@ -96,23 +94,8 @@ include "../backend/profilbk.php";
             <?php endif; ?>
         </div>
   <div class="profile-name">
-    <?php
-    $query="SELECT * FROM users WHERE email = '{$email}'";
-    $select_user_query = mysqli_query($conn, $query);
-    
-    if(!$select_user_query)
-    {
-      die('Query Failed');
-    }
-    while($row1 = mysqli_fetch_row($select_user_query)) {
-      $name = $row1[4];
-      $skills = $row1[5];
-      echo $name;
-    }
-    print_r($row1);
-    ?>
-  <h3><?php print_r($row1);?></h3>
- <span><?php echo "nu ".$skills;?></span>
+  <h3><?php echo $name?></h3>
+ <span><?php echo $skills?></span>
   </div>
   </div>
 
@@ -120,7 +103,7 @@ include "../backend/profilbk.php";
 
   <footer>
     <div class="buy">
-      <a href="<?php echo $row['phone'];?>"  class="call">Call / SMS</a>
+      <a href="+040721333445"  class="call">Call / SMS</a>
       <span class="buy-btn"> Buy now!</Sspan>
     </div>
   </footer>
