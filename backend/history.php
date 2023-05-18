@@ -28,6 +28,7 @@ if (mysqli_num_rows($result) > 0) {
         echo '<h2 class="service-price">' . $row['price'] . '</h2>';
         echo '<span>' . $row['location'] . 'aici trb ceva (locatie era) </span>';
         echo '<span>' . $row['date'] . 'aici era data</span>';
+        echo '<a herf="historyedit.php"><button class="input-btn">edit</button></a>'
         echo '</div>';
         echo '</div>';        
         
