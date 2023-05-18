@@ -79,7 +79,7 @@ if (mysqli_num_rows($result) > 0) {
    ?>
   <?php
   $email = $row['email'];
-   echo $email;
+   
    $query="SELECT * FROM users WHERE email = '{$email}'";
       $select_user_query = mysqli_query($conn, $query);
       
@@ -95,9 +95,10 @@ if (mysqli_num_rows($result) > 0) {
        $image = $r[3]; //image is stored in blob format
        $name = $r[4];
        $skills = $r[5];
-       echo $name;
-        echo $skills;
-     }}?>
+       
+     }}
+     echo $email;
+     ?>
 
   
   </main>
