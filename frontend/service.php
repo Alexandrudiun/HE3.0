@@ -97,7 +97,7 @@ if (mysqli_num_rows($result) > 0) {
         </div>
   <div class="profile-name">
   <?php
-$email = $row['email'];
+$email = 'lol';
 echo $email;
 //  $query="SELECT * FROM users WHERE email = '{$email}'";
 //     $select_user_query = mysqli_query($conn, $query);
