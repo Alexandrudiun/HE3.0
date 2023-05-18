@@ -125,9 +125,20 @@ if (mysqli_num_rows($result) > 0) {
 
   <footer>
     <div class="buy">
-      <a href="+040721333445"  class="call">Call / SMS</a>
-      <span class="buy-btn"> Buy now!</Sspan>
+      <div class="buy-btn">
+      <ion-icon name="arrow-back-outline"></ion-icon> 
+      <a href="#" onclick="goBack()">Go Back</a>
     </div>
+    <a href="<?php echo $skills;?>" class="call">Call / SMS</a>
+  </footer>
+  <!-- Ion icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    function goBack() {
+      history.back();
+    }
+  </script>
   </footer>
 </body>
 </html>
