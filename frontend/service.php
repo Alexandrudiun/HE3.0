@@ -94,8 +94,8 @@ if (mysqli_num_rows($result) > 0) {
             <?php endif; ?>
         </div>
   <div class="profile-name">
-  <h3><?php echo $name?></h3>
- <span><?php echo $skills?></span>
+  <h3><?php echo $row['name'];?></h3>
+ <span><?php echo $row['skills'];?></span>
   </div>
   </div>
 
@@ -103,7 +103,7 @@ if (mysqli_num_rows($result) > 0) {
 
   <footer>
     <div class="buy">
-      <a href="+040721333445"  class="call">Call / SMS</a>
+      <a href="<?php echo $row['phone'];?>"  class="call">Call / SMS</a>
       <span class="buy-btn"> Buy now!</Sspan>
     </div>
   </footer>
