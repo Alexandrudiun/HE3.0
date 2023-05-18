@@ -88,26 +88,27 @@ if (mysqli_num_rows($result) > 0) {
   </main>
 <?php
 $email = $row['email'];
- $query="SELECT * FROM users WHERE email = '{$email}'";
-    $select_user_query = mysqli_query($conn, $query);
+echo $email;
+//  $query="SELECT * FROM users WHERE email = '{$email}'";
+//     $select_user_query = mysqli_query($conn, $query);
     
-    if(!$select_user_query)
-    {
-      die('Query Failed');
-    }
-    $email_found = false; // Flag variable to check if email was found
-    while($row = mysqli_fetch_row($select_user_query)) {
-    if($row[1] == $email) {
+//     if(!$select_user_query)
+//     {
+//       die('Query Failed');
+//     }
+//     $email_found = false; // Flag variable to check if email was found
+//     while($row = mysqli_fetch_row($select_user_query)) {
+//     if($row[1] == $email) {
       
-      $email_found = true;
-      $image = $row[3]; //image is stored in blob format
-      $name = $row[4];
-      $skills = $row[5];
-      $credit = $row[6];
-      $worker = $row[7];
-      $buyer = $row[8];
+//       $email_found = true;
+//       $image = $row[3]; //image is stored in blob format
+//       $name = $row[4];
+//       $skills = $row[5];
+//       $credit = $row[6];
+//       $worker = $row[7];
+//       $buyer = $row[8];
       
-    }?>
+//     }?>
   <div class="profile-details">
   <div class="image">
             <?php if($image==NULL): ?>
