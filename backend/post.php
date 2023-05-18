@@ -21,7 +21,9 @@ if(isset($_POST['submit'])){
     $price = $_POST['pret'];
     $description = $_POST['descriere'];
     $phone = $_POST['phone'];
-    $query = "INSERT INTO posts (email, name, title, price, description, phone) VALUES ('{$email}', '{$name}', '{$title}', '{$price}', '{$description}', '{$phone}')";
+    $date = date('Y-m-d H:i:s');
+    $city = $_POST['city'];
+    $query = "INSERT INTO posts (email, city, title, price, description, phone, date) VALUES ('{$email}', '{$city}', '{$title}', '{$price}', '{$description}', '{$phone}', '{$date}')";
     $add_post_query = mysqli_query($conn, $query);
     if(!$add_post_query) {
        die('Query Failed'. mysqli_error($conn));
@@ -60,8 +62,8 @@ if(isset($_POST['submit'])){
     }
     $photoNames = rtrim($photoNames, ', ');
     if($uploadCount > 0){
-        // Store the concatenated string in the database
-        $query = "UPDATE posts SET images = '$photoNames' WHERE email = '$email' AND name = '$name' AND title = '$title' AND price = '$price' AND description = '$description' AND phone = '$phone'";
+        
+        $query = "UPDATE posts SET images = '$photoNames' WHERE email = '$email'AND date ='$date' AND city = '$city' AND title = '$title' AND price = '$price' AND description = '$description' AND phone = '$phone'";
         $result = mysqli_query($conn, $query);
         
         if($result){
