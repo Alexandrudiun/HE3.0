@@ -26,39 +26,74 @@ if (isset($_GET['id'])) {
 </head>
 <body>
   <?php
+  $sql = "SELECT * FROM `posts` WHERE id = '{$id}';";
+  $result = mysqli_query($conn, $sql);
+  
+  // Store the products in an array
+  $post = array();
+  if (mysqli_num_rows($result) > 0) {
+      echo '<div class="container" id="service-list">';
+      while ($row = mysqli_fetch_assoc($result)) {
+          $numphones = $row['phone'];
+          $photo_names = explode(', ', $row['images']);
+          echo '<div class="slide-wrapper">';
+          echo '<div class="slider">';
+          for($i=0; $i<3; $i++){
+              $location = "https://idcrew.shop/img/upload/" . $photo_names[$i]; 
+              echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'" onclick="showPopup('.$i.')">';
+          }
+          echo '</div>';
+          echo '</div>';
+  
+          echo '<div class="slider-nav">';
+          echo '<a href="#slide-1"></a>';
+          echo '<a href="#slide-2"></a>';
+          echo '<a href="#slide-3"></a>';
+          echo '</div>';
+  
+          echo '</div>';
+          echo '<div class="popup-container" id="popup-container">';
+          for($i=0; $i<3; $i++){
+              $location = "https://idcrew.shop/img/upload/" . $photo_names[$i]; 
+              echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
+          };
+          echo '<ion-icon name="close-circle-outline" onclick="hidePopup()"></ion-icon>';
+          echo '</div>';
+      }
+  }
+  
+// $sql = "SELECT * FROM `posts` WHERE id = '{$id}';";
+// $result = mysqli_query($conn, $sql);
 
-$sql = "SELECT * FROM `posts` WHERE id = '{$id}';";
-$result = mysqli_query($conn, $sql);
+// // Store the products in an array
+// $post = array();
+// if (mysqli_num_rows($result) > 0) {
+//     echo '<div class="container" id="service-list">';
+//     while ($row = mysqli_fetch_assoc($result)) {
+//         $numphones = $row['phone'];
+//         $photo_names = explode(', ', $row['images']);
+//         echo '<div class="slide-wrapper">';
+//         echo '<div class="slider">';
+//         for($i=0;$i<3;$i++){
+//           $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
+//         echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
+//         }ho '</div>';
+//     echo'<
+//         echo '</div>';
+//       echo '</div>';
 
-// Store the products in an array
-$post = array();
-if (mysqli_num_rows($result) > 0) {
-    echo '<div class="container" id="service-list">';
-    while ($row = mysqli_fetch_assoc($result)) {
-        $numphones = $row['phone'];
-        $photo_names = explode(', ', $row['images']);
-        echo '<div class="slide-wrapper">';
-        echo '<div class="slider">';
-        for($i=0;$i<3;$i++){
-          $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
-        echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
-        }
-        echo '</div>';
-      echo '</div>';
-
-       echo '<div class="slider-nav">';
-       echo '<a href="#slide-1"></a>';
-       echo '<a href="#slide-2"></a>';
-       echo '<a href="#slide-3"></a>';
-       echo '</div>';
-    echo'</div>';
-    echo '<div class="popup-image">';
-    for($i=0;$i<3;$i++){
-      $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
-    echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
-    };
-    echo '<ion-icon name="close-circle-outline"></ion-icon>';
-    echo '</div>';
+//        echo '<div class="slider-nav">';
+//        echo '<a href="#slide-1"></a>';
+//        echo '<a href="#slide-2"></a>';
+//        echo '<a href="#slide-3"></a>';
+//        ec/div>';
+//     echo '<div class="popup-image">';
+//     for($i=0;$i<3;$i++){
+//       $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
+//     echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
+//     };
+//     echo '<ion-icon name="close-circle-outline"></ion-icon>';
+//     echo '</div>';
   ?>
 
   <main>
