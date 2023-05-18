@@ -23,9 +23,6 @@
   <div class="cards">
 <?php
 
-include "../backend/conn.php";
-
-
 $sql = "SELECT * FROM `posts` ORDER BY `id` ASC;";
 $result = mysqli_query($conn, $sql);
 
@@ -36,21 +33,23 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $post[] = $row;
         $photo_names = explode(', ', $row['images']);
-        $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside the while loop
+        $location = "https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside the while loop
         
         echo '<div class="card">';
+        echo '<a href="../frontend/service.php?id=' . $row['id'] . '">'; // Added a link with the product ID as a parameter
         echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;">';
         echo '<div class="info-area">';
         echo '<h3 class="service-title">' . $row['title'] . '</h3>';
         echo '<h2 class="service-price">' . $row['price'] . '</h2>';
         echo '<span>' . $row['location'] . 'aici trb ceva (locatie era) </span>';
-        echo '<span>' . $row['date'] . 'aici era data</span>';
-        echo '</div>';
+        echo '<span>' . $row['date'] . 'aici era data</span>'; echo '</div>';
+        echo '</a>'; // Closed the link
         echo '</div>';        
         
     }
     echo '</div>';
 }
+
 
 ?>
 </div>
