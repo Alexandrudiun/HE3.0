@@ -87,6 +87,7 @@ if (mysqli_num_rows($result) > 0) {
 
   <div class="profile-details">
   <div class="image">
+      <?php echo $name;?>
             <?php if($image==NULL): ?>
             <img src='/img/user.png' class='profile-img'>
             <?php else: ?>
