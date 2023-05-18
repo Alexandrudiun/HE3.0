@@ -53,7 +53,10 @@ if (mysqli_num_rows($result) > 0) {
        echo '</div>';
     echo'</div>';
     echo '<div class="popup-image">';
-    echo '<img src="' . $location . '">';
+    for($i=0;$i<3;$i++){
+      $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
+    echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
+    };
     echo '<ion-icon name="close-circle-outline"></ion-icon>';
     echo '</div>';
   ?>
