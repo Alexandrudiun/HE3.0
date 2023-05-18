@@ -50,7 +50,7 @@ if (mysqli_num_rows($result) > 0) {
         echo '<div class="slide-wrapper">';
         echo '<div class="slider">';
         for($i=0;$i<3;$i++){
-        echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;" id="slide-'.$i.'">';
+        echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
         }
         
         echo '</div>';
