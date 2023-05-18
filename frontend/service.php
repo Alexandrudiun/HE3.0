@@ -96,6 +96,7 @@ if (mysqli_num_rows($result) > 0) {
        $name = $r[4];
        $skills = $r[5];
       echo $r[5];
+      print_r($r);
      }}
      
      ?>
