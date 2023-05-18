@@ -36,7 +36,7 @@ session_start();
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
 
     $email=$_SESSION['email'];
-
+echo $email;  
 
     $query="SELECT * FROM posts WHERE email = '{$email}'";
     $result=mysqli_query($conn,$query);
@@ -50,8 +50,8 @@ $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside t
 
           
           echo '<div class="card">';
-          echo '<a href="/frontend/serviceedit.php?id="'. $row['id'] '>';
-          echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;">';
+         // echo '<a href="/frontend/serviceedit.php?id="'. $row['id'] '>';
+         // echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;">';
         //   echo '<div class="info-area">';
         //   echo '<div class="title-price">';
         //   echo '<h3 class="service-title">'.$row['title'].'</h3>';
