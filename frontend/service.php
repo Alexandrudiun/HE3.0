@@ -105,9 +105,10 @@ if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_row($select_user_query)) {
       $name = $row[4];
       $skills = $row[5];
+      echo $name;
     }
     ?>
-  <h3><?php echo $name?></h3>
+  <h3><?php echo $name;?></h3>
  <span><?php echo $skills;?></span>
   </div>
   </div>
