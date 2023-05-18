@@ -123,6 +123,10 @@ if(isset($_POST['submit'])){
                   <label for="">Descriere</label>
                   <textarea type="text" id="descriere" name="descriere" rows="5" required></textarea>
                 </div>
+                <div class="input-box">
+                  <label for="">Preţ</label>
+                  <input type="text" id="pret" name="pret" required>
+                </div>
                     <h3>Date de contact</h3>
                     <div class="input-box">
                     <label for="">Telefon</label>
