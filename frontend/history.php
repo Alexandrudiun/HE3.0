@@ -68,7 +68,7 @@
                   </a>
               </li>
               <li class="list">
-                  <a href="/frontend/post.php">
+                  <a href="/backend/post.php">
                       <span class="icon">
                           <ion-icon name="add-circle-outline"></ion-icon>
                       </span>
@@ -76,7 +76,7 @@
                   </a>
               </li>
               <li class="list active">
-                  <a href="#">
+                  <a href="/frontend/history.php">
                       <span class="icon">
                           <ion-icon name="albums-outline"></ion-icon>
                       </span>
