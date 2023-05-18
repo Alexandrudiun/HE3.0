@@ -24,11 +24,11 @@ if (mysqli_num_rows($result) > 0) {
         echo '<div class="card">';
         echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;">';
         echo '<div class="info-area">';
+        echo '<a herf="historyedit.php"><button>edit</button></a>'
         echo '<h3 class="service-title">' . $row['title'] . '</h3>';
         echo '<h2 class="service-price">' . $row['price'] . '</h2>';
         echo '<span>' . $row['location'] . 'aici trb ceva (locatie era) </span>';
         echo '<span>' . $row['date'] . 'aici era data</span>';
-        echo '<a herf="historyedit.php"><button class="input-btn">edit</button></a>'
         echo '</div>';
         echo '</div>';        
         
