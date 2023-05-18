@@ -51,7 +51,7 @@
 
           
         //   echo '<div class="card">';
-        //  // echo '<a href="/frontend/serviceedit.php?id="'. $row['id'] '>';
+        //   echo '<a href="/frontend/serviceedit.php?id="'. $row['id'] '>';
         //   echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;">';
         //   echo '<div class="info-area">';
         //   echo '<div class="title-price">';
@@ -59,12 +59,12 @@
         //   echo '<h2 class="service-price">'.$row['title'].'</h2>';
         //   echo '</div>';
         //   echo '<div class="date">';
-        //  // echo '<span>'.$row['date'].'</span>';
-        //  // echo '<span>'.$row['city'].'</span>';
+        //   echo '<span>'.$row['date'].'</span>';
+        //  echo '<span>'.$row['city'].'</span>';
         //   echo '</div>';
         //   echo '</div>';
         // echo '</div>';
-      //   }
+        // }
 
       // }
       // }?>
@@ -85,25 +85,30 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
 
     $post = array();
 if (mysqli_num_rows($result) > 0) {
-echo '<div class="flex-container id="service-list">';
+
 while ($row = mysqli_fetch_assoc($result)) {
 $post[] = $row;
 $photo_names = explode(', ', $row['images']);
 $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside the while loop
 
+ 
 echo '<div class="card">';
+echo '<a href="/frontend/serviceedit.php?id="'. $row['id'] '>';
 echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;">';
 echo '<div class="info-area">';
-echo '<a href="/backend/historyedit.php"><button>edit</button></a>';
-echo '<h3 class="service-title">' . $row['title'] . '</h3>';
-echo '<h2 class="service-price">' . $row['price'] . '</h2>';
-echo '<span>' . $row['location'] . 'aici trb ceva (locatie era) </span>';
-echo '<span>' . $row['date'] . 'aici era data</span>';
+echo '<div class="title-price">';
+echo '<h3 class="service-title">'.$row['title'].'</h3>';
+echo '<h2 class="service-price">'.$row['title'].'</h2>';
 echo '</div>';
-echo '</div>';        
+echo '<div class="date">';
+echo '<span>'.$row['date'].'</span>';
+echo '<span>'.$row['city'].'</span>';
+echo '</div>';
+echo '</div>';
+echo '</div>';       
 
 }
-echo '</div>';
+
 }
 }?>
           </a>
