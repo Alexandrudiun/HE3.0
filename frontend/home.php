@@ -39,7 +39,7 @@ if (mysqli_num_rows($result) > 0) {
         $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside the while loop
         
         echo '<div class="card">';
-        echo '<a href="/frontend/service.php?id=' . $row['id'] . '">';
+        echo '<a style="text-decoration:none;" href="/frontend/service.php?id=' . $row['id'] . '">';
         echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;">';
         echo '<div class="info-area">';
         echo '<h3 class="service-title">' . $row['title'] . '</h3>';
