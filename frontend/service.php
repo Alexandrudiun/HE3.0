@@ -98,15 +98,7 @@ if (mysqli_num_rows($result) > 0) {
 
         
      }}?>
-<?php
-}
 
-}
-} else {
- 
-  echo "ID not found in the URL.";
-}
-?>
   
   </main>
 
@@ -136,3 +128,12 @@ if (mysqli_num_rows($result) > 0) {
   </footer>
 </body>
 </html>
+<?php
+}
+
+}
+} else {
+ 
+  echo "ID not found in the URL.";
+}
+?>
