@@ -111,8 +111,8 @@ include "../backend/profilbk.php";
     }
     print_r($row1);
     ?>
-  <h3><?php echo $name;?></h3>
- <span><?php echo $skills;?></span>
+  <h3><?php echo "da ".$name;?></h3>
+ <span><?php echo "nu ".$skills;?></span>
   </div>
   </div>
 
