@@ -36,7 +36,7 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $post[] = $row;
         $photo_names = explode(', ', $row['images']);
-        $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside the while loop
+        $location="https://idcrew.shop/img/upload/" . $photo_names[0]; 
         
         echo '<div class="card">';
         echo '<a style="text-decoration:none;" href="/frontend/service.php?id=' . $row['id'] . '">';

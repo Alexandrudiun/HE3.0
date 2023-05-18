@@ -1,3 +1,22 @@
+<?php
+// Check if the 'id' parameter exists in the URL
+if (isset($_GET['id'])) {
+  // Retrieve the value of the 'id' parameter
+  $id = $_GET['id'];
+
+  // You can use the $id variable for further processing
+  // For example, you can echo the value or use it in a database query
+  echo "ID: " . $id;
+
+  // Other processing with the $id variable...
+} else {
+  // Handle the case when the 'id' parameter is not present in the URL
+  echo "ID not found in the URL.";
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
