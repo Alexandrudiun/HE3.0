@@ -94,8 +94,8 @@ if (mysqli_num_rows($result) > 0) {
             <?php endif; ?>
         </div>
   <div class="profile-name">
-  <h3><?php echo $row['name']."cv";?></h3>
- <span><?php echo $row['skills'];?></span>
+  <h3><?php echo $name?></h3>
+ <span><?php echo $skills;?></span>
   </div>
   </div>
 
