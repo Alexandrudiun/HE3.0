@@ -94,6 +94,19 @@ if (mysqli_num_rows($result) > 0) {
             <?php endif; ?>
         </div>
   <div class="profile-name">
+    <?php
+    $query="SELECT * FROM users WHERE email = '{$email}'";
+    $select_user_query = mysqli_query($conn, $query);
+    
+    if(!$select_user_query)
+    {
+      die('Query Failed');
+    }
+    while($row = mysqli_fetch_row($select_user_query)) {
+      $name = $row[4];
+      $skills = $row[5];
+    }
+    ?>
   <h3><?php echo $name?></h3>
  <span><?php echo $skills;?></span>
   </div>
