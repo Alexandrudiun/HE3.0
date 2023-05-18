@@ -1,10 +1,13 @@
-document.querySelectorAll('.slider img').forEach(image =>{
-  image.onclick = () =>{
-  document.querySelector('.popup-image').style.display = 'block';
-  document.querySelector('.popup-image img').src = image.getAttribute('src');
-  }
-});
 
-document.querySelector('.popup-image ion-icon').onclick = () =>{
-  document.querySelector('.popup-image').style.display = 'none';
+function showPopup(slideIndex) {
+    const popupContainer = document.getElementById('popup-container');
+    popupContainer.classList.add('show');
+    const popupContent = document.getElementById('popup-content');
+    popupContent.src = document.getElementById('slide-' + slideIndex).src;
 }
+
+function hidePopup() {
+    const popupContainer = document.getElementById('popup-container');
+    popupContainer.classList.remove('show');
+}
+
