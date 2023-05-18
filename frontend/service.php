@@ -41,10 +41,11 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $numphones = $row['phone'];
         $photo_names = explode(', ', $row['images']);
-        $location="https://idcrew.shop/img/upload/" . $photo_names[0]; 
+        
         echo '<div class="slide-wrapper">';
         echo '<div class="slider">';
         for($i=0;$i<3;$i++){
+          $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
         echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
         }
         
