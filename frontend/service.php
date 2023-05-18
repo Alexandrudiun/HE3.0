@@ -95,10 +95,10 @@ if (mysqli_num_rows($result) > 0) {
        $image = $r[3]; //image is stored in blob format
        $name = $r[4];
        $skills = $r[5];
-       
+       echo "<script>document.getElementById('message1').innerHTML = '$name';</script>";
+       echo "<script>document.getElementById('message1).innerHTML = '$skills';</script>";
      }}
-     echo $email .'  ';
-     echo $image;
+     
      ?>
 
   
