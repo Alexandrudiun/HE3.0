@@ -46,7 +46,7 @@ if (mysqli_num_rows($result) > 0) {
         }
         echo '<div class="popup-image">';
         echo '<img src="' . $location . '"';
-        echo '<span>&times;</span>'
+        echo '<span>&times;</span>';
         echo '</div>';
         echo '</div>';
 
