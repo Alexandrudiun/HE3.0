@@ -86,7 +86,17 @@ if (mysqli_num_rows($result) > 0) {
 ?>
   
   </main>
-<?php
+
+  <div class="profile-details">
+  <div class="image">
+            <?php if($image==NULL): ?>
+            <img src='/img/user.png' class='profile-img'>
+            <?php else: ?>
+            <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="profile picture of <?=$name?>" class="profile-img">
+            <?php endif; ?>
+        </div>
+  <div class="profile-name">
+  <?php
 $email = $row['email'];
 echo $email;
 //  $query="SELECT * FROM users WHERE email = '{$email}'";
@@ -109,17 +119,9 @@ echo $email;
 //       $buyer = $row[8];
       
 //     }?>
-  <div class="profile-details">
-  <div class="image">
-            <?php if($image==NULL): ?>
-            <img src='/img/user.png' class='profile-img'>
-            <?php else: ?>
-            <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="profile picture of <?=$name?>" class="profile-img">
-            <?php endif; ?>
-        </div>
-  <div class="profile-name">
-  <h3><?php echo $name?></h3>
- <span><?php echo $skills?></span>
+
+  <!-- <h3><?php ?></h3>
+ <span><?php?></span> -->
   </div>
   </div>
 
