@@ -45,7 +45,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 $post[] = $row;
 $photo_names = explode(', ', $row['images']);
 $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside the while loop
-echo '<a style="text-decoration:none;" href="/frontend/serviceedit.php?id=' . $row['id'] . '">';
+echo '<a style="text-decoration:none;" href="/backend/serviceedit.php?id=' . $row['id'] . '">';
 echo '<div class="card">';
 echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;">';
 echo '<div class="info-area">';
