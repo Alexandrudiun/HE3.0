@@ -45,7 +45,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
 if (mysqli_num_rows($result) > 0) {
 echo '<div class="flex-container id="service-list">';
 while ($row = mysqli_fetch_assoc($result)) {
-$post[] = $row;
 $photo_names = explode(', ', $row['images']);
 $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside the while loop
 
@@ -58,8 +57,8 @@ $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside t
           echo '<h2 class="service-price">'.$row['title'].'</h2>';
           echo '</div>';
           echo '<div class="date">';
-          echo '<span>'.$row['date'].'</span>';
-          echo '<span>'.$row['city'].'</span>';
+         // echo '<span>'.$row['date'].'</span>';
+         // echo '<span>'.$row['city'].'</span>';
           echo '</div>';
           echo '</div>';
           echo '</div>';
