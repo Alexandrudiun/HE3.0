@@ -21,7 +21,7 @@
 
 .navigation ul {
   display: flex;
-  width: 280px; /* Adjusted width for 4 elements */
+  width: 280px; 
 }
 
 .navigation ul li {
