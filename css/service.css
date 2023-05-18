@@ -87,7 +87,7 @@ body{
   z-index: 100;
 }
 
-.popup-image span{
+.close-btn{
   position: inherit;
   top:0;
   right: 10px;
