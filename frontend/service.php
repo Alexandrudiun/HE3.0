@@ -102,6 +102,8 @@ if (mysqli_num_rows($result) > 0) {
   
   </main>
 
+  <h3><?php echo $name;?></h3>
+ <span><?php echo $skills;?></span> 
   <div class="profile-details">
   <div class="image">
             <?php if($image==NULL): ?>
@@ -113,8 +115,7 @@ if (mysqli_num_rows($result) > 0) {
   <div class="profile-name">
  
 
-  <h3><?php echo $name;?></h3>
- <span><?php echo $skills;?></span> 
+
   </div>
   </div>
 
