@@ -119,3 +119,17 @@ ion-icon{
   font-size: 10px;
   color: #ccc;
 }
+
+.delete-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 3px;
+  width: 100%;
+  background-color: #fc4c4c;
+  color: #f3f3f3;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
