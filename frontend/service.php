@@ -25,9 +25,6 @@ if (isset($_GET['id'])) {
     <link rel="manifest" href="/manifest.json">
 </head>
 <body>
-  <div class="back">
-  <ion-icon name="arrow-back-outline"></ion-icon>
-  </div>
   <section class="container">
   <?php
 
