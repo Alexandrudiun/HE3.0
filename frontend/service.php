@@ -95,15 +95,14 @@ if (mysqli_num_rows($result) > 0) {
        $image = $r[3]; //image is stored in blob format
        $name = $r[4];
        $skills = $r[5];
-
-        
+       echo "<script>document.getElementById('message1').innerHTML = '$name';</script>";
+        echo "<script>document.getElementById('message').innerHTML = '$skills';</script>";
      }}?>
 
   
   </main>
 
-  <h3><?php echo $name;?></h3>
- <span><?php echo $skills;?></span> 
+  
   <div class="profile-details">
   <div class="image">
             <?php if($image==NULL): ?>
@@ -113,7 +112,9 @@ if (mysqli_num_rows($result) > 0) {
             <?php endif; ?>
         </div>
   <div class="profile-name">
- 
+
+  <h3 id ="message1"></h3>
+ <span id ="message"></span> 
 
 
   </div>
