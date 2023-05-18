@@ -131,7 +131,7 @@ else{
                     </a>
                 </li>
                 <li class="list active">
-                    <a href="#">
+                    <a href="/frontend/profil.php">
                         <span class="icon">
                         <ion-icon name="person-circle-outline"></ion-icon>
                         </span>
@@ -146,7 +146,7 @@ else{
                         <span class="text">Postează</span>
                     </a>
                 </li>
-                <li class="list">
+                <li class="/frontend/history.php">
                     <a href="#">
                         <span class="icon">
                             <ion-icon name="albums-outline"></ion-icon>

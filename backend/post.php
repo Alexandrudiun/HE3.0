@@ -170,7 +170,7 @@ if(isset($_POST['submit'])){
                     </a>
                 </li>
                 <li class="list active">
-                    <a href="#">
+                    <a href="/backned/post.php">
                         <span class="icon">
                             <ion-icon name="add-circle-outline"></ion-icon>
                         </span>
@@ -178,7 +178,7 @@ if(isset($_POST['submit'])){
                     </a>
                 </li>
                 <li class="list">
-                    <a href="#">
+                    <a href="/frontend/history.php">
                         <span class="icon">
                             <ion-icon name="albums-outline"></ion-icon>
                         </span>
