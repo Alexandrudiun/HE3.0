@@ -32,7 +32,7 @@ $result = mysqli_query($conn, $sql);
 // Store the products in an array
 $post = array();
 if (mysqli_num_rows($result) > 0) {
-    echo '<div class="flex-container id="service-list">';
+    echo '<div class="flex-container" id="service-list">';
     while ($row = mysqli_fetch_assoc($result)) {
         $post[] = $row;
         $photo_names = explode(', ', $row['images']);
