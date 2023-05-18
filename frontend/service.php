@@ -109,6 +109,7 @@ include "../backend/profilbk.php";
       $skills = $row1[5];
       echo $name;
     }
+    print_r($row1);
     ?>
   <h3><?php echo $name;?></h3>
  <span><?php echo $skills;?></span>
