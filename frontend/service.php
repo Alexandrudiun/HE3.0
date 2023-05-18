@@ -88,16 +88,16 @@ if (mysqli_num_rows($result) > 0) {
         die('Query Failed');
       }
       $email_found = false; // Flag variable to check if email was found
-  //     while($row = mysqli_fetch_row($select_user_query)) {
-  //     if($row[1] == $email) {
+     while($r = mysqli_fetch_row($select_user_query)) {
+     if($r[1] == $email) {
         
-  //       $email_found = true;
-  //       $image = $row[3]; //image is stored in blob format
-  //       $name = $row[4];
-  //       $skills = $row[5];
-       
+       $email_found = true;
+       $image = $r[3]; //image is stored in blob format
+       $name = $r[4];
+       $skills = $r[5];
+
         
-  //     }?>
+     }}?>
 <?php
 }
 
@@ -121,8 +121,8 @@ if (mysqli_num_rows($result) > 0) {
   <div class="profile-name">
  
 
-  <!-- <h3><?php ?></h3>
- <span><?php?></span> -->
+  <!-- <h3><?php echo $name;?></h3>
+ <span><?php echo $skills;?></span> -->
   </div>
   </div>
 
