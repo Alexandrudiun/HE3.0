@@ -75,12 +75,13 @@ if (mysqli_num_rows($result) > 0) {
   echo '<p>'.$row['description'].'</p>';
   echo '</div>';
    }
- include "../backend/profilbk.php";
+ 
 }
 } else {
  
   echo "ID not found in the URL.";
 }
+include "../backend/profilbk.php";
 ?>
   
   </main>
