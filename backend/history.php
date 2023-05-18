@@ -24,7 +24,7 @@ if (mysqli_num_rows($result) > 0) {
         echo '<div class="card">';
         echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;">';
         echo '<div class="info-area">';
-        echo '<a herf="https://idcrew.shop/backend/historyedit.php"><button>edit</button></a>';
+        echo '<button><a herf="https://idcrew.shop/backend/historyedit.php">edit</a></button>';
         echo '<h3 class="service-title">' . $row['title'] . '</h3>';
         echo '<h2 class="service-price">' . $row['price'] . '</h2>';
         echo '<span>' . $row['location'] . 'aici trb ceva (locatie era) </span>';
