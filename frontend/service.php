@@ -113,8 +113,8 @@ if (mysqli_num_rows($result) > 0) {
   <div class="profile-name">
  
 
-  <!-- <h3><?php echo $name;?></h3>
- <span><?php echo $skills;?></span> -->
+  <h3><?php echo $name;?></h3>
+ <span><?php echo $skills;?></span> 
   </div>
   </div>
 
