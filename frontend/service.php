@@ -95,9 +95,10 @@ if (mysqli_num_rows($result) > 0) {
        $image = $r[3]; //image is stored in blob format
        $name = $r[4];
        $skills = $r[5];
-       
+       echo "<script>document.getElementById('message1').innerHTML = '$name';</script>";
+       echo "<script>document.getElementById('message1).innerHTML = '$skills';</script>";
      }}
-    
+     
      ?>
 
   
@@ -114,8 +115,8 @@ if (mysqli_num_rows($result) > 0) {
         </div>
   <div class="profile-name">
 
-  <h3><?php echo $name;?></h3>
- <span><?php echo $skills;?></span> 
+  <h3 id ="message1"></h3>
+ <span id ="message"></span> 
 
 
   </div>
@@ -125,7 +126,7 @@ if (mysqli_num_rows($result) > 0) {
 
   <footer>
     <div class="buy">
-      <a href="<?php echo ?>"  class="call">Call / SMS</a>
+      <a href="+040721333445"  class="call">Call / SMS</a>
       <span class="buy-btn"> Buy now!</Sspan>
     </div>
   </footer>
