@@ -1,3 +1,5 @@
+// for better search performances use binary search O(logn);
+
 const search = () => {
   const searchbox = document.getElementById("search-item").value.toUpperCase();
   const product = document.querySelectorAll(".card");
@@ -12,3 +14,4 @@ const search = () => {
     }
   }
 };
+
