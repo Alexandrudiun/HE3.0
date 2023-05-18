@@ -44,10 +44,6 @@ if (mysqli_num_rows($result) > 0) {
           $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
         echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
         }
-        echo '<div class="popup-image">';
-        echo '<img src="' . $location . '">';
-        echo '<ion-icon name="close-circle-outline"></ion-icon>';
-        echo '</div>';
         echo '</div>';
 
        echo '<div class="slider-nav">';
