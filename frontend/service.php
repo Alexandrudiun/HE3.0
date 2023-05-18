@@ -133,7 +133,7 @@ if (mysqli_num_rows($result) > 0) {
     </div>
     <a href="<?php echo "tel:".$numphones;?>" class="call">Call / SMS</a>
   </footer>
-  <script src="popup.js"></script>
+  <script src="js/popup.js"></script>
   <!-- Ion icons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
