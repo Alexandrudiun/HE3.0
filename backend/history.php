@@ -35,4 +35,4 @@ if (mysqli_num_rows($result) > 0) {
     }
     echo '</div>';
 }
-        }
+        }?> <button><a herf="https://idcrew.shop/backend/historyedit.php">edit</a></button>
