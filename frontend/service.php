@@ -4,7 +4,7 @@ include "../backend/conn.php";
 if (isset($_GET['id'])) {
 
   $id = $_GET['id'];
-  echo "ID: " . $id;
+  
 
 
 
@@ -27,7 +27,7 @@ if (isset($_GET['id'])) {
 <body>
 
   <section class="container">
-  <?php
+  <?php 
 
 $sql = "SELECT * FROM `posts` WHERE id = '{$id}';";
 $result = mysqli_query($conn, $sql);
@@ -37,6 +37,7 @@ $post = array();
 if (mysqli_num_rows($result) > 0) {
     echo '<div class="flex-container id="service-list">';
     while ($row = mysqli_fetch_assoc($result)) {
+        $numphone=$row['phone'];
         $photo_names = explode(', ', $row['images']);
         $location="https://idcrew.shop/img/upload/" . $photo_names[0]; 
         echo '<div class="slide-wrapper">';
