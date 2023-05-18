@@ -85,13 +85,6 @@ if (mysqli_num_rows($result) > 0) {
   </main>
 
   <div class="profile-details">
-  <img src="/img/user.png" class="img-profile">
-  <div class="profile-name">
-  <h3>Ionescu Andrei</h3>
- <span>WEB Dev |Front web dev</span>
-  </div>
-  </div>
-
   <div class="image">
             <?php if($image==NULL): ?>
             <img src='/img/user.png' class='profile-img'>
@@ -99,6 +92,13 @@ if (mysqli_num_rows($result) > 0) {
             <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="profile picture of <?=$name?>" class="profile-img">
             <?php endif; ?>
         </div>
+  <div class="profile-name">
+  <h3><?php echo $name?></h3>
+ <span><?php echo $skills?></span>
+  </div>
+  </div>
+
+  
 
   <footer>
     <div class="buy">
