@@ -27,7 +27,7 @@ if (isset($_GET['id'])) {
 <body>
 
   <section class="container">
-  <?php 
+  <?php
 
 $sql = "SELECT * FROM `posts` WHERE id = '{$id}';";
 $result = mysqli_query($conn, $sql);
@@ -37,7 +37,7 @@ $post = array();
 if (mysqli_num_rows($result) > 0) {
     echo '<div class="flex-container id="service-list">';
     while ($row = mysqli_fetch_assoc($result)) {
-        $numphone=$row['phone'];
+        $numphones = $row['phone'];
         $photo_names = explode(', ', $row['images']);
         $location="https://idcrew.shop/img/upload/" . $photo_names[0]; 
         echo '<div class="slide-wrapper">';
@@ -94,8 +94,8 @@ if (mysqli_num_rows($result) > 0) {
             <?php endif; ?>
         </div>
   <div class="profile-name">
-  <h3><?php echo $row['name']."cv";?></h3>
- <span><?php echo $row['skills'];?></span>
+  <h3><?php echo $name?></h3>
+ <span><?php echo $skills?></span>
   </div>
   </div>
 
@@ -103,7 +103,7 @@ if (mysqli_num_rows($result) > 0) {
 
   <footer>
     <div class="buy">
-      <a href="<?php echo $row['phone'];?>"  class="call">Call / SMS</a>
+      <a href="+040721333445"  class="call">Call / SMS</a>
       <span class="buy-btn"> Buy now!</Sspan>
     </div>
   </footer>
