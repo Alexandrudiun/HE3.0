@@ -114,8 +114,8 @@ if (mysqli_num_rows($result) > 0) {
         </div>
   <div class="profile-name">
 
-  <h3 id ="message1"><?php echo $name;?></h3>
- <span id ="message"></span> 
+  <h3><?php echo $name;?></h3>
+ <span><?php echo $skills;?></span> 
 
 
   </div>
