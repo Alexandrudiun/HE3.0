@@ -94,14 +94,7 @@ if (mysqli_num_rows($result) > 0) {
                         <span class="text">Istoric</span>
                     </a>
                 </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon">
-                        <ion-icon name="build-outline"></ion-icon>
-                        </span>
-                        <span class="text">My work</span>
-                    </a>
-                </li>
+                
                 <div class="indicator"></div>
             </ul>
         </div>
