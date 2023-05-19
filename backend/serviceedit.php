@@ -84,16 +84,18 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 
 
                 <?php 
-                $parts = explode(', ', $city);   
-                echo $city;            
+                $parts = explode(', ', $row['city']);   
+                $localitate = $parts[0];
+                $judet = $parts[1];
+                           
                 ?>
 
 
-                <input type="text" id="localitate" name="localitate" value="<?php echo $parts[0];?>" required>
+                <input type="text" id="localitate" name="localitate" value="<?php echo $localitate;?>" required>
                 </div>
                 <div class="input-box">
                 <label for="">Judeţ</label>
-                <input type="text" id="judet" name="judet" value="<?php echo $parts[1];?>" required>
+                <input type="text" id="judet" name="judet" value="<?php echo $judet;?>" required>
                 </div>
                 <div class="button">
                   <input type="submit" name="submit" value="Post" class="btn-login">
