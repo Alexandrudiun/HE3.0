@@ -6,7 +6,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 {
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
-        echo $id;
 
         $sql = "SELECT * FROM `posts` WHERE id = '{$id}';";
         $result = mysqli_query($conn, $sql);
@@ -50,6 +49,8 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
                     </label>
                     <p id="num-of-files">Nicio imagine adăugată</p>
                     <div id="images"><?php
+
+
                     $photo_names = explode(', ', $row['images']);
         echo '<div class="slide-wrapper">';
         echo '<div class="slider">';
@@ -228,7 +229,7 @@ if(isset($_POST['submit'])){
         }
 }
 }
-    }
+    
 }
 
 ?>
