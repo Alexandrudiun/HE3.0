@@ -13,5 +13,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
         print_r($row);
         echo "da";
         }
+        print_r($row);
+        echo"nu";
     }
 }
