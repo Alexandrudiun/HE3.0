@@ -85,6 +85,7 @@ else{
     }?>
      
     </a>
+    </div>   
     <div class="toggle-container">
                 <label class="switch">
                 <?php
@@ -114,8 +115,7 @@ else{
 
 
 </label>
-            </div>
-    </div>    
+            </div> 
     </main>
     <!-- Navbar Down -->
     <footer>  
