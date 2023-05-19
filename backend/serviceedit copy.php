@@ -12,11 +12,11 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
         
         
         $row = mysqli_fetch_assoc($result);
-prin
+        $photo_names = explode(', ', $row['images']);
 
 
         if($row['email']==$_SESSION['email'])
-        {$photo_names = explode(', ', $row['images']);?>
+        {?>
 
 
 
@@ -160,6 +160,7 @@ else{
         echo '<div class="slider">';
         for($i=0;$i<3;$i++){
           $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
+          if($photo_names[$i])
         echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
         }?>
                     </div>
