@@ -95,7 +95,7 @@ if(isset($_POST['submit'])){
             $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
             $select_user_query = mysqli_query($conn, $query);
             echo "<script>document.getElementById('mesaj').innerHTML = 'Anunțul a fost postat';</script>";
-            header("Location: post.php?uploadsuccess");
+            header("Location: serviceedit.php?uploadsuccess");
         } else {
             echo "Error: " . mysqli_error($conn);
         }
