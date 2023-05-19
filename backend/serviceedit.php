@@ -98,7 +98,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
                 <input type="text" id="judet" name="judet" value="<?php echo $judet;?>" required>
                 </div>
                 <div class="button">
-                  <input type="submit" name="submit" value="Post" class="btn-login">
+                  <input type="submit" name="submit" value="Încarcă noile date" class="btn-login">
                   </div>
                   
               </form>
