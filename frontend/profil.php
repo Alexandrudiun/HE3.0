@@ -92,13 +92,16 @@ else{
       ?>
       <form method='post'>
         <button type='submit' class="switch-btn" name='toggle_profile_type'>
-          Schimbă tipul de profil <?php
+            <div class="btn-icon">
+            <ion-icon name="swap-horizontal-outline"></ion-icon>
+          Schimbă profilul în: <?php
           if (!$profiletype_temp) {
             echo "worker";
           } else {
             echo "buyer";
           }
           ?>
+          </div>
         </button>
       </form>
     <?php
@@ -107,6 +110,8 @@ else{
     } else {
       echo "buyer";
     }
+
+    
     ?>
 </div>
 

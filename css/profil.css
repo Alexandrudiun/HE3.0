@@ -134,6 +134,13 @@ h3{
   display: flex;
   align-items: center;
   justify-content: center;
+  gap:5px;
+}
+
+.btn-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .switch-btn{
@@ -147,4 +154,13 @@ h3{
   color: #fff ;
   padding: 10px;
   cursor: pointer;
+}
+
+.worker,
+.buyer{
+  color: #f3f3f3;
+  font-size: 1em;
+  font-weight: 400;
+  margin-top: 5px;
+  text-transform: uppercase;
 }
