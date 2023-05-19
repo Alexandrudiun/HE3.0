@@ -11,8 +11,9 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
         
         while ($row = mysqli_fetch_assoc($result)) {
         print_r($row);
-        
-        
+        echo $row['id'];
+        echo"da";
+        }
 
 
 
@@ -156,7 +157,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 
 
 <?php
-        }
+
 
 include "conn.php";
 
