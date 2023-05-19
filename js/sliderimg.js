@@ -35,6 +35,16 @@ function removeImage(index) {
   let selectedFiles = Array.from(fileInput.files);
   selectedFiles.splice(index, 1);
   fileInput.value = ''; // Clear the file input value
-  fileInput.files = new FileList(...selectedFiles);
+
+  // Create a new FileList object with the updated selected files
+  let newFileList = new DataTransfer();
+  selectedFiles.forEach((file) => newFileList.items.add(file));
+
+  // Set the files property of the file input to the new FileList
+  if ('files' in fileInput) {
+    fileInput.files = newFileList.files;
+  }
+
   preview();
 }
+
