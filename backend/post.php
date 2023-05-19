@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
     $description = $_POST['descriere'];
     $phone = $_POST['phone'];
     $date = date('Y-m-d H:i:s');
-    $city = $_POST['localitate'].' '.$_POST['judet'];
+    $city = $_POST['localitate'].', '.$_POST['judet'];
     $query = "INSERT INTO posts (email, city, title, price, description, phone, date) VALUES ('{$email}', '{$city}', '{$title}', '{$price}', '{$description}', '{$phone}', '{$date}')";
     $add_post_query = mysqli_query($conn, $query);
     if(!$add_post_query) {
