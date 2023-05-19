@@ -92,7 +92,7 @@ else{
       ?>
       <form method='post'>
         <button type='submit' class="switch-btn" name='toggle_profile_type'>
-          Schimbă tipul de profil <?php
+          Schimbă profilul în: <?php
           if (!$profiletype_temp) {
             echo "worker";
           } else {
