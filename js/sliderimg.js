@@ -22,3 +22,7 @@ function preview (){
     reader.readAsDataURL(i);
   }
 }
+
+function remove_img(){
+  document.getElementById('fileInput').remove();
+}

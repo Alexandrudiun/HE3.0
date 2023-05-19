@@ -145,8 +145,7 @@ if(isset($_POST['submit'])){
                 </div>
                 <div class="button">
                   <input type="submit" name="submit" value="Post" class="btn-login">
-                  </div>
-                  
+                  </div>   
               </form>
             </div>
           </div> 
