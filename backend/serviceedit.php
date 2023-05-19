@@ -92,9 +92,10 @@ if(isset($_POST['submit'])){
         } else {
             echo "Error: " . mysqli_error($conn);
         }
-}
+}include "conn.php";
 $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
     $delete_query = mysqli_query($conn, $sql);
+    echo $delete_query;
 
 }
 
