@@ -25,7 +25,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
  
 if(isset($_POST['submit'])){
     
-    $ok=true
+    $ok=true;
 
 
     $email = $_SESSION['email'];
