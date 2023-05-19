@@ -224,8 +224,8 @@ if(isset($_POST['submit'])){
 ?>
     <?}
 
-        else echo $row['email']. ' Acces Interzis '. $_SESSION['email'];
-        print_r($row);
+        else print_r($row);
+        
         
 
 
