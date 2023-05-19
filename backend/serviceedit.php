@@ -7,9 +7,15 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 
         $sql = "SELECT * FROM `posts` WHERE id = '{$id}';";
         $result = mysqli_query($conn, $sql);
-        while($row = mysqli_fetch_assoc($result)) {
+        
+        
+        while ($row = mysqli_fetch_assoc($result)) {
         print_r($row);
+        echo $row['id'];
         }
+
+
+
         if($row['email']==$_SESSION['email'])
         {?>
 
