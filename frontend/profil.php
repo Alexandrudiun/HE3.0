@@ -94,7 +94,7 @@ else{
                 {
                                       
 ?> <form method='post'>
-    <button type='submit' class="" name='toggle_profile_type'><p>Switch profile type to</p> <?php 
+    <button type='submit' class="swich-btn" name='toggle_profile_type'> Schimbă tipul de profil <?php 
                     if(!$profiletype_temp)   echo "worker";
                     else echo "buyer";
                   }
