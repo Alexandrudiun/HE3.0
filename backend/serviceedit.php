@@ -166,8 +166,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 
 
 
-if(isset($_POST['submit'])){
-    include "conn.php";
+ if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
     $query="SELECT * FROM users WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn, $query);
@@ -181,7 +180,7 @@ if(isset($_POST['submit'])){
     $description = $_POST['descriere'];
     $phone = $_POST['phone'];
     $date = date('Y-m-d H:i:s');
-    $city = $_POST['localitate'].' '.$_POST['judet'];
+    $city = $_POST['localitate'].', '.$_POST['judet'];
     $query = "INSERT INTO posts (email, city, title, price, description, phone, date) VALUES ('{$email}', '{$city}', '{$title}', '{$price}', '{$description}', '{$phone}', '{$date}')";
     $add_post_query = mysqli_query($conn, $query);
     if(!$add_post_query) {
@@ -226,11 +225,12 @@ if(isset($_POST['submit'])){
         $result = mysqli_query($conn, $query);
         
         if($result){
-            echo "<script>document.getElementById('mesaj').innerHTML = 'Anunțul a fost actualizat';</script>";
-            header("Location: serviceedit.php?uploadsuccess");
+            echo "<script>document.getElementById('mesaj').innerHTML = 'Anunțul a fost postat';</script>";
+            header("Location: post.php?uploadsuccess");
         } else {
             echo "Error: " . mysqli_error($conn);
         }
+}
 }
 }
     
@@ -242,7 +242,7 @@ if(isset($_POST['submit'])){
     header("Location: /frontend/error404.html");
 }
 
-} else {
+ else {
     header("Location: /index.php");
 }
 
