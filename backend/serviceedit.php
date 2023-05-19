@@ -8,8 +8,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
         $sql = "SELECT * FROM `posts` WHERE id = '{$id}';";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
-        print_r($row);
-        ECHO "DA";
         if($row['email']==$_SESSION['email'])
         {?>
 
@@ -226,9 +224,8 @@ if(isset($_POST['submit'])){
 ?>
     <?}
 
-        else print_r($row);
-        
-        
+        else echo 'Acces Interzis';
+
 
 
     }
