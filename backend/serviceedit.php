@@ -89,7 +89,7 @@ if(isset($_POST['submit'])){
         if($result){
             
             echo "<script>document.getElementById('mesaj').innerHTML = 'Anunțul a fost postat';</script>";
-            // header("Location: serviceedit.php?uploadsuccess");
+            header("Location: serviceedit.php?uploadsuccess");
         } else {
             echo "Error: " . mysqli_error($conn);
         }
