@@ -87,7 +87,7 @@ if (mysqli_num_rows($result) > 0) {
                     </a>
                 </li>
                 <li class="list">
-                    <a href="/frontend/history.php">
+                    <a href="/backend/history.php">
                         <span class="icon">
                             <ion-icon name="albums-outline"></ion-icon>
                         </span>
