@@ -16,7 +16,7 @@ prin
 
 
         if($row['email']==$_SESSION['email'])
-        {?>
+        {$photo_names = explode(', ', $row['images']);?>
 
 
 
