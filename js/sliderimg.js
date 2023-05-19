@@ -6,11 +6,11 @@ function preview() {
   imageContainer.innerHTML = "";
   numOfFiles.textContent = `${fileInput.files.length} Imagini Selectate`;
 
-  for (let i of fileInput.files) {
+  for (let i = 0; i < fileInput.files.length; i++) {
     let reader = new FileReader();
     let figure = document.createElement("figure");
     let figCap = document.createElement("figcaption");
-    figCap.innerText = i.name;
+    figCap.innerText = fileInput.files[i].name;
     figure.appendChild(figCap);
 
     reader.onload = () => {
@@ -27,17 +27,13 @@ function preview() {
     figure.appendChild(removeButton);
 
     imageContainer.appendChild(figure);
-    reader.readAsDataURL(i);
+    reader.readAsDataURL(fileInput.files[i]);
   }
 }
 
-function removeImage(file) {
+function removeImage(index) {
   let selectedFiles = Array.from(fileInput.files);
-  let removedIndex = selectedFiles.findIndex((f) => f.name === file.name);
-
-  if (removedIndex !== -1) {
-    selectedFiles.splice(removedIndex, 1);
-    fileInput.files = new FileList(...selectedFiles);
-    preview();
-  }
+  selectedFiles.splice(index, 1);
+  fileInput.files = new FileList(...selectedFiles);
+  preview();
 }
