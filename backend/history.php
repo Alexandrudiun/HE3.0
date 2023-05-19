@@ -67,10 +67,7 @@ echo '</a>';
 
 }
 }?>
-          <div class="delete-btn">
-            <ion-icon name="close-outline"></ion-icon>
-            <span>Edit Post</span>
-          </div>
+        
 
 
 
