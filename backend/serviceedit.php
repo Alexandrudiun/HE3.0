@@ -11,6 +11,9 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
         
         while ($row = mysqli_fetch_assoc($result)) {
         print_r($row);
+        echo "da";
         }
+        print_r($row);
+        echo"nu";
     }
 }
