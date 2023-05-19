@@ -11,9 +11,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
         $result = mysqli_query($conn, $sql);
         
         
-        while ($row = mysqli_fetch_assoc($result)) {
-    
-        }
+        $row = mysqli_fetch_assoc($result);
 
 
 
