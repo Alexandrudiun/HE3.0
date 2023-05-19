@@ -59,7 +59,7 @@ echo '</div>';
 echo '</div>';   
 echo '<div class="delete-btn">';
 echo '<ion-icon name="close-outline"></ion-icon>';
-echo '<span>Edit Post</span>';
+echo '<span>Editează sau şterge postarea</span>';
 echo '</div>';
 echo '</a>';
 
