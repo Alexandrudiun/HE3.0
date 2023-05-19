@@ -136,7 +136,7 @@ h3{
   justify-content: center;
 }
 
-.swich-btn{
+.switch-btn{
   margin-top: 15px;
   text-decoration: none;
   border: solid 1px transparent;
@@ -146,4 +146,5 @@ h3{
   border-radius: 10px;
   color: #fff ;
   padding: 10px;
+  cursor: pointer;
 }
