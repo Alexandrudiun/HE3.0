@@ -167,6 +167,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 
 
 if(isset($_POST['submit'])){
+    include "conn.php";
     $email = $_SESSION['email'];
     $query="SELECT * FROM users WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn, $query);
