@@ -142,7 +142,7 @@ if(isset($_POST['submit'])){
                     </div>
                 <div class="input-box">
                 <?php
-                     $parts = explode(', ', $city);
+                     $parts = explode(', ', $row['city']);
                      $localitate = $parts[0];
                      $judet = $parts[1];
                 ?>  
