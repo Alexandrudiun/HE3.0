@@ -100,8 +100,8 @@ if(isset($_POST['submit'])){
 }
 
 }}}
-echo $id;
-if($ok){
+
+if($ok){echo $id;
     $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
     $delete_query = mysqli_query($conn, $sql);
 }
