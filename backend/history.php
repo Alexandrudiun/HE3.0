@@ -56,7 +56,11 @@ echo '<span>'.$row['date'].'</span>';
 echo '<span>'.$row['city'].'</span>';
 echo '</div>';
 echo '</div>';
-echo '</div>';        
+echo '</div>';   
+echo '<div class="delete-btn">';
+echo '<ion-icon name="close-outline"></ion-icon>';
+echo '<span>Edit Post</span>';
+echo '</div>';
 echo '</a>';
 
 }
@@ -65,8 +69,12 @@ echo '</a>';
 }?>
           <div class="delete-btn">
             <ion-icon name="close-outline"></ion-icon>
-            <span>Delete Post</span>
+            <span>Edit Post</span>
           </div>
+
+
+
+
         </div>
       </div>
     </div>
