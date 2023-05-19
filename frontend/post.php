@@ -114,7 +114,9 @@ if(isset($_POST['submit'])){
                     </label>
                     <p id="num-of-files">Nicio imagine adăugată</p>
                     <div id="images"></div>
-                    <p><button onclick="remove_img()">click me to remove image</button></p>
+                    <div class="center-btn">
+                    <button onclick="remove_img()">click me to remove image</button>
+                    </div>
                     </div>
                 <div id="mesaj" style="color:red; text-align:center;"></div>
                 </section>
