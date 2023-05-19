@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
     $phone = $_POST['phone'];
     $date = date('Y-m-d H:i:s');
     $city = $_POST['localitate'].', '.$_POST['judet'];
-    $query = "UPDATE posts SET email = '{$email}', city = '{$city}', title = '{$title}', price = '{$price}', description = '{$description}', phone = '{$phone}', date = '{$date}' WHERE post_id = {$id}";
+    $query = "UPDATE posts SET email = '{$email}', city = '{$city}', title = '{$title}', price = '{$price}', description = '{$description}', phone = '{$phone}', date = '{$date}' WHERE id = {$id}";
 
     $add_post_query = mysqli_query($conn, $query);
     if(!$add_post_query) {
