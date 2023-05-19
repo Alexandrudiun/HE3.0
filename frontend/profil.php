@@ -87,7 +87,6 @@ else{
     </a>
     </div>   
     <div class="toggle-container">
-    <label class="switch">
     <?php
     if ($worker == 1 && $buyer == 1) {
       ?>
@@ -109,7 +108,6 @@ else{
       echo "buyer";
     }
     ?>
-  </label>
 </div>
 
     </main>
