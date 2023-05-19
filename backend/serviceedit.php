@@ -24,18 +24,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 
  
 if(isset($_POST['submit'])){
-    for($i=0;$i<3;$i++){
-        $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
-        if($photo_names[$i])
-      if(!unlink($location))
-      {
-        echo "File $location cannot be deleted due to an error<br>";
-      }
-      }
-      $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
-      $delete_query = mysqli_query($conn, $sql);
-        if(!$delete_query) {
-            die('Query Failed'. mysqli_error($conn));
     $email = $_SESSION['email'];
     $query="SELECT * FROM users WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn, $query);
