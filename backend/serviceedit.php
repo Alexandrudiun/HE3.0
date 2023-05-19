@@ -9,6 +9,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
         print_r($row);
+        ECHO "DA";
         if($row['email']==$_SESSION['email'])
         {?>
 
