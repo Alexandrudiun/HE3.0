@@ -87,35 +87,31 @@ else{
     </a>
     </div>   
     <div class="toggle-container">
-                <label class="switch">
-                <?php
-                
-                if($worker == 1 && $buyer == 1) 
-                {
-                                      
-?> <form method='post'>
-    <button type='submit' class="swich-btn" name='toggle_profile_type'> Schimbă tipul de profil <?php 
-                    if(!$profiletype_temp)   echo "worker";
-                    else echo "buyer";
-                  }
-                else
-                  if($worker == 1 && $buyer == 0)
-                 {
-                    echo "worker";
-                 }
-                    else
-                    {
-                         echo "buyer"; 
-                    }
-                         
-                    ?></button>
-</form>
-                
-               
+    <label class="switch">
+    <?php
+    if ($worker == 1 && $buyer == 1) {
+      ?>
+      <form method='post'>
+        <button type='submit' class="switch-btn" name='toggle_profile_type'>
+          Schimbă tipul de profil <?php
+          if (!$profiletype_temp) {
+            echo "worker";
+          } else {
+            echo "buyer";
+          }
+          ?>
+        </button>
+      </form>
+    <?php
+    } else if ($worker == 1 && $buyer == 0) {
+      echo "worker";
+    } else {
+      echo "buyer";
+    }
+    ?>
+  </label>
+</div>
 
-
-</label>
-            </div> 
     </main>
     <!-- Navbar Down -->
     <footer>  
