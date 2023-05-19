@@ -7,7 +7,8 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
 
-        
+        $sql = "SELECT * FROM `posts` WHERE id = '{$id}';";
+        $result = mysqli_query($conn, $sql);
         
         
         $row = mysqli_fetch_assoc($result);
@@ -24,17 +25,24 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
  
 if(isset($_POST['submit'])){
     
-    $sql = "SELECT * FROM `posts` WHERE id = '{$id}';";
-    $result = mysqli_query($conn, $sql);
+
     
       
 
+
+
+    $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
+    $delete_query = mysqli_query($conn, $sql);
 
 
 
     $email = $_SESSION['email'];
     $query="SELECT * FROM users WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn, $query);
+    
+    
+    
+
     $name = $_POST['name'];
     $title = $_POST['titlu'];
     $price = $_POST['pret'];
@@ -166,7 +174,7 @@ if(isset($_POST['submit'])){
                 <input type="text" id="judet" name="judet" value="<?php echo $judet; ?>" required>
                 </div>
                 <div class="button">
-                  <input type="submit" name="submit" value="Editeaza" class="btn-login">
+                  <input type="submit" name="submit" value="Post" class="btn-login">
                   </div>
                   
               </form>
