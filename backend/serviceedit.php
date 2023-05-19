@@ -235,22 +235,21 @@ if(isset($_POST['submit'])){
 }
     
 
-}}}
+}
 ?>
     <?php
 
-//      else echo 'Acces Interzis';
+    else echo 'Acces Interzis';
 
 
-//     }
-// }
+}
     
-    // else {
-    //     header("Location: /frontend/error404.html");
-    // }
+    else {
+        header("Location: /frontend/error404.html");
+    }
 
-//}
-// else{
-//     header("Location: /index.php");
-// }
+}
+else{
+    header("Location: /index.php");
+}
 ?>
