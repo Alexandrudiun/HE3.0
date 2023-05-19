@@ -235,7 +235,7 @@ if(isset($_POST['submit'])){
 
 }
 ?>
-    <?
+    <?php
 
      else echo 'Acces Interzis';
 
