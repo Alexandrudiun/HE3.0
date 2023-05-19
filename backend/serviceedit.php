@@ -82,6 +82,18 @@ if(isset($_POST['submit'])){
         $result = mysqli_query($conn, $query);
         
         if($result){
+            
+
+            for($i=0;$i<3;$i++){
+                $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
+                if($photo_names[$i])
+              if(!unlink($location))
+              {
+                echo "File $location cannot be deleted due to an error<br>";
+              }
+              }
+            $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
+            $select_user_query = mysqli_query($conn, $query);
             echo "<script>document.getElementById('mesaj').innerHTML = 'Anunțul a fost postat';</script>";
             header("Location: post.php?uploadsuccess");
         } else {
@@ -119,7 +131,8 @@ if(isset($_POST['submit'])){
                         <ion-icon name="albums-outline"></ion-icon> Adaugă imagini
                     </label>
                     <p id="num-of-files">Nicio imagine adăugată</p>
-                    <div id="images"><?php for($i=0;$i<3;$i++){
+                    <div id="images">
+          <?php for($i=0;$i<3;$i++){
           $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
           if($photo_names[$i])
         echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';

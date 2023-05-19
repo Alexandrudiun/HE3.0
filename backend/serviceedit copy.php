@@ -32,10 +32,8 @@ if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
     $query="SELECT * FROM users WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn, $query);
-    
-    
-    
 
+    
     $name = $_POST['name'];
     $title = $_POST['titlu'];
     $price = $_POST['pret'];
@@ -87,6 +85,8 @@ if(isset($_POST['submit'])){
         $result = mysqli_query($conn, $query);
         
         if($result){
+            $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
+            $select_user_query = mysqli_query($conn, $query);
             echo "<script>document.getElementById('mesaj').innerHTML = 'Anunțul a fost actualizat';</script>";
             header("Location: serviceedit.php?uploadsuccess");
         } else {
