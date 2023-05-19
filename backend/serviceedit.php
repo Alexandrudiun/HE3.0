@@ -2,6 +2,8 @@
 
 include "conn.php";
 session_start();
+$sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
+    $delete_query = mysqli_query($conn, $sql);
 if(isset($_SESSION['email']) && isset($_SESSION['password']))
 { $ok=false;
     if (isset($_GET['id'])) {
@@ -101,10 +103,10 @@ if(isset($_POST['submit'])){
 
 }}}
 
-if($ok){echo $id;
-    $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
-    $delete_query = mysqli_query($conn, $sql);
-}
+// if($ok){echo $id;
+//     $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
+//     $delete_query = mysqli_query($conn, $sql);
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
