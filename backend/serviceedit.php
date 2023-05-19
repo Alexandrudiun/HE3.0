@@ -92,8 +92,8 @@ if(isset($_POST['submit'])){
                 echo "File $location cannot be deleted due to an error<br>";
               }
               }
-            $query = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
-           $select_user_query = mysqli_query($conn, $query);
+              $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
+              $delete_query = mysqli_query($conn, $sql);
             echo "<script>document.getElementById('mesaj').innerHTML = 'Anunțul a fost postat';</script>";
             header("Location: serviceedit.php?uploadsuccess");
         } else {
