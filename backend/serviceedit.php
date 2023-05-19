@@ -12,12 +12,12 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
         
         
         $row = mysqli_fetch_assoc($result);
-        print_r($row);
-
+        
+        $photo_names = explode(', ', $row['images']);
 
         if($row['email']==$_SESSION['email'])
         {
-        }}}
+        
        ?>
 
 <?php
@@ -90,7 +90,7 @@ if(isset($_POST['submit'])){
 }
 }
 
-
+}}}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -121,6 +121,7 @@ if(isset($_POST['submit'])){
                     <p id="num-of-files">Nicio imagine adăugată</p>
                     <div id="images"><?php for($i=0;$i<3;$i++){
           $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
+          if($photo_names[$i])
         echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
         }?></div>
                 </div>

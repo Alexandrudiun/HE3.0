@@ -12,6 +12,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
         
         
         $row = mysqli_fetch_assoc($result);
+       
         $photo_names = explode(', ', $row['images']);
 
 
