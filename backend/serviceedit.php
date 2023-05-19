@@ -68,7 +68,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
                 </div>
                 <div class="input-box">
                   <label for="">Descriere</label>
-                  <textarea type="text" id="descriere" name="descriere" rows="5" value="<?php echo $row['description']; ?>" required></textarea>
+                  <input type="text" id="descriere" name="descriere" rows="5" value="<?php echo $row['description']; ?>" required></input>
                 </div>
                 <div class="input-box">
                   <label for="">Preţ (RON)</label>
@@ -84,7 +84,8 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 
 
                 <?php 
-                $parts = explode(', ', $city);               
+                $parts = explode(', ', $city);   
+                echo $city;            
                 ?>
 
 
