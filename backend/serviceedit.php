@@ -24,24 +24,10 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 
  
 if(isset($_POST['submit'])){
-    
-
-    
-      
-
-
-
-    include "../del.php";
-
-
-
     $email = $_SESSION['email'];
     $query="SELECT * FROM users WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn, $query);
     
-    
-    
-
     $name = $_POST['name'];
     $title = $_POST['titlu'];
     $price = $_POST['pret'];
@@ -49,7 +35,8 @@ if(isset($_POST['submit'])){
     $phone = $_POST['phone'];
     $date = date('Y-m-d H:i:s');
     $city = $_POST['localitate'].', '.$_POST['judet'];
-    $query = "INSERT INTO posts (email, city, title, price, description, phone, date) VALUES ('{$email}', '{$city}', '{$title}', '{$price}', '{$description}', '{$phone}', '{$date}')";
+    $query = "UPDATE posts SET email = '{$email}', city = '{$city}', title = '{$title}', price = '{$price}', description = '{$description}', phone = '{$phone}', date = '{$date}' WHERE post_id = {$id}";
+
     $add_post_query = mysqli_query($conn, $query);
     if(!$add_post_query) {
        die('Query Failed'. mysqli_error($conn));
