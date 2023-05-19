@@ -130,15 +130,18 @@ figCaption{
   word-wrap: break-word;
 }
 
-
-.remove-button{
+.remove-wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.remove-button{
   background-color: #fc4c4c;
   color: #fff;
   padding: 7px;
   border-radius: 10px;
+  border: none;
 }
 
 .input-box{

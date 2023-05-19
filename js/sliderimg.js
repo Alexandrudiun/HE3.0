@@ -19,13 +19,20 @@ function preview() {
       figure.insertBefore(img, figCap);
     };
 
+    let removeWrapper = document.createElement("div");
+    removeWrapper.classList.add("remove-wrapper"); // Add a class to the wrapper div
+
     let removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
-    removeButton.classList.add("remove-button");
+    removeButton.classList.add("remove-button"); // Add the class to the remove button
+
     removeButton.addEventListener("click", () => {
       removeImage(i);
     });
-    figure.appendChild(removeButton);
+
+    removeWrapper.appendChild(removeButton); // Append the remove button to the wrapper div
+    figure.appendChild(removeWrapper); // Append the wrapper div to the figure
+
 
     imageContainer.appendChild(figure);
     reader.readAsDataURL(fileInput.files[i]);
