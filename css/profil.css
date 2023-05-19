@@ -136,6 +136,12 @@ h3{
   justify-content: center;
 }
 
+.btn-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .switch-btn{
   margin-top: 15px;
   text-decoration: none;
