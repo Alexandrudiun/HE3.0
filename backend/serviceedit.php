@@ -235,7 +235,7 @@ if(isset($_POST['submit'])){
 }
     
 } else {
-    echo 'Acces Interzis';
+    header("Location: /frontend/error404.html");
 }
 
 } else {
