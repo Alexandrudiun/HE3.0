@@ -1,4 +1,5 @@
 <?php
+include "conn.php";
 session_start();
 if (isset($_SESSION['email']) && isset($_SESSION['password'])) {
     if (isset($_GET['id'])) {
