@@ -25,9 +25,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
  
 if(isset($_POST['submit'])){
     
-    $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
-    $delete_query = mysqli_query($conn, $sql);
-
+    
 
 
     $email = $_SESSION['email'];
@@ -95,6 +93,9 @@ if(isset($_POST['submit'])){
             echo "Error: " . mysqli_error($conn);
         }
 }
+$sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
+    $delete_query = mysqli_query($conn, $sql);
+
 }
 
 }}}
