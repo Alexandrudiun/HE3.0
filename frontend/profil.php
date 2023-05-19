@@ -28,36 +28,6 @@ if (isset($_POST['toggle_profile_type'])) {
     <main>
         <div class="center">
             <div class="profile-card">
-            <div class="toggle-container">
-                <label class="switch">
-                <?php
-                
-                if($worker == 1 && $buyer == 1) 
-                {
-                                      
-?> <form method='post'>
-    <button type='submit' class="" name='toggle_profile_type'><p>Switch profile type to</p> <?php 
-                    if(!$profiletype_temp)   echo "worker";
-                    else echo "buyer";
-                  }
-                else
-                  if($worker == 1 && $buyer == 0)
-                 {
-                    echo "worker";
-                 }
-                    else
-                    {
-                         echo "buyer"; 
-                    }
-                         
-                    ?></button>
-</form>
-                
-               
-
-
-</label>
-            </div>
             <div class="image">
             <?php if($image==NULL): ?>
             <img src='/img/user.png' class='profile-img'>
@@ -115,6 +85,36 @@ else{
     }?>
      
     </a>
+    <div class="toggle-container">
+                <label class="switch">
+                <?php
+                
+                if($worker == 1 && $buyer == 1) 
+                {
+                                      
+?> <form method='post'>
+    <button type='submit' class="" name='toggle_profile_type'><p>Switch profile type to</p> <?php 
+                    if(!$profiletype_temp)   echo "worker";
+                    else echo "buyer";
+                  }
+                else
+                  if($worker == 1 && $buyer == 0)
+                 {
+                    echo "worker";
+                 }
+                    else
+                    {
+                         echo "buyer"; 
+                    }
+                         
+                    ?></button>
+</form>
+                
+               
+
+
+</label>
+            </div>
     </div>    
     </main>
     <!-- Navbar Down -->
