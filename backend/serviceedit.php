@@ -102,10 +102,6 @@ if(isset($_POST['submit'])){
 
 }}}
 
-// if($ok){echo $id;
-//     $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
-//     $delete_query = mysqli_query($conn, $sql);
-// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
