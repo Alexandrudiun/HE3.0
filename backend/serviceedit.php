@@ -125,28 +125,35 @@ if(isset($_POST['submit'])){
                 </section>
                 <div class="input-box">
                   <label for="">Titlul anunţului</label>
-                  <input type="text" id="titlu" name="titlu" required>
+                  <input type="text" id="titlu" name="titlu" value="<?php echo $row['title']; ?>" required>
                 </div>
                 <div class="input-box">
                   <label for="">Descriere</label>
-                  <textarea type="text" id="descriere" name="descriere" rows="5" required></textarea>
+                  <textarea type="text" id="descriere" name="descriere" rows="5" required><?php echo $row['description']; ?></textarea>
                 </div>
                 <div class="input-box">
                   <label for="">Preţ (RON)</label>
-                  <input type="number" id="pret" name="pret" required>
+                  <input type="number" id="pret" name="pret" value="<?php echo $row['price']; ?>" required>
                 </div>
                     <h3>Date de contact</h3>
                     <div class="input-box">
                     <label for="">Telefon</label>
-                <input type="tel" id="phone" name="phone" pattern="^(\+40|0)[0-9]{9}$" required>
+                <input type="tel" id="phone" name="phone" pattern="^(\+40|0)[0-9]{9}$" value="<?php echo $row['phone']; ?>" required>
                     </div>
                 <div class="input-box">
+                <?php
+                     $parts = explode(', ', $city);
+                     $localitate = $parts[0];
+                     $judet = $parts[1];
+                ?>  
+
+
                 <label for="">Localitate</label>
-                <input type="text" id="localitate" name="localitate" required>
+                <input type="text" id="localitate" name="localitate" value="<?php echo $localitate; ?>" required>
                 </div>
                 <div class="input-box">
                 <label for="">Judeţ</label>
-                <input type="text" id="judet" name="judet" required>
+                <input type="text" id="judet" name="judet" value="<?php echo $judet; ?>" required>
                 </div>
                 <div class="button">
                   <input type="submit" name="submit" value="Post" class="btn-login">
