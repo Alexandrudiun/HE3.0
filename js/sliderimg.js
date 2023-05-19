@@ -21,6 +21,7 @@ function preview() {
 
     let removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
+    removeButton.classList.add("remove-button");
     removeButton.addEventListener("click", () => {
       removeImage(i);
     });
