@@ -17,8 +17,8 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 
 
 
-        if($row['email']==$_SESSION['email'])
-        {?>
+        // if($row['email']==$_SESSION['email'])
+        // {?>
 
 
 <!DOCTYPE html>
@@ -231,7 +231,7 @@ if(isset($_POST['submit'])){
 
 
 ?>
-    <?}
+    <?
 
         else echo 'Acces Interzis';
 
