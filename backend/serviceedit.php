@@ -4,6 +4,15 @@ include "conn.php";
 session_start();
 if(isset($_SESSION['email']) && isset($_SESSION['password']))
 {
+    
+        
+       ?>
+
+<?php
+
+ 
+if(isset($_POST['submit'])){
+    
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
 
@@ -17,15 +26,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 
         if($row['email']==$_SESSION['email'])
         {
-        
-       ?>
-
-<?php
-
- 
-if(isset($_POST['submit'])){
-    
-
     
       $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
       $delete_query = mysqli_query($conn, $sql);
