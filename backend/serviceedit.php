@@ -3,7 +3,7 @@
 include "conn.php";
 session_start();
 if(isset($_SESSION['email']) && isset($_SESSION['password']))
-{
+{ $ok=false;
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
 
@@ -25,7 +25,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
  
 if(isset($_POST['submit'])){
     
-    
+    $ok=true
 
 
     $email = $_SESSION['email'];
@@ -44,8 +44,6 @@ if(isset($_POST['submit'])){
     $city = $_POST['localitate'].', '.$_POST['judet'];
 
     $query = "INSERT INTO posts (email, city, title, price, description, phone, date) VALUES ('{$email}', '{$city}', '{$title}', '{$price}', '{$description}', '{$phone}', '{$date}')";
-    $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
-    $delete_query = mysqli_query($conn, $sql);
     $add_post_query = mysqli_query($conn, $query);
     if(!$add_post_query) {
        die('Query Failed'. mysqli_error($conn));
@@ -102,6 +100,10 @@ if(isset($_POST['submit'])){
 }
 
 }}}
+if($ok){
+    $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
+    $delete_query = mysqli_query($conn, $sql);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
