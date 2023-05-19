@@ -130,13 +130,11 @@ figCaption{
   word-wrap: break-word;
 }
 
-.center-btn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .remove-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #fc4c4c;
   color: #fff;
   padding: 7px;
