@@ -119,7 +119,10 @@ if(isset($_POST['submit'])){
                         <ion-icon name="albums-outline"></ion-icon> Adaugă imagini
                     </label>
                     <p id="num-of-files">Nicio imagine adăugată</p>
-                    <div id="images"></div>
+                    <div id="images"><?php for($i=0;$i<3;$i++){
+          $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
+        echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
+        }?></div>
                 </div>
                 <div id="mesaj" style="color:red; text-align:center;"></div>
                 </section>
