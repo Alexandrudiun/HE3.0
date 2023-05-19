@@ -24,6 +24,18 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 
  
 if(isset($_POST['submit'])){
+    
+
+    
+      $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
+      $delete_query = mysqli_query($conn, $sql);
+
+
+
+
+
+
+
     $email = $_SESSION['email'];
     $query="SELECT * FROM users WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn, $query);
