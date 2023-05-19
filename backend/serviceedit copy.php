@@ -4,6 +4,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 {
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
+        echo $id;
 
         $sql = "SELECT * FROM `posts` WHERE id = '{$id}';";
         $result = mysqli_query($conn, $sql);
