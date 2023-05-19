@@ -105,10 +105,10 @@ else{
         </button>
       </form>
     <?php
-    } else if ($worker == 1 && $buyer == 0) {
-      echo "worker";
-    } else {
-      echo "buyer";
+    } if ($worker == 1 && $buyer == 0) {
+        echo '<span class="worker">worker</span>';
+      } else {
+        echo '<span class="buyer">buyer</span>';
     }
     ?>
 </div>

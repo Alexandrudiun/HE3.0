@@ -155,3 +155,12 @@ h3{
   padding: 10px;
   cursor: pointer;
 }
+
+.worker,
+.buyer{
+  color: #f3f3f3;
+  font-size: 1em;
+  font-weight: 400;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
