@@ -13,16 +13,13 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
         
         
         while ($row = mysqli_fetch_assoc($result)) {
-        print_r($row);
-        echo $row['id'];
-        echo"da";
-        echo"da";
+    
         }
 
 
 
-        // if($row['email']==$_SESSION['email'])
-        // {?>
+        if($row['email']==$_SESSION['email'])
+        {?>
 
 
 <!DOCTYPE html>
@@ -237,17 +234,17 @@ if(isset($_POST['submit'])){
 ?>
     <?
 
-//         else echo 'Acces Interzis';
+        else echo 'Acces Interzis';
 
 
 
-//     }
-//     else {
-//         header("Location: /frontend/error404.html");
-//     }
-// }
+    }
+    else {
+        header("Location: /frontend/error404.html");
+    }
+}
 
-// else{
-//     header("Location: /index.php");
-// }
+else{
+    header("Location: /index.php");
+}
 ?>
