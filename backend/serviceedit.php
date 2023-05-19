@@ -94,7 +94,7 @@ if(isset($_POST['submit'])){
         } else {
             echo "Error: " . mysqli_error($conn);
         }
-}include "conn.php";
+}
 
     
 
