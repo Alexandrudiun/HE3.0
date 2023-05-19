@@ -23,6 +23,13 @@ function preview (){
   }
 }
 
-function remove_img(){
-  document.getElementById('fileInput').remove();
+function remove_img() {
+  let selectedFiles = Array.from(fileInput.files);
+  let removedIndex = selectedFiles.findIndex(file => file.name === fileInput.files[0].name);
+
+  if (removedIndex !== -1) {
+    selectedFiles.splice(removedIndex, 1);
+    fileInput.files = new FileList(...selectedFiles);
+    preview();
+  }
 }
