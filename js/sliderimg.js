@@ -34,6 +34,7 @@ function preview() {
 function removeImage(index) {
   let selectedFiles = Array.from(fileInput.files);
   selectedFiles.splice(index, 1);
+  fileInput.value = ''; // Clear the file input value
   fileInput.files = new FileList(...selectedFiles);
   preview();
 }
