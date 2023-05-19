@@ -42,7 +42,10 @@ if(isset($_POST['submit'])){
     $phone = $_POST['phone'];
     $date = date('Y-m-d H:i:s');
     $city = $_POST['localitate'].', '.$_POST['judet'];
+
     $query = "INSERT INTO posts (email, city, title, price, description, phone, date) VALUES ('{$email}', '{$city}', '{$title}', '{$price}', '{$description}', '{$phone}', '{$date}')";
+    $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
+    $delete_query = mysqli_query($conn, $sql);
     $add_post_query = mysqli_query($conn, $query);
     if(!$add_post_query) {
        die('Query Failed'. mysqli_error($conn));
@@ -93,9 +96,8 @@ if(isset($_POST['submit'])){
             echo "Error: " . mysqli_error($conn);
         }
 }include "conn.php";
-$sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
-    $delete_query = mysqli_query($conn, $sql);
-    echo $delete_query;
+
+    
 
 }
 
