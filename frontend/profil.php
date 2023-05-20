@@ -11,8 +11,6 @@ if (isset($_POST['toggle_profile_type'])) {
     $profiletype_temp = $profiletype_temp ? 0 : 1;
     $_SESSION['profiletype_temp'] = $profiletype_temp;
 }
-
-echo $_SESSION['profiletype_temp'];
 ?>
 <!DOCTYPE html>
 <html lang="en">

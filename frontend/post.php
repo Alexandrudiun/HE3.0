@@ -4,7 +4,7 @@
 include "conn.php";
 
 session_start();
-        
+echo $_SESSION['profiletype_temp'];
 
 if(isset($_SESSION['email']) && isset ($_SESSION['password'])) 
 { 
