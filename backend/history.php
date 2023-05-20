@@ -67,6 +67,8 @@ echo '</a>';
 }
 
 }
+}else {
+  header("Location: ../index.php");
 }?>
         
 

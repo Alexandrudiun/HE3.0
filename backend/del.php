@@ -1,6 +1,7 @@
 <?php
 include "conn.php";
-
+session_start();
+if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
 $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
@@ -12,5 +13,8 @@ else{
     echo "Deleted";
 }
 header("Location: history.php");
+}}
+else {
+    header("Location: ../index.php");
 }
 ?>

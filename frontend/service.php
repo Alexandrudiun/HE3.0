@@ -1,6 +1,7 @@
 <?php
 include "../backend/conn.php";
-
+session_start();
+if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
 if (isset($_GET['id'])) {
 
   $id = $_GET['id'];
@@ -146,5 +147,8 @@ if (mysqli_num_rows($result) > 0) {
 } else {
  
   echo "ID not found in the URL.";
+}}
+else {
+  header("Location: ../index.php");
 }
 ?>

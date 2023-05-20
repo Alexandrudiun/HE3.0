@@ -4,7 +4,7 @@ include "conn.php";
 session_start();
 
 if(isset($_SESSION['email']) && isset($_SESSION['password']))
-{ $ok=false;
+{ 
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
 
@@ -28,8 +28,7 @@ if(isset($_POST['submit'])){
     
     include "del.php";  
 
-    $ok=true;
-
+    
 
     $email = $_SESSION['email'];
     $query="SELECT * FROM users WHERE email = '{$email}'";
@@ -99,6 +98,9 @@ if(isset($_POST['submit'])){
 }
 
 }}}
+else {
+    header("Location: ../index.php");
+}
 
 ?>
 <!DOCTYPE html>

@@ -25,4 +25,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
         header("Location: ../frontend/profil.php");
     }
 }
+else {
+    header("Location: ../index.php");
+}
 ?>
