@@ -76,36 +76,30 @@ body{
   opacity: 1;
 }
 
-.popup-image{
+.popup-image {
   position: fixed;
   top: 0;
   left: 0;
-  background: #1C1C1E;
-  opacity: 0.9;
-  height: 100%;
   width: 100%;
-  z-index: 100;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 
-.popup-image ion-icon{
-  position: inherit;
-  top:0;
-  right: 10px;
-  font-size: 40px;
-  color: #fff;
-  cursor: pointer;
-  z-index: 100;
+.popup-image img {
+  max-width: 90%;
+  max-height: 90%;
 }
 
-.popup-image img{
+.popup-image ion-icon {
   position: absolute;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 5px solid #fff;
-  border-radius: 5px;
-  width: 350px;
-  object-fit: cover;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .top-details{
