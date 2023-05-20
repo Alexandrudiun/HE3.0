@@ -9,6 +9,5 @@ $delete_query = mysqli_query($conn, $sql);
 if(!$delete_query) {
    die('Query Failed'. mysqli_error($conn));
 }
-header("Location: history.php");
 }
 ?>
