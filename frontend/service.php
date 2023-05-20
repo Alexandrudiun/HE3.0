@@ -52,12 +52,12 @@ if (mysqli_num_rows($result) > 0) {
        echo '<a href="#slide-3"></a>';
        echo '</div>';
     echo'</div>';
-    echo '<div class="popup-image">';
-    for($i=0;$i<3;$i++){
-      $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
-    echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
+    echo '<div class="popup-image" id="popup-image">';
+    for ($i = 0; $i < 3; $i++) {
+        $location = "https://idcrew.shop/img/upload/" . $photo_names[$i];
+        echo '<img src="' . $location . '" alt="' . $row['name'] . '" id="popup-slide-' . $i . '">';
     };
-    echo '<ion-icon name="close-circle-outline"></ion-icon>';
+    echo '<ion-icon name="close-circle-outline" onclick="hideImage()"></ion-icon>';
     echo '</div>';
   ?>
 
@@ -133,6 +133,7 @@ if (mysqli_num_rows($result) > 0) {
     <a href="<?php echo "tel:".$numphones;?>" class="call">Call / SMS</a>
   </footer>
   <!-- Ion icons -->
+  <script src="js/popup.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script>
