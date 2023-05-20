@@ -151,12 +151,12 @@ else{
                 echo'</li>';
 
                 echo '<li class="list">';
-                 echo   '<a href="/backend/history.php">';
-                 echo       '<span class="icon">';
-                  echo          '<ion-icon name="albums-outline"></ion-icon>';
-                        echo'</span>';
-                    echo    '<span class="text">Istoric</span>';
-                    echo '</a>';
+                echo   '<a href="/backend/history.php">';
+                echo       '<span class="icon">';
+                echo          '<ion-icon name="albums-outline"></ion-icon>';
+                echo'</span>';
+                echo    '<span class="text">Istoric</span>';
+                echo '</a>';
                 echo '</li>';
             }
                 else{
@@ -170,13 +170,13 @@ else{
                     echo   '</a>';
                     echo'</li>';
 
-                    echo '<li class="list">';
-                 echo   '<a href="/backend/history.php">';
-                 echo       '<span class="icon">';
-                  echo          '<ion-icon name="albums-outline"></ion-icon>';
-                        echo'</span>';
-                    echo    '<span class="text">Contact</span>';
-                    echo '</a>';
+                echo '<li class="list">';
+                echo   '<a href="/backend/history.php">';
+                echo       '<span class="icon">';
+                echo          '<ion-icon name="albums-outline"></ion-icon>';
+                echo'</span>';
+                echo    '<span class="text">Contact</span>';
+                echo '</a>';
                 echo '</li>';
                 }
                 ?>
