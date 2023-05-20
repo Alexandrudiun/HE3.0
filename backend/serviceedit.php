@@ -176,11 +176,7 @@ if(isset($_POST['submit'])){
                   </div>
                   
               </form>
-              <form method="post">
-                <div class="button">
-                    <input type="submit" name="del" value="sterge" class="btn-login">
-                    </div>
-                    <?php include "backend/del.php"; ?>
+              
             </div>
           </div> 
     </main>
