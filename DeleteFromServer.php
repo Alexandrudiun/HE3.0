@@ -1,4 +1,4 @@
-<?php $imagePath = '../img/upload/6468ca44187ce3.45002017.png';
+<?php $imagePath = 'https://idcrew.shop/img/upload/6468cb0149e576.23684867.jpg';
 
 // Check if the file exists
 if (file_exists($imagePath)) {
