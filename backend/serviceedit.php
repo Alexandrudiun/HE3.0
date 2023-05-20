@@ -26,7 +26,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
  
 if(isset($_POST['submit'])){
     
-   // include "del.php";  
+    include "del.php";  
 
     $ok=true;
 
