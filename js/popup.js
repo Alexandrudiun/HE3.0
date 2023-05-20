@@ -1,13 +1,13 @@
+    function showImage(index) {
+        var popup = document.getElementById('popup-image');
+        var popupSlide = document.getElementById('popup-slide-' + index);
+        popup.style.display = 'block';
+        popupSlide.style.display = 'block';
+    }
 
-function showPopup(slideIndex) {
-    const popupContainer = document.getElementById('popup-container');
-    popupContainer.classList.add('show');
-    const popupContent = document.getElementById('popup-content');
-    popupContent.src = document.getElementById('slide-' + slideIndex).src;
-}
+    function hideImage() {
+        var popup = document.getElementById('popup-image');
+        popup.style.display = 'none';
+    }
 
-function hidePopup() {
-    const popupContainer = document.getElementById('popup-container');
-    popupContainer.classList.remove('show');
-}
 
