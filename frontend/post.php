@@ -4,7 +4,7 @@
 include "conn.php";
 
 session_start();
-echo $_SESSION['profiletype_temp'];
+
 
 if(isset($_SESSION['email']) && isset ($_SESSION['password'])) 
 { 
@@ -121,7 +121,7 @@ if(isset($_POST['submit'])){
                 <div id="mesaj" style="color:red; text-align:center;"></div>
                 </section>
                 <div class="input-box">
-                  <label for="">Titlul anunţului</label>
+                  <label for="">Titlul anunţului<?php echo $_SESSION['profiletype_temp'];?></label>
                   <input type="text" id="titlu" name="titlu" required>
                 </div>
                 <div class="input-box">
