@@ -54,12 +54,12 @@ if (isset($_POST['toggle_profile_type'])) {
 
 
                    
-
-                
-                <div class="credits credits-box">
-                    <a href="#" class="credits">Credits: <?php echo $credit; ?> RON</a>
-                    <ion-icon name="add-circle-outline"></ion-icon>
-                </div>
+<?php
+                if(!$profiletype_temp){
+                echo '<div class="credits credits-box">';
+                echo '<a href="#" class="credits">Credits:'. $credit . 'RON</a>';
+                echo '<ion-icon name="add-circle-outline"></ion-icon>';
+                echo "</div>";}?>
             </div>
         </div>
         </div>

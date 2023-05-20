@@ -11,9 +11,11 @@ if(isset($_SESSION['email']) && isset ($_SESSION['password']))
 
 //--------------------check if worker or buyer--------------------
 if (!$_SESSION['profiletype_temp']) {
-    echo "worker";
+    $ok = true;
+    //echo "worker";
   } else {
-    echo "buyer";
+    //echo "buyer";
+    $ok = false;
   }
 //--------------------check if worker or buyer--------------------
 
