@@ -76,7 +76,7 @@ body{
   opacity: 1;
 }
 
-..popup-image {
+.popup-image {
   position: fixed;
   top: 0;
   left: 0;
