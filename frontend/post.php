@@ -4,13 +4,7 @@
 include "conn.php";
 
 session_start();
-        echo "da";
-          if (!$_SESSION['profiletype_temp']) {
-            echo "worker";
-          } else {
-            echo "buyer";
-          }
-          
+        
 
 if(isset($_SESSION['email']) && isset ($_SESSION['password'])) 
 { 
