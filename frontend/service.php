@@ -11,7 +11,6 @@ if (isset($_GET['id'])) {
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,26 +38,35 @@ if (mysqli_num_rows($result) > 0) {
         $photo_names = explode(', ', $row['images']);
         echo '<div class="slide-wrapper">';
         echo '<div class="slider">';
-        for($i=0;$i<3;$i++){
-          $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
-        echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
+        for ($i = 0; $i < 3; $i++) {
+            $location = "https://idcrew.shop/img/upload/" . $photo_names[$i];
+            echo '<img src="' . $location . '" alt="' . $row['name'] . '" id="slide-' . $i . '" class="slider-image">';
         }
         echo '</div>';
-      echo '</div>';
+        echo '</div>';
 
-       echo '<div class="slider-nav">';
-       echo '<a href="#slide-1"></a>';
-       echo '<a href="#slide-2"></a>';
-       echo '<a href="#slide-3"></a>';
-       echo '</div>';
-    echo'</div>';
-    echo '<div class="popup-image">';
-    for($i=0;$i<3;$i++){
-      $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
-    echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
-    };
-    echo '<ion-icon name="close-circle-outline"></ion-icon>';
+        echo '<div class="slider-nav">';
+        echo '<a href="#slide-1"></a>';
+        echo '<a href="#slide-2"></a>';
+        echo '<a href="#slide-3"></a>';
+        echo '</div>';
+    }
     echo '</div>';
+
+    // Add JavaScript/jQuery code
+    echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>';
+    echo '<script>';
+    echo '$(document).ready(function() {';
+    echo '  $(".slider-image").click(function() {';
+    echo '    var imgSrc = $(this).attr("src");';
+    echo '    var altText = $(this).attr("alt");';
+    echo '    var popupHtml = \'<div class="image-popup"><img src="\' + imgSrc + \'" alt="\' + altText + \'"></div>\';';
+    echo '    $("body").append(popupHtml);';
+    echo '  });';
+    echo '});';
+    echo '</script>';
+}
+
   ?>
 
   <main>
