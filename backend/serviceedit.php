@@ -176,7 +176,7 @@ if(isset($_POST['submit'])){
                   </div>
                   
               </form>
-              <form action="del.php" method="post">
+              <form method="post">
                 <div class="button">
                     <input type="submit" name="del" value="sterge" class="btn-login">
                     </div>
