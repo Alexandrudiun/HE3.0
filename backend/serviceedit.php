@@ -120,7 +120,7 @@ if(isset($_POST['submit'])){
 <main>
         <div class="center">
             <div class="profile-card">
-              <form action="post.php" method="post" enctype="multipart/form-data">
+              <form action="serviceedit.php" method="post" enctype="multipart/form-data">
                 <h1>Publică un anunţ nou</h1>
                 <h3>Detalii anunţ</h3>
                 <section>
@@ -172,7 +172,7 @@ if(isset($_POST['submit'])){
                 <input type="text" id="judet" name="judet" value="<?php echo $judet; ?>" required>
                 </div>
                 <div class="button">
-                  <input type="submit" name="submit" value="Post" class="btn-login">
+                  <input type="submit" name="submit" value="editeaza" class="btn-login">
                   </div>
                   
               </form>
