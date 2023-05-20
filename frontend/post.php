@@ -5,6 +5,12 @@ include "conn.php";
 
 session_start();
 
+          if (!$_SESSION['profiletype_temp']) {
+            echo "worker";
+          } else {
+            echo "buyer";
+          }
+          
 
 if(isset($_SESSION['email']) && isset ($_SESSION['password'])) 
 { 
