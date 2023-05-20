@@ -1,4 +1,4 @@
-<?php $imagePath = '../img/upload/64672a742897d7.52395259.jpg';
+<?php $imagePath = '../img/upload/6468ca44187ce3.45002017.png';
 
 // Check if the file exists
 if (file_exists($imagePath)) {
