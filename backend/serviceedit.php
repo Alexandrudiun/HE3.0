@@ -172,7 +172,7 @@ if(isset($_POST['submit'])){
                 <input type="text" id="judet" name="judet" value="<?php echo $judet; ?>" required>
                 </div>
                 <div class="button">
-                  <input type="submit" name="submit" value="Post" class="btn-login">
+                  <input type="submit" name="submit" value="editeaza" class="btn-login">
                   </div>
                   
               </form>
