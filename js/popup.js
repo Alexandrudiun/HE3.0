@@ -1,6 +1,6 @@
     function showImage(index) {
         var popup = document.getElementById('popup-image');
-        var popupSlide = document.getElementById('popup-slide-' + index);
+        var popupSlide = document.getElementById('slide-' + index);
         popup.style.display = 'block';
         popupSlide.style.display = 'block';
     }
