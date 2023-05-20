@@ -4,7 +4,7 @@
 include "conn.php";
 
 session_start();
-
+        echo "da";
           if (!$_SESSION['profiletype_temp']) {
             echo "worker";
           } else {
