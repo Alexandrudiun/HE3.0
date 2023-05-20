@@ -25,13 +25,13 @@ include "../backend/profiletypebk.php";
             <div>
             <label>
               <input type="checkbox" id="worker" name="worker">
-              <span>Lucrator</span>
+              <span>Vânzător de servicii(worker)</span>
             </label>
             </div>
             <div>
               <label>
                 <input type="checkbox" id="worker" name="buyer">
-                <span>Cumpărator</span>
+                <span>Cumpărator de servicii(employer)</span>
               </label>
             </div>
           </div>

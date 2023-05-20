@@ -19,20 +19,26 @@ if (!$_SESSION['profiletype_temp']) {
   }
 //--------------------check if worker or buyer--------------------
 
-
-
+    $email = $_SESSION['email'];
+    $query="SELECT * FROM users WHERE email = '{$email}'";
+    $result= mysqli_query($conn, $query);
+    $row1 = mysqli_fetch_assoc($result);
+    
+if($row1['credit']<10)
+        {
+            header("Location: ../frontend/CrediteInsuficiente.html");
+        }
 
 
 
 
 if(isset($_POST['submit'])){
-    $email = $_SESSION['email'];
-    $query="SELECT * FROM users WHERE email = '{$email}'";
+    $credit = $row1['credit'] - 10;
+    $query="UPDATE users SET credit = '$credit' WHERE email = '$email'";
     $select_user_query = mysqli_query($conn, $query);
-    
-    
-    
-
+    if(!$select_user_query) {
+        die('Query Failed'. mysqli_error($conn));
+     }
     $name = $_POST['name'];
     $title = $_POST['titlu'];
     $price = $_POST['pret'];
@@ -125,6 +131,7 @@ else
             <div class="profile-card">
               <form action="post.php" method="post" enctype="multipart/form-data">
                 <h1>Publică un anunţ nou</h1>
+                <h2>Fiecare anunţ costă 10 Credite. Completează cu atenție formularul deoarece editarea ulterioară costă 5 credite</h2>
                 <h3>Detalii anunţ</h3>
                 <section>
                 <div class="file-box file-input">

@@ -10,10 +10,18 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 
         $sql = "SELECT * FROM `posts` WHERE id = '{$id}';";
         $result = mysqli_query($conn, $sql);
-        
-        
         $row = mysqli_fetch_assoc($result);
-        
+
+        $email = $_SESSION['email'];
+        $query="SELECT * FROM users WHERE email = '{$email}'";
+        $result= mysqli_query($conn, $query);
+        $row1 = mysqli_fetch_assoc($result);
+               
+        if($row1['credit']<5)
+        {
+            header("Location: ../frontend/CrediteInsuficientePentruAEditaAnuntul.html");
+        }
+
         $photo_names = explode(', ', $row['images']);
 
         if($row['email']==$_SESSION['email'])
@@ -25,7 +33,12 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 
  
 if(isset($_POST['submit'])){
-    
+    $credit = $row1['credit'] - 5;
+    $query="UPDATE users SET credit = '$credit' WHERE email = '$email'";
+    $select_user_query = mysqli_query($conn, $query);
+    if(!$select_user_query) {
+        die('Query Failed'. mysqli_error($conn));
+     }
     include "del.php";  
 
     
@@ -122,6 +135,7 @@ else {
             <div class="profile-card">
               <form action="serviceedit.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
                 <h1>Publică un anunţ nou</h1>
+                <h2>Completează cu atenție formularul deoarece editarea ulterioara costa 5 credite</h2>
                 <h3>Detalii anunţ</h3>
                 <section>
                 <div class="file-box file-input">
