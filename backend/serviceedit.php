@@ -172,6 +172,11 @@ if(isset($_POST['submit'])){
                   </div>
                   
               </form>
+              <form action="del.php" method="post">
+                <div class="button">
+                    <input type="submit" name="submit" value="sterge" class="btn-login">
+                    </div>
+                </form>
               
             </div>
           </div> 
