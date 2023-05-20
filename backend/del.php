@@ -13,4 +13,5 @@ else{
     echo "Deleted";
 }
 header("Location: history.php");
+}
 ?>
