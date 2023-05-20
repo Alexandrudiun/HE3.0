@@ -4,9 +4,9 @@
 include "conn.php";
 
 session_start();
-if ($_SESSION['profiletype_temp']) {
-    echo "buyer";
-  
+if (!$_SESSION['profiletype_temp']) {
+    echo "worker";
+ 
 if(isset($_SESSION['email']) && isset ($_SESSION['password'])) 
 { 
 if(isset($_POST['submit'])){
@@ -77,7 +77,8 @@ if(isset($_POST['submit'])){
 }
 }
 } else {
-    echo "worker";
+    echo "buyer";
+    header("Location: ../frontend/error404.html");
   }
 ?>
 
