@@ -172,7 +172,7 @@ if(isset($_POST['submit'])){
                   </div>
                   
               </form>
-              <form action="del?<?php echo $id;?>.php" method="post">
+              <form action="del?id=<?php echo $id;?>.php" method="post">
                 <div class="button">
                     <input type="submit" name="submit" value="Sterge Anuntul" class="btn-login">
                     </div>
