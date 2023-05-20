@@ -88,9 +88,12 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 7px;
+  z-index: 100;
 }
 
 .popup-image img {
+  border-radius: 10px;
   max-width: 90%;
   max-height: 90%;
 }
