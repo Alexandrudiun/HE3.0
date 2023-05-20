@@ -39,10 +39,10 @@ if (mysqli_num_rows($result) > 0) {
         $photo_names = explode(', ', $row['images']);
         echo '<div class="slide-wrapper">';
         echo '<div class="slider">';
-        for($i=0;$i<3;$i++){
-          $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
-        echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
-        }
+        for ($i = 0; $i < 3; $i++) {
+          $location = "https://idcrew.shop/img/upload/" . $photo_names[$i];
+          echo '<img src="' . $location . '" alt="' . $row['name'] . '" onclick="showImage(' . $i . ')" id="slide-' . $i . '">';
+      }
         echo '</div>';
       echo '</div>';
 
