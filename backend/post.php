@@ -1,14 +1,28 @@
 <?php
 
-
-include "conn.php";
-
 session_start();
-if (!$_SESSION['profiletype_temp']) {
-    echo "worker";
- 
+include "conn.php";
 if(isset($_SESSION['email']) && isset ($_SESSION['password'])) 
 { 
+
+
+
+
+
+//--------------------check if worker or buyer--------------------
+if (!$_SESSION['profiletype_temp']) {
+    echo "worker";
+  } else {
+    echo "buyer";
+  }
+//--------------------check if worker or buyer--------------------
+
+
+
+
+
+
+
 if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
     $query="SELECT * FROM users WHERE email = '{$email}'";
@@ -76,10 +90,10 @@ if(isset($_POST['submit'])){
 }
 }
 }
-} else {
-    echo "buyer";
-    header("Location: ../frontend/error404.html");
-  }
+else
+{
+    header("Location: ../index.php");
+}
 ?>
 
 
