@@ -1,0 +1,1 @@
+<?php echo"<h1>Pagină de contact</h1>";?>

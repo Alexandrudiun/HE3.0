@@ -162,7 +162,7 @@ else{
                 else{
                     // for buyer
                     echo '<li class="list">';
-                    echo   '<a href="/backend/post.php">';
+                    echo   '<a href="/frontend/join.php">';
                     echo       '<span class="icon">';
                     echo            '<ion-icon name="add-circle-outline"></ion-icon>';
                     echo       '</span>';
@@ -171,7 +171,7 @@ else{
                     echo'</li>';
 
                 echo '<li class="list">';
-                echo   '<a href="/backend/history.php">';
+                echo   '<a href="/frontend/contact.php">';
                 echo       '<span class="icon">';
                 echo          '<ion-icon name="albums-outline"></ion-icon>';
                 echo'</span>';
