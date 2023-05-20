@@ -4,11 +4,9 @@
 include "conn.php";
 
 session_start();
-if (!$_SESSION['profiletype_temp']) {
-    echo "worker";
-  } else {
+if ($_SESSION['profiletype_temp']) {
     echo "buyer";
-  }
+  
 if(isset($_SESSION['email']) && isset ($_SESSION['password'])) 
 { 
 if(isset($_POST['submit'])){
@@ -78,7 +76,9 @@ if(isset($_POST['submit'])){
 }
 }
 }
-
+} else {
+    echo "worker";
+  }
 ?>
 
 
