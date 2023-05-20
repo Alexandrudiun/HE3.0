@@ -1,6 +1,7 @@
 <?php
 include "backend/conn.php";
-if(isset($_GET['id'])) {
+
+if(isset($_GET['id']) && isset($_POST['del'])) {
     $id = $_GET['id'];
 
 $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
