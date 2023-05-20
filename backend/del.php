@@ -3,7 +3,7 @@ include "conn.php";
 
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
-
+    $id--;
 $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '{$id}';";
 $delete_query = mysqli_query($conn, $sql);
 if(!$delete_query) {
