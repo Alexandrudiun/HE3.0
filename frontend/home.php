@@ -24,7 +24,7 @@
 <?php
 
 include "../backend/conn.php";
-
+session_start();
 if(isset($_SESSION['email']) && isset ($_SESSION['password']))
 {
 $sql = "SELECT * FROM `posts` ORDER BY `id` ASC;";
