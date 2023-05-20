@@ -121,7 +121,7 @@ if(isset($_POST['submit'])){
                 <div id="mesaj" style="color:red; text-align:center;"></div>
                 </section>
                 <div class="input-box">
-                  <label for="">Titlul anunţului<?php echo "da". $_SESSION['profiletype_temp'];?></label>
+                  <label for="">Titlul anunţului</label>
                   <input type="text" id="titlu" name="titlu" required>
                 </div>
                 <div class="input-box">
