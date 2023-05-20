@@ -32,10 +32,6 @@ if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
     $query="SELECT * FROM users WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn, $query);
-    
-    
-    
-
     $name = $_POST['name'];
     $title = $_POST['titlu'];
     $price = $_POST['pret'];
