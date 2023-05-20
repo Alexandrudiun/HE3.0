@@ -32,4 +32,5 @@
       
       echo "<script>document.getElementById('message').innerHTML = 'Ați fost inregistrat click aici pentru login';</script>";
     }
+    
   ?>
