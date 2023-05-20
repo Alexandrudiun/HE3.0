@@ -117,13 +117,8 @@ if (mysqli_num_rows($result) > 0) {
 
   <h3><?php echo $name;?></h3>
  <span><?php echo $skills;?></span> 
-
-
   </div>
   </div>
-
-  
-
   <footer>
     <div class="buy">
       <div class="buy-btn">
@@ -135,7 +130,8 @@ if (mysqli_num_rows($result) > 0) {
   <!-- Ion icons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="js/script.js"></script>
+  <!-- ------------- -->
+  <script src="/js/script.js"></script>
   <script>
     function goBack() {
       history.back();
