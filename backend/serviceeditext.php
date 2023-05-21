@@ -50,7 +50,7 @@ if(isset($_POST['submit'])){
         $row = mysqli_fetch_assoc($result);
         $photo_names = $row['images'];
 
-     $query="UPDATE posts SET city = '$city' AND title = '$title' AND price = '$price' AND description = '$description' AND phone = '$phone' AND date = '$date' WHERE email = '$email' AND id = '$id' and images = '$photo_names'";
+     $query="UPDATE posts SET city = '$city' AND title = '$title' AND images = '$photo_names' AND price = '$price' AND description = '$description' AND phone = '$phone' AND date = '$date' WHERE email = '$email' AND id = '$id'";
      $select_user_query = mysqli_query($conn, $query);
      if(!$select_user_query) {
          die('Query Failed'. mysqli_error($conn));
