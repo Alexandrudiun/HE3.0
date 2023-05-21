@@ -28,15 +28,6 @@
           <textarea type="text" id="skills" name="skills" rows="5"><?php echo $row['skills'];?></textarea>
           <label for="">Skills</label>
         </div>
-        <!-- <p>Dorești să îți schimbi si imaginea de profil?</p>
-        <input type="checkbox" name="da" id="">
-        <input type="checkbox" name="nu" id=""> -->
-        <div class="input-box">
-          <ion-icon name="camera-outline" class="camera-icon"></ion-icon>
-          <input type="file" accept="image/*" name="image" id="image">
-          <label class="change-profile">Change Profile Picture</label>
-        </div>
-
         <div class="button">
           <input type="submit" name="submit" value="Save" class="btn-login">
           </div>
