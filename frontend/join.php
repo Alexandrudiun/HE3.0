@@ -40,7 +40,27 @@ else
 </form>
 
 
-
+ <!-- Navbar Down -->
+ <footer>  
+    <section class="nav-bar">
+        <div class="navigation">
+            <ul>
+                <li class="list">
+                    <a href="/frontend/home.php">
+                        <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Acasă</span>
+                    </a>
+                </li>
+                <li class="list active">
+                    <a href="/frontend/profil.php">
+                        <span class="icon">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="text">Profil</span>
+                    </a>
+                </li>
 
 
 
