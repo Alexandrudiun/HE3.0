@@ -10,7 +10,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
         echo '<a style="text-decoration:none;" href="/backend/ServiceedittextAndPhotos.php?id=' . $id. '">';
         echo '<button>Editeaza tot Anuntulu</button>';
         echo '</a>';
-        echo '<a style="text-decoration:none;" href="/backend/del.php?id=' . $row['id'] . '">';
+        echo '<a style="text-decoration:none;" href="/backend/del.php?id=' . $id . '">';
         echo '<div class="delete-btn">';
         echo '<ion-icon name="close-outline"></ion-icon>';
         echo '<span>Șterge postarea</span>';
