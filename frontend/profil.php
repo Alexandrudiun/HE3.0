@@ -28,14 +28,16 @@ if (isset($_POST['toggle_profile_type'])) {
     <main>
         <div class="center">
             <div class="profile-card">
+            <a href="/backend/profileditphoto.php">
             <div class="image">
                 <?php if($image==NULL): ?>
                 <img src='/img/user.png' class='profile-img'>
                 <?php else: ?>
                 <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="profile picture of <?=$name?>" class="profile-img">
                 <?php endif; ?>
-                <a href="/backend/profileditphoto.php" class="plus-icon">
+                <div class="plus-icon">
                 <ion-icon name="add-circle-outline"></ion-icon>
+                </div>
                 </a>
             </div>
             <div class="text-data">
