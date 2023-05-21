@@ -85,6 +85,8 @@ else {
                 <h3>Detalii anunţ</h3>
                 <section>
                 </div>
+                <div class="file-box file-input">
+                    </div>
                 <div id="mesaj" style="color:red; text-align:center;"></div>
                 </section>
                 <div class="input-box">
