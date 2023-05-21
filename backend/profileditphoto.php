@@ -2,10 +2,7 @@
 include "conn.php";
 session_start(); // Start the session
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {   
-    if(!$result)
-    {
-      die('Query Failed'). mysqli_error($conn);
-    }
+    
     $email = $_SESSION['email'];
     if(isset($_POST['submit'])) {
         
