@@ -53,7 +53,7 @@ echo '<div class="info-area">';
 echo '<a style="text-decoration:none;" href="/backend/del.php?id=' . $row['id'] . '">';
 echo '<div class="delete-btn">';
 echo '<ion-icon name="close-outline"></ion-icon>';
-echo '<span>Editează sau şterge postarea</span>';
+echo '<span>Șterge postarea</span>';
 echo '</div>';
 echo '</a>';
 
@@ -69,7 +69,7 @@ echo '</div>';
 echo '<a style="text-decoration:none;" href="/backend/serviceedit.php?id=' . $row['id'] . '">';
 echo '<div class="delete-btn">';
 echo '<ion-icon name="close-outline"></ion-icon>';
-echo '<span>Editează sau şterge postarea</span>';
+echo '<span>Editează postarea</span>';
 echo '</div>';
 echo '</a>';
 
