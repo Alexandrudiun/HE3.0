@@ -2,7 +2,7 @@
 include "conn.php";
 session_start(); // Start the session
 if(isset($_SESSION['email']) && isset($_SESSION['password'])) {   
-    
+   
     $email = $_SESSION['email'];
     if(isset($_POST['submit'])) {
         
@@ -44,10 +44,12 @@ else {
 <div class="center">
     <div class="profile-card">
       <form action="#" method="post" enctype="multipart/form-data">
-        <h1>Editează poza de profil</h1>
+        <h3>Schimbă poza de profil</h3>
+
         <div class="input-box">
           <ion-icon name="camera-outline" class="camera-icon"></ion-icon>
           <input type="file" accept="image/*" name="image" id="image">
+          
         </div>
 
         <div class="button">
