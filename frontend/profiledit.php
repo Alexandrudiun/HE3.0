@@ -1,4 +1,12 @@
-<?php include "../backend/profileditbk.php";?>
+<?php include "../backend/profileditbk.php";
+ $query="SELECT * FROM users WHERE email = '{$_SESSION['email']}'";
+ $select_user_query = mysqli_query($conn, $query);
+ $row = mysqli_fetch_row($select_user_query);
+ if(!$select_user_query)
+    {
+      die('Query Failed'). mysqli_error($conn);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,19 +27,23 @@
         <h1>Edit Profile</h1>
         <div class="input-box">
           <ion-icon name="person-outline"></ion-icon>
-          <input type="text" id="name" name="name">
+          <input type="text" id="name" name="name" value="<?php echo $row['name'];?>">
           <label for="">Name</label>
         </div>
         <div class="input-box">
           <ion-icon name="build-outline"></ion-icon>
-          <textarea type="text" id="skills" name="skills" rows="5"></textarea>
+          <textarea type="text" id="skills" name="skills" rows="5"><?php echo $row['skills'];?></textarea>
           <label for="">Skills</label>
         </div>
+        <!-- <p>Dorești să îți schimbi si imaginea de profil?</p>
+        <input type="checkbox" name="da" id="">
+        <input type="checkbox" name="nu" id=""> -->
         <div class="input-box">
           <ion-icon name="camera-outline" class="camera-icon"></ion-icon>
           <input type="file" accept="image/*" name="image" id="image">
           <label class="change-profile">Change Profile Picture</label>
         </div>
+
         <div class="button">
           <input type="submit" name="submit" value="Save" class="btn-login">
           </div>
