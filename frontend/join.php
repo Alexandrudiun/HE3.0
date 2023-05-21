@@ -9,7 +9,7 @@ if(isset($_SESSION['email']) && isset ($_SESSION['password']))
 {
   if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
-    $query="UPDATE users SET worker = 1 WHERE email ='$email'";
+    $query="UPDATE users SET worker = 1, buyer = 1 WHERE email ='$email'";
   }
 
 }
