@@ -18,12 +18,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 { 
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
-        echo '<a href="/backend/del.php?id=' . $id . '">';
-        echo '<div class="delete-btn">';
-        echo '<ion-icon name="close-outline"></ion-icon>';
-        echo '<span>Șterge postarea</span>';
-        echo '</div>';
-        echo '</a>';
     echo '<section>';
     echo '<div class="form-box">';
     echo '<div class="form-value">';
@@ -40,6 +34,17 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
     echo '<label>';
     echo '<input type="checkbox" id="worker" name="buyer">';
     echo '<a href="/backend/ServiceedittextAndPhotos.php?id=' . $id. '"> Editează anunţul întreg </a>';
+    echo '</label>';
+    echo '</div>';
+    echo '<div>';
+    echo '<label>';
+    echo '<input type="checkbox" id="worker" name="worker">';
+    echo '<a href="/backend/del.php?id=' . $id . '">';
+    echo '<div class="delete-btn">';
+    echo '<ion-icon name="close-outline"></ion-icon>';
+    echo '<span>Șterge postarea</span>';
+    echo '</div>';
+    echo '</a>';echo '<a href="/backend/serviceeditext.php?id=' . $id . '">Editeaza detaliile anunţului </a>';
     echo '</label>';
     echo '</div>';
     echo '</div>';
