@@ -86,10 +86,11 @@ if($worker == 1 && $buyer == 1)
 }
 else{
 if($worker == 1 && $buyer == 0) {
-echo '<a href="/frontend/home.php" class="btn-post">Get a worker</a>';
+
+echo '<a href="/backend/post.php" class="btn-post">Post a job</a>';
 }
 else{
-echo '<a href="/backend/post.php" class="btn-post">Post a job</a>';
+echo '<a href="/frontend/home.php" class="btn-post">Get a worker</a>';
 }
 }?>
         
