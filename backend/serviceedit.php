@@ -60,9 +60,6 @@ if(isset($_POST['submit'])){
        die('Query Failed'. mysqli_error($conn));
     }
     $photoNames = ''; 
-    for($i=0;$i<3;$i++){
-        $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
-        $_FILES['file']=$location;}
     $files = $_FILES['file'];
     $allowed = array('jpg', 'jpeg', 'png', 'pdf');
     $uploadCount = 0;
