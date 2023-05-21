@@ -100,6 +100,7 @@ echo '<a href="/frontend/home.php" class="btn-post">Get a worker</a>';
         
     </div>   
     <div class="toggle-container">
+        Tipul de profil :
     <?php
     if ($worker == 1 && $buyer == 1) {
       ?>
@@ -124,7 +125,6 @@ echo '<a href="/frontend/home.php" class="btn-post">Get a worker</a>';
       echo "buyer";
     }
 
-    
     ?>
 </div>
 
