@@ -36,8 +36,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
     echo '<a href="/backend/ServiceedittextAndPhotos.php?id=' . $id. '"> Editează anunţul întreg </a>';
     echo '</label>';
     echo '</div>';
-    echo '<div>';
-    echo '<label>';
     echo '<input type="checkbox" id="worker" name="worker">';
     echo '<a href="/backend/del.php?id=' . $id . '">';
     echo '<div class="delete-btn">';
@@ -45,8 +43,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
     echo '<span>Șterge postarea</span>';
     echo '</div>';
     echo '</a>';
-    echo '</label>';
-    echo '</div>';
     echo '</div>';
     echo '</form>';
     echo '</div>';
