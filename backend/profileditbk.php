@@ -6,7 +6,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($result);
     
-    if(!$select_user_query)
+    if(!$result)
     {
       die('Query Failed'). mysqli_error($conn);
     }
