@@ -116,6 +116,8 @@ h3{
 .credits{
   text-decoration: none;
   color:#fff;
+  border: none;
+  background: transparent;
 }
 
 .credits-box{
@@ -178,8 +180,6 @@ h3{
   transition: all 250ms ease-in-out;
   transform: translate(-50%, -50%) scale(1);
 }
-
-
  /* Swich button */
 
 .toggle-container {
