@@ -44,7 +44,7 @@ if (mysqli_num_rows($result) > 0) {
         echo '<img src="' . $location . '" alt="' . $row['name'] . '" style="width: 100%;">';
         echo '<div class="info-area">';
         echo '<h3 class="service-title">' . $row['title'] . '</h3>';
-        echo '<h2 class="service-price">' . $row['price'] . '</h2>';
+        echo '<h2 class="service-price">' . $row['price'] . RON '</h2>';
         echo '<span>' . $row['city'] . '</span>';
         echo '<span>' . $row['date'] . '</span>';
         echo '</div>';
