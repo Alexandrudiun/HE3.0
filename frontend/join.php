@@ -74,7 +74,7 @@ else
             {
                 if(!$profiletype_temp){
                     // for worker
-                echo '<li class="list ">';
+                echo '<li class="list">';
                 echo   '<a href="/backend/post.php">';
                 echo       '<span class="icon">';
                 echo            '<ion-icon name="add-circle-outline"></ion-icon>';
@@ -138,7 +138,7 @@ else
                 }
                 else{
                     // for buyer
-                    echo '<li class="list">';
+                    echo '<li class="list active">';
                     echo   '<a href="/frontend/join.php">';
                     echo       '<span class="icon">';
                     echo            '<ion-icon name="help-circle-outline"></ion-icon>';
