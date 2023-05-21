@@ -4,12 +4,19 @@
 
 
 <?php
+include "../backend/conn.php";
 session_start();
 if(isset($_SESSION['email']) && isset ($_SESSION['password']))
 {
   if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
     $query="UPDATE users SET worker = 1, buyer = 1 WHERE email ='$email'";
+    $select_user_query = mysqli_query($conn, $query);
+    
+    if(!$select_user_query)
+    {
+      die('Query Failed');
+    }
   }
 
 }
