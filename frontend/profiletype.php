@@ -19,19 +19,19 @@ include "../backend/profiletypebk.php";
 <section>
     <div class="form-box">
       <div class="form-value">
-        <form method="Post">
+      <form method="post" id="profile-form">
           <h1>Selectează tipul de profil</h1>
           <div class="input-box">
             <div>
             <label>
               <input type="checkbox" id="worker" name="worker">
-              <span>Vânzător de servicii(worker)</span>
+              <span>Vânzător (worker)</span>
             </label>
             </div>
             <div>
               <label>
                 <input type="checkbox" id="worker" name="buyer">
-                <span>Cumpărator de servicii(employer)</span>
+                <span>Cumpărator (employer)</span>
               </label>
             </div>
           </div>
