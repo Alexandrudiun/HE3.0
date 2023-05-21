@@ -72,7 +72,7 @@ input[type="checkbox"]{
   text-decoration: none;
 }
 
-.input-box div label span::before{
+.input-box div label a::before{
   content: '';
   position: absolute;
   top: 0;
@@ -82,36 +82,15 @@ input[type="checkbox"]{
   background: rgba(255, 255, 255, .1);
 }
 
-.input-box div:nth-child(1) label input[type="checkbox"]:checked ~ span{
+.input-box div:nth-child(1) label input[type="checkbox"]:checked ~ a{
   background: #44B3C2;
   color: #fff;
   box-shadow: 0 2px 20px #44B3C2;
 }
 
-.input-box div:nth-child(2) label input[type="checkbox"]:checked ~ span{
+.input-box div:nth-child(2) label input[type="checkbox"]:checked ~ a{
   background: #F1C40F;
   color: #fff;
   box-shadow: 0 2px 20px #F1C40F;
 }
 
-input.btn-login{
-  width: 100%;
-  height: 40px;
-  border-radius: 40px;
-  background: #2C3E50;
-  color: #f3f3f3;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 500;
-}
-
-.note{
-  text-align: center;
-  margin-top: 10px;
-  font-size: 12px;
-  font-style: italic;
-  font-weight: 300;
-  color: #f3f3f3;
-}
