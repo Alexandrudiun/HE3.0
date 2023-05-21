@@ -24,13 +24,13 @@ include "../backend/profiletypebk.php";
           <div class="input-box">
             <div>
             <label>
-              <input type="radio" id="worker" name="worker">
+              <input type="checkbox" id="worker" name="worker">
               <span>Vânzător de servicii(worker)</span>
             </label>
             </div>
             <div>
               <label>
-                <input type="radio" id="worker" name="buyer">
+                <input type="checkbox" id="worker" name="buyer">
                 <span>Cumpărator de servicii(employer)</span>
               </label>
             </div>
@@ -44,7 +44,6 @@ include "../backend/profiletypebk.php";
       </div>
     </div>
   </section>
-  <script src="/js/profiletype.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
