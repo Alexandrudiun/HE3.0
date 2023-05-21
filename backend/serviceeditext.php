@@ -57,6 +57,7 @@ if(isset($_POST['submit'])){
      if(!$select_user_query) {
          die('Query Failed'. mysqli_error($conn));
       }
+      header("Location: ../backend/history.php");
    
 
 }
@@ -84,7 +85,7 @@ else {
 <main>
         <div class="center">
             <div class="profile-card">
-              <form action="serviceeditext.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
+              <form action="#" method="post" enctype="multipart/form-data">
                 <h1>Publică un anunţ nou</h1>
                 <h2>Completează cu atenție formularul deoarece editarea ulterioara costa 5 credite</h2>
                 <h3>Detalii anunţ</h3>
