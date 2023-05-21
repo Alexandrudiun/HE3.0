@@ -138,22 +138,18 @@ else {
                 <h2>Completează cu atenție formularul deoarece editarea ulterioara costa 5 credite</h2>
                 <h3>Detalii anunţ</h3>
                 <section>
-                            <div class="file-box file-input">
-                <input type="file" id="fileInput" accept="image/png, image/jpeg" name="file[]" multiple="multiple" onchange="preview()" required>
-                <label for="fileInput" class="inputFile">
-                    <ion-icon name="albums-outline"></ion-icon> Adaugă imagini
-                </label>
-                <p id="num-of-files">Nicio imagine adăugată</p>
-                <div id="images">
-                    <?php for ($i = 0; $i < min(3, count($photo_names)); $i++) {
-                        $location = "https://idcrew.shop/img/upload/" . $photo_names[$i]; 
-                        if ($photo_names[$i]) {
-                            echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
-                        }
-                    } ?>
-                </div>
-</div>
-
+                <div class="file-box file-input">
+                    <input type="file" id="fileInput" accept="image/png, image/png, image/jpeg" name="file[]" multiple="multiple" onchange="preview()" required>
+                    <label for="fileInput" class="inputFile">
+                        <ion-icon name="albums-outline"></ion-icon> Adaugă imagini
+                    </label>
+                    <p id="num-of-files">Nicio imagine adăugată</p>
+                    <div id="images">
+          <?php for($i=0;$i<3;$i++){
+          $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
+          if($photo_names[$i])
+        echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
+        }?></div>
                 </div>
                 <div id="mesaj" style="color:red; text-align:center;"></div>
                 </section>
