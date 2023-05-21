@@ -60,19 +60,18 @@ ion-icon{
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, 162.5px);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
-  justify-content: center; /* Center the grid horizontally */
-  padding: 0 5px 0 5px;
+  justify-content: center;
+  padding: 0 5px;
   margin-bottom: 0px;
-  grid-auto-flow: dense; /* Added property for asymmetrical placement */
+  grid-auto-flow: dense;
 }
 
 .card {
   background-color: #2C3E50;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 162.5px; /* Added width property */
 }
 
 .card img {
@@ -106,4 +105,5 @@ ion-icon{
   font-size: 10px;
   color: #ccc;
 }
+
 
