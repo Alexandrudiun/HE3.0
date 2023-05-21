@@ -64,8 +64,8 @@ h3{
 }
 
 .plus-icon ion-icon {
-  width: 25px;
-  height: 25px;
+  font-size: 25px;
+  color: #fff;
   /* Add your desired styles for the plus icon image */
 }
 
