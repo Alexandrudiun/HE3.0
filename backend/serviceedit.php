@@ -147,6 +147,7 @@ else {
                     <div id="images">
           <?php for($i=0;$i<3;$i++){
           $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
+          $file[]=$location;
           if($photo_names[$i])
         echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
         }?></div>
