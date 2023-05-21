@@ -84,7 +84,8 @@ ion-icon{
   display: block;
 	margin: 0 auto;
   object-fit: cover;
-	width: 100%;
+	width: 162.5px;
+  height: 162.5px;
   border-top-left-radius: 10px;
   border-top-right-radius:10px;
 }
