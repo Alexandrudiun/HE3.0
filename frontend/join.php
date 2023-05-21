@@ -24,10 +24,6 @@ else
 
 
 
-<?php echo"<h1>Alătură-te echipei</h1>";?>
-
-
-
 
 
 
