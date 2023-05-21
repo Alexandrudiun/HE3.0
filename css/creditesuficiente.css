@@ -55,7 +55,7 @@ body{
   text-align: center;
   padding: 5px;
   box-sizing: border-box;
-  width: 100%;
+  width: 90%;
   border-radius: 10px;
 }
 
@@ -96,15 +96,15 @@ body{
 }
 
 .credit-box{
-    display: flex;
-    align-items: center;
-    justify-content: center ;
-    background: #ccc;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    padding: 5px;
-    width: 90%;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  background: #ccc;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 5px;
+  width: 90%;
+}
 
   .credits{
     text-decoration: none;
