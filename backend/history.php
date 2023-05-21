@@ -49,15 +49,15 @@ $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside t
 echo '<div class="card">';
 echo '<img src="' . $location . '" alt="' . $row['name'] . '" >';
 echo '<div class="info-area">';
-
+echo '<div class="flex-del"';
+echo '<h3 class="service-title">' . $row['title'] . '</h3>';
 echo '<a style="text-decoration:none;" href="/backend/del.php?id=' . $row['id'] . '">';
 echo '<div class="delete-btn">';
 echo '<ion-icon name="close-outline"></ion-icon>';
 echo '<span>Șterge postarea</span>';
 echo '</div>';
 echo '</a>';
-
-echo '<h3 class="service-title">' . $row['title'] . '</h3>';
+echo '</div>';
 echo '<h2 class="service-price">' . $row['price'] . '</h2>';
 echo '<div class="date">';
 echo '<span>'.$row['date'].'</span>';
