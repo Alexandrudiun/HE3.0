@@ -133,7 +133,7 @@ else {
 <main>
         <div class="center">
             <div class="profile-card">
-              <form action="serviceedit.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
+              <form action="ServiceedittextAndPhotos.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
                 <h1>Publică un anunţ nou</h1>
                 <p class="info">Completează cu atenție formularul deoarece editarea ulterioara costa 5 credite</p>
                 <h3>Detalii anunţ</h3>
