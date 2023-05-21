@@ -39,11 +39,11 @@ h1{
 .input-box{
   position: relative;
   margin: 15px 0;
-  width: 310px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:10px;
+  flex-direction: column;
 }
 
 .input-box div{
