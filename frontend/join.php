@@ -6,7 +6,13 @@
 <?php
 session_start();
 if(isset($_SESSION['email']) && isset ($_SESSION['password']))
-{}
+{
+  if(isset($_POST['submit'])){
+    $email = $_SESSION['email'];
+    $query="UPDATE users SET worker = 1 WHERE email ='$email'";
+  }
+
+}
 else
 {
     header("Location: ../index.php");
@@ -18,15 +24,13 @@ else
 
 
 
-<?php echo"<h1>Alătură-te echipei</h1>";?>
 
 
 
-
-
-
-
-
+<h1>Alătura-te echipei de workeri de din aplicație și devino prestator de servicii la pe site-ul nostru.</h1>
+<form method="post">
+    <input type="submit" name='submit' value="Join">
+</form>
 
 
 
