@@ -28,14 +28,17 @@ if (isset($_POST['toggle_profile_type'])) {
     <main>
         <div class="center">
             <div class="profile-card">
-            <a style="text-decoration:none;"href ="/backend/profileditphoto.php"><div class="image">
-            <?php if($image==NULL): ?>
-            <img src='/img/user.png' class='profile-img'>
-            <?php else: ?>
-            <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="profile picture of <?=$name?>" class="profile-img">
-            <?php endif; ?>
-            </a>
-        </div>
+            <div class="image">
+                <?php if($image==NULL): ?>
+                <img src='/img/user.png' class='profile-img'>
+                <?php else: ?>
+                <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="profile picture of <?=$name?>" class="profile-img">
+                <?php endif; ?>
+                <a href="/backend/profileditphoto.php" class="plus-icon">
+                <ion-icon name="add-circle-outline"></ion-icon>
+                </a>
+            </div>
+            </div>
             <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
                 <span class="name"><?php echo $name?></span>
