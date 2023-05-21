@@ -43,6 +43,17 @@ h1{
   text-align: center;
 }
 
+.info{
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
 h3{
   position: relative;
   text-align: center;
