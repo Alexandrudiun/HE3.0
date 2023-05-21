@@ -223,14 +223,14 @@ echo '<a href="/frontend/home.php" class="btn-post">Get a worker</a>';
                         echo       '<span class="icon">';
                         echo            '<ion-icon name="add-circle-outline"></ion-icon>';
                         echo       '</span>';
-                        echo        '<span class="text">Alătură-te echipei</span>';
+                        echo        '<span class="text">Alătură-te</span>';
                         echo   '</a>';
                         echo'</li>';
     
                     echo '<li class="list">';
                     echo   '<a href="/frontend/contact.php">';
                     echo       '<span class="icon">';
-                    echo          '<ion-icon name="albums-outline"></ion-icon>';
+                    echo          '<ion-icon name="help-circle-outline"></ion-icon>';
                     echo'</span>';
                     echo    '<span class="text">Contact</span>';
                     echo '</a>';
