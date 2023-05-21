@@ -52,16 +52,16 @@ if(isset($_POST['submit'])){
     $date = date('Y-m-d H:i:s');
     
 
-     $query="UPDATE posts SET city = '$city' AND title = '$title' AND images = '$photo_names' AND price = '$price' AND description = '$description' AND phone = '$phone' AND date = '$date' WHERE email = '$email' AND id = '$id'";
+     $query="UPDATE posts SET city = '$city' AND title = '$title' AND price = '$price' AND description = '$description' AND phone = '$phone' AND date = '$date' WHERE email = '$email' AND id = '$id'";
      $select_user_query = mysqli_query($conn, $query);
      if(!$select_user_query) {
          die('Query Failed'. mysqli_error($conn));
       }
-      $query="UPDATE posts SET images = '$photo_names' WHERE email = '$email' AND id = '$id'";
-     $select_user_query = mysqli_query($conn, $query);
-     if(!$select_user_query) {
-         die('Query Failed'. mysqli_error($conn));
-      }
+    //   $query="UPDATE posts SET images = '$photo_names' WHERE email = '$email' AND id = '$id'";
+    //  $select_user_query = mysqli_query($conn, $query);
+    //  if(!$select_user_query) {
+    //      die('Query Failed'. mysqli_error($conn));
+    //   }
     
 
 }
