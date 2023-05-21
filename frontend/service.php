@@ -19,7 +19,7 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post</title>
+    <title>Service</title>
     <link rel="icon" href="/img/logo192.jpg">
     <link rel="stylesheet" href="/css/service.css">
     <link rel="stylesheet" href="/css/navbar.css">
