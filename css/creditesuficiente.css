@@ -106,10 +106,23 @@ body{
     width: 90%;
   }
 
-.adauga-btn{
-  text-decoration: none;
-  color: #fff;
-}
+  .credits{
+    text-decoration: none;
+    color:#fff;
+    border: none;
+    background: transparent;
+  }
+  
+  .credits-box{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    background: #ccc;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+ }
 
 ion-icon{
   color: #fff;
