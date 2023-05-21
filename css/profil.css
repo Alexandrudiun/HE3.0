@@ -133,46 +133,65 @@ h3{
 
 /* Popup credits */
 
-.popup-container{
+.popup .overlay{
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vw;
   background: #1C1C1E;
   opacity: 0.7;
   z-index: 1;
   display: none;
 }
 
-.content{
+.popup .content{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,50%) scale(0);
   background: #2C3E50;
-  width: 85%;
+  width: 400px;
+  height: 220px;
   z-index: 2;
   text-align: center;
   padding: 5px;
   box-sizing: border-box;
 }
 
-.close-button{
-  position: absolute;
-  right: 5px;
-  top:5px;
-  font-size: 16px;
-  cursor: pointer;
+.title{
+  color: #fff;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.description{
+  font-size: 17px;
+  font-weight: 400;
   color: #fff;
 }
 
-.popup.active .popup-container{
+.popup .close-btn{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 30px;
+  width: 30px;
+  background: #222;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.popup.active .overlay{
   display: block;
 }
 
 .popup.active .popup-container{
-  transition: all 250ms ease-in-out;
+  transition: all 300ms ease-in-out;
   transform: translate(-50%, -50%) scale(1);
 }
  /* Swich button */
