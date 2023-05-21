@@ -28,7 +28,7 @@ if (isset($_POST['toggle_profile_type'])) {
     <main>
         <div class="center">
             <div class="profile-card">
-            <a href ="/backend/profileditphoto.php"><div class="image">
+            <a style="text-decoration:none;"href ="/backend/profileditphoto.php"><div class="image">
             <?php if($image==NULL): ?>
             <img src='/img/user.png' class='profile-img'>
             <?php else: ?>
