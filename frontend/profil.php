@@ -35,7 +35,7 @@ if (isset($_POST['toggle_profile_type'])) {
                 <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="profile picture of <?=$name?>" class="profile-img">
                 <?php endif; ?>
                 <a href="/backend/profileditphoto.php" class="plus-icon">
-                <ion-icon name="add-circle-outline"></ion-icon>
+                <ion-icon name="add-outline"></ion-icon>
                 </a>
             </div>
             <div class="text-data">
