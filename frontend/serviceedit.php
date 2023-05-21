@@ -1,4 +1,6 @@
-<?php if(isset($_SESSION['email']) && isset($_SESSION['password']))
+<?php 
+session_start();
+if(isset($_SESSION['email']) && isset($_SESSION['password']))
 { 
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
