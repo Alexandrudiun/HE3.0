@@ -50,6 +50,11 @@ a{
   text-decoration: none;
 }
 
+.flex-a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .input-box div{
   margin: 10px;
 }
@@ -99,10 +104,7 @@ input[type="checkbox"]{
 }
 
 .delete-btn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
+  text-align: center;
   padding: 3px;
   width: 100%;
   background-color: #fc4c4c;
