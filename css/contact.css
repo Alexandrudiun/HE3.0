@@ -25,3 +25,10 @@ h1{
   text-transform: uppercase;
   color: #fff;
 }
+
+.contact-info h3{
+  font-size: 16em;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+}
