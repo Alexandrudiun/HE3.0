@@ -38,7 +38,6 @@ if (isset($_POST['toggle_profile_type'])) {
                 <ion-icon name="add-circle-outline"></ion-icon>
                 </a>
             </div>
-            </div>
             <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
                 <span class="name"><?php echo $name?></span>
