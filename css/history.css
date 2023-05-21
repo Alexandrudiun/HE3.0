@@ -99,6 +99,7 @@ ion-icon{
   justify-content: space-between;
   padding: 5px;
   word-break: break-word;
+  width: 100%;
 }
 
 .flex-del{
