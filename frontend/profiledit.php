@@ -131,9 +131,9 @@
                     echo '<li class="list">';
                     echo   '<a href="/frontend/join.php">';
                     echo       '<span class="icon">';
-                    echo            '<ion-icon name="add-circle-outline"></ion-icon>';
+                    echo            '<ion-icon name="help-circle-outline"></ion-icon>';
                     echo       '</span>';
-                    echo        '<span class="text">Alătură-te echipei</span>';
+                    echo        '<span class="text">Alătură-te</span>';
                     echo   '</a>';
                     echo'</li>';
 
