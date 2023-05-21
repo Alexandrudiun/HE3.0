@@ -49,11 +49,17 @@ $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside t
 echo '<div class="card">';
 echo '<img src="' . $location . '" alt="' . $row['name'] . '" >';
 echo '<div class="info-area">';
+echo  '<form action="del.php?id='.$row['id'].'" method="post">';
+echo '<div class="button">';
+echo  '<input type="submit" name="submit" value="Sterge Anuntul" class="btn-login">';
+echo '</div>';
+echo '</form>';
 echo '<h3 class="service-title">' . $row['title'] . '</h3>';
 echo '<h2 class="service-price">' . $row['price'] . '</h2>';
 echo '<div class="date">';
 echo '<span>'.$row['date'].'</span>';
 echo '<span>'.$row['city'].'</span>';
+
 echo '</div>';
 echo '</div>';
 echo '</div>';   
