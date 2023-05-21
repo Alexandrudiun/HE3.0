@@ -50,7 +50,7 @@ echo '<div class="card">';
 echo '<img src="' . $location . '" alt="' . $row['name'] . '" >';
 echo '<div class="info-area">';
 echo '<h3 class="service-title">' . $row['title'] . '</h3>';
-echo '<h2 class="service-price">' . $row['price'] . '</h2>';
+echo '<h2 class="service-price">' . $row['price'] . ' RON</h2>';
 echo '<div class="date">';
 echo '<span>'.$row['date'].'</span>';
 echo '<span>'.$row['city'].'</span>';
