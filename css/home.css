@@ -60,8 +60,9 @@ ion-icon{
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(162.5px, 1fr));
+  grid-template-columns: repeat(2, 162.5px);
   grid-gap: 20px;
+  justify-content: center; /* Center the grid horizontally */
   padding: 0 5px 0 5px;
   margin-bottom: 0px;
   grid-auto-flow: dense; /* Added property for asymmetrical placement */
