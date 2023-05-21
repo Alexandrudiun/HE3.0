@@ -9,15 +9,25 @@ else
 
 ?>
 
-
-
-
-
-
-<?php echo"<h1>Pagină de contact</h1>";?>
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" href="/img/logo192.jpg">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <h1>Contact</h1>
+    <div class="contact-info">
+    <h3>E-mail: contact@idcrew </h3>
+    <h3>Telefon: 0721333445 / 0759154425 </h3>
+    <h3>Location: Constanţa</h3>
+    </div>
 <!-- Navbar Down -->
 <footer>  
     <section class="nav-bar">
@@ -137,3 +147,5 @@ else
         </div>
     </section>
     </footer>
+</body>
+</html>
