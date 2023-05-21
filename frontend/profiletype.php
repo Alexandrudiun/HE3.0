@@ -19,7 +19,7 @@ include "../backend/profiletypebk.php";
 <section>
     <div class="form-box">
       <div class="form-value">
-        <form method="Post">
+      <form method="post" id="profile-form">
           <h1>Selectează tipul de profil</h1>
           <div class="input-box">
             <div>
@@ -44,6 +44,7 @@ include "../backend/profiletypebk.php";
       </div>
     </div>
   </section>
+  <script src="/js/profiletype.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
