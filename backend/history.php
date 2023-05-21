@@ -50,8 +50,8 @@ echo '<div class="card">';
 echo '<img src="' . $location . '" alt="' . $row['name'] . '" >';
 echo '<div class="info-area">';
 
-echo '<a style="text-decoration:none;" href="/backend/del.php?id=' . $row['id'] . '">';
 echo '<div class="flex-del">';
+echo '<a style="text-decoration:none;" href="/backend/del.php?id=' . $row['id'] . '">';
 echo '<h3 class="service-title">' . $row['title'] . '</h3>';
 echo '<div class="delete-btn">';
 echo '<ion-icon name="close-outline"></ion-icon>';
