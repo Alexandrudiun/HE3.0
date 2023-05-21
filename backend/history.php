@@ -66,7 +66,7 @@ echo '<span>'.$row['city'].'</span>';
 echo '</div>';
 echo '</div>';
 echo '</div>';   
-echo '<a style="text-decoration:none;" href="/backend/serviceedit.php?id=' . $row['id'] . '">';
+echo '<a style="text-decoration:none;" href="/frontend/serviceedit.php?id=' . $row['id'] . '">';
 echo '<div class="delete-btn">';
 echo '<ion-icon name="close-outline"></ion-icon>';
 echo '<span>Editează postarea</span>';
