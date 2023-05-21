@@ -156,6 +156,7 @@ h3{
   padding: 5px;
   box-sizing: border-box;
   width: 100%;
+  border-radius: 10px;
 }
 
 .popup .title {
