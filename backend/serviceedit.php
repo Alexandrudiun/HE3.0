@@ -36,8 +36,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
     echo '<a href="/backend/ServiceedittextAndPhotos.php?id=' . $id. '"> Editează anunţul întreg </a>';
     echo '</label>';
     echo '</div>';
-    echo '<input type="checkbox" id="worker" name="worker">';
-    echo '<a href="/backend/del.php?id=' . $id . '">';
+    echo '<a href="/backend/del.php?id=' . $id . '" class="flex-a">';
     echo '<div class="delete-btn">';
     echo '<ion-icon name="close-outline"></ion-icon>';
     echo '<span>Șterge postarea</span>';
