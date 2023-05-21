@@ -12,7 +12,7 @@ if(!$delete_query) {
 else{
     echo "Deleted";
 }
-header("Location: history.php");
+header("Location: ../backend/history.php");
 }}
 else {
     header("Location: ../index.php");
