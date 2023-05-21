@@ -50,11 +50,11 @@ echo '<div class="card">';
 echo '<img src="' . $location . '" alt="' . $row['name'] . '" >';
 echo '<div class="info-area">';
 echo  '<a href="del.php?id='.$row['id']>
-echo '<div class="button">'
+echo '<div class="button">';
 echo '<div class="delete-btn">';
 echo '<ion-icon name="close-outline"></ion-icon>';;
 echo '<span>Editează sau şterge postarea</span>';
-echo '</div>'
+echo '</div>';
 echo '</div>';
 echo '</a>';
 echo '<h3 class="service-title">' . $row['title'] . '</h3>';
