@@ -3,7 +3,10 @@
 include "../backend/conn.php";
 session_start();
 if(isset($_SESSION['email']) && isset ($_SESSION['password']))
-{
+{   $profiletype_temp = $_SESSION['profiletype_temp'];
+    $worker = $_SESSION['worker'];
+    $buyer = $_SESSION['buyer'];
+  
   if(isset($_POST['submit'])){
     $email = $_SESSION['email'];
     $query="UPDATE users SET worker = 1, buyer = 1 WHERE email ='$email'";
@@ -37,6 +40,14 @@ else
 </head>
 
 <body>
+<?php 
+
+    if($worker == $buyer)
+    {
+        echo 'Ești deja membru al echipei noastre!';
+    }?>
+
+
 
     <h1>Alătura-te echipei de workeri din aplicație și devino prestator de servicii pe site-ul nostru!</h1>
     <form method="post">
@@ -67,9 +78,7 @@ else
                 </li>
 
 <?php
-            $profiletype_temp = $_SESSION['profiletype_temp'];
-            $worker = $_SESSION['worker'];
-            $buyer = $_SESSION['buyer'];
+            
             if($worker == 1 && $buyer == 1) 
             {
                 if(!$profiletype_temp){
