@@ -139,7 +139,7 @@ else {
                 <h3>Detalii anunţ</h3>
                 <section>
                 <div class="file-box file-input">
-                    <input type="file" id="fileInput" accept="image/png, image/png, image/jpeg" name="file[]" multiple="multiple" onchange="preview()" required>
+                    <input type="file" id="fileInput" accept="image/png, image/png, image/jpeg" name="file[]" multiple="multiple" onchange="preview()" >
                     <label for="fileInput" class="inputFile">
                         <ion-icon name="albums-outline"></ion-icon> Adaugă imagini
                     </label>
