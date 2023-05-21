@@ -45,9 +45,11 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
     echo '<div>';
     echo '<label>';
     echo '<input type="checkbox" id="worker" name="worker">';
-    echo '<a href="/backend/del.php?id=' . $id . '" class="delete-btn">';
+    echo '<a href="/backend/del.php?id=' . $id . '">';
+    echo '<div class="delete-btn">';
     echo '<ion-icon name="close-outline"></ion-icon>';
     echo '<span>Șterge postarea</span>';
+    echo '</div>';
     echo '</a>';
     echo '</label>';
     echo '</div>';

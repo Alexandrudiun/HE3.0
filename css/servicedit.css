@@ -46,6 +46,10 @@ h1{
   flex-direction: column;
 }
 
+a{
+  text-decoration: none;
+}
+
 .input-box div{
   margin: 10px;
 }
