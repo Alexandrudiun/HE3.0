@@ -57,6 +57,11 @@ if(isset($_POST['submit'])){
      if(!$select_user_query) {
          die('Query Failed'. mysqli_error($conn));
       }
+      $query="UPDATE posts SET images = '$photo_names' WHERE email = '$email' AND id = '$id'";
+     $select_user_query = mysqli_query($conn, $query);
+     if(!$select_user_query) {
+         die('Query Failed'. mysqli_error($conn));
+      }
     
 
 }
