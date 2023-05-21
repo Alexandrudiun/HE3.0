@@ -45,16 +45,15 @@ else
     if($worker == $buyer)
     {
         echo 'Ești deja membru al echipei noastre!';
-    }?>
+    }
 
-
-
-    <h1>Alătura-te echipei de workeri din aplicație și devino prestator de servicii pe site-ul nostru!</h1>
-    <form method="post">
-    <div class="button">
-        <input type="submit" name="submit" value="Alatură-te acum!" class="btn-login">
-    </div>
-    </form>
+else
+{   echo '<h1>Alătura-te echipei de workeri din aplicație și devino prestator de servicii pe site-ul nostru!</h1>';
+    echo '<form method="post">';
+    echo '<div class="button">';
+    echo  '<input type="submit" name="submit" value="Alatură-te acum!" class="btn-login">';
+    echo '</div>';
+    echo '</form>';}?>
  <!-- Navbar Down -->
  <footer>  
     <section class="nav-bar">
