@@ -84,7 +84,7 @@ else {
                 <h2>Completează cu atenție formularul deoarece editarea ulterioara costa 5 credite</h2>
                 <h3>Detalii anunţ</h3>
                 <section>
-                </div>
+                
                 <div id="mesaj" style="color:red; text-align:center;"></div>
                 </section>
                 <div class="input-box">
