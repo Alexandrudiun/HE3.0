@@ -133,23 +133,23 @@ h3{
 
 /* Popup credits */
 
-.popup .overlay{
+.popup .overlay {
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   background: #1C1C1E;
   opacity: 0.7;
   z-index: 1;
   display: none;
 }
 
-.popup .content{
+.popup .content {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
   background: #2C3E50;
   width: 400px;
   height: 220px;
@@ -159,19 +159,19 @@ h3{
   box-sizing: border-box;
 }
 
-.title{
+.popup .title {
   color: #fff;
   font-size: 23px;
   font-weight: 400;
 }
 
-.description{
+.popup .description {
   font-size: 17px;
   font-weight: 400;
   color: #fff;
 }
 
-.popup .close-btn{
+.popup .close-btn {
   position: absolute;
   right: 20px;
   top: 20px;
@@ -186,14 +186,15 @@ h3{
   border-radius: 50%;
 }
 
-.popup.active .overlay{
+.popup.active .overlay {
   display: block;
 }
 
-.popup.active .popup-container{
+.popup.active .content {
   transition: all 300ms ease-in-out;
   transform: translate(-50%, -50%) scale(1);
 }
+
  /* Swich button */
 
 .toggle-container {
