@@ -103,9 +103,9 @@ echo '<a href="/backend/post.php" class="btn-post">Post a job</a>';
             <ion-icon name="swap-horizontal-outline"></ion-icon>
           Schimbă profilul în: <?php
           if (!$profiletype_temp) {
-            echo "worker";
-          } else {
             echo "buyer";
+          } else {
+            echo "worker";
           }
           ?>
           </div>
