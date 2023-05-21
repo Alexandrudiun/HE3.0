@@ -41,7 +41,7 @@ else
     <h1>Alătura-te echipei de workeri din aplicație și devino prestator de servicii pe site-ul nostru!</h1>
     <form method="post">
     <div class="button">
-        <input type="submit" name="submit" value="Alatură-te" class="btn-login">
+        <input type="submit" name="submit" value="Alatură-te acum!" class="btn-login">
     </div>
     </form>
  <!-- Navbar Down -->
