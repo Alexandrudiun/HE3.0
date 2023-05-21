@@ -114,7 +114,7 @@ else
                 echo '<li class="list">';
                 echo   '<a href="/frontend/contact.php">';
                 echo       '<span class="icon">';
-                echo          '<ion-icon name="albums-outline"></ion-icon>';
+                echo          '<ion-icon name="mail-outline"></ion-icon>';
                 echo'</span>';
                 echo    '<span class="text">Contact</span>';
                 echo '</a>';
@@ -158,7 +158,7 @@ else
                 echo '<li class="list">';
                 echo   '<a href="/frontend/contact.php">';
                 echo       '<span class="icon">';
-                echo          '<ion-icon name="albums-outline"></ion-icon>';
+                echo          '<ion-icon name="mail-outline"></ion-icon>';
                 echo'</span>';
                 echo    '<span class="text">Contact</span>';
                 echo '</a>';
