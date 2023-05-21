@@ -191,11 +191,7 @@ else {
                   </div>
                   
               </form>
-              <form action="del.php?id=<?php echo $id;?>" method="post">
-                <div class="button">
-                    <input type="submit" name="submit" value="Sterge Anuntul" class="btn-login">
-                    </div>
-                </form>
+   
               
             </div>
           </div> 

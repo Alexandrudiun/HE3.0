@@ -49,26 +49,27 @@ $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside t
 echo '<div class="card">';
 echo '<img src="' . $location . '" alt="' . $row['name'] . '" >';
 echo '<div class="info-area">';
-echo  '<a href="del.php?id='.$row['id']>
-echo '<div class="button">';
+
+echo '<a style="text-decoration:none;" href="/backend/del.php?id=' . $row['id'] . '">';
 echo '<div class="delete-btn">';
-echo '<ion-icon name="close-outline"></ion-icon>';;
-echo '<span>Editează sau şterge postarea</span>';
-echo '</div>';
+echo '<ion-icon name="close-outline"></ion-icon>';
+echo '<span>Șterge postarea</span>';
 echo '</div>';
 echo '</a>';
+
 echo '<h3 class="service-title">' . $row['title'] . '</h3>';
 echo '<h2 class="service-price">' . $row['price'] . '</h2>';
 echo '<div class="date">';
 echo '<span>'.$row['date'].'</span>';
 echo '<span>'.$row['city'].'</span>';
+
 echo '</div>';
 echo '</div>';
 echo '</div>';   
 echo '<a style="text-decoration:none;" href="/backend/serviceedit.php?id=' . $row['id'] . '">';
 echo '<div class="delete-btn">';
 echo '<ion-icon name="close-outline"></ion-icon>';
-echo '<span>Editează sau şterge postarea</span>';
+echo '<span>Editează postarea</span>';
 echo '</div>';
 echo '</a>';
 
