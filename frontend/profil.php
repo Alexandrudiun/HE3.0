@@ -147,6 +147,8 @@ echo '<a href="/backend/post.php" class="btn-post">Post a job</a>';
                 </li>
                 
                 <?php
+                $worker = $_SESSION['worker'];
+                $buyer = $_SESSION['buyer'];
                 if($worker == 1 && $buyer == 1) 
                 {
                     if(!$profiletype_temp){
