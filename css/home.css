@@ -60,7 +60,7 @@ ion-icon{
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(162.5px, 1fr));
   grid-gap: 20px;
   padding: 0 5px 0 5px;
   margin-bottom: 0px;
@@ -71,6 +71,7 @@ ion-icon{
   background-color: #2C3E50;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 162.5px; /* Added width property */
 }
 
 .card img {
@@ -104,3 +105,4 @@ ion-icon{
   font-size: 10px;
   color: #ccc;
 }
+
