@@ -1,8 +1,4 @@
 
-
-
-
-
 <?php
 include "../backend/conn.php";
 session_start();
@@ -27,12 +23,20 @@ else
 
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <link rel="icon" href="/img/logo192.jpg">
+    <link rel="stylesheet" href="/css/error404.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="manifest" href="/manifest.json">
+</head>
 
-
-
-
-
-
+<body>
 
 <h1>Alătura-te echipei de workeri de din aplicație și devino prestator de servicii la pe site-ul nostru.</h1>
 <form method="post">
@@ -61,11 +65,6 @@ else
                         <span class="text">Profil</span>
                     </a>
                 </li>
-
-
-
-
-
 
 <?php
             $profiletype_temp = $_SESSION['profiletype_temp'];
@@ -164,3 +163,14 @@ else
         </div>
     </section>
     </footer>
+    <script src="/js/nav.js"></script>
+    <!-- Ion icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        function goBack() {
+        history.back();
+        }
+    </script>
+</body>
+</html>
