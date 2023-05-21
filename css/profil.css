@@ -25,6 +25,7 @@ h3{
   align-items: center;
   justify-content: center;
 }
+
 .profile-card{
   position: relative;
   margin: 10px;
@@ -60,13 +61,14 @@ h3{
   position: absolute;
   bottom: -10px;
   right: -10px;
-  /* Add your desired styles for the plus icon container */
+  text-decoration: none;
+  color: #fff;
 }
+
 
 .plus-icon ion-icon {
   font-size: 25px;
   color: #fff;
-  /* Add your desired styles for the plus icon image */
 }
 
 .text-data{
