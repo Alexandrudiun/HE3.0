@@ -99,15 +99,15 @@ if(isset($_POST['submit'])){
         
         if($result){
             
-            echo "<script>document.getElementById('mesaj').innerHTML = 'Anunțul a fost postat';</script>";
-            header("Location: del.php?id=$id");
+            
+            //header("Location: del.php?id=$id");
         } else {
             echo "Error: " . mysqli_error($conn);
         }
 }
 
     
-
+header("Location: ../backend/history.php");
 }
 
 }}}
@@ -144,13 +144,7 @@ else {
                         <ion-icon name="albums-outline"></ion-icon> Adaugă imagini
                     </label>
                     <p id="num-of-files">Nicio imagine adăugată</p>
-                    <div id="images">
-          <?php for($i=0;$i<3;$i++){
-          $location="https://idcrew.shop/img/upload/" . $photo_names[$i]; 
-          $file[]=$location;
-          if($photo_names[$i])
-        echo '<img src="' . $location . '" alt="' . $row['name'] . '"  id="slide-'.$i.'">';
-        }?></div>
+                    <div id="images"></div>
                 </div>
                 <div id="mesaj" style="color:red; text-align:center;"></div>
                 </section>

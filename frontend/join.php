@@ -16,6 +16,7 @@ if(isset($_SESSION['email']) && isset ($_SESSION['password']))
     {
       die('Query Failed');
     }
+    header("Location: ../frontend/profil.php");
   }
 
 }
