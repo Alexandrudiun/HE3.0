@@ -41,7 +41,7 @@ else
                         <span class="text">Acasă</span>
                     </a>
                 </li>
-                <li class="list active">
+                <li class="list">
                     <a href="/frontend/profil.php">
                         <span class="icon">
                         <ion-icon name="person-circle-outline"></ion-icon>
@@ -87,7 +87,7 @@ else
                     echo   '</a>';
                     echo'</li>';
 
-                echo '<li class="list">';
+                echo '<li class="list active">';
                 echo   '<a href="/frontend/contact.php">';
                 echo       '<span class="icon">';
                 echo          '<ion-icon name="albums-outline"></ion-icon>';
@@ -131,7 +131,7 @@ else
                     echo   '</a>';
                     echo'</li>';
 
-                echo '<li class="list">';
+                echo '<li class="list active">';
                 echo   '<a href="/frontend/contact.php">';
                 echo       '<span class="icon">';
                 echo          '<ion-icon name="albums-outline"></ion-icon>';
