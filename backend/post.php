@@ -131,7 +131,7 @@ else
             <div class="profile-card">
               <form action="post.php" method="post" enctype="multipart/form-data">
                 <h1>Publică un anunţ nou</h1>
-                <h2>Fiecare anunţ costă 10 Credite. Completează cu atenție formularul deoarece editarea ulterioară costă 5 credite</h2>
+                <p id="num-of-files">Fiecare anunţ costă 10 Credite. Completează cu atenție formularul deoarece editarea ulterioară costă 5 credite</p>
                 <h3>Detalii anunţ</h3>
                 <section>
                 <div class="file-box file-input">
