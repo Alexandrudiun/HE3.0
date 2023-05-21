@@ -58,7 +58,7 @@ input[type="checkbox"]{
   display: none;
 } 
 
-.input-box div label span{
+.input-box div label a{
   position: relative;
   display: inline-block;
   background: #303f9f;
@@ -69,6 +69,7 @@ input[type="checkbox"]{
   transition: 0.5s;
   user-select: none;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .input-box div label span::before{
