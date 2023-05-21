@@ -75,8 +75,6 @@ ion-icon{
 
 .card{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #2C3E50;
 	border-radius: 10px;
   margin-bottom: 10px;
@@ -97,17 +95,12 @@ ion-icon{
 
 .info-area{
   display: flex;
-  align-items: center;
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: space-between;
   padding: 5px;
   word-break: break-word;
 }
 
-.flex-del{
-  display: flex;
-  align-items: center;
-}
 
 .card h3{
   font-size: 1em;
