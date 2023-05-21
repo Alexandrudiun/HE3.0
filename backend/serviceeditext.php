@@ -52,12 +52,13 @@ if(isset($_POST['submit'])){
     $date = date('Y-m-d H:i:s');
     
 
-     $query="UPDATE posts SET city = '$city' AND title = '$title' AND images = '$photo_names' AND price = '$price' AND description = '$description' AND phone = '$phone' AND date = '$date' WHERE email = '$email' AND id = '$id'";
+     $query="UPDATE posts SET city = '$city', title = '$title', price = '$price', description = '$description', phone = '$phone', date = '$date' WHERE id = '$id'";
      $select_user_query = mysqli_query($conn, $query);
      if(!$select_user_query) {
          die('Query Failed'. mysqli_error($conn));
       }
-    
+      header("Location: ../backend/history.php");
+   
 
 }
 
@@ -84,7 +85,7 @@ else {
 <main>
         <div class="center">
             <div class="profile-card">
-              <form action="serviceeditext.php" method="post" enctype="multipart/form-data">
+              <form action="#" method="post" enctype="multipart/form-data">
                 <h1>Publică un anunţ nou</h1>
                 <h2>Completează cu atenție formularul deoarece editarea ulterioara costa 5 credite</h2>
                 <h3>Detalii anunţ</h3>
