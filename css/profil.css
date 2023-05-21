@@ -167,7 +167,7 @@ h3{
 
 .popup .description {
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 300;
   color: #fff;
 }
 
@@ -177,7 +177,7 @@ h3{
   top: 5px;
   height: 25px;
   width: 25px;
-  background: #222;
+  background: #F1C40F;
   color: #fff;
   font-size: 20px;
   font-weight: 300;
