@@ -27,13 +27,13 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
     echo '<div>';
     echo '<label>';
     echo '<input type="checkbox" id="worker" name="worker">';
-    echo '<a href="/backend/serviceeditext.php?id=' . $id . '">Editeaza detaliile anunţului </a>';
+    echo '<a href="/backend/serviceeditext.php?id=' . $id . '">Editeaza detaliile postării </a>';
     echo '</label>';
     echo '</div>';
     echo '<div>';
     echo '<label>';
     echo '<input type="checkbox" id="worker" name="buyer">';
-    echo '<a href="/backend/ServiceedittextAndPhotos.php?id=' . $id. '"> Editează anunţul întreg </a>';
+    echo '<a href="/backend/ServiceedittextAndPhotos.php?id=' . $id. '"> Editează postarea întregă </a>';
     echo '</label>';
     echo '</div>';
     echo '<a href="/backend/del.php?id=' . $id . '" class="flex-a">';
