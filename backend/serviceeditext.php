@@ -32,9 +32,9 @@ if(isset($_SESSION['email']) && isset($_SESSION['password']))
 <?php
 $query="SELECT * FROM posts WHERE email = '{$email}'";
 $result= mysqli_query($conn, $query);
-$row = mysqli_fetch_assoc($result);
-$photo_names = $row['images'];
-echo $photo_names;
+$row3 = mysqli_fetch_assoc($result);
+$photo_names = $row3['images'];
+
  
 if(isset($_POST['submit'])){
     $credit = $row1['credit'] - 5;
@@ -43,6 +43,7 @@ if(isset($_POST['submit'])){
     if(!$select_user_query) {
         die('Query Failed'. mysqli_error($conn));
      }
+
     $city = $_POST['localitate'].', '.$_POST['judet'];
     $title = $_POST['titlu'];
     $price = $_POST['pret'];
@@ -83,7 +84,7 @@ else {
 <main>
         <div class="center">
             <div class="profile-card">
-              <form action="serviceedit.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
+              <form action="serviceeditext.php" method="post" enctype="multipart/form-data">
                 <h1>Publică un anunţ nou</h1>
                 <h2>Completează cu atenție formularul deoarece editarea ulterioara costa 5 credite</h2>
                 <h3>Detalii anunţ</h3>
@@ -128,6 +129,7 @@ else {
                   </div>
                   
               </form>
+
               <form action="del.php?id=<?php echo $id;?>" method="post">
                 <div class="button">
                     <input type="submit" name="submit" value="Sterge Anuntul" class="btn-login">
