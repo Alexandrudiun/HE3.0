@@ -80,12 +80,12 @@ if (isset($_POST['toggle_profile_type'])) {
 if($worker == 1 && $buyer == 1) 
 {
     if(!$profiletype_temp)    echo '<a href="/backend/post.php" class="btn-post">Post a job</a>';
-    else echo '<a href="/frontend/home.php" class="btn-post">Get a worker</a>';
+    else echo '<a href="/backend/home.php" class="btn-post">Get a worker</a>';
 
 }
 else{
 if($worker == 1 && $buyer == 0) {
-echo '<a href="/frontend/home.php" class="btn-post">Get a worker</a>';
+echo '<a href="/backend/home.php" class="btn-post">Get a worker</a>';
 }
 else{
 echo '<a href="/backend/post.php" class="btn-post">Post a job</a>';
