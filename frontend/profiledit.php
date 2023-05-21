@@ -1,11 +1,4 @@
 <?php include "../backend/profileditbk.php";
- $query="SELECT * FROM users WHERE email = '{$_SESSION['email']}'";
- $select_user_query = mysqli_query($conn, $query);
- $row = mysqli_fetch_row($select_user_query);
- if(!$select_user_query)
-    {
-      die('Query Failed'). mysqli_error($conn);
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
