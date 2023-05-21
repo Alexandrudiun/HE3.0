@@ -75,25 +75,23 @@ if (isset($_POST['toggle_profile_type'])) {
 
     
         <div class="btn-container">
-        <a href="post.php" class="btn-post">
-    <?php     
+        <?php     
 
-                    if($worker == 1 && $buyer == 1) 
-                    {
-                        if(!$profiletype_temp)   echo "post a job";
-                        else echo "get a job";
+if($worker == 1 && $buyer == 1) 
+{
+    if(!$profiletype_temp)    echo '<a href="post.php" class="btn-post">Post a job</a>';
+    else echo '<a href="home.php" class="btn-post">Get a worker</a>';
 
-                    }
+}
 else{
-    if($worker == 1 && $buyer == 0) {
-            echo "Get a job";
-    }
-    else{
-        echo "Post a job";
-     }
-    }?>
-     
-    </a>
+if($worker == 1 && $buyer == 0) {
+echo '<a href="home.php" class="btn-post">Get a worker</a>';
+}
+else{
+echo '<a href="post.php" class="btn-post">Post a job</a>';
+}
+}?>
+        
     </div>   
     <div class="toggle-container">
     <?php
