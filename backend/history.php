@@ -58,7 +58,7 @@ echo '<ion-icon name="close-outline"></ion-icon>';
 echo '<span>Șterge postarea</span>';
 echo '</div>';
 echo '</a>';
-echo '</div>'
+echo '</div>';
 echo '<h2 class="service-price">' . $row['price'] . '</h2>';
 echo '<div class="date">';
 echo '<span>'.$row['date'].'</span>';
