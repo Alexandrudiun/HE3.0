@@ -59,7 +59,7 @@ if (isset($_POST['toggle_profile_type'])) {
                 echo '<div class="popup" id="popup">';
                 echo '<div class="popup-container"></div>';
                 echo '<div class="content">';
-                    echo '<div class="close-button" onclick="creditPopup()><ion-icon name="close-circle-outline"></ion-icon></div>';
+                echo '<div class="close-button" onclick="creditPopup()"><ion-icon name="close-circle-outline"></ion-icon></div>';
                     echo '<h1 class="title"> Adaugă credite </h1>';
                     echo '<p class="description">Pentru a adăuga bani în contul tău, trebuie să faci un transfer bancar în contul: RO49AAAAXXXXXXXXXXXXXXXX, cu suma dorită. În detaliile ordinului de plată, te rugăm să precizezi "WORKER X", unde X reprezintă adresa ta de email. Un exemplu de transfer reușit ar fi: WORKER yanaseh572@paxven.com.</p>';
                 echo '</div>';
