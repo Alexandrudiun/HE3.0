@@ -34,7 +34,7 @@ if (isset($_POST['toggle_profile_type'])) {
             <?php else: ?>
             <img src="data:image/jpeg;base64,<?=base64_encode($image)?>" alt="profile picture of <?=$name?>" class="profile-img">
             <?php endif; ?>
-            </div></a>
+            </a>
         </div>
             <div class="text-data">
             <!-- Aici vine php cu echo si script pentru email -->
