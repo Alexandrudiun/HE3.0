@@ -37,6 +37,7 @@ include "../backend/profiletypebk.php";
           </div>
           <div class="button">
             <input type="submit" name="submit" value="Salvează" class="btn-login">
+          </div>
         </form>
         <div class="note">
           <p>*pot fi selectate ambele opţiuni*</p>
