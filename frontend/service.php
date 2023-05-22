@@ -127,10 +127,10 @@ if (mysqli_num_rows($result) > 0) {
   </div>
   </div>
   <footer>
-    <div class="buy">
+    <div class="buy"><a href="/frontend/home.php">
       <div class="buy-btn">
       <ion-icon name="arrow-back-outline"></ion-icon> 
-      <a href="/frontend/home.php">Go Back</a>
+      Go Back</a>
     </div>
     <a href="<?php echo "tel:".$numphones;?>" class="call">Call / SMS</a>
   </footer>
