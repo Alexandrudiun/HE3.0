@@ -16,6 +16,7 @@ const search = () => {
     }
   }
 
+  //for one item
   if (visibleCount === 1) {
     const visibleCard = document.querySelector(".card:not(.hidden)");
     visibleCard.style.width = "100%";
