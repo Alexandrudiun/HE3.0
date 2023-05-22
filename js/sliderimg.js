@@ -4,9 +4,13 @@ let numOfFiles = document.getElementById("num-of-files");
 
 function preview() {
   imageContainer.innerHTML = "";
-  numOfFiles.textContent = `${fileInput.files.length} Imagini Selectate`;
+  numOfFiles.textContent = `${fileInput.files.length} Images Selected`;
 
   for (let i = 0; i < fileInput.files.length; i++) {
+    if (i >= 3) {
+      break; // Limit the number of images to 3
+    }
+
     let reader = new FileReader();
     let figure = document.createElement("figure");
     let figCap = document.createElement("figcaption");
@@ -20,19 +24,18 @@ function preview() {
     };
 
     let removeWrapper = document.createElement("div");
-    removeWrapper.classList.add("remove-wrapper"); // Add a class to the wrapper div
+    removeWrapper.classList.add("remove-wrapper");
 
     let removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
-    removeButton.classList.add("remove-button"); // Add the class to the remove button
+    removeButton.classList.add("remove-button");
 
     removeButton.addEventListener("click", () => {
       removeImage(i);
     });
 
-    removeWrapper.appendChild(removeButton); // Append the remove button to the wrapper div
-    figure.appendChild(removeWrapper); // Append the wrapper div to the figure
-
+    removeWrapper.appendChild(removeButton);
+    figure.appendChild(removeWrapper);
 
     imageContainer.appendChild(figure);
     reader.readAsDataURL(fileInput.files[i]);
@@ -42,17 +45,16 @@ function preview() {
 function removeImage(index) {
   let selectedFiles = Array.from(fileInput.files);
   selectedFiles.splice(index, 1);
-  fileInput.value = ''; // Clear the file input value
+  fileInput.value = "";
 
-  // Create a new FileList object with the updated selected files
   let newFileList = new DataTransfer();
   selectedFiles.forEach((file) => newFileList.items.add(file));
 
-  // Set the files property of the file input to the new FileList
-  if ('files' in fileInput) {
+  if ("files" in fileInput) {
     fileInput.files = newFileList.files;
   }
 
   preview();
 }
 
+fileInput.addEventListener("change", preview);

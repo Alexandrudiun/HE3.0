@@ -60,10 +60,12 @@ if (mysqli_num_rows($result) > 0) {
        echo '</div>';
     echo'</div>';
     echo '<div class="popup-image" id="popup-image">';
+    echo '<div class="popup-image-content">';
     for ($i = 0; $i < 3; $i++) {
       $location = "https://idcrew.shop/img/upload/" . $photo_names[$i];
       echo '<img src="' . $location . '" alt="' . $row['name'] . '" id="popup-slide-' . ($i + 1) . '">';
     };
+    echo '</div>';
     echo '<ion-icon name="close-circle-outline" onclick="hideImage()"></ion-icon>';
     echo '</div>';
   ?>
