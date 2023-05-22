@@ -90,6 +90,7 @@ body{
   align-items: center;
   gap: 7px;
   z-index: 100;
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .popup-image img {
@@ -105,6 +106,10 @@ body{
   color: white;
   font-size: 30px;
   cursor: pointer;
+}
+
+.popup-image .container {
+  padding: 10px;
 }
 
 .top-details{
