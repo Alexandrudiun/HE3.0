@@ -42,7 +42,7 @@ if (mysqli_num_rows($result) > 0) {
         echo '<div class="slider">';
         for ($i = 0; $i < 3; $i++) {
           $location = "https://idcrew.shop/img/upload/" . $photo_names[$i];
-          if(!$photo_names) { 
+          if($photo_names == 0) { 
             echo '<img src="' . $location = "https://idcrew.shop/img/upload/" . $photo_names[0] . '" alt="' . $row['name'] . '" onclick="showImage(' . 0 . ')" id="slide-' . 0 . '">';
           }
           else{
