@@ -84,19 +84,25 @@ body{
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 7px;
   z-index: 100;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px; /* Add padding to the container */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+  max-height: 100vh; /* Limit the maximum height to the viewport height */
 }
 
 .popup-image img {
   border-radius: 10px;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 100%;
+  max-height: calc(100vh - 20px); 
+  object-fit: contain;
 }
+
 
 .popup-image ion-icon {
   position: absolute;
@@ -105,6 +111,10 @@ body{
   color: white;
   font-size: 30px;
   cursor: pointer;
+}
+
+.popup-image .container {
+  padding: 10px;
 }
 
 .top-details{
