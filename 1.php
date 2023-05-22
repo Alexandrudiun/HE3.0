@@ -13,7 +13,7 @@
   echo "Generated hash: ".$hash;}
 ?>
 
-<form action="1.php" method="post">
+<form action="#" method="post">
     <input type="text" name='password'>
     <input type="submit">
 </form>
