@@ -76,9 +76,9 @@ ion-icon{
 	margin: 10px;
 }
 
-.card.hidden {
+/* .card.hidden {
   visibility: hidden;
-}
+} */
 
 .card img {
   display: block;
