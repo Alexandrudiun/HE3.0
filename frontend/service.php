@@ -70,6 +70,7 @@ if (mysqli_num_rows($result) > 0) {
 
   <main>
   <?php
+  echo $photo_names[$i];
   echo '<div class="top-details">';
   echo '<div class="date">';
   echo '<span>'.$row['date'].'</span>';
