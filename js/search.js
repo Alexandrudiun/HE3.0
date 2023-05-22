@@ -2,17 +2,30 @@
 
 const search = () => {
   const searchbox = document.getElementById("search-item").value.toUpperCase();
-  const product = document.querySelectorAll(".card");
+  const products = document.querySelectorAll(".card");
+  let visibleCount = 0;
 
-  for (var i = 0; i < product.length; i++) {
-    let textvalue = product[i].textContent || product[i].innerText;
+  for (let i = 0; i < products.length; i++) {
+    let textValue = products[i].textContent || products[i].innerText;
 
-    if (textvalue.toUpperCase().indexOf(searchbox) > -1) {
-      product[i].classList.remove("hidden");
+    if (textValue.toUpperCase().indexOf(searchbox) > -1) {
+      products[i].classList.remove("hidden");
+      visibleCount++;
     } else {
-      product[i].classList.add("hidden");
+      products[i].classList.add("hidden");
     }
   }
+
+  if (visibleCount === 1) {
+    const visibleCard = document.querySelector(".card:not(.hidden)");
+    visibleCard.style.width = "100%";
+  } else {
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+      card.style.width = "calc(50% - 20px)";
+    });
+  }
 };
+
 
 
