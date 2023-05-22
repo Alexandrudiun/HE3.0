@@ -19,13 +19,16 @@ const search = () => {
   if (visibleCount === 1) {
     const visibleCard = document.querySelector(".card:not(.hidden)");
     visibleCard.style.width = "100%";
+    visibleCard.style.marginRight = "0";
   } else {
     const cards = document.querySelectorAll(".card");
     cards.forEach(card => {
       card.style.width = "calc(50% - 20px)";
+      card.style.marginRight = "20px";
     });
   }
 };
+
 
 
 
