@@ -4,7 +4,12 @@ let numOfFiles = document.getElementById("num-of-files");
 
 function preview() {
   imageContainer.innerHTML = "";
-  numOfFiles.textContent = `${fileInput.files.length} Images Selected`;
+
+  if (fileInput.files.length > 3) {
+    numOfFiles.textContent = "Maxim 3 Imagini Selectate";
+  } else {
+    numOfFiles.textContent = `${fileInput.files.length} Imagini Selectate`;
+  }
 
   for (let i = 0; i < fileInput.files.length; i++) {
     if (i >= 3) {
