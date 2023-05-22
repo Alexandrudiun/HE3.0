@@ -58,22 +58,21 @@ ion-icon{
   margin-bottom: 100px;
 }
 
-.cards{
+.cards {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-	justify-content: center;
+  justify-content: center;
   padding: 0 5px 0 5px;
-  margin-bottom:0px;
+  margin-bottom: 0px;
 }
 
-.card{
+.card {
   background-color: #2C3E50;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
   width: calc(50% - 20px);
-  margin-right: 20px;
-	margin: 10px;
 }
 
 .card.hidden {
@@ -111,5 +110,11 @@ ion-icon{
   font-size: 10px;
   color: #ccc;
 }
+
+.card:last-child {
+  margin-right: 0;
+  width: 100%;
+}
+
 
 
