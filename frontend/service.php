@@ -43,7 +43,7 @@ if (mysqli_num_rows($result) > 0) {
         for ($i = 0; $i < 3; $i++) {
           $location = "https://idcrew.shop/img/upload/" . $photo_names[$i];
           if(!$photo_names) { 
-            echo '<img src="' . $location . '" alt="' . $row['name'] . '" onclick="showImage(' . 1 . ')" id="slide-' . 1 . '">';
+            echo '<img src="' . $location . '" alt="' . $row['name'] . '" onclick="showImage(' . 0 . ')" id="slide-' . 0 . '">';
           }
           else{
           echo '<img src="' . $location . '" alt="' . $row['name'] . '" onclick="showImage(' . $i . ')" id="slide-' . $i . '">';
