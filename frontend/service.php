@@ -70,7 +70,6 @@ if (mysqli_num_rows($result) > 0) {
 
   <main>
   <?php
-  echo "da";
   echo '<div class="top-details">';
   echo '<div class="date">';
   echo '<span>'.$row['date'].'</span>';
