@@ -99,9 +99,10 @@ body{
 .popup-image img {
   border-radius: 10px;
   max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* Adjust the object-fit property to "contain" */
+  max-height: calc(100vh - 20px); 
+  object-fit: contain;
 }
+
 
 .popup-image ion-icon {
   position: absolute;
