@@ -101,7 +101,6 @@ input:valid ~ label{
 
 .forget a{
   color: #fff;
-  text-decoration: none;
 }
 
 .forget label a:hover{
