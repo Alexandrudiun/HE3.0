@@ -88,6 +88,10 @@ ion-icon{
   display: none;
 }
 
+.margin-bottom.hidden {
+  display: none;
+}
+
 .card img{
   display: block;
   object-fit: cover;
