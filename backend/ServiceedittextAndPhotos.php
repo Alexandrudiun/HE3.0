@@ -154,7 +154,7 @@ else {
                 </div>
                 <div class="input-box">
                   <label for="">Descriere</label>
-                  <textarea type="text" id="descriere" name="descriere" rows="5" required><?php echo $row['description']; ?></textarea>
+                  <textarea type="text" id="descriere" name="descriere" rows="5" maxlength="300" required><?php echo $row['description']; ?></textarea>
                 </div>
                 <div class="input-box">
                   <label for="">Preţ (RON)</label>
