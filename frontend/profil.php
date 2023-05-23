@@ -46,11 +46,11 @@ if (isset($_POST['toggle_profile_type'])) {
                 <span class="jobs"><?php echo $skills?></span>
                 <div class="accout-settings">
                     <div class="flex-button">
-                        <a href="profiledit.php" class="edit">Edit Profile</a>
+                        <a href="profiledit.php" class="edit">Editează profil</a>
                         <ion-icon name="create-outline" class="icon"></ion-icon>
                     </div>
                     <div class="flex-button">
-                        <a href="/backend/logoutbk.php" class="logout">Logout</a>
+                        <a href="/backend/logoutbk.php" class="logout">Decontectează-te</a>
                         <ion-icon name="log-out-outline" class="icon"></ion-icon>
                     </div>
                 </div>
@@ -84,17 +84,17 @@ $_SESSION['worker'] = $worker;
 $_SESSION['buyer'] = $buyer;
 if($worker == 1 && $buyer == 1) 
 {
-    if(!$profiletype_temp)    echo '<a href="/backend/post.php" class="btn-post">Post a job</a>';
-    else echo '<a href="/frontend/home.php" class="btn-post">Get a worker</a>';
+    if(!$profiletype_temp)    echo '<a href="/backend/post.php" class="btn-post">Pune o postare</a>';
+    else echo '<a href="/frontend/home.php" class="btn-post">Cumpară un serviciu</a>';
 
 }
 else{
 if($worker == 1 && $buyer == 0) {
 
-echo '<a href="/backend/post.php" class="btn-post">Post a job</a>';
+echo '<a href="/backend/post.php" class="btn-post">Pune o postare</a>';
 }
 else{
-echo '<a href="/frontend/home.php" class="btn-post">Get a worker</a>';
+echo '<a href="/frontend/home.php" class="btn-post">Cumpară un serviciu</a>';
 }
 }?>
         
@@ -109,9 +109,9 @@ echo '<a href="/frontend/home.php" class="btn-post">Get a worker</a>';
             <ion-icon name="swap-horizontal-outline"></ion-icon>
           Schimbă profilul în: <?php
           if (!$profiletype_temp) {
-            echo "buyer";
+            echo "cumpărător";
           } else {
-            echo "worker";
+            echo "vanzâtor";
           }
           ?>
           </div>
@@ -119,9 +119,9 @@ echo '<a href="/frontend/home.php" class="btn-post">Get a worker</a>';
       </form>
     <?php
     } else if ($worker == 1 && $buyer == 0) {
-      echo "worker";
+      echo "cumpărător";
     } else {
-      echo "buyer";
+      echo "vanzâtor";
     }
 
     ?>
