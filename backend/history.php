@@ -40,7 +40,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
 
     $post = array();
 if (mysqli_num_rows($result) > 0) {
-echo '<div class="flex-container id="service-list">';
+
 while ($row = mysqli_fetch_assoc($result)) {
 $post[] = $row;
 $photo_names = explode(', ', $row['images']);
@@ -64,7 +64,6 @@ echo '<ion-icon name="create-outline"></ion-icon>';
 echo '<span>Editează sau şterge postarea</span>';
 echo '</div>';
 echo '</a>';
-echo '</div>';
 echo '</div>';
 
 }
