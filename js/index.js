@@ -7,7 +7,7 @@ form.addEventListener('submit', (event) => {
   if (password.value !== confirmPassword.value) {
     errorMessage.style.display = 'block';
     errorMessage.style.color = 'red';
-    errorMessage.style.fontWeight = '500';
+    errorMessage.style.fontWeight = '400';
     form.style.textAlign = 'center';
     event.preventDefault();
   }

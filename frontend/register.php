@@ -40,7 +40,7 @@
           <div class="button">
           <input type="submit" name="submit" value="Register" class="btn-login">
           </div>
-          <a href="/index.php"><div id="message"></div></a>
+          <a href="/index.php" style="text-decoration:none"><div id="message"></div></a>
           <div class="register">
             <p>Ai deja un cont? <a href="/index.php">Intră în cont! </a></p>
           </div>
