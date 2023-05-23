@@ -23,53 +23,66 @@
     <div class="flex-2-column">
       <div class="cards">
         <div class="flex-container" id="service-list">
-      <?php
-
-
+        <?php
 include "conn.php";
 session_start();
 
-
-if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
-
-    $email=$_SESSION['email'];
-
-
-    $query="SELECT * FROM posts WHERE email = '{$email}'";
-    $result=mysqli_query($conn,$query);
+if (isset($_SESSION['email']) && isset($_SESSION['password'])) {
+    $email = $_SESSION['email'];
+    $query = "SELECT * FROM posts WHERE email = '{$email}'";
+    $result = mysqli_query($conn, $query);
 
     $post = array();
-if (mysqli_num_rows($result) > 0) {
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $post[] = $row;
+            $photo_names = explode(', ', $row['images']);
+            $location = "https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside the while loop
 
-while ($row = mysqli_fetch_assoc($result)) {
-$post[] = $row;
-$photo_names = explode(', ', $row['images']);
-$location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside the while loop
+            $display = ''; // Added a variable to control display of cards
+            if (isset($_GET['text']) && !empty($_GET['text'])) {
+                $search = $_GET['text'];
+                $search = mysqli_real_escape_string($conn, $search);
+                $search = htmlentities($search);
 
-echo '<div class="margin-bottom">';
-echo '<div class="card">';
-echo '<img src="' . $location . '" alt="' . $row['name'] . '" >';
-echo '<div class="info-area">';
-echo '<h3 class="service-title">' . $row['title'] . '</h3>';
-echo '<h2 class="service-price">' . $row['price'] . ' RON</h2>';
-echo '<div class="date">';
-echo '<span>'.$row['date'].'</span>';
-echo '<span>'.$row['city'].'</span>';
-echo '</div>';
-echo '</div>';
-echo '</div>';   
-echo '<a style="text-decoration:none;" href="/backend/serviceedit.php?id=' . $row['id'] . '">';
-echo '<div class="delete-btn">';
-echo '<ion-icon name="create-outline"></ion-icon>';
-echo '<span>Editează sau şterge postarea</span>';
-echo '</div>';
-echo '</a>';
-echo '</div>';
+                if (
+                    strpos(strtoupper($row['title']), strtoupper($search)) !== false ||
+                    strpos(strtoupper($row['price']), strtoupper($search)) !== false ||
+                    strpos(strtoupper($row['date']), strtoupper($search)) !== false ||
+                    strpos(strtoupper($row['city']), strtoupper($search)) !== false
+                ) {
+                    $display = 'display: block;'; // Show the card
+                } else {
+                    $display = 'display: none;'; // Hide the card
+                }
+            } else {
+                $display = 'display: block;'; // Show the card when there is no search input
+            }
 
+            echo '<div class="margin-bottom" style="' . $display . '">';
+            echo '<div class="card">';
+            echo '<img src="' . $location . '" alt="' . $row['name'] . '">';
+            echo '<div class="info-area">';
+            echo '<h3 class="service-title">' . $row['title'] . '</h3>';
+            echo '<h2 class="service-price">' . $row['price'] . ' RON</h2>';
+            echo '<div class="date">';
+            echo '<span>' . $row['date'] . '</span>';
+            echo '<span>' . $row['city'] . '</span>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+            echo '<a style="text-decoration:none;" href="/backend/serviceedit.php?id=' . $row['id'] . '">';
+            echo '<div class="delete-btn" style="' . $display . '">';
+            echo '<ion-icon name="create-outline"></ion-icon>';
+            echo '<span>Editează sau şterge postarea</span>';
+            echo '</div>';
+            echo '</a>';
+            echo '</div>';
+        }
+    }
 }
+?>
 
-}
-}?>
         
         </div>
       </div>

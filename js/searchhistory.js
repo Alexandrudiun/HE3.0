@@ -9,13 +9,12 @@ const search = () => {
     let deleteButton = deleteButtons[i];
 
     if (textValue.toUpperCase().indexOf(searchbox) > -1) {
-      cards[i].classList.remove("hidden");
-      deleteButton.classList.remove("hidden");
+      cards[i].parentElement.style.display = "block"; // Show the card's parent element
+      deleteButton.style.display = "block"; // Show the delete button
       visibleCount++;
     } else {
-      cards[i].classList.add("hidden");
-      deleteButton.classList.add("hidden");
+      cards[i].parentElement.style.display = "none"; // Hide the card's parent element
+      deleteButton.style.display = "none"; // Hide the delete button
     }
   }
 };
-
