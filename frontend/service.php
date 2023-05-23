@@ -79,7 +79,7 @@ if (mysqli_num_rows($result) > 0) {
   echo '<div class="title">';
   echo '<h3>'.$row['title'].'</h3>';
   echo '</div>';
-  echo '<h2 class="service-price">' . $row['price'] . ' RON</h2>';
+  echo '<h2 class="price">' . $row['price'] . ' RON</h2>';
   echo '</div>';
   echo '<div class="description">';
   echo '<h3>Descrierea serviciului</h3>';
