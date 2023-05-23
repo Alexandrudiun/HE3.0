@@ -179,12 +179,13 @@ body{
   justify-content: space-between;
   border-radius: 10px;
   margin-bottom: 100px;
+  gap: 5px;
 }
 
 .img-profile {
   position: relative; 
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
   border: 3px solid #F1C40F;
   border-radius: 50%;
@@ -209,7 +210,7 @@ body{
 }
 
 .profile-name span{
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 300;
   color: #f3f3f3;
   word-break: break-word;
@@ -262,10 +263,9 @@ footer {
 }
 
 .image{
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  overflow: hidden;
 }
 .profile-img{
   width: 150px;
