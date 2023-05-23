@@ -1,6 +1,6 @@
 const search = () => {
   const searchbox = document.getElementById("search-item").value.toUpperCase();
-  const products = document.querySelectorAll(".card");
+  const products = document.querySelectorAll(".margin-bottom");
   let visibleCount = 0;
 
   for (let i = 0; i < products.length; i++) {

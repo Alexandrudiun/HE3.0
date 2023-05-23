@@ -65,6 +65,7 @@ echo '<span>Editează sau şterge postarea</span>';
 echo '</div>';
 echo '</a>';
 echo '</div>';
+echo '</div>';
 
 }
 
