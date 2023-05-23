@@ -14,10 +14,10 @@ if(isset($_POST['submit'])){
     $select_user_query = mysqli_query($conn, $query);
     
     
-    $email_found = false; // Flag variable to check if email was found
+    $email_found = false; 
     while($row = mysqli_fetch_row($select_user_query)){
         if($row[1] !== $email) {
-            continue; // Skip to next row if email doesn't match
+            continue; 
         }
         $email_found = true;
     }

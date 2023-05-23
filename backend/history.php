@@ -37,9 +37,9 @@ if (isset($_SESSION['email']) && isset($_SESSION['password'])) {
         while ($row = mysqli_fetch_assoc($result)) {
             $post[] = $row;
             $photo_names = explode(', ', $row['images']);
-            $location = "https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside the while loop
+            $location = "https://idcrew.shop/img/upload/" . $photo_names[0]; 
 
-            $display = ''; // Added a variable to control display of cards
+            $display = ''; 
             if (isset($_GET['text']) && !empty($_GET['text'])) {
                 $search = $_GET['text'];
                 $search = mysqli_real_escape_string($conn, $search);
@@ -51,12 +51,12 @@ if (isset($_SESSION['email']) && isset($_SESSION['password'])) {
                     strpos(strtoupper($row['date']), strtoupper($search)) !== false ||
                     strpos(strtoupper($row['city']), strtoupper($search)) !== false
                 ) {
-                    $display = 'display: flex;'; // Show the card
+                    $display = 'display: flex;'; 
                 } else {
-                    $display = 'display: none;'; // Hide the card
+                    $display = 'display: none;'; 
                 }
             } else {
-                $display = 'display: block;'; // Show the card when there is no search input
+                $display = 'display: block;'; 
             }
 
             echo '<div class="margin-bottom" style="' . $display . '">';
