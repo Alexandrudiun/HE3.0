@@ -1,19 +1,32 @@
 const search = () => {
   const searchbox = document.getElementById("search-item").value.toUpperCase();
-  const cards = document.querySelectorAll(".card");
+  const products = document.querySelectorAll(".card");
   let visibleCount = 0;
 
-  cards.forEach(card => {
-    const textValue = card.textContent || card.innerText;
-    const deleteBtn = card.querySelector(".delete-btn");
+  for (let i = 0; i < products.length; i++) {
+    let textValue = products[i].textContent || products[i].innerText;
 
     if (textValue.toUpperCase().indexOf(searchbox) > -1) {
-      card.style.display = "block";
-      deleteBtn.style.display = "flex";
+      products[i].classList.remove("hidden");
       visibleCount++;
     } else {
-      card.style.display = "none";
-      deleteBtn.style.display = "none";
+      products[i].classList.add("hidden");
     }
+  }
+
+  // Hide content with class "margin-bottom"
+  const marginContent = document.querySelectorAll(".margin-bottom");
+  marginContent.forEach(content => {
+    content.style.display = "none";
   });
+
+  if (visibleCount === 1) {
+    const visibleCard = document.querySelector(".card:not(.hidden)");
+    visibleCard.style.width = "100%";
+  } else {
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+      card.style.width = "calc(50% - 20px)";
+    });
+  }
 };
