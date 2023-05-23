@@ -28,7 +28,7 @@
           <label for="">Parolă</label>
           </div>
           <div class="forget">
-             <a href="#">CONTACT SUPORT</a></label>
+             <a href="/frontend/contactsuportlogin.html">CONTACT SUPORT</a></label>
           </div>
           <div class="message" id="message" ></div>
           <div class="button">

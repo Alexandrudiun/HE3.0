@@ -34,7 +34,7 @@
           <label for="">Confirmare Parolă</label>
           </div>
           <div class="forget">
-             <a href="#">CONTACT SUPORT</a></label>
+             <a href="/frontend/contactsuportregister.html">CONTACT SUPORT</a></label>
           </div>
           <p class="error-message">Parolele nu se potrivesc</p>
           <div class="button">
