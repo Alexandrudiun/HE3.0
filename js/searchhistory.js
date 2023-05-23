@@ -10,7 +10,7 @@ const search = () => {
 
     if (textValue.toUpperCase().indexOf(searchbox) > -1) {
       cards[i].parentElement.style.display = "block"; // Show the card's parent element
-      deleteButton.style.display = "block"; // Show the delete button
+      deleteButton.style.display = "flex"; // Show the delete button
       visibleCount++;
     } else {
       cards[i].parentElement.style.display = "none"; // Hide the card's parent element
