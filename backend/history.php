@@ -117,7 +117,7 @@ echo '</div>';
       </div>
   </section>
   </footer>
-  <script src="/js/search.js"></script>
+  <script src="/js/searchhistory.js"></script>
   <script src="/js/nav.js"></script>
   <script src="/js/sliderimg.js"></script>
 <!-- Ion icons -->
