@@ -46,6 +46,7 @@ $post[] = $row;
 $photo_names = explode(', ', $row['images']);
 $location="https://idcrew.shop/img/upload/" . $photo_names[0]; // Moved inside the while loop
 
+echo '<div class="margin-bottom">'
 echo '<div class="card">';
 echo '<img src="' . $location . '" alt="' . $row['name'] . '" >';
 echo '<div class="info-area">';
@@ -63,16 +64,13 @@ echo '<ion-icon name="create-outline"></ion-icon>';
 echo '<span>Editează sau şterge postarea</span>';
 echo '</div>';
 echo '</a>';
+echo '</div>';
 
 }
 
 }
 }?>
         
-
-
-
-
         </div>
       </div>
     </div>

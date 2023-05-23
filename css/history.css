@@ -73,6 +73,10 @@ ion-icon{
   width: 100%;
 }
 
+.margin-bottom{
+  margin-bottom: 15px;
+}
+
 .card{
   display: flex;
   background-color: #2C3E50;
