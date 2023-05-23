@@ -70,7 +70,7 @@ if (isset($_POST['toggle_profile_type'])) {
                 echo '</div>';
                 echo '</div>';
                 echo '<div class="credits credits-box">';
-                echo '<button class="credits" onclick="togglePopup()">Credits:'. $credit . 'RON</button>';
+                echo '<button class="credits" onclick="togglePopup()">Credite: '. $credit . 'RON</button>';
                 echo '<ion-icon name="add-circle-outline"></ion-icon>';
                 echo "</div>";}?>
             </div>
