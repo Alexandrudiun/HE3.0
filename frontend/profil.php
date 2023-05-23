@@ -46,11 +46,11 @@ if (isset($_POST['toggle_profile_type'])) {
                 <span class="jobs"><?php echo $skills?></span>
                 <div class="accout-settings">
                     <div class="flex-button">
-                        <a href="profiledit.php" class="edit">Editează profil</a>
+                        <a href="profiledit.php" class="edit">Edit Profil</a>
                         <ion-icon name="create-outline" class="icon"></ion-icon>
                     </div>
                     <div class="flex-button">
-                        <a href="/backend/logoutbk.php" class="logout">Decontectează-te</a>
+                        <a href="/backend/logoutbk.php" class="logout">Deconectare</a>
                         <ion-icon name="log-out-outline" class="icon"></ion-icon>
                     </div>
                 </div>
