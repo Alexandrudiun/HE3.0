@@ -1,16 +1,19 @@
 const search = () => {
   const searchbox = document.getElementById("search-item").value.toUpperCase();
-  const products = document.querySelectorAll(".margin-bottom");
+  const cards = document.querySelectorAll(".card");
   let visibleCount = 0;
 
-  for (let i = 0; i < products.length; i++) {
-    let textValue = products[i].textContent || products[i].innerText;
+  cards.forEach(card => {
+    const textValue = card.textContent || card.innerText;
+    const deleteBtn = card.querySelector(".delete-btn");
 
     if (textValue.toUpperCase().indexOf(searchbox) > -1) {
-      products[i].classList.remove("hidden");
+      card.style.display = "block";
+      deleteBtn.style.display = "flex";
       visibleCount++;
     } else {
-      products[i].classList.add("hidden");
+      card.style.display = "none";
+      deleteBtn.style.display = "none";
     }
-  }
+  });
 };
