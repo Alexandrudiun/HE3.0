@@ -15,17 +15,6 @@ const search = () => {
       products[i].classList.add("hidden");
     }
   }
-
-  //for one item
-  if (visibleCount === 1) {
-    const visibleCard = document.querySelector(".card:not(.hidden)");
-    visibleCard.style.width = "100%";
-  } else {
-    const cards = document.querySelectorAll(".card");
-    cards.forEach(card => {
-      card.style.width = "calc(50% - 20px)";
-    });
-  }
 };
 
 
