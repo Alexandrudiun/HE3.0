@@ -56,7 +56,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['password'])) {
                     $display = 'display: none;'; // Hide the card
                 }
             } else {
-                $display = 'display: block;'; // Show the card when there is no search input
+                $display = 'display: flex;'; // Show the card when there is no search input
             }
 
             echo '<div class="margin-bottom" style="' . $display . '">';
