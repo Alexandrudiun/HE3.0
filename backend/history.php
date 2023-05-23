@@ -72,7 +72,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['password'])) {
             echo '</div>';
             echo '</div>';
             echo '<a style="text-decoration:none;" href="/backend/serviceedit.php?id=' . $row['id'] . '">';
-            echo '<div class="delete-btn" style="' . $display . '">';
+            echo '<div class="delete-btn" style="display:flex;">';
             echo '<ion-icon name="create-outline"></ion-icon>';
             echo '<span>Editează sau şterge postarea</span>';
             echo '</div>';
