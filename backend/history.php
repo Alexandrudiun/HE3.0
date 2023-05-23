@@ -51,12 +51,12 @@ if (isset($_SESSION['email']) && isset($_SESSION['password'])) {
                     strpos(strtoupper($row['date']), strtoupper($search)) !== false ||
                     strpos(strtoupper($row['city']), strtoupper($search)) !== false
                 ) {
-                    $display = 'display: block;'; // Show the card
+                    $display = 'display: flex;'; // Show the card
                 } else {
                     $display = 'display: none;'; // Hide the card
                 }
             } else {
-                $display = 'display: flex;'; // Show the card when there is no search input
+                $display = 'display: block;'; // Show the card when there is no search input
             }
 
             echo '<div class="margin-bottom" style="' . $display . '">';
