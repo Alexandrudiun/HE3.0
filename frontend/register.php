@@ -17,7 +17,7 @@
     <div class="form-box">
       <div class="form-value">
         <form action="/frontend/register.php" method="Post">
-          <h1>Register</h1>
+          <h1>Întregistrează-te</h1>
           <div class="input-box">
           <ion-icon name="mail-outline"></ion-icon>
           <input type="email" id="email" name="email" required>
@@ -26,15 +26,15 @@
           <div class="input-box">
           <ion-icon name="lock-closed-outline"></ion-icon>
           <input type="password" id="password" name="password" required>
-          <label for="">Password</label>
+          <label for="">Parolă</label>
           </div>
           <div class="input-box">
           <ion-icon name="lock-closed-outline"></ion-icon>
           <input type="password" id="confirm-password" name="confirmPassword" required>
-          <label for="">Confirm Password</label>
+          <label for="">Confirmare Parolă</label>
           </div>
           <div class="forget">
-             <a href="#">Am uitat parola</a></label>
+             <a href="#">CONTACT SUPORT</a></label>
           </div>
           <p class="error-message">Parolele nu se potrivesc</p>
           <div class="button">
