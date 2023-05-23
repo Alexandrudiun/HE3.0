@@ -16,7 +16,7 @@
     <div class="form-box">
       <div class="form-value">
         <form action="index.php" method="Post">
-          <h1>Logează-te</h1>
+          <h1>Loghează-te</h1>
           <div class="input-box">
           <ion-icon name="mail-outline"></ion-icon>
           <input type="email" id="email" name="email" required>
