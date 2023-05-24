@@ -59,8 +59,21 @@ if (isset($_POST['toggle_profile_type'])) {
 
 
                    
-<?php
+<?php           if($worker == 1 && $buyer == 1)
                 if(!$profiletype_temp){
+                echo '<div class="popup" id="popup-1">';
+                echo '<div class="overlay"></div>';
+                echo '<div class="content">';
+                echo '<div class="close-btn" onclick="togglePopup()">&times;</div>';
+                echo '<h1 class="title">Adaugă credite</h1>';
+                echo '<p class="description">Pentru a adăuga bani în contul tău, trebuie să faci un transfer bancar în contul: RO49AAAAXXXXXXXXXXXXXXXX, cu suma dorită. În detaliile ordinului de plată, te rugăm să precizezi "WORKER X", unde X reprezintă adresa ta de email. Un exemplu de transfer reușit ar fi: WORKER yanaseh572@paxven.com</p>';
+                echo '</div>';
+                echo '</div>';
+                echo '<div class="credits credits-box">';
+                echo '<button class="credits" onclick="togglePopup()">Credite: '. $credit . 'RON</button>';
+                echo '<ion-icon name="add-circle-outline"></ion-icon>';
+                echo "</div>";}?>
+                <?php if($worker == 1 && $buyer == 0){
                 echo '<div class="popup" id="popup-1">';
                 echo '<div class="overlay"></div>';
                 echo '<div class="content">';
@@ -151,8 +164,8 @@ echo '<a href="/frontend/home.php" class="btn-post">Cumpară un serviciu</a>';
                 </li>
                 
                 <?php
-                $worker = $_SESSION['worker'];
-                $buyer = $_SESSION['buyer'];
+                // $worker = $_SESSION['worker'];
+                // $buyer = $_SESSION['buyer'];
                 if($worker == 1 && $buyer == 1) 
                 {
                     if(!$profiletype_temp){
