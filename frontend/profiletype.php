@@ -31,7 +31,7 @@ include "../backend/profiletypebk.php";
             <div>
               <label>
                 <input type="checkbox" id="worker" name="buyer">
-                <span>Cumpărator (employer)</span>
+                <span>Cumpărator (buyer)</span>
               </label>
             </div>
           </div>
