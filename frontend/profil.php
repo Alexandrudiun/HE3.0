@@ -119,9 +119,9 @@ echo '<a href="/frontend/home.php" class="btn-post">Cumpară un serviciu</a>';
       </form>
     <?php
     } else if ($worker == 1 && $buyer == 0) {
-      echo "cumpărător";
+      echo "vânzător";
     } else {
-      echo "vanzâtor";
+      echo "cumpărator";
     }
 
     ?>
